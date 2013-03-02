@@ -1,4 +1,4 @@
-var theSymbols = [" ", "!", "\"", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[", "{", "]", "}", ";", ":", "'", "@", "#", "~", "|", ",", "<", ".", ">", "/", "?"];
+var theSymbols = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "+"];
 
 function GeneratePassword(lengthOfPassword, wantSymbols) {
 	var theLetters = "abcdefghijklmnopqrstuvwxyz";
