@@ -1,14 +1,9 @@
-function autoResize (id) {
-    $(id).height($(id).contents().height());
-}
-
-function update_iframe (id) {
-
-	window.alert('Alert');
+function updateframe(){
 
 	var user = $("#fb-user").val();
 	
-	$(id).attr("src","http://graph.facebook.com/"+user);
+	var url = 'http://graph.facebook.com/' + user;
 	
-	autoResize(id);
+	$("#facebook-frame").attr('src',url);
+	
 }

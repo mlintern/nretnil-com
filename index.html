@@ -53,21 +53,21 @@
 					</form>
 				</div>
 				<div class="tab-pane" id="tab2">
-					<div class="span4 offset3">
+					<form class="span4 offset3">
 						<fieldset>
 			                <label>Look up Facebook ID</label>
 			                <input type="text" placeholder="mark.lintern" id="fb-user">
-			                <button id="fb-button" class="btn btn-large btn-primary span12" onclick="javascript:void(0);">Submit</button>
+			                <button id="fb-button" class="btn btn-large btn-primary  span10 offset1" onclick="updateframe();return false;">Go</button>
+	                		<iframe id="facebook-frame" class="span12" src="http://graph.facebook.com/mark.lintern"></iframe>
 	                	</fieldset>
-	                </div>
-				  	<iframe class="span4 offset3" id"facebook-frame" onclick="update_iframe("#facebook-frame");return false;" src="http://graph.facebook.com/mark.lintern"></iframe>
+	                </form>
 				</div>
 				<div class="tab-pane active" id="tab3">
 					<form class="span4 offset3">
 						<fieldset>
 			                <label>Look up Instagram User ID</label>
 			                <input type="text" class="input-block-level" placeholder="Your username" id="username">
-			                <button class="btn btn-large btn-primary span10 offset1" onclick="lookupID();return false;">Submit</button>
+			                <button class="btn btn-large btn-primary span10 offset1" onclick="lookupID();return false;">Go</button>
 			        	</fieldset>
 			        <div class="result hidden">
 						<div class="id"></div>
