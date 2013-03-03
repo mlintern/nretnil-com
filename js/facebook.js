@@ -6,5 +6,8 @@ function updateframe(){
 	
 	$("#facebook-frame").attr('src',url);
 	
-	$("#facebook-frame").height($("#facebook-frame").contents().find("html").height());
+	var newheight = '200px';
+		
+	console.log(newheight);
+	$("#facebook-frame").height(newheight);
 }
