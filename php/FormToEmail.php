@@ -187,11 +187,11 @@ function build_message($request_input){if(!isset($message_output)){$message_outp
 
 $message = build_message($_REQUEST);
 
-$message = $message . PHP_EOL.PHP_EOL."-- ".PHP_EOL."Thank you for using FormToEmail from http://FormToEmail.com";
+// $message = $message . PHP_EOL.PHP_EOL."-- ".PHP_EOL."Thank you for using FormToEmail from http://FormToEmail.com";
 
 $message = stripslashes($message);
 
-$subject = "FormToEmail Comments";
+$subject = "FormToEmail Contents";
 
 $subject = stripslashes($subject);
 
@@ -234,7 +234,6 @@ mail($my_email,$subject,$message,$headers);
 <b>Thank you <?php if(isset($_REQUEST['name'])){print stripslashes($_REQUEST['name']);} ?></b>
 <br>Your message has been sent
 <p><a href="<?php print $continue; ?>">Click here to continue</a></p>
-<p><b>FormToEmail</b> by <a href="http://FormToEmail.com">FormToEmail.com</a></p>
 </center>
 </div>
 
