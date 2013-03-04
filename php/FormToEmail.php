@@ -116,9 +116,11 @@ Optional.  Enter the continue link to offer the user after the form is sent.  If
 If you do change it, remove the "/" symbol below and replace with the name of the page to link to, eg: "mypage.htm" or "http://www.elsewhere.com/page.htm"
 
 */
-
-$continue = "/";
-
+if(substr_count($_REQUEST['redirect'] == 0){
+	$continue = "/";
+}else{
+	$continue = $_REQUEST['redirect']
+}
 /*
 
 Step 3:
@@ -206,9 +208,9 @@ $headers .= "Reply-To: " . $_REQUEST['email'];
 else
 {
 
-$from_name = "";
+$from_name = "Form To Email";
 
-if(isset($_REQUEST['name']) && !empty($_REQUEST['name'])){$from_name = stripslashes($_REQUEST['name']);}
+// if(isset($_REQUEST['name']) && !empty($_REQUEST['name'])){$from_name = stripslashes($_REQUEST['name']);}
 
 $headers = "From: {$from_name} <{$_REQUEST['email']}>";
 
