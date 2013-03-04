@@ -32,7 +32,7 @@
 				<li class="active"><a href="#tab3" data-toggle="tab">Instagram Token Lookup</a></li>
 				<li><a href="#tab4" data-toggle="tab">Pig Latin Generator</a></li>
 				<li><a href="#tab5" data-toggle="tab">Lorem Ipsum Text</a></li>
-				<li><a href="#tab6" data-toggle="tab">Section 6</a></li>
+				<li><a href="#tab6" data-toggle="tab">Ask Mark</a></li>
 			</ul>
 			<div class="tab-content">
 				<div class="tab-pane" id="tab1">
@@ -44,10 +44,11 @@
 							<label class="checkbox">
 							<input id="Symbols" type="checkbox" /> Punctuation (!, @, #, $, %, and so on)
 							</label>
-							<span class="help-block">Your new password:</span>
+							<label class="help-block">Your new password:</label>
 							<div id="outputPassword" tabindex="-1" aria-live="assertive" spellcheck="false">Your new password will appear here.</div>
-							<span class="help-block">Remember your new password as:</span>
+							<label class="help-block">Remember your new password as:</label>
 							<div id="outputMnemonic" spellcheck="false">Your mnemonic will appear here.</div>
+							<br />
 							<input id="btnGenerate" class="btn btn-large btn-primary span12" type="button" value="Generate" />
 						</fieldset>
 					</form>
@@ -121,7 +122,16 @@
 					<div class="span8 offset2 hidden ipsum"></div>	
 				</div>
 				<div class="tab-pane" id="tab6">
-				  <p>I'm in Section 6.</p>
+				  <form action="FormToEmail.php" method="post" class="span4 offset3">
+				  	<fieldset>
+						<table border="0"cellspacing="5">
+						<tr align="left"><td>Name:</td><td><input type="text" size="30" name="name"></td></tr>
+						<tr align="left"><td>Email address:</td><td><input type="text" size="30" name="email"></td></tr>
+						<tr align="left"><td valign="top">Question</td><td><textarea name="comments" rows="6" cols="30"></textarea></td></tr>
+						<tr align="left"><td>&nbsp;</td><td><input type="submit" value="Send"></td></tr>
+						</table>
+					</fieldset>
+				</form>
 				</div>
 			</div>
 		</div>
