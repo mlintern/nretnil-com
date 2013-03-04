@@ -150,7 +150,7 @@ if(substr_count($_REQUEST['email'],"@") != 1 || stristr($_REQUEST['email']," ") 
 
 // Check referrer is from same site.
 
-if(!(isset($_SERVER['HTTP_REFERER']) && !empty($_SERVER['HTTP_REFERER']) && stristr($_SERVER['HTTP_REFERER'],$_SERVER['HTTP_HOST']))){$errors[] = "You must enable referrer logging to use the form";}
+// if(!(isset($_SERVER['HTTP_REFERER']) && !empty($_SERVER['HTTP_REFERER']) && stristr($_SERVER['HTTP_REFERER'],$_SERVER['HTTP_HOST']))){$errors[] = "You must enable referrer logging to use the form";}
 
 // Check for a blank form.
 
