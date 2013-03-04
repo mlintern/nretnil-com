@@ -119,7 +119,7 @@ If you do change it, remove the "/" symbol below and replace with the name of th
 if(substr_count($_REQUEST['redirect'] == 0){
 	$continue = "/";
 }else{
-	$continue = $_REQUEST['redirect']
+	$continue = $_REQUEST['redirect'];
 }
 /*
 
@@ -220,24 +220,21 @@ mail($my_email,$subject,$message,$headers);
 
 ?>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE HTML>
 
 <html>
-
 <head>
 <title>Form To Email PHP script from FormToEmail.com</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 </head>
 
 <body bgcolor="#ffffff" text="#000000">
-
-<div>
-<center>
-<b>Thank you <?php if(isset($_REQUEST['name'])){print stripslashes($_REQUEST['name']);} ?></b>
-<br>Your message has been sent
-<p><a href="<?php print $continue; ?>">Click here to continue</a></p>
-</center>
-</div>
-
+	<div>
+		<center>
+			<b>Thank you <?php if(isset($_REQUEST['name'])){print stripslashes($_REQUEST['name']);} ?></b>
+			<br>Your message has been sent
+			<p><a href="<?php print $continue; ?>">Click here to continue</a></p>
+		</center>
+	</div>
 </body>
 </html>
