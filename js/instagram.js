@@ -9,7 +9,7 @@ function lookupID(){
         format: "json"
       },
       function(data) {
-            var avatar = "<ul class='thumbnails'><li class='span1'><a href='"+data.data[0].profile_picture+"' class='thumbnail' target='_blank'><img src='"+data.data[0].profile_picture+"' alt=''></a></li>";
+            var avatar = "<ul class='thumbnails'><li><a href='"+data.data[0].profile_picture+"' class='thumbnail' target='_blank'><img src='"+data.data[0].profile_picture+"' alt=''></a></li>";
             $(".result .avatar").append(avatar);
             
             var id = "<h2>User ID: " + data.data[0].id + "<br /></h2>";
