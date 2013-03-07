@@ -83,12 +83,13 @@ Step 1:
 To put the form on your webpage, copy the code below as it is, and paste it into your webpage:
 
 <form action="FormToEmail.php" method="post">
-<table border="0" style="background:#ececec" cellspacing="5">
-<tr align="left"><td>Name</td><td><input type="text" size="30" name="name"></td></tr>
-<tr align="left"><td>Email address</td><td><input type="text" size="30" name="email"></td></tr>
-<tr align="left"><td valign="top">Comments</td><td><textarea name="comments" rows="6" cols="30"></textarea></td></tr>
-<tr align="left"><td>&nbsp;</td><td><input type="submit" value="Send"><font face="arial" size="1">&nbsp;&nbsp;Created with <a href="http://FormToEmail.com">FormToEmail.com</a></font></td></tr>
-</table>
+	<input type="hidden" name="redirect" value="http://www.google.com">
+	<table border="0" style="background:#ececec" cellspacing="5">
+		<tr align="left"><td>Name</td><td><input type="text" size="30" name="name"></td></tr>
+		<tr align="left"><td>Email address</td><td><input type="text" size="30" name="email"></td></tr>
+		<tr align="left"><td valign="top">Comments</td><td><textarea name="comments" rows="6" cols="30"></textarea></td></tr>
+		<tr align="left"><td>&nbsp;</td><td><input type="submit" value="Send"><font face="arial" size="1">&nbsp;&nbsp;Created with <a href="http://FormToEmail.com">FormToEmail.com</a></font></td></tr>
+	</table>
 </form>
 
 Step 2:
@@ -167,7 +168,6 @@ $_REQUEST['email'] = trim($_REQUEST['email']);
 			}
 		}
 	}
-$from_email = $_REQUEST['email'];
 }
 
 // Check referrer is from same site.
@@ -202,9 +202,16 @@ unset($set);
 
 // Display any errors and exit if errors exist.
 
-if(count($errors)){foreach($errors as $value){print "$value<br>";} exit;}
+if(count($errors)){
+	foreach($errors as $value){
+		print "$value<br>";
+	} 
+	exit;
+}
 
-if(!defined("PHP_EOL")){define("PHP_EOL", strtoupper(substr(PHP_OS,0,3) == "WIN") ? "\r\n" : "\n");}
+if(!defined("PHP_EOL")){
+	define("PHP_EOL", strtoupper(substr(PHP_OS,0,3) == "WIN") ? "\r\n" : "\n");
+}
 
 // Build message.
 
@@ -236,22 +243,21 @@ $subject = "FormToEmail Contents";
 
 $subject = stripslashes($subject);
 
-if($from_email)
-{
+if($from_email){
 
-$headers = "From: " . $from_email;
-$headers .= PHP_EOL;
-$headers .= "Reply-To: " . $_REQUEST['email'];
+	$headers = "From: " . $from_email;
+	$headers .= PHP_EOL;
+	$headers .= "Reply-To: " . $_REQUEST['email'];
 
-}
-else
-{
+}else{
 
-$from_name = "Form To Email";
-
-if(isset($_REQUEST['name']) && !empty($_REQUEST['name'])){$from_name = stripslashes($_REQUEST['name']);}
-
-$headers = "From: {$from_name} <{$_REQUEST['email']}>";
+	$from_name = "Form To Email";
+	
+	if(isset($_REQUEST['name']) && !empty($_REQUEST['name'])){
+		$from_name = stripslashes($_REQUEST['name']);
+	}
+	
+	$headers = "From: {$from_name} <{$_REQUEST['email']}>";
 
 }
 
