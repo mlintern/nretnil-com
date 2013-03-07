@@ -86,13 +86,13 @@
 				  	<fieldset>
 						<label>Enter English Text to Translate:</label>
 						
-						<textarea class="span12" rows="7" name="taEng">Enter the English text here that you want translated into Pig Latin. This is accomplished via this HTML document and accompanying JavaScript program. Note that hyphenated words are treated as two words. Words may consist of alphabetic characters only (A-Z and a-z). All punctuation, numerals, symbols and whitespace are not modified.</textarea>
+						<textarea id="taEng" class="span12" rows="7" name="taEng">Enter the English text here that you want translated into Pig Latin. This is accomplished via this HTML document and accompanying JavaScript program. Note that hyphenated words are treated as two words. Words may consist of alphabetic characters only (A-Z and a-z). All punctuation, numerals, symbols and whitespace are not modified.</textarea>
 						
 						<input class="btn btn-success span6" value="Translate" onclick="fTranslate()" type="button">
 						<input  class="btn btn-danger span6" value="Clear Text" onclick="fClearText()" type="button">
 						
 						<label>Igpay Atinlay Anslationtray:</label>
-						<textarea class="span12" rows="7" name="taPL"></textarea>
+						<textarea id="taPL" class="span12" rows="7" name="taPL"></textarea>
 						
 						<input class="btn btn-warning span12" value="Select All Text" onclick="fSelectText('taPL')" type="button">
 						
