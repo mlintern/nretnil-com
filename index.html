@@ -26,17 +26,17 @@
 
 <div class="row-fluid">
 	<div class="span12">
-		<div class="tabbable"> <!-- Only required for left/right tabs -->
+		<div class="tabbable tabs-left"> <!-- Only required for left/right tabs -->
 			<ul class="nav nav-tabs">
-				<li><a href="#tab1" data-toggle="tab">Password Generator</a></li>
-				<li><a href="#tab2" data-toggle="tab">Facebook Token Lookup</a></li>
-				<li class="active"><a href="#tab3" data-toggle="tab">Instagram Token Lookup</a></li>
-				<li><a href="#tab4" data-toggle="tab">Pig Latin Generator</a></li>
-				<li><a href="#tab5" data-toggle="tab">Lorem Ipsum Text</a></li>
-				<li><a href="#tab6" data-toggle="tab">Ask Mark</a></li>
+				<li><a href="#pswd1" data-toggle="tab">Password Generator <i class="icon-lock pull-right"></i></a></li>
+				<li><a href="#fb-token" data-toggle="tab">Facebook Token Lookup <i class="icon-book pull-right"></i></a></li>
+				<li class="active"><a href="#insta-token" data-toggle="tab">Instagram Token Lookup <i class="icon-picture pull-right"></i></a></li>
+				<li><a href="#pig-latin" data-toggle="tab">Pig Latin Generator <i class="icon-bookmark pull-right"></i></a></li>
+				<li><a href="#lorem" data-toggle="tab">Lorem Ipsum Text <i class="icon-list-alt pull-right"></i></a></li>
+				<li><a href="#ask" data-toggle="tab">Ask Mark <i class="icon-bullhorn pull-right"></i></a></li>
 			</ul>
 			<div class="tab-content">
-				<div class="tab-pane" id="tab1">
+				<div class="tab-pane" id="pswd1">
 				  	<form class="span4 offset3">
 						<fieldset>
 							<legend>Password Generator</legend>
@@ -54,7 +54,7 @@
 						</fieldset>
 					</form>
 				</div>
-				<div class="tab-pane" id="tab2">
+				<div class="tab-pane" id="fb-token">
 					<form class="span4 offset3">
 						<fieldset>
 			                <label>Look up Facebook ID</label>
@@ -64,7 +64,7 @@
 	                	</fieldset>
 	                </form>
 				</div>
-				<div class="tab-pane active" id="tab3">
+				<div class="tab-pane active" id="insta-token">
 					<form class="span4 offset3">
 						<fieldset>
 			                <label>Look up Instagram User ID</label>
@@ -82,7 +82,7 @@
 						</div>
 	                </form> 
 				</div>
-				<div class="tab-pane" id="tab4">
+				<div class="tab-pane" id="pig-latin">
 				  <form name="frmTranslator" class="span4 offset3">
 				  	<fieldset>
 						<label>Enter English Text to Translate:</label>
@@ -106,7 +106,7 @@
 					  </fieldset>	
 					</form>
 				</div>
-				<div class="tab-pane" id="tab5">
+				<div class="tab-pane" id="lorem">
 					<form class="span4 offset3">
 						<fieldset>
 							<input type="text" id="numwords" value="150"/>
@@ -122,7 +122,7 @@
 					</form>
 					<div class="span8 offset2 hidden ipsum"></div>	
 				</div>
-				<div class="tab-pane" id="tab6">
+				<div class="tab-pane" id="ask">
 				  <form action="php/FormToEmail.php" method="post" class="span4 offset3">
 				  	<fieldset>
 						<label>Name:</label><input type="text" size="30" name="name"></td></tr>
