@@ -38,6 +38,7 @@
 				<li class="active"><a href="#insta-token" data-toggle="tab">Instagram Token Lookup <i class="icon-picture pull-right"></i></a></li>
 				<li><a href="#pig-latin" data-toggle="tab">Pig Latin Generator <i class="icon-bookmark pull-right"></i></a></li>
 				<li><a href="#lorem" data-toggle="tab">Lorem Ipsum Text <i class="icon-list-alt pull-right"></i></a></li>
+				<li><a href="#human2unix" data-toggle="tab">Human To Unix Time<i class="icon-time pull-right"></i></a></li>
 				<li><a href="#ask" data-toggle="tab">Ask Mark <i class="icon-bullhorn pull-right"></i></a></li>
 			</ul>
 			<div class="tab-content">
@@ -135,6 +136,33 @@
 					</form>
 					<div class="span8 offset2 hidden ipsum"></div>	
 				</div>
+				<div class="tab-pane" id="human2unix">
+				  <form name="u2h" class="span5">
+						<h3>Unix to Human</h3>
+						<label>UNIX TimeStamp:</label>
+						
+						<input type="text" class="span12" id="timeStamp" style="margin-bottom: 25px;">
+						<input class="btn btn-large btn-success span6" type="button" value="Submit" onClick="timeToHuman();">
+						<input class="btn btn-large btn-warning span6" type="reset" value="Reset">
+						<br><br>
+						<input id="u2h-result" type="text" value="" class="span12" READONLY>
+						</form>
+						
+						<form name="h2u"  class="span7">
+						<h3>Human to Unix</h3>	   		    
+						    Mon: <input type="text" class="span2" maxlength="2" id="inMon">
+						    Day: <input type="text" class="span2" maxlength="2" id="inDay">
+						    Year: <input type="text" class="span4" maxlength="4" id="inYear"><br>
+						    Hr: <input type="text" class="span2" maxlength="2" id="inHr">
+						    Min: <input type="text" class="span2" maxlength="2" id="inMin">
+						    Sec: <input type="text" class="span2" maxlength="2" id="inSec">					 
+						 <br> 		  
+						 <input class="btn btn-large btn-success span6" type="button" value="Submit" onClick="humanToTime();">
+						 <input class="btn btn-large btn-warning span6" type="reset" value="Reset">
+						 <br><br>
+						    <input id="h2u-result" type="text" value="" class="span12" READONLY>
+						</form>
+				</div>
 				<div class="tab-pane" id="ask">
 				  <form action="php/FormToEmail.php" method="post" class="span4 offset3">
 				  	<fieldset>
@@ -159,6 +187,7 @@
 <script type="text/javascript" src="js/instagram.js"></script>
 <script type="text/javascript" src="js/facebook.js"></script>
 <script type="text/javascript" src="js/lorem.js"></script>
+<script type="text/javascript" src="js/human2unix.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 </body>
 </html>
