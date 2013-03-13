@@ -7,15 +7,15 @@ function timeToHuman()
 function humanToTime()
   {
     var humDate = new Date(Date.UTC($("#inYear").val(),
-          (stripLeadingZeroes($("#inMon").val())-1),
-          stripLeadingZeroes($("#inDay").val()),
-          stripLeadingZeroes($("#inHr").val()),
-          stripLeadingZeroes($("#inMin").val()),
-          stripLeadingZeroes($("#inSec").val())));
+          (stripZeros($("#inMon").val())-1),
+          stripZeros($("#inDay").val()),
+          stripZeros($("#inHr").val()),
+          stripZeros($("#inMin").val()),
+          stripZeros($("#inSec").val())));
     $("#h2u-result").val(humDate.getTime()/1000.0);
   }
 
-function stripLeadingZeroes(input)
+function stripZeros(input)
   {
     if((input.length > 1) && (input.substr(0,1) == "0"))
       return input.substr(1);
