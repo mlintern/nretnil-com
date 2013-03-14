@@ -53,11 +53,11 @@
 							<input id="Symbols" type="checkbox" /> Punctuation (!, @, #, $, %, and so on)
 							</label>
 							<label class="help-block">Your new password:</label>
-							<div id="outputPassword" tabindex="-1" aria-live="assertive" spellcheck="false">Your new password will appear here.</div>
-							<label class="help-block">Remember your new password as:</label>
+							<div id="outputPassword" tabindex="-1" aria-live="assertive" spellcheck="false">Your new password here.</div>
+							<input id="btnGenerate" style="margin: 15px 0" class="btn btn-large btn-primary span12" type="button" value="Generate" />							
+							<label class="help-block">Your mnemonic password:</label>
 							<div id="outputMnemonic" spellcheck="false">Your mnemonic will appear here.</div>
 							<br />
-							<input id="btnGenerate" class="btn btn-large btn-primary span12" type="button" value="Generate" />
 						</fieldset>
 					</form>
 				</div>
@@ -76,14 +76,11 @@
 					<form class="span4 offset3">
 						<fieldset>
 			                <label>Look up Facebook ID</label>
-			                <input type="text" value="mark.lintern" id="fb-user">
-			                <button id="fb-button" class="btn btn-large btn-primary  span10 offset1" onclick="updateframe();return false;">Go</button>
-	                		<iframe id="facebook-frame" style="margin: 10px 0;" height="200" width="200" class="span12" src="http://graph.facebook.com/mark.lintern"></iframe>
-	                		<button id="fb-button" class="btn btn-large btn-primary  span10 offset1" onclick="updatefacebook();return false;">Go</button>
+			                <input type="text" class="span12" value="mark.lintern" id="fb-user">
+	                		<button id="fb-button" class="btn btn-large btn-primary  span12" onclick="updatefacebook();return false;">Go</button>
+	                		<div style="margin-top:10px;" class="span12" id="facebook-info"></div>
 	                	</fieldset>
 	                </form>
-	                
-	                <div id="facebook-info"></div>
 				</div>
 				<div class="tab-pane active" id="insta-token">
 					<form class="span4 offset3">

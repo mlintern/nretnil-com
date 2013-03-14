@@ -15,13 +15,10 @@ function updatefacebook(){
 	
 	console.log(url);
 
-	$.get('http://graph.facebook.com/mark.lintern',function(data){
+	$.get(url,function(data,status,xhr){
+		$('#facebook-info').html(data);
 		console.log(data);
-	});
+		console.log(status);
+		console.log(xhr);
+	},"html");
 }
-
-$.get('http://graph.facebook.com/mark.lintern',function(data){
-	console.log(data);
-});
-
-updatefacebook();
