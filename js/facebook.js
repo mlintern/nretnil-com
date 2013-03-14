@@ -5,10 +5,6 @@ function updateframe(){
 	var url = 'http://graph.facebook.com/' + user;
 	
 	$("#facebook-frame").attr('src',url);
-	
-	var newheight = '200px';
-
-	$("#facebook-frame").height(newheight);
 }
 
 function updatefacebook(){
@@ -23,3 +19,9 @@ function updatefacebook(){
 		console.log(data);
 	});
 }
+
+$.get('http://graph.facebook.com/mark.lintern',function(data){
+	console.log(data);
+});
+
+updatefacebook();
