@@ -1,9 +1,5 @@
 <?php
-
-$headers = apache_request_headers(); 
-$real_client_ip = $headers["X-Forwarded-For"];
-return $real_client_ip;
-
+$client_ip = $_SERVER["REMOTE_ADDR"];
 ?>
 
 <!DOCTYPE HTML>
@@ -14,6 +10,6 @@ return $real_client_ip;
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 </head>
 <body>
-<?php print $real_client_ip; ?>
+<?php print $client_ip; ?>
 </body>
 </html>
