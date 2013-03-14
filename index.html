@@ -44,7 +44,7 @@
 			</ul>
 			<div class="tab-content">
 				<div class="tab-pane" id="pswd1">
-				  	<form class="span4 offset3">
+				  	<form class="span6 offset3">
 						<fieldset>
 							<legend>Password Generator</legend>
 							<label>Length:</label>
@@ -53,7 +53,7 @@
 							<input id="Symbols" type="checkbox" /> Punctuation (!, @, #, $, %, and so on)
 							</label>
 							<label class="help-block">Your new password:</label>
-							<div id="outputPassword" tabindex="-1" aria-live="assertive" spellcheck="false">Your new password here.</div>
+							<div id="outputPassword" tabindex="-1" aria-live="assertive" class="align-center" spellcheck="false">Your new password here.</div>
 							<input id="btnGenerate" style="margin: 15px 0" class="btn btn-large btn-primary span12" type="button" value="Generate" />							
 							<label class="help-block">Your mnemonic password:</label>
 							<div id="outputMnemonic" spellcheck="false">Your mnemonic will appear here.</div>
@@ -73,7 +73,7 @@
 					<h1 class="align-center span6 offset3" id="External-IP"></h1>
 				</div>
 				<div class="tab-pane" id="fb-token">
-					<form class="span4 offset3">
+					<form class="span6 offset3">
 						<fieldset>
 			                <label>Look up Facebook ID</label>
 			                <input type="text" class="span12" value="mark.lintern" id="fb-user">
@@ -83,7 +83,7 @@
 	                </form>
 				</div>
 				<div class="tab-pane active" id="insta-token">
-					<form class="span4 offset3">
+					<form class="span6 offset3">
 						<fieldset>
 			                <label>Look up Instagram User ID</label>
 			                <input type="text" class="input-block-level" value="mlintern" id="username">
@@ -101,7 +101,7 @@
 	                </form> 
 				</div>
 				<div class="tab-pane" id="pig-latin">
-				  <form name="frmTranslator" class="span4 offset3">
+				  <form name="frmTranslator" class="span6 offset3">
 				  	<fieldset>
 						<label>Enter English Text to Translate:</label>
 						
@@ -125,7 +125,7 @@
 					</form>
 				</div>
 				<div class="tab-pane" id="lorem">
-					<form class="span4 offset3">
+					<form class="span6 offset3">
 						<fieldset>
 							<input type="text" id="numwords" value="150"/>
 							<label class="radio">
@@ -138,7 +138,7 @@
 							<input class="btn btn-large btn-success span12" value="Create Text" onclick="loremExecute();return;false;" type="button">
 						</fieldset>
 					</form>
-					<div class="span8 offset2 hidden ipsum"></div>	
+					<div class="span10 offset1 hidden ipsum"></div>	
 				</div>
 				<div class="tab-pane" id="human2unix">
 				  <form name="u2h" class="span5">
@@ -149,7 +149,7 @@
 						<input class="btn btn-large btn-success span6" type="button" value="Submit" onClick="timeToHuman();">
 						<input class="btn btn-large btn-warning span6" type="reset" value="Reset">
 						<br><br>
-						<input id="u2h-result" type="text" value="" class="span12" READONLY>
+						<input id="u2h-result" type="text" value="" class="span12 align-center" READONLY>
 						</form>
 						
 						<form name="h2u"  class="span7">
@@ -164,11 +164,11 @@
 						 <input class="btn btn-large btn-success span6" type="button" value="Submit" onClick="humanToTime();">
 						 <input class="btn btn-large btn-warning span6" type="reset" value="Reset">
 						 <br><br>
-						    <input id="h2u-result" type="text" value="" class="span12" READONLY>
+						    <input id="h2u-result" type="text" value="" class="span12 align-center" READONLY>
 						</form>
 				</div>
 				<div class="tab-pane" id="ask">
-				  <form action="php/FormToEmail.php" method="post" class="span4 offset3">
+				  <form action="php/FormToEmail.php" method="post" class="span6 offset3">
 				  	<fieldset>
 						<label>Name:</label><input type="text" size="30" name="name"></td></tr>
 						<label>Email address:</label><input type="text" size="30" name="email"></td></tr>
