@@ -44,8 +44,8 @@
 				<li><a href="#ask" data-toggle="tab">Ask Mark <i class="icon-bullhorn pull-right"></i></a></li>
 			</ul>
 			<div class="tab-content">
-				<div class="tab-pane" id="pswd1">
-				  	<form class="span6 offset3">
+				<div class="tab-pane span6 offset3" id="pswd1">
+				  	<form>
 						<fieldset>
 							<legend>Password Generator</legend>
 							<label>Length:</label>
@@ -62,8 +62,8 @@
 						</fieldset>
 					</form>
 				</div>
-				<div class="tab-pane" id="pswd2">
-				  	<form class="span6 offset3">
+				<div class="tab-pane span6 offset3" id="pswd2">
+				  	<form>
 						<fieldset>
 							<code class="span12 align-center" id="passphrase_result" style="text-transform:lowercase;padding:10px;margin-bottom: 15px;"></code>
 							<div style="margin-top: 20px;"><button class="btn btn-large btn-success btn-block" onclick="passphrase_gen();return false;">Generate Another!</button></div>
@@ -73,8 +73,8 @@
 				<div class="tab-pane active" id="exip">
 					<h1 class="align-center span6 offset3" id="External-IP"></h1>
 				</div>
-				<div class="tab-pane" id="dnstools">
-					<form class="span10 offset1">
+				<div class="tab-pane span10 offset1" id="dnstools">
+					<form>
 						<fieldset>
 			                <label>DNS Lookup</label>
 			                <input type="text" class="span12" value="" id="ip-info">
@@ -82,7 +82,7 @@
 	                		<div style="margin-top:10px;" class="span12" id="ip-info-div"></div>
 	                	</fieldset>
 	                </form>
-	                <form class="span10 offset1">
+	                <form>
 						<fieldset>
 			                <label>Hostname Lookup</label>
 			                <input type="text" class="span12" value="" id="hostname-info">
@@ -91,8 +91,8 @@
 	                	</fieldset>
 	                </form>
 				</div>
-				<div class="tab-pane" id="fb-token">
-					<form class="span6 offset3">
+				<div class="tab-pane span6 offset3" id="fb-token">
+					<form>
 						<fieldset>
 			                <label>Look up Facebook ID</label>
 			                <input type="text" class="span12" value="mark.lintern" id="fb-user">
@@ -101,8 +101,8 @@
 	                	</fieldset>
 	                </form>
 				</div>
-				<div class="tab-pane" id="insta-token">
-					<form class="span6 offset3">
+				<div class="tab-pane span6 offset3" id="insta-token">
+					<form>
 						<fieldset>
 			                <label>Look up Instagram User ID</label>
 			                <input type="text" class="input-block-level" value="mlintern" id="username">
@@ -119,8 +119,8 @@
 						</div>
 	                </form> 
 				</div>
-				<div class="tab-pane" id="pig-latin">
-				  <form name="frmTranslator" class="span6 offset3">
+				<div class="tab-pane span6 offset3" id="pig-latin">
+				  <form name="frmTranslator">
 				  	<fieldset>
 						<label>Enter English Text to Translate:</label>
 						
@@ -143,7 +143,7 @@
 					  </fieldset>	
 					</form>
 				</div>
-				<div class="tab-pane" id="lorem">
+				<div class="tab-pane span11" id="lorem">
 					<form class="span6 offset3">
 						<fieldset>
 							<input type="text" id="numwords" value="150"/>
@@ -186,8 +186,8 @@
 						    <input id="h2u-result" type="text" value="" class="span12 align-center" READONLY>
 						</form>
 				</div>
-				<div class="tab-pane" id="ask">
-				  <form action="php/FormToEmail.php" method="post" class="span6 offset3">
+				<div class="tab-pane span6 offset3" id="ask">
+				  <form action="php/FormToEmail.php" method="post">
 				  	<fieldset>
 						<label>Name:</label><input class="span12" type="text" name="name"></td></tr>
 						<label>Email address:</label><input class="span12" type="text" name="email"></td></tr>
