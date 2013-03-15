@@ -100,7 +100,7 @@ Enter the email address below to send the contents of the form to.  You can ente
 
 */
 
-$my_email = "ml@compendium.com";
+$my_email = "mark@lintern.us";
 
 /*
 
