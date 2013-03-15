@@ -35,6 +35,7 @@
 				<li><a href="#pswd1" data-toggle="tab">Password Generator <i class="icon-lock pull-right"></i></a></li>
 				<li><a href="#pswd2" data-toggle="tab">Passphrase Generator <i class="icon-lock pull-right"></i></a></li>
 				<li class="active"><a href="#exip" data-toggle="tab">External IP<i class="icon-ok-circle pull-right"></i></a></li>
+				<li><a href="#dnstools" data-toggle="tab">DNS Tools<i class="icon-ok-circle pull-right"></i></a></li>
 				<li><a href="#fb-token" data-toggle="tab">Facebook Token Lookup <i class="icon-book pull-right"></i></a></li>
 				<li><a href="#insta-token" data-toggle="tab">Instagram Token Lookup <i class="icon-picture pull-right"></i></a></li>
 				<li><a href="#pig-latin" data-toggle="tab">Pig Latin Generator <i class="icon-bookmark pull-right"></i></a></li>
@@ -72,12 +73,30 @@
 				<div class="tab-pane active" id="exip">
 					<h1 class="align-center span6 offset3" id="External-IP"></h1>
 				</div>
+				<div class="tab-pane" id="dnstools">
+					<form class="span5">
+						<fieldset>
+			                <label>DNS Lookup</label>
+			                <input type="text" class="span12" value="" id="ip-info">
+	                		<button id="fb-button" class="btn btn-large btn-primary btn-block" onclick="iplookup();return false;">Lookup</button>
+	                		<div style="margin-top:10px;" class="span12" id="ip-info-div"></div>
+	                	</fieldset>
+	                </form>
+	                <form class="span5">
+						<fieldset>
+			                <label>Hostname Lookup</label>
+			                <input type="text" class="span12" value="" id="hostname-info">
+	                		<button id="fb-button" class="btn btn-large btn-primary btn-block" onclick="hostnamelookup();return false;">Lookup</button>
+	                		<div style="margin-top:10px;" class="span12" id="hostname-info-div"></div>
+	                	</fieldset>
+	                </form>
+				</div>
 				<div class="tab-pane" id="fb-token">
 					<form class="span6 offset3">
 						<fieldset>
 			                <label>Look up Facebook ID</label>
 			                <input type="text" class="span12" value="mark.lintern" id="fb-user">
-	                		<button id="fb-button" class="btn btn-large btn-primary  span12" onclick="updatefacebook();return false;">Go</button>
+	                		<button id="fb-button" class="btn btn-large btn-primary btn-block" onclick="updatefacebook();return false;">Go</button>
 	                		<div style="margin-top:10px;" class="span12" id="facebook-info"></div>
 	                	</fieldset>
 	                </form>
@@ -192,7 +211,7 @@
 <script type="text/javascript" src="js/facebook.js"></script>
 <script type="text/javascript" src="js/lorem.js"></script>
 <script type="text/javascript" src="js/human2unix.js"></script>
-<script type="text/javascript" src="js/externalip.js"></script>
+<script type="text/javascript" src="js/dns.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 </body>
 </html>
