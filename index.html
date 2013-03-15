@@ -74,22 +74,24 @@
 					<h1 class="align-center span6 offset3" id="External-IP"></h1>
 				</div>
 				<div class="tab-pane" id="dnstools">
-					<form class="span10 offset1">
-						<fieldset>
-			                <label>DNS Lookup</label>
-			                <input type="text" class="span12" value="" id="ip-info">
-	                		<button id="fb-button" class="btn btn-large btn-primary btn-block" onclick="iplookup();return false;">Lookup</button>
-	                		<div style="margin-top:10px;" class="span12" id="ip-info-div"></div>
-	                	</fieldset>
-	                </form>
-	                <form class="span10 offset1">
-						<fieldset>
-			                <label>Hostname Lookup</label>
-			                <input type="text" class="span12" value="" id="hostname-info">
-	                		<button id="fb-button" class="btn btn-large btn-primary btn-block" onclick="hostnamelookup();return false;">Lookup</button>
-	                		<div style="margin-top:10px;" class="span12" id="hostname-info-div"></div>
-	                	</fieldset>
-	                </form>
+					<div  class="span10 offset1">
+						<form class="span12">
+							<fieldset>
+				                <label>DNS Lookup</label>
+				                <input type="text" class="span12" value="" id="ip-info">
+		                		<button id="fb-button" class="btn btn-large btn-primary btn-block" onclick="iplookup();return false;">Lookup</button>
+		                		<div style="margin-top:10px;" class="span12" id="ip-info-div"></div>
+		                	</fieldset>
+		                </form>
+		                <form class="span12">
+							<fieldset>
+				                <label>Hostname Lookup</label>
+				                <input type="text" class="span12" value="" id="hostname-info">
+		                		<button id="fb-button" class="btn btn-large btn-primary btn-block" onclick="hostnamelookup();return false;">Lookup</button>
+		                		<div style="margin-top:10px;" class="span12" id="hostname-info-div"></div>
+		                	</fieldset>
+		                </form>
+	                </div>
 				</div>
 				<div class="tab-pane" id="fb-token">
 					<form class="span6 offset3">
