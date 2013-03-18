@@ -21,13 +21,15 @@ traceroute($target);
 
 function get_dns_ip($hostname){
    $answer = dns_get_record($hostname);
+   echo "<pre>";
    foreach ($answer as $value){
       foreach ($value as $set){	
         print_r($set);
         echo " ";
       }
-      echo "<br>";
+      echo "\n";
    }
+   echo "</pre>";
 }
 
 function get_dns_hostname($ip){
