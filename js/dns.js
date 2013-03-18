@@ -39,7 +39,7 @@ function whoislookup(){
 }
 
 function traceroute(){
-	var target = $("#whois-info").val();
+	var target = $("#traceroute-info").val();
 	
 	var url = '/php/dns.php?traceroute=' + target;
 	
