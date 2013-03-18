@@ -36,7 +36,7 @@ function get_dns_hostname($ip){
 }
 
 function traceroute($target){
-$output = shell_exec("/usr/sbin/traceroute $target");
+$output = shell_exec("/bin/traceroute $target");
 echo "<pre>$output</pre>";
 }
 ?>
