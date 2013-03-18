@@ -27,6 +27,17 @@ function hostnamelookup(){
 	},"html");
 }
 
+function whoislookup(){
+	var hostname = $("#whois-info").val();
+	
+	var url = '/php/dns.php?whois=' + hostname;
+	
+	$.get(url, function(data,status,xhr){
+		console.log(data);
+		$('#hostname-info-div').html(data);
+	},"html");
+}
+
 /*$.ajax({
   type:'GET',
   url: "http://icanhazip.com",

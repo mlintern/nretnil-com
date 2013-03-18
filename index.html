@@ -77,9 +77,19 @@
 						<div class="row-fluid">
 						<form class="span12">
 							<fieldset>
-				                <label>DNS Lookup</label>
-				                <input type="text" class="span12" value="" id="ip-info">
-		                		<button id="fb-button" class="btn btn-large btn-primary btn-block" onclick="iplookup();return false;">Lookup</button>
+				                <label>Reverse IP Lookup</label>
+				                <input type="text" class="span12" value=""  placeholder="IP Address" id="ip-info">
+		                		<button class="btn btn-large btn-primary btn-block" onclick="iplookup();return false;">Lookup</button>
+		                		<div style="margin-top:10px;" id="ip-info-div"></div>
+		                	</fieldset>
+		                </form>
+		                </div>
+		                <div class="row-fluid">
+						<form class="span12">
+							<fieldset>
+				                <label>Who Is</label>
+				                <input type="text" class="span12" value=""  placeholder="IP Address" id="whois-info">
+		                		<button class="btn btn-large btn-primary btn-block" onclick="whoislookup();return false;">Lookup</button>
 		                		<div style="margin-top:10px;" id="ip-info-div"></div>
 		                	</fieldset>
 		                </form>
@@ -87,9 +97,9 @@
 		                <div class="row-fluid">
 		                <form class="span12">
 							<fieldset>
-				                <label>Hostname Lookup</label>
-				                <input type="text" class="span12" value="" id="hostname-info">
-		                		<button id="fb-button" class="btn btn-large btn-primary btn-block" onclick="hostnamelookup();return false;">Lookup</button>
+				                <label>DIG</label>
+				                <input type="text" class="span12" value="" placeholder="Hostname" id="hostname-info">
+		                		<button class="btn btn-large btn-primary btn-block" onclick="hostnamelookup();return false;">Lookup</button>
 		                		<div style="margin-top:10px;" id="hostname-info-div"></div>
 		                	</fieldset>
 		                </form>
@@ -290,7 +300,7 @@
 							</div>
 							<button class="btn btn-large btn-primary btn-block" onClick="generatecron();return false;">Generate</button>
 						</form>
-						<code id="cron-code" class="span12"></code>
+						<code id="cron-code"></code>
 					</div>
 				</div>
 				<div class="tab-pane" id="ask">
