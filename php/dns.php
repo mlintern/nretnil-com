@@ -11,11 +11,7 @@ get_dns_hostname($ipaddr);
 
 if ($_GET['whois'] != null){
 $ip = $_GET['whois'];
- 
 $whois = get_whois($ip);
- 
-echo $whois;
- 
 }
 
 function get_dns_ip($hostname){
@@ -50,7 +46,7 @@ function get_whois($ip)
     //now get actual whois data
     $whois_data = get_whois_from_server($whois_server , $ip);
      
-    return $whois_data;
+    echo $whois_data;
 }
  
 /**
