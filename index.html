@@ -9,6 +9,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link type="text/css" href="css/bootstrap.css" rel="stylesheet">
 <link type="text/css" href="css/responsive.css" rel="stylesheet">
+<link type="text/css" href="css/style.css" rel="stylesheet">
+
 
 <!-- Compile Less on the Fly
 <link rel="stylesheet/less" href="less/bootstrap.less">
@@ -78,7 +80,7 @@
 						<form class="span12">
 							<fieldset>
 				                <label>Reverse IP Lookup</label>
-				                <input type="text" class="span12" value=""  placeholder="IP Address" id="ip-info">
+				                <input type="text" class="span12" value=""  placeholder="IP Address..." id="ip-info">
 		                		<button class="btn btn-large btn-primary btn-block" onclick="iplookup();return false;">Lookup</button>
 		                		<div style="margin-top:10px;" id="ip-info-div"></div>
 		                	</fieldset>
@@ -88,7 +90,7 @@
 						<form class="span12">
 							<fieldset>
 				                <label>Who Is</label>
-				                <input type="text" class="span12" value=""  placeholder="Target" id="whois-info">
+				                <input type="text" class="span12" value=""  placeholder="Target..." id="whois-info">
 		                		<button class="btn btn-large btn-primary btn-block" onclick="whoislookup();return false;">Lookup</button>
 		                		<div style="margin-top:10px;" id="whois-info-div"></div>
 		                	</fieldset>
@@ -98,7 +100,7 @@
 		                <form class="span12">
 							<fieldset>
 				                <label>DIG</label>
-				                <input type="text" class="span12" value="" placeholder="Hostname" id="hostname-info">
+				                <input type="text" class="span12" value="" placeholder="Hostname..." id="hostname-info">
 		                		<button class="btn btn-large btn-primary btn-block" onclick="hostnamelookup();return false;">Lookup</button>
 		                		<div style="margin-top:10px;" id="hostname-info-div"></div>
 		                	</fieldset>
@@ -108,7 +110,7 @@
 		                <form class="span12">
 							<fieldset>
 				                <label>Trace Route</label>
-				                <input type="text" class="span12" value="" placeholder="target" id="traceroute-info">
+				                <input type="text" class="span12" value="" placeholder="Target..." id="traceroute-info">
 		                		<button class="btn btn-large btn-primary btn-block" onclick="traceroute();return false;">Lookup</button>
 		                		<div style="margin-top:10px;" id="traceroute-info-div"></div>
 		                	</fieldset>
@@ -213,10 +215,11 @@
 				</div>
 				<div class="tab-pane" id="crontab">
 					<!-- <form enctype="multipart/form-data"  action="index.html" method="post"> -->
-					<div class="span6 offset3">
-						<form>	
-							<div>
-								<label align="center">MINUTES</label>
+					<div class="span10 offset1">
+						<form id="cron-creator">
+						<div class="row-fluid">	
+							<div class="span6 cron-item">
+								<label class="cron-section-title" align="center">MINUTES</label>
 								<div class="span5">
 									<label class="radio"><input type="radio" name="minutes" value="*" checked>Every Minute</label>
 									<label class="radio"><input type="radio" name="minutes" value="0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58">Even Minutes</label>
@@ -233,9 +236,8 @@
 									  </select>
 								</div>
 							</div>	
-							<div class="clearfix"></div>
-							<div>
-								<label align="center">HOURS</label>
+							<div class="span6 cron-item">
+								<label class="cron-section-title" align="center">HOURS</label>
 								<div class="span5">
 									<label class="radio"><input type="radio" name="hours" value="*" checked>Every Hour</label>
 									<label class="radio"><input type="radio" name="hours" value="0,2,4,6,8,10,12,14,16,18,20,22">Even Hours</label>
@@ -250,10 +252,11 @@
 									    <option value="0">Midnight</option><option value="1">1am</option><option value="2">2am</option><option value="3">3am</option><option value="4">4am</option><option value="5">5am</option><option value="6">6am</option><option value="7">7am</option><option value="8">8am</option><option value="9">9am</option><option value="10">10am</option><option value="11">11am</option><option value="12">Noon</option><option value="13">1pm</option><option value="14">2pm</option><option value="15">3pm</option><option value="16">4pm</option><option value="17">5pm</option><option value="18">6pm</option><option value="19">7pm</option><option value="20">8pm</option><option value="21">9pm</option><option value="22">10pm</option><option value="23">11pm</option>
 								  	</select>
 								</div>
-								<div class="clearfix"></div>
 							</div>
-							<div>
-								<label align="center">DAYS OF MONTH</label>
+						</div>
+						<div class="row-fluid">
+							<div class="span6 cron-item">
+								<label class="cron-section-title" align="center">DAYS OF MONTH</label>
 								<div class="span5">
 									<label class="radio"><input type="radio" name="days" value="*" checked>Every Day</label>
 									<label class="radio"><input type="radio" name="days" value="2,4,6,8,10,12,14,16,18,20,22,24,26,28,30">Even Days</label>
@@ -267,10 +270,9 @@
 								        <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
 								    </select>
 								 </div>
-								 <div class="clearfix"></div>
 							</div>	
-							<div>
-								<label align="center">MONTH</label>
+							<div class="span6 cron-item">
+								<label class="cron-section-title" align="center">MONTH</label>
 								<div class="span5">
 									<label class="radio"><input type="radio" name="months" value="*" checked>Every Month</label>
 									<label class="radio"><input type="radio" name="months" value="2,4,6,8,10,12">Even Months</label>
@@ -285,10 +287,11 @@
 								        <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option><option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option><option value="7">Jul</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
 								      </select>
 							    </div>
-							    <div class="clearfix"></div>
 							</div>
-							<div>
-								<label align="center">WEEKDAYS</label>
+						</div>
+						<div class="row-fluid">
+							<div class="span6 cron-item">
+								<label class="cron-section-title" align="center">WEEKDAYS</label>
 								<div class="span5">
 									<label class="radio"><input type="radio" name="weekdays" value="*" checked>Every Day of the Week</label>
 								    <label class="radio"><input type="radio" name="weekdays" value="1-5">Non-Weekend Days (Mon-Fri)</label>
@@ -301,16 +304,15 @@
 										<option value="0">Sun</option><option value="1">Mon</option><option value="2">Tue</option><option value="3">Wed</option><option value="4">Thu</option><option value="5">Fri</option><option value="6">Sat</option>
 								      </select>
 								</div>
-								<div class="clearfix"></div>
-							</div>			
-							
-							<div>
-							<label align="center">PATH TO SCRIPT</label>
-							<input type="text" name="command" size="50" value="/this/that/notscript.php">
+							</div>										
+							<div class="span6 cron-item">
+								<label class="cron-section-title" align="center">PATH TO SCRIPT</label>
+								<input type="text" name="command" size="50" value="/this/that/notscript.php">
+								<button class="btn btn-large btn-primary btn-block" onClick="generatecron();return false;">Generate</button>
+								<code id="cron-code" style="margin-top: 20px;display:block;"></code>
 							</div>
-							<button class="btn btn-large btn-primary btn-block" onClick="generatecron();return false;">Generate</button>
+						</div>
 						</form>
-						<code id="cron-code"></code>
 					</div>
 				</div>
 				<div class="tab-pane" id="ask">
@@ -330,7 +332,8 @@
 
 </div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/passwordgenerator.js"></script>
 <script type="text/javascript" src="js/passphrase.js"></script>
 <script type="text/javascript" src="js/piglatin.js"></script>
