@@ -11,7 +11,7 @@ get_dns_hostname($ipaddr);
 
 if ($_GET['whois'] != null){
 $ip = $_GET['whois'];
-echo "Hopefully Coming Soon";
+echo "<pre>Hopefully Coming Soon</pre>";
 }
 
 if ($_GET['traceroute'] != null){
@@ -34,7 +34,7 @@ function get_dns_ip($hostname){
 
 function get_dns_hostname($ip){
    $host = gethostbyaddr($ip);
-   echo $host;
+   echo "<pre>$host</pre>";
 }
 
 function traceroute($target){
