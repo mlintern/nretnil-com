@@ -10,8 +10,8 @@ get_dns_hostname($ipaddr);
 }
 
 if ($_GET['whois'] != null){
-$ip = $_GET['whois'];
-echo "<pre>Hopefully Coming Soon</pre>";
+$target = $_GET['whois'];
+whois($target);
 }
 
 if ($_GET['traceroute'] != null){
@@ -39,6 +39,11 @@ function get_dns_hostname($ip){
 
 function traceroute($target){
 $output = shell_exec("/bin/traceroute $target");
+echo "<pre>$output</pre>";
+}
+
+function whois($target){
+$output = shell_exec("/usr/bin/whois $target");
 echo "<pre>$output</pre>";
 }
 ?>

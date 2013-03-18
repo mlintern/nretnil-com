@@ -28,9 +28,9 @@ function hostnamelookup(){
 }
 
 function whoislookup(){
-	var ipaddr = $("#whois-info").val();
+	var target = $("#whois-info").val();
 	
-	var url = '/php/dns.php?whois=' + ipaddr;
+	var url = '/php/dns.php?whois=' + target;
 	
 	$.get(url, function(data,status,xhr){
 		console.log(data);
