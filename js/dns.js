@@ -38,6 +38,17 @@ function whoislookup(){
 	},"html");
 }
 
+function traceroute(){
+	var target = $("#whois-info").val();
+	
+	var url = '/php/dns.php?traceroute=' + target;
+	
+	$.get(url, function(data,status,xhr){
+		console.log(data);
+		$('#traceroute-info-div').html(data);
+	},"html");
+}
+
 /*$.ajax({
   type:'GET',
   url: "http://icanhazip.com",
