@@ -14,6 +14,11 @@ $ip = $_GET['whois'];
 echo "Hopefully Coming Soon";
 }
 
+if ($_GET['traceroute'] != null){
+$target = $_GET['traceroute'];
+traceroute($target);
+}
+
 function get_dns_ip($hostname){
    $answer = dns_get_record($hostname);
    foreach ($answer as $value){
@@ -28,5 +33,10 @@ function get_dns_ip($hostname){
 function get_dns_hostname($ip){
    $host = gethostbyaddr($ip);
    echo $host;
+}
+
+function traceroute($target){
+$output = shell_exec("/usr/sbin/traceroute $target");
+echo "<pre>$output</pre>";
 }
 ?>
