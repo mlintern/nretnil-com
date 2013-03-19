@@ -39,6 +39,7 @@ function whoislookup(){
 }
 
 function traceroute(){
+	$('#tr-btn').button('loading');
 	var target = $("#traceroute-info").val();
 	
 	var url = '/php/dns.php?traceroute=' + target;
@@ -46,6 +47,7 @@ function traceroute(){
 	$.get(url, function(data,status,xhr){
 		console.log(data);
 		$('#traceroute-info-div').html(data);
+		$('#tr-btn').button('reset');
 	},"html");
 }
 

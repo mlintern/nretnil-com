@@ -111,7 +111,7 @@
 							<fieldset>
 				                <label>Trace Route</label>
 				                <input type="text" class="span12" value="" placeholder="Target..." id="traceroute-info">
-		                		<button class="btn btn-large btn-primary btn-block" onclick="traceroute();return false;">Lookup</button>
+		                		<button id="tr-btn" class="btn btn-large btn-primary btn-block" onclick="traceroute();return false;" data-loading-text="Loading...">Lookup</button>
 		                		<div style="margin-top:10px;" id="traceroute-info-div"></div>
 		                	</fieldset>
 		                </form>
