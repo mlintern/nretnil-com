@@ -105,12 +105,34 @@ function loremExecute(){
 	$('.ipsum').addClass('hidden');
 	
 	if ($("input:radio[name='typeoftext']:checked").val() == "paragraphs"){
-		$('.ipsum').lorem({ type: 'paragraphs',amount:$('#numpara').val() ,ptags:true});
+		if ($('#ptags').attr("checked")){
+			$('.ipsum').lorem({ type: 'paragraphs',amount:$('#numpara').val() ,ptags:true});
+		}else{
+			$('.ipsum').lorem({ type: 'paragraphs',amount:$('#numpara').val() ,ptags:false});
+		}
 		$('.ipsum').toggleClass('hidden');
-	}else{
+		$('.ipsum').focus();
+		$('.ipsum').select();
+	}else if ($("input:radio[name='typeoftext']:checked").val() == "words"){
 		console.log('words');
-		$('.ipsum').lorem({ type: 'words',amount:$('#numwords').val(),ptags:true});
+		if ($('#ptags').is(":checked")){
+			$('.ipsum').lorem({ type: 'words',amount:$('#numwords').val(),ptags:true});
+		}else{
+			$('.ipsum').lorem({ type: 'words',amount:$('#numwords').val(),ptags:false});
+		}
 		$('.ipsum').toggleClass('hidden');
+		$('.ipsum').focus();
+  		$('.ipsum').select();
+	}else{
+		console.log('characters');
+		if ($('#ptags').is(":checked")){
+			$('.ipsum').lorem({ type: 'characters',amount:$('#numchars').val(),ptags:true});
+		}else{
+			$('.ipsum').lorem({ type: 'characters',amount:$('#numchars').val(),ptags:false});
+		}
+		$('.ipsum').toggleClass('hidden');
+		$('.ipsum').focus();
+  		$('.ipsum').select();
 	}
 
 }

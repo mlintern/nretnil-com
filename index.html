@@ -151,7 +151,7 @@
 				  	<fieldset>
 						<label>Enter English Text to Translate:</label>
 						
-						<textarea id="taEng" class="span12" rows="7" name="taEng">Enter the English text here that you want translated into Pig Latin. This is accomplished via this HTML document and accompanying JavaScript program. Note that hyphenated words are treated as two words. Words may consist of alphabetic characters only (A-Z and a-z). All punctuation, numerals, symbols and whitespace are not modified.</textarea>
+						<textarea id="taEng" class="span12" rows="7" name="taEng">Enter the English text here that you want translated into Pig Latin.</textarea>
 						
 						<input class="btn btn-success span6" value="Translate" onclick="fTranslate()" type="button">
 						<input  class="btn btn-danger span6" value="Clear Text" onclick="fClearText()" type="button">
@@ -177,14 +177,21 @@
 							<label class="radio">
 								<input name="typeoftext" type="radio" value="words">Words
 							</label>
+							<input type="text" id="numchars" value="500"/>
+							<label class="radio">
+								<input name="typeoftext" type="radio" value="words">Characters
+							</label>
 							<input type="text" id="numpara" value="5"/>
 							<label class="radio">
 								<input name="typeoftext" type="radio" value="paragraphs" checked>Paragraphs
 							</label>
+							<label class="checkbox">
+								<input id="ptags" type="checkbox">Include &lt;p&gt; tags
+							</label>
 							<input class="btn btn-large btn-success span12" value="Create Text" onclick="loremExecute();return false;" type="button">
 						</fieldset>
 					</form>
-					<div class="span10 offset1 hidden ipsum"></div>	
+					<div class="span10 offset1"><textarea class="hidden ipsum span12" style="display:block; height: 300px;"></textarea></div>
 				</div>
 				<div class="tab-pane" id="human2unix">
 				  <form name="u2h" class="span5">
