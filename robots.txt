@@ -1,0 +1,7 @@
+# Make changes for all web spiders
+User-agent: *
+Disallow: /php
+Disallow: /img
+Disallow: /js
+Disallow: /less
+Disallow: /css
