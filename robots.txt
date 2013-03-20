@@ -5,3 +5,4 @@ Disallow: /img
 Disallow: /js
 Disallow: /less
 Disallow: /css
+Disallow: /bluevioletmuleinfluenceplayground
