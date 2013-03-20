@@ -29,6 +29,7 @@ function passphrase_gen()
         
     console.log(choices.join(" "));
     $("#passphrase_result").text(choices.join(" "));
+    $("#passphrase_result_nospace").text(choices.join(""));
 }
 
 passphrase_gen();
