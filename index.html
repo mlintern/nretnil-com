@@ -174,18 +174,24 @@
 				<div class="tab-pane" id="lorem">
 					<form class="span6 offset3">
 						<fieldset>
-							<input type="text" id="numwords" value="150"/>
-							<label class="radio">
+						<div class="row-fluid">
+							<label class="radio span4">
 								<input name="typeoftext" type="radio" value="words">Words
 							</label>
-							<input type="text" id="numchars" value="500"/>
-							<label class="radio">
+							<input class="span6" type="text" id="numwords" value="150"/>
+						</div>	
+						<div class="row-fluid">
+							<label class="radio span4">
 								<input name="typeoftext" type="radio" value="words">Characters
 							</label>
-							<input type="text" id="numpara" value="5"/>
-							<label class="radio">
+							<input class="span6" type="text" id="numchars" value="500"/>
+						</div>	
+						<div class="row-fluid">
+							<label class="radio span4">
 								<input name="typeoftext" type="radio" value="paragraphs" checked>Paragraphs
 							</label>
+							<input class="span6" type="text" id="numpara" value="5"/>
+						</div>
 							<label class="checkbox">
 								<input id="ptags" type="checkbox">Include &lt;p&gt; tags
 							</label>
