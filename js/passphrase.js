@@ -27,9 +27,12 @@ function passphrase_gen()
     var index = ((jsRandom ^ hash[4]) + 0x100000000) % nouns.length;
     choices.push(nouns[index]);
         
-    console.log(choices.join(" "));
-    $("#passphrase_result").text(choices.join(" "));
-    $("#passphrase_result_nospace").text(choices.join(""));
+    var phrase = choices.join(" ");
+    
+    console.log(phrase);
+    
+    $("#passphrase_result").text(phrase);
+	$("#passphrase_result_nospace").text(phrase.replace(/\s/g, ''));
 }
 
 passphrase_gen();
