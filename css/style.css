@@ -4,3 +4,7 @@ min-height: 200px;
 .cron-section-title{
 font-weight: bold;
 }
+/*FOOTER*/
+.footer-email{
+color:blue;
+}
