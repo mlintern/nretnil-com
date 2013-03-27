@@ -15,7 +15,8 @@ $(document).ready(function () {
         bs_pinButtonHeight = $('.pinimgload').outerHeight(true);
         $('.pinimgload').remove()
     });
-    ($('#bs_pinOnHover').html().toLowerCase() == '<a href="http://www.bloggersentral.com/2012/11/pinterest-pin-it-button-on-image-hover.html">pin it button on image hover</a>') ? hoverCheck() : alert("Pin It On Hover Widget: Please restore the backlink");
+    
+    //($('#bs_pinOnHover').html().toLowerCase() == '<a href="http://www.bloggersentral.com/2012/11/pinterest-pin-it-button-on-image-hover.html">pin it button on image hover</a>') ? hoverCheck() : alert("Pin It On Hover Widget: Please restore the backlink");
 
     function getButtonHTML(media, description, pinitURL) {
         $HTML = '<div class="pinit-wrapper" style="display:none;position: absolute;z-index: 9999; cursor: pointer;" ><a href="http://pinterest.com/pin/create/button/?url=' + pinitURL + '&media=' + media + '&description=' + description + '" style="display:block;outline:none;" target="_blank"><img class="pinimg" style="-moz-box-shadow:none;-webkit-box-shadow:none;-o-box-shadow:none;box-shadow:none;background:transparent;margin: 0;padding: 0;border:0;" src="' + bs_pinButtonURL + '" title="Grab this button from marks-mbs.blogspot.com" ></a></div>';
