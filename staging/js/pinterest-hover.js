@@ -4,6 +4,9 @@ $(document).ready(function () {
 	var bs_pinButtonPos = "center";
 	var bs_pinPrefix = "";
 	var bs_pinSuffix = "";
+	var imageSelector = ".post-body img";
+	var descriptionSelector = ".post-title";
+	var UrlSelector = ".post-title a";
 	
     $('body').append('<img class="pinimgload" src="' + bs_pinButtonURL + '" >');
     $('#bs_pinOnHover').hide();
@@ -17,17 +20,17 @@ $(document).ready(function () {
     });
 
     function getButtonHTML(media, description, pinitURL) {
-        $HTML = '<div class="pinit-wrapper" style="display:none;position: absolute;z-index: 9999; cursor: pointer;" ><a href="http://pinterest.com/pin/create/button/?url=' + pinitURL + '&media=' + media + '&description=' + description + '" style="display:block;outline:none;" target="_blank"><img class="pinimg" style="-moz-box-shadow:none;-webkit-box-shadow:none;-o-box-shadow:none;box-shadow:none;background:transparent;margin: 0;padding: 0;border:0;" src="' + bs_pinButtonURL + '" title="Grab this button from marks-mbs.blogspot.com" ></a></div>';
+        $HTML = '<div class="pinit-wrapper" style="display:none;position: absolute;z-index: 9999; cursor: pointer;" ><a href="http://pinterest.com/pin/create/button/?url=' + pinitURL + '&media=' + media + '&description=' + description + '" style="display:block;outline:none;" target="_blank"><img class="pinimg" style="-moz-box-shadow:none;-webkit-box-shadow:none;-o-box-shadow:none;box-shadow:none;background:transparent;margin: 0;padding: 0;border:0;" src="' + bs_pinButtonURL + '"></a></div>';
         return $HTML
     }
     function hoverCheck() {
-        $('.entry-content img,.post-body img').mouseenter(function () {
+        $(imageSelector).mouseenter(function () {
             $('.pinit-wrapper').css("visibility", "hidden");
             clearTimeout(bsButtonHover);
             $hoveredImg = $(this);
             media = $hoveredImg.prop('src');
-            description = $hoveredImg.closest('.post,.hentry').find('.post-title,.entry-title').text();
-            var pinitURL = $hoveredImg.closest('.post,.hentry').find('.post-title a,.entry-title a').attr('href');
+            description = $hoveredImg.closest('.post').find('.post-title').text();
+            var pinitURL = $hoveredImg.closest('.post').find('.post-title a').attr('href');
             if (pinitURL == undefined) {
                 pinitURL = $(location).attr('href')
             }
