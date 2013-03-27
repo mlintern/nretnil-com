@@ -1,4 +1,10 @@
 $(document).ready(function () {
+	
+	var bs_pinButtonURL = "http://dev.nretnil.com/staging/img/pinterest.png";
+	var bs_pinButtonPos = "center";
+	var bs_pinPrefix = "";
+	var bs_pinSuffix = "";
+	
     $('body').append('<img class="pinimgload" src="' + bs_pinButtonURL + '" >');
     $('#bs_pinOnHover').hide();
     var bsButtonHover;
