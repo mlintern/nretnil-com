@@ -1,6 +1,7 @@
 $(document).ready(function () {
 	
-	var bs_pinButtonURL = "http://dev.nretnil.com/staging/img/pinterest.png";
+	//var bs_pinButtonURL = "http://dev.nretnil.com/staging/img/pinterest.png";
+	var bs_pinButtonURL = "http://3.bp.blogspot.com/-y3xzTGiGzH0/UK4XOaUpdaI/AAAAAAAADw8/Z1MH4Jr4Efo/s1600/pinterestx1_72.png";
 	var bs_pinButtonPos = "center";
 	var bs_pinPrefix = "";
 	var bs_pinSuffix = "";
