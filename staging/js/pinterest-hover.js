@@ -6,7 +6,7 @@ $(document).ready(function () {
 	var bs_pinSuffix = "";
 	var imageSelector = ".post-body img";
 	var descriptionSelector = ".post-title";
-	var UrlSelector = ".post-title a";
+	var urlSelector = ".post-title a";
 	
     $('body').append('<img class="pinimgload" src="' + bs_pinButtonURL + '" >');
     $('#bs_pinOnHover').hide();
@@ -29,8 +29,8 @@ $(document).ready(function () {
             clearTimeout(bsButtonHover);
             $hoveredImg = $(this);
             media = $hoveredImg.prop('src');
-            description = $hoveredImg.closest('.post').find('.post-title').text();
-            var pinitURL = $hoveredImg.closest('.post').find('.post-title a').attr('href');
+            description = $hoveredImg.closest('.post').find(descriptionSelector).text();
+            var pinitURL = $hoveredImg.closest('.post').find(urlSelector).attr('href');
             if (pinitURL == undefined) {
                 pinitURL = $(location).attr('href')
             }
@@ -71,7 +71,7 @@ $(document).ready(function () {
                 $(this).show()
             })
         });
-        $('.entry-content img,.post-body img').on('mouseleave', function () {
+        $(imageSelector).on('mouseleave', function () {
             if ($.browser.msie) {
                 $targetIE1 = $(this).next('.pinit-wrapper');
                 $targetIE2 = $(this).parent('a').next('.pinit-wrapper');
