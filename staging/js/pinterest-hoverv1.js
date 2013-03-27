@@ -1,10 +1,4 @@
 $(document).ready(function () {
-	
-	var bs_pinButtonURL = "http://dev.nretnil.com/staging/img/pinterest.png";
-	var bs_pinButtonPos = "center";
-	var bs_pinPrefix = "";
-	var bs_pinSuffix = "";
-
     $('body').append('<img class="pinimgload" src="' + bs_pinButtonURL + '" >');
     $('#bs_pinOnHover').hide();
     var bsButtonHover;
@@ -15,7 +9,6 @@ $(document).ready(function () {
         bs_pinButtonHeight = $('.pinimgload').outerHeight(true);
         $('.pinimgload').remove()
     });
-    
     ($('#bs_pinOnHover').html().toLowerCase() == '<a href="http://www.bloggersentral.com/2012/11/pinterest-pin-it-button-on-image-hover.html">pin it button on image hover</a>') ? hoverCheck() : alert("Pin It On Hover Widget: Please restore the backlink");
 
     function getButtonHTML(media, description, pinitURL) {
