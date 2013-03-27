@@ -1,0 +1,225 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<p>
+	<img alt="Thank You for Choosing Simonton" src="https://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/405ebe56-8e2d-4bca-a22d-8aa0f2599ebb/Image/9423547a6143834c1e15220816b245b9/thank_you_for_choosing.png" style="margin-left: 60px; margin-right: 60px; width: 500px; height: 159px; " /></p>
+<div id="form_container">
+	<style type="text/css">
+#form_container {
+width: 550px;
+margin: 15px 45px;
+padding: 10px;
+background-color: #999;
+border: solid 2px black;
+}
+#form_container label {
+	width:130px;
+	float:left;
+	text-align: right;
+	padding-right: 10px;
+} 
+#form_container .form_item{
+	margin: 0;
+	padding: 5px;
+}
+#form_container a{
+	color: #3C3D3C;
+}
+#form_container .form_item input{
+	border: solid 1px #000;
+	background: #fffcf6;
+}
+#form_container .form_item button {
+	margin-left:140px;
+	margin-top: 10px;
+	height:auto;
+	font-size: 13px;
+}
+iiframe.fb_connect_frame, #cb_connect {
+    border: 0 none;
+    height: 60px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 80px;
+}
+#cb_connect {
+	float: right;
+*bottom:0px;
+*top:-12px !important;
+}
+iframe.fb_connect_frame, #cb_connect {
+    bottom: 0;
+    position: relative;
+    top: 15px;
+}
+#form_item_name {
+	width: 400px;
+}	</style>
+	<form action="https://www.compendiumblog.com/app/posts/webtopost" enctype="multipart/form-data" id="cb_web_to_post" method="post">
+		<input name="BlogKey" type="hidden" value="FxCH1E70RcTXrz9NSpOXUAzgV5bqJdEGCEl4Ut5tHN0SIM2sILDwSGBkMm0SAavBU11V/1TMpLxqzdOFF7n0TA==" /> <input name="RetUrl" type="hidden" value="http://blog.simonton.com/blog/landing-pages/thank-you" />
+		<div class="form_item">
+			<label for="DataField_Product">Product </label> <select id="DataField_Product" name="DataField[Product]" type="select-one" value=""><option selected="selected" value="Please Select Your Product">Please Select Your Product</option><option value="Simonton Reflections">Simonton Reflections</option><option value="Simonton Impressions">Simonton Impressions</option><option value="Prism by Simonton">Prism by Simonton</option><option value="Asure">Asure</option><option value="VantagePointe by Simonton">VantagePointe by Simonton</option><option value="Simonton ProFinish">Simonton ProFinish</option><option value="Simonton ProFinish Brickmould 600/300">Simonton ProFinish Brickmould 600/300</option><option value="Simonton StormBreaker Plus">Simonton StormBreaker Plus</option><option value="Simonton DaylightMax">Simonton DaylightMax</option><option value="Simonton Madeira">Simonton Madeira</option><option value="Lumera (patio doors)">Lumera (patio doors)</option><option value="Verona by Simonton">Verona by Simonton</option></select></div>
+		<div class="form_item" id="form_item_name">
+			<div id="cb_connect">
+				&nbsp;</div>
+			<label for="DataField_Name">*Name </label> <input id="DataField_Name" name="DataField[Name]" type="text" value="" /></div>
+		<div class="form_item">
+			<label for="DataField_Email">*Email </label> <input id="DataField_Email" name="DataField[Email]" type="text" value="" /></div>
+		<!-- <div class="form_item">
+			<label for="HiddenField_EmailAddress">E-mail </label>
+			<input id="HiddenField_EmailAddress" type="text" name="HiddenField[EmailAddress]" value="">
+			<div><label>&nbsp;</label><input name="Settings[Notify]" type="checkbox" checked="checked" value="yes"> Notify me when my story goes live</div>
+		</div> -->
+		<div class="form_item">
+			<label for="DataField_City">*City </label> <input id="DataField_City" name="DataField[City]" type="text" value="" /></div>
+		<div class="form_item">
+			<label for="DataField_State">*State </label> <input id="DataField_State" name="DataField[State]" type="text" value="" /></div>
+		<div class="form_item">
+			<label for="DataField_Zip">*Zip </label> <input id="DataField_State" name="DataField[Zip]" type="text" value="" /></div>
+		<div class="form_item">
+			<label for="Title">Project Title </label> <input id="Title" name="Title" size="30" type="text" value="" /></div>
+		<div class="form_item">
+			<label for="Body">Share Your Story </label><textarea cols="100" id="Body" name="Body" rows="10" style="width: 300px"></textarea></div>
+		<div id="image_fields">
+			<div class="form_item">
+				<label for="UserFiles_0">Photos of Your Home </label> <input id="UserFiles" name="UserFiles[0]" type="file" /></div>
+		</div>
+		<br />
+		<div class="form_item" id="add_another_image_link">
+			<label>&nbsp;</label><a href="#">[+] Add another image</a></div>
+			<div class="clear"></div>
+				<div class="QapTcha"></div>
+		<script src="http://www.compendiumblog.com/js/w2p.js" type="text/javascript"></script></form>
+</div>
+
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+<style>
+/*****************/
+/** QapTcha CSS **/
+/*****************/
+.QapTcha {
+margin:0px auto 5px auto;
+width:252px;
+}
+.QapTcha .clr{
+clear:both;
+}
+.QapTcha .bgSlider {
+width:252px;
+height:25px;
+float:left;
+border:1px solid #040404;
+background-color: #000;
+}
+.QapTcha .Slider {
+width:34px;
+height:25px;
+background:transparent url('http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/36fa1b7c-3afe-4afb-940c-ac2ceefcc527/Image/9a11812125f3461de5c57bd5d71b3736/bg_qaptcha_arrow.jpg') no-repeat;
+cursor:e-resize;
+position:relative;
+top:0;
+left:0;
+}
+.QapTcha .TxtStatus {
+width:252px;
+margin-top:7px;
+text-align:left;
+color:#bb2828;
+font-family:Verdana;
+font-size:10px;
+clear:both;
+}
+.QapTcha .dropSuccess {
+color:#4e8b37;
+}
+.QapTcha .dropError {
+color:#bb2828;
+}
+</style>
+
+
+<script>
+jQuery.QapTcha = {
+	build : function(options)
+	{
+        var defaults = {
+			txtLock : 'Locked : form can\'t be submited',
+			txtUnlock : 'Unlocked : form can be submited',
+			disabledSubmit : true,
+			autoRevert : true,
+			PHPfile : 'php/Qaptcha.jquery.php',
+			autoSubmit : false
+        };
+
+		if(this.length>0)
+		return jQuery(this).each(function(i) {
+			/** Vars **/
+			var
+				opts = $.extend(defaults, options),
+				$this = $(this),
+				form = $('form').has($this),
+				Clr = jQuery('<div>',{'class':'clr'}),
+				bgSlider = jQuery('<div>',{'class':'bgSlider'}),
+				Slider = jQuery('<div>',{'class':'Slider'}),
+				TxtStatus = jQuery('<div>',{'class':' TxtStatus dropError',text:opts.txtLock}),
+				inputQapTcha = jQuery('<input>',{name:generatePass(32),value:generatePass(7),type:'hidden'});
+
+			/** Construct DOM **/
+			bgSlider.appendTo($this);
+			Clr.insertAfter(bgSlider);
+			TxtStatus.insertAfter(Clr);
+			inputQapTcha.appendTo($this);
+			Slider.appendTo(bgSlider);
+			$this.show();
+
+			Slider.draggable({
+				revert: function(){
+					if(opts.autoRevert)
+					{
+						if(parseInt(Slider.css("left")) > (bgSlider.width()-Slider.width()-2)) return false;
+						else return true;
+					}
+				},
+				containment: bgSlider,
+				axis:'x',
+				stop: function(event,ui){
+					if(ui.position.left > (bgSlider.width()-Slider.width()-2))
+						{
+						Slider.draggable('disable').css('cursor','default');
+						inputQapTcha.val('');
+						TxtStatus.text(opts.txtUnlock).addClass('dropSuccess').removeClass('dropError');
+						
+						$('<div>').attr({
+						    id: 'wtp-submit',
+						    style: 'margin:0 auto;width:110px;',
+						    class: 'form_item'
+						})
+						.append(
+						$('<input>').attr({
+						    name: 'Submit',
+						    type: 'submit',
+						    value: 'Share your Story'
+						})).appendTo('form');
+						
+						$('.QapTcha').hide();
+						}
+				}
+			});
+
+			function generatePass(nb) {
+		        var chars = 'azertyupqsdfghjkmwxcvbn23456789AZERTYUPQSDFGHJKMWXCVBN_-#@';
+		        var pass = '';
+		        for(i=0;i<nb;i++){
+		            var wpos = Math.round(Math.random()*chars.length);
+		            pass += chars.substring(wpos,wpos+1);
+		        }
+		        return pass;
+		    }
+
+		});
+	}
+}; jQuery.fn.QapTcha = jQuery.QapTcha.build;
+
+$(document).ready(function(){
+    $('.QapTcha').QapTcha();
+  });
+</script>
