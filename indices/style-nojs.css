@@ -176,5 +176,6 @@ td:first-child + td + td + td + td {
 }
 
 address{
+display:none;
 text-align: center;
 }

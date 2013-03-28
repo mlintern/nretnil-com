@@ -167,5 +167,6 @@ th a {
 }
 
 address{
+display: none;
 text-align: center;
 }
