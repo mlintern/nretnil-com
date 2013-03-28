@@ -21,12 +21,6 @@
     //       hidden "description" column and "parent directory" row
     $use_js = true;
 
-    // show_readme
-    //   If true, the contents of an (optional) readme.html file will appear before
-    //   the directory listing.  This file should be an HTML snippet; no head/body/etc
-    //   tags.  You can do paragraph tags or whatever.
-    $show_readme = false;
-
     // titleformat
     //   How to format the <title> tag.  %DIR is replaced with the directory path.
     // for instance:
@@ -74,18 +68,6 @@
 
         $logohtml = "<div class='logohtml'>$logohtml</div>";
     }
-
-    // this is hacky, but in almost every situation there's no real harm.
-    // it just might fail if you're doing something funky with directory mappings.
-    $readmetext = "";
-    $pathtext = "";
-    $readmefile = $_SERVER["DOCUMENT_ROOT"] . $uri . "/readme.html";
-    if ($show_readme && file_exists($readmefile)) {
-        $readmetext = "<div class='readme'>" . file_get_contents($readmefile) . "</div>";
-    } else {
-        // If no readme, show URI.
-	$pathtext = "<div class='path'>$uri</div>";
-    }
 ?>
 
 <html>
@@ -116,7 +98,6 @@
         <div class='header'>
             <?php print $logohtml; ?>
             <?php print $pathtext; ?>
-            <?php print $readmetext; ?>
         </div>
 </div>
 </body>
