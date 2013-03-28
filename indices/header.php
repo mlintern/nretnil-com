@@ -92,15 +92,13 @@
 	$pathtext = "<div class='path'>$uri</div>";
     }
 ?>
-
-<!DOCTYPE HTML>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title><?php $titletext ?></title>
+    <title><?=$titletext?></title>
 
     <style type="text/css">
     <!--
-        <?php $csstext ?>
+        <?=$csstext?>
     -->
     </style>
 
@@ -110,18 +108,17 @@
     -->
     </script>
 </head>
+
 <body>
     <div id="pagecontainer">
         <script>
         <!--
-        <?php $pcjstext ?>
+        <?=$pcjstext?>
         -->
         </script>
 
         <div class='header'>
-            <?php $logohtml ?>
-            <?php $pathtext ?>
-            <?php $readmetext ?>
+            <?=$logohtml?>
+            <?=$pathtext?>
+            <?=$readmetext?>
         </div>
-</body>
-</html
