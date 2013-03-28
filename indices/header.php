@@ -92,19 +92,21 @@
 	$pathtext = "<div class='path'>$uri</div>";
     }
 ?>
+
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title><?php $titletext ?></title>
+    <title><?php print $titletext; ?></title>
 
     <style type="text/css">
     <!--
-        <?php $csstext ?>
+        <?php print $csstext; ?>
     -->
     </style>
 
     <script type="text/javascript">
     <!--
-        <?php $jstext ?>
+        <?php print $jstext; ?>
     -->
     </script>
 </head>
@@ -113,18 +115,15 @@
     <div id="pagecontainer">
         <script>
         <!--
-        <?php $pcjstext ?>
+        <?php print $pcjstext; ?>
         -->
         </script>
 
         <div class='header'>
-            <?php $logohtml ?>
-            <?=$pathtext?>
-            <?=$readmetext?>
+            <?php print $logohtml; ?>
+            <?php print $pathtext; ?>
+            <?php print $readmetext; ?>
         </div>
-    <div class="credits">
-        <a href="http://antisleep.com/software/indices">Indices</a> 1.1
-    </div>
 </div>
 </body>
 </html>
