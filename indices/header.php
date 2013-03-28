@@ -30,7 +30,7 @@
     //   If true, the contents of an (optional) readme.html file will appear before
     //   the directory listing.  This file should be an HTML snippet; no head/body/etc
     //   tags.  You can do paragraph tags or whatever.
-    $show_readme = true;
+    $show_readme = false;
 
     // titleformat
     //   How to format the <title> tag.  %DIR is replaced with the directory path.
@@ -45,8 +45,8 @@
     // for instance:
     //  $logoimageurl = "/images/titlebar-small.gif";
     //  $logolink     = "http://antisleep.com/";
-    $logoimageurl = "";
-    $logolink     = "";
+    $logoimageurl = "/img/sig.png";
+    $logolink     = "http://www.nretnil.com";
 
     //=======================================================================
     // (end of config)
@@ -92,13 +92,15 @@
 	$pathtext = "<div class='path'>$uri</div>";
     }
 ?>
-<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!DOCTYPE HTML>
+<html>
 <head>
-    <title><?=$titletext?></title>
+    <title><?php $titletext ?></title>
 
     <style type="text/css">
     <!--
-        <?=$csstext?>
+        <?php $csstext ?>
     -->
     </style>
 
@@ -108,17 +110,18 @@
     -->
     </script>
 </head>
-
 <body>
     <div id="pagecontainer">
         <script>
         <!--
-        <?=$pcjstext?>
+        <?php $pcjstext ?>
         -->
         </script>
 
         <div class='header'>
-            <?=$logohtml?>
-            <?=$pathtext?>
-            <?=$readmetext?>
+            <?php $logohtml ?>
+            <?php $pathtext ?>
+            <?php $readmetext ?>
         </div>
+</body>
+</html
