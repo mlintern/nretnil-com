@@ -68,6 +68,8 @@
 
         $logohtml = "<div class='logohtml'>$logohtml</div>";
     }
+    
+    $pathtext = "<div class='path'>$uri</div>";
 ?>
 
 <html>
