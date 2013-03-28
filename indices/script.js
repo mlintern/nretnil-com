@@ -1,7 +1,5 @@
 // This script cruises the DOM of Apache's XHTML / HTMLTable
 // directory output, and injects useful class names throughout.
-//
-// It's part of Indices: http://antisleep.com/software/indices
 
 function init() {
     var tablerows = document.getElementsByTagName("tr");
