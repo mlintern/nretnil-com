@@ -104,7 +104,7 @@
 
     <script type="text/javascript">
     <!--
-        <?=$jstext?>
+        <?php $jstext ?>
     -->
     </script>
 </head>
@@ -113,7 +113,7 @@
     <div id="pagecontainer">
         <script>
         <!--
-        <?=$pcjstext?>
+        <?php $pcjstext ?>
         -->
         </script>
 
@@ -122,3 +122,9 @@
             <?=$pathtext?>
             <?=$readmetext?>
         </div>
+    <div class="credits">
+        <a href="http://antisleep.com/software/indices">Indices</a> 1.1
+    </div>
+</div>
+</body>
+</html>
