@@ -45,7 +45,7 @@
     // for instance:
     //  $logoimageurl = "/images/titlebar-small.gif";
     //  $logolink     = "http://antisleep.com/";
-    $logoimageurl = "/img/sig.png";
+    $logoimageurl = "http://dev.nretnil.com/img/sig.png";
     $logolink     = "http://www.nretnil.com";
 
     //=======================================================================
@@ -94,11 +94,11 @@
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title><?=$titletext?></title>
+    <title><?php $titletext ?></title>
 
     <style type="text/css">
     <!--
-        <?=$csstext?>
+        <?php $csstext ?>
     -->
     </style>
 
@@ -118,7 +118,7 @@
         </script>
 
         <div class='header'>
-            <?=$logohtml?>
+            <?php $logohtml ?>
             <?=$pathtext?>
             <?=$readmetext?>
         </div>
