@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Online JavaScript Beautifier</title>
+
+<link rel="icon" href="favicon.png" type="image/png">
+<script src="js/codemirror2/codemirror.js"></script>
+<script src="js/codemirror2/javascript.js"></script>
+<link rel="stylesheet" href="css/codemirror.css">
+<link rel="stylesheet" href="css/jsb-style.css">
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.cookie.js"></script>
+
+
+<script src="js/beautify.js"></script>
+<script src="js/beautify-css.js"></script>
+<script src="js/beautify-html.js"></script>
+<script src="js/tests/sanitytest.js"></script>
+<script src="js/tests/beautify-tests.js"></script>
+<script src="js/unpackers/javascriptobfuscator_unpacker.js"></script>
+<script src="js/unpackers/urlencode_unpacker.js"></script>
+<script src="js/unpackers/p_a_c_k_e_r_unpacker.js"></script>
+<script src="js/unpackers/myobfuscate_unpacker.js"></script>
+<script src="js/onpage.js"></script>
+
+</head>
+<body>
+
+    <table id="options">
+        <tr>
+          <td>
+          <select name="tabsize" id="tabsize">
+            <option value="1">indent with a tab character</option>
+            <option value="2">indent with 2 spaces</option>
+            <option value="3">indent with 3 spaces</option>
+            <option value="4">indent with 4 spaces</option>
+            <option value="8">indent with 8 spaces</option>
+          </select><br>
+
+          <select name="wrap-line-length" id="wrap-line-length">
+            <option value="0">Do not wrap lines</option>
+            <option value="40">Wrap lines near 40 characters</option>
+            <option value="70">Wrap lines near 70 characters</option>
+            <option value="80">Wrap lines near 80 characters</option>
+            <option value="110">Wrap lines near 110 characters</option>
+            <option value="120">Wrap lines near 120 characters</option>
+            <option value="160">Wrap lines near 160 characters</option>
+          </select><br>
+
+          <select id="brace-style">
+            <option value="collapse">Braces with control statement</option>
+            <option value="expand">Braces on own line</option>
+            <option value="end-expand">End braces on own line</option>
+            <!-- option value="expand-strict">Braces always on own line (not recommended)</option -->
+          </select>
+
+          <p style="margin:6px 0 0 0">HTML &lt;style&gt;, &lt;script&gt; formatting:</p><select id="indent-scripts">
+            <option value="keep">Keep indent level of the tag</option>
+            <option value="normal">Add one indent level</option>
+            <option value="separate">Separate indentation</option>
+          </select>
+
+        </td><td>
+
+          <input class="checkbox" type="checkbox" id="preserve-newlines"><label for="preserve-newlines"> Preserve empty lines?</label><br>
+          <input class="checkbox" type="checkbox" id="detect-packers"><label for="detect-packers"> Detect packers and obfuscators?</label><br>
+          <input class="checkbox" type="checkbox" id="keep-array-indentation"><label for="keep-array-indentation"> Keep array indentation?</label><br>
+          <input class="checkbox" type="checkbox" id="break-chained-methods"><label for="break-chained-methods"> Break lines on chained methods?</label><br>
+          <input class="checkbox" type="checkbox" id="space-before-conditional"><label for="space-before-conditional"> Space before conditional: "if(x)" / "if (x)"</label><br>
+          <input class="checkbox" type="checkbox" id="unescape-strings"><label for="unescape-strings"> Unescape printable chars encoded as \xNN or \uNNNN?</label>
+          <br><a href="index.html?without-codemirror" class="turn-off-codemirror">Use a simple textarea for code input?</a>
+
+
+        </td></tr>
+    </table>
+
+    <button id="submit"><strong>Beautify JavaScript or HTML</strong> <em>(ctrl-enter)</em></button>
+    <textarea id="source" rows="30" cols="160"></textarea>
+
+    <p style="text-align:right">
+    <a href="index.html#" style="color: #ccc; border-bottom: 1px dashed #ccc; text-decoration: none;" onclick="run_tests(); return false;">Run the tests</a>
+    </p>
+
+    </div>
+    <div id="testresults"></div>
+</body>
+</html>
