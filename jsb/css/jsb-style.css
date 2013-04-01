@@ -1,29 +1,7 @@
-body {
-    background: #eee;
-    color: #333;
-}
 
-img {
-    border: 0;
-}
-
-a.self { font-weight: bold; text-decoration: none; color: #444; border-bottom: 1px solid #aaa }
-
-p, select, label, .blurb, a.turn-off-codemirror {
-    font:13px/1.231 arial, sans-serif;
-    *font-size:small;
-}
 
 a.turn-off-codemirror {
     margin-left: 25px;
-}
-
-button#submit {
-    clear: both;
-    margin-top: 5px;
-    width: 100%;
-    padding: 10px 0;
-    cursor: pointer;
 }
 
 #source {
@@ -32,49 +10,16 @@ button#submit {
     padding-right: 0;
 }
 
-button#submit em {
-    font-size: 11px;
-    font-style: normal;
-    color: #999;
-}
-
 label {
     cursor: pointer;
 }
 
 select {
-    width: 220px;
+    width: 250px;
 }
-
-table#options {
-    float: right;
-}
-table#options td {
-    vertical-align: top;
-    padding-left: 10px;
-}
-
-#about p {
-    margin: 0 6px 6px 0;
-}
-
-li {
-    line-height: 150%;
-}
-li.writeme {
-    padding-top: 8px;
-}
-
-
-#testresults {
-    display: none;
-    font-family: monaco, "lucida console", "courier new", monospace;
-}
-
 .CodeMirror {
     border: 1px solid #ccc;
     margin-bottom: 6px;
-    background: white;
 }
 .CodeMirror-scroll {
   min-height: 400px;
@@ -83,16 +28,4 @@ li.writeme {
   overflow-y: hidden;
   overflow-x: auto;
   width: 100%
-}
-p {
-    margin-left: 40px;
-    margin-right: 40px;
-}
-a {
-    white-space: nowrap;
-    color: #36d;
-}
-.contributor-sep {
-    border-top: 1px solid #ccc;
-    padding-top: 8px;
 }
