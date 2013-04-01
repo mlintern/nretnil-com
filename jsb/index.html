@@ -4,15 +4,17 @@
 <meta charset="utf-8">
 <title>Online JavaScript Beautifier</title>
 
-<link rel="icon" href="favicon.png" type="image/png">
 <script src="js/codemirror2/codemirror.js"></script>
 <script src="js/codemirror2/javascript.js"></script>
 <link rel="stylesheet" href="css/codemirror.css">
+<link type="text/css" href="../css/bootstrap.css" rel="stylesheet">
+<link type="text/css" href="../css/responsive.css" rel="stylesheet">
 <link rel="stylesheet" href="css/jsb-style.css">
+
+
 
 <script src="js/jquery.js"></script>
 <script src="js/jquery.cookie.js"></script>
-
 
 <script src="js/beautify.js"></script>
 <script src="js/beautify-css.js"></script>
@@ -27,56 +29,79 @@
 
 </head>
 <body>
+<div class="container">
 
-    <table id="options">
-        <tr>
-          <td>
-          <select name="tabsize" id="tabsize">
-            <option value="1">indent with a tab character</option>
-            <option value="2">indent with 2 spaces</option>
-            <option value="3">indent with 3 spaces</option>
-            <option value="4">indent with 4 spaces</option>
-            <option value="8">indent with 8 spaces</option>
-          </select><br>
+<div class="row-fluid">
+	<div class="span12 page-header">
+		<h1 class="text-center">Nretnil Tools</h1>
+	</div>
+</div>
 
-          <select name="wrap-line-length" id="wrap-line-length">
-            <option value="0">Do not wrap lines</option>
-            <option value="40">Wrap lines near 40 characters</option>
-            <option value="70">Wrap lines near 70 characters</option>
-            <option value="80">Wrap lines near 80 characters</option>
-            <option value="110">Wrap lines near 110 characters</option>
-            <option value="120">Wrap lines near 120 characters</option>
-            <option value="160">Wrap lines near 160 characters</option>
-          </select><br>
+<div class="row-fluid">
+	<div class="navbar span12">
+		<div class="navbar-inner">
+			<a class="brand" href="/">Tools</a>
+			<ul class="nav">
+				<li class="divider-vertical"></li>
+				<li><a href="map/index.html">Maps</a></li>
+				<li class="divider-vertical"></li>
+				<li><a href="jsb/index.html">JS Beautify</a></li>
+				<li class="divider-vertical"></li>
+				<li><a href="staging">Staging</a></li>
+				<li class="divider-vertical"></li>
+			</ul>
+		</div>
+	</div>
+</div>
 
-          <select id="brace-style">
-            <option value="collapse">Braces with control statement</option>
-            <option value="expand">Braces on own line</option>
-            <option value="end-expand">End braces on own line</option>
-            <!-- option value="expand-strict">Braces always on own line (not recommended)</option -->
-          </select>
-
-          <p style="margin:6px 0 0 0">HTML &lt;style&gt;, &lt;script&gt; formatting:</p><select id="indent-scripts">
-            <option value="keep">Keep indent level of the tag</option>
-            <option value="normal">Add one indent level</option>
-            <option value="separate">Separate indentation</option>
-          </select>
-
-        </td><td>
-
-          <input class="checkbox" type="checkbox" id="preserve-newlines"><label for="preserve-newlines"> Preserve empty lines?</label><br>
-          <input class="checkbox" type="checkbox" id="detect-packers"><label for="detect-packers"> Detect packers and obfuscators?</label><br>
-          <input class="checkbox" type="checkbox" id="keep-array-indentation"><label for="keep-array-indentation"> Keep array indentation?</label><br>
-          <input class="checkbox" type="checkbox" id="break-chained-methods"><label for="break-chained-methods"> Break lines on chained methods?</label><br>
-          <input class="checkbox" type="checkbox" id="space-before-conditional"><label for="space-before-conditional"> Space before conditional: "if(x)" / "if (x)"</label><br>
-          <input class="checkbox" type="checkbox" id="unescape-strings"><label for="unescape-strings"> Unescape printable chars encoded as \xNN or \uNNNN?</label>
-          <br><a href="index.html?without-codemirror" class="turn-off-codemirror">Use a simple textarea for code input?</a>
-
-
-        </td></tr>
-    </table>
-
-    <button id="submit"><strong>Beautify JavaScript or HTML</strong> <em>(ctrl-enter)</em></button>
+<div class="row-fluid">
+	<div class="span3 offset3">
+	          <select name="tabsize" id="tabsize">
+	            <option value="1">indent with a tab character</option>
+	            <option value="2">indent with 2 spaces</option>
+	            <option value="3">indent with 3 spaces</option>
+	            <option value="4">indent with 4 spaces</option>
+	            <option value="8">indent with 8 spaces</option>
+	          </select>
+	
+	          <select name="wrap-line-length" id="wrap-line-length">
+	            <option value="0">Do not wrap lines</option>
+	            <option value="40">Wrap lines near 40 characters</option>
+	            <option value="70">Wrap lines near 70 characters</option>
+	            <option value="80">Wrap lines near 80 characters</option>
+	            <option value="110">Wrap lines near 110 characters</option>
+	            <option value="120">Wrap lines near 120 characters</option>
+	            <option value="160">Wrap lines near 160 characters</option>
+	          </select>
+	
+	          <select id="brace-style">
+	            <option value="collapse">Braces with control statement</option>
+	            <option value="expand">Braces on own line</option>
+	            <option value="end-expand">End braces on own line</option>
+	            <!-- option value="expand-strict">Braces always on own line (not recommended)</option -->
+	          </select>
+	
+	          <p style="margin:6px 0 0 0">HTML &lt;style&gt;, &lt;script&gt; formatting:</p>
+	          <select id="indent-scripts">
+	            <option value="keep">Keep indent level of the tag</option>
+	            <option value="normal">Add one indent level</option>
+	            <option value="separate">Separate indentation</option>
+	          </select>
+	
+	</div>
+	<div class="span6">
+	
+	          <label class="checkbox"><input class="checkbox" type="checkbox" id="preserve-newlines"> Preserve empty lines?</label>
+	          <label class="checkbox"><input class="checkbox" type="checkbox" id="detect-packers"> Detect packers and obfuscators?</label>
+	          <label class="checkbox"><input class="checkbox" type="checkbox" id="keep-array-indentation"> Keep array indentation?</label>
+	          <label class="checkbox"><input class="checkbox" type="checkbox" id="break-chained-methods"> Break lines on chained methods?</label>
+	          <label class="checkbox"><input class="checkbox" type="checkbox" id="space-before-conditional"> Space before conditional: "if(x)" / "if (x)"</label>
+	          <label class="checkbox"><input class="checkbox" type="checkbox" id="unescape-strings"> Unescape printable chars encoded as \xNN or \uNNNN?</label>
+	          <a href="index.html?without-codemirror" class="turn-off-codemirror">Use a simple textarea for code input?</a>
+	</div>
+</div>
+<div class="row-fluid">
+    <button  class="btn-block btn btn-primary btn-large" id="submit"><strong>Beautify JavaScript or HTML</strong> <em>(ctrl-enter)</em></button>
     <textarea id="source" rows="30" cols="160"></textarea>
 
     <p style="text-align:right">
@@ -85,5 +110,11 @@
 
     </div>
     <div id="testresults"></div>
+</div>    
+</div>   
+</div>
+
+<script type="text/javascript" src="../js/bootstrap.js"></script>
+
 </body>
 </html>
