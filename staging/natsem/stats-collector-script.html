@@ -61,31 +61,40 @@ $(document).ready(function () {
 
 <div class="container">
 	<div class="row-fluid">
-		<div class="span3">
+		<div class="span12 page-header">
+			<h1 class="text-center">Stats Test</h1>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="span6  offset3">
 			<form>
-				<label>Order Tracking Number</label>
-				<input id="otn" type="text" value="1234567890"/>
-				<label>User ID</label>
-				<input id="uid" type="text" value="0987654321"/>
-				<label>Categories</label>
-				<input id="category" type="text" value="Training Trainers"/>
-				<label>Author</label>
-				<input id="author" type="text" value="John Smith"/>
-				<label>Title</label>
-				<input id="title" type="text" value="7 Ways to Send Data"/>
-				<label>Action</label>
-				<select id="action" type="text">
-					<option value="Read">Read</option>
-					<option value="Comment">Comment</option>
-				</select>
-				<label>Detail</label>
-				<input id="detail" type="text" value="http://community.mystar12.com/7-ways-to-send-data"/>
-				<label>Origin</label>
-				<select id="origin" type="text">
-					<option value="Organic">Organic</option>
-					<option value="Natsem">NatSem</option>
-					<option value="MyStar12">MyStar12</option>
-				</select>
+				<div class="span6">
+					<label>Order Tracking Number</label>
+					<input id="otn" type="text" value="1234567890"/>
+					<label>User ID</label>
+					<input id="uid" type="text" value="0987654321"/>
+					<label>Categories</label>
+					<input id="category" type="text" value="Training Trainers"/>
+					<label>Author</label>
+					<input id="author" type="text" value="John Smith"/>
+				</div>
+				<div class="span6">
+					<label>Title</label>
+					<input id="title" type="text" value="7 Ways to Send Data"/>
+					<label>Action</label>
+					<select id="action" type="text">
+						<option value="Read">Read</option>
+						<option value="Comment">Comment</option>
+					</select>
+					<label>Detail</label>
+					<input id="detail" type="text" value="http://community.mystar12.com/7-ways-to-send-data"/>
+					<label>Origin</label>
+					<select id="origin" type="text">
+						<option value="Organic">Organic</option>
+						<option value="Natsem">NatSem</option>
+						<option value="MyStar12">MyStar12</option>
+					</select>
+				</div>
 			</form>
 			<button id="go" class="btn btn-primary btn-block">Send</button>
 		</div>
