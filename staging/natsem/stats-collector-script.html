@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link type="text/css" href="http://www.nretnil.com/css/bootstrap.css" rel="stylesheet">
+<link type="text/css" href="http://www.nretnil.com/css/responsive.css" rel="stylesheet">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+
+	function go () {
+	
+		/* var otn = '1234567890';
+		var uid = '0987654321';
+		var categories = '{{Post.CategoryBlogs[0].Name}}';
+		var author = '{{Post.Author.Name}}';
+		var title = '{{Post.PostTitle}}';
+		var date = new Date();
+		date = parseInt(date / 1000);
+		var action = 'Read';
+		var detail = '{{Post.PostUrl}}';
+		var origin = 'Organic'; */
+	
+		var otn = $('otn').val();
+		var uid = $('uid').val();
+		var categories = $('cateogory').val();
+		var author = $('author').val();
+		var title = $('title').val();
+		var date = new Date();
+		date = parseInt(date / 1000);
+		var action = $('select#action option:selected').val();
+		var detail = $('detail').val();
+		var origin = $('select#origin option:selected').val();
+	
+	   $.ajax({type: "POST",
+	       url: "http://www.mystar12.com/proxy/pxCommunityTracking.cfc?method=storeTrackingData",
+	       data: JSON.stringify({
+				orderTrackingNumber:otn,
+				userID:uid,
+				topicCategory:categories,
+				articleAuthor:author,
+				articleTitle:title,
+				datetimeAccessed:date,
+				Action:action,
+				ActionDetail:detail,
+				referrer:origin
+				})
+			});
+		};
+		
+	$('#go').click(function(){
+		go();
+	})
+	
+});
+</script>
+
+</head>
+<body>
+
+<div class="container">
+	<div class="row-fluid">
+		<div class="span3">
+			<form>
+				<label>Order Tracking Number</label>
+				<input id="otn" type="text" value="1234567890"/>
+				<label>User ID</label>
+				<input id="uid" type="text" value="0987654321"/>
+				<label>Categories</label>
+				<input id="category" type="text" value="Training Trainers"/>
+				<label>Author</label>
+				<input id="author" type="text" value="John Smith"/>
+				<label>Title</label>
+				<input id="title" type="text" value="7 Ways to Send Data"/>
+				<label>Action</label>
+				<select id="action" type="text">
+					<option value="Read">Read</option>
+					<option value="Comment">Comment</option>
+				</select>
+				<label>Detail</label>
+				<input id="detail" type="text" value="http://community.mystar12.com/7-ways-to-send-data"/>
+				<label>Origin</label>
+				<select id="origin" type="text">
+					<option value="Organic">Organic</option>
+					<option value="Natsem">NatSem</option>
+					<option value="MyStar12">MyStar12</option>
+				</select>
+			</form>
+			<button id="go" class="btn btn-primary btn-block">Send</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
+<!--
+	
+{"orderTrackingNumber":"D1FAE442-F4F8-4F12-A14B-009EEE8832A9","userID":"D1FAE442-F4F8-4F12-A14B-009EEE8832A9","topicCategory":"News","articleAuthor":"Lakiesha Joly","articleTitle":"10 Worst Bosses Of All-time","datetimeAccessed":1364065401,"action":"Read","actionDetail":"http:\/\/community.mystar12.com\/10-Worst-Bosses-Of-All-time","referrer":"http:\/\/www.mystar12.com"}
+
+OrderTrackingNumber - uniqueidentifier
+userID - uniqueidentifier
+Topic/Category – varchar(200)
+ArticleAuthor - varchar(200)
+ArticleTitle - varchar(200)
+datetimeAccessed - datetime
+Action – varchar(100)
+ActionDetail - varchar(255)
+referrer – (referring URL)
+
+-->
