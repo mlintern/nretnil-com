@@ -22,15 +22,15 @@ $(document).ready(function () {
 		var detail = '{{Post.PostUrl}}';
 		var origin = 'Organic'; */
 	
-		var otn = $('otn').val();
-		var uid = $('uid').val();
-		var categories = $('cateogory').val();
-		var author = $('author').val();
-		var title = $('title').val();
+		var otn = $('#otn').val();
+		var uid = $('#uid').val();
+		var categories = $('#cateogory').val();
+		var author = $('#author').val();
+		var title = $('#title').val();
 		var date = new Date();
 		date = parseInt(date / 1000);
 		var action = $('select#action option:selected').val();
-		var detail = $('detail').val();
+		var detail = $('#detail').val();
 		var origin = $('select#origin option:selected').val();
 	
 	   $.ajax({type: "POST",
