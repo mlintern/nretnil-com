@@ -1,6 +1,6 @@
 <?php
 // The XML file that you wish to be parsed
-$file = "xml_beginner.xml";
+$file = "parker-part.xml";
 
 // This function tells the parser what to do with the data once it reaches the contents
 // that appear between tags.
@@ -10,12 +10,12 @@ function contents($parser, $data){
 
 // This function tells the parser to place a <b> where it finds a start tag.
 function startTag($parser, $data){
-	echo "<b>";
+	echo "<$data>";
 }
 
 // And this function tells the parser to replace the end tags with "<b><br />"
 function endTag($parser, $data){
-	echo "</b><br />";
+	echo "</$data><br />";
 }
 
 // These lines create the parser and then set the functions for the parser to use when
