@@ -1,6 +1,6 @@
 <?php
 // The XML file that you wish to be parsed
-$file = "parker-part.xml";
+$file = "../parker-part.xml";
 
 // This function tells the parser what to do with the data once it reaches the contents
 // that appear between tags.
