@@ -18,8 +18,8 @@ IndexOptions SuppressDescription
 
 IndexIgnore readme.html
 
-HeaderName /indices/header.php
-ReadmeName /indices/footer.html
+HeaderName /indices/index.php
+#ReadmeName /indices/footer.html
 
 DefaultIcon /indices/icons/text.png
 
