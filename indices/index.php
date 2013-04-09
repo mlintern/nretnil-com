@@ -79,17 +79,8 @@
     <link type="text/css" href="../css/bootstrap.css" rel="stylesheet">
 	<link type="text/css" href="../css/responsive.css" rel="stylesheet">
 	
-    <style type="text/css">
-    <!--
-        <?php print $csstext; ?>
-    -->
-    </style>
-
-    <script type="text/javascript">
-    <!--
-        <?php print $jstext; ?>
-    -->
-    </script>
+    <link type="text/css" href="style-js.css" rel="stylesheet">
+	<script type="text/javascript" src="script.js"></script>
 
 </head>
 
@@ -134,5 +125,6 @@
 	</div>
 	
 </div>
+<script type="text/javascript" src="js/bootstrap.js"></script>
 </body>
 </html>
