@@ -76,8 +76,8 @@
 <head>
     <title><?php print $titletext; ?></title>
 
-    <link type="text/css" href="http://dev.nretnil.com/css/bootstrap.css" rel="stylesheet">
-	<link type="text/css" href="http://dev.nretnil.com/css/responsive.css" rel="stylesheet">
+    <link type="text/css" href="../css/bootstrap.css" rel="stylesheet">
+	<link type="text/css" href="../css/responsive.css" rel="stylesheet">
 	
     <style type="text/css">
     <!--
