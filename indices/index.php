@@ -110,19 +110,20 @@
 		</div>
 	</div>
 </div>
-
-    <div id="pagecontainer">
-        <script>
-        <!--
-        <?php print $pcjstext; ?>
-        -->
-        </script>
-
-        <div class='header'>
-            <?php print $logohtml; ?>
-            <?php print $pathtext; ?>
-        </div>
+<div class="row-fluid">
+	<div id="pagecontainer" class="span10 offset1">
+	    <script>
+	    <!--
+	    <?php print $pcjstext; ?>
+	    -->
+	    </script>
+	
+	    <div class='header'>
+	        <?php print $logohtml; ?>
+	        <?php print $pathtext; ?>
+	    </div>
 	</div>
+</div>
 	
 </div>
 <script type="text/javascript" src="http://dev.nretnil.com/js/bootstrap.js"></script>
