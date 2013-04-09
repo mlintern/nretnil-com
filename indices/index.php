@@ -76,11 +76,11 @@
 <head>
     <title><?php print $titletext; ?></title>
 
-    <link type="text/css" href="../css/bootstrap.css" rel="stylesheet">
-	<link type="text/css" href="../css/responsive.css" rel="stylesheet">
+    <link type="text/css" href="http://dev.nretnil.com/css/bootstrap.css" rel="stylesheet">
+	<link type="text/css" href="http://dev.nretnil.com/css/responsive.css" rel="stylesheet">
 	
-    <link type="text/css" href="style-js.css" rel="stylesheet">
-	<script type="text/javascript" src="script.js"></script>
+    <link type="text/css" href="http://dev.nretnil.com/indices/style-js.css" rel="stylesheet">
+	<script type="text/javascript" src="http://dev.nretnil.com/indices/script.js"></script>
 
 </head>
 
@@ -125,6 +125,6 @@
 	</div>
 	
 </div>
-<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="http://dev.nretnil.com/js/bootstrap.js"></script>
 </body>
 </html>
