@@ -76,6 +76,9 @@
 <head>
     <title><?php print $titletext; ?></title>
 
+    <link type="text/css" href="css/bootstrap.css" rel="stylesheet">
+	<link type="text/css" href="css/responsive.css" rel="stylesheet">
+	
     <style type="text/css">
     <!--
         <?php print $csstext; ?>
@@ -87,9 +90,36 @@
         <?php print $jstext; ?>
     -->
     </script>
+
 </head>
 
 <body>
+
+<div class="container">
+
+<div class="row-fluid">
+	<div class="span12 page-header">
+		<h1 class="text-center">Nretnil Tools</h1>
+	</div>
+</div>
+
+<div class="row-fluid">
+	<div class="navbar span12">
+		<div class="navbar-inner">
+			<a class="brand" href="/">Tools</a>
+			<ul class="nav">
+				<li class="divider-vertical"></li>
+				<li><a href="http://www.nretnil.com/map/index.html">Maps</a></li>
+				<li class="divider-vertical"></li>
+				<li><a href="http://www.nretnil.com/jsb/index.html">JS Beautify</a></li>
+				<li class="divider-vertical"></li>
+				<li><a href="http://dev.nretnil.com/staging">Staging</a></li>
+				<li class="divider-vertical"></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
     <div id="pagecontainer">
         <script>
         <!--
@@ -101,6 +131,8 @@
             <?php print $logohtml; ?>
             <?php print $pathtext; ?>
         </div>
+	</div>
+	
 </div>
 </body>
 </html>
