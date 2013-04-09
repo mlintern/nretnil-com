@@ -35,6 +35,7 @@ header a {
 }
 
 .path {
+
     font-size: 13px;
     margin: 10px 0;
 }
@@ -51,6 +52,92 @@ header a {
 
 .credits a {
     text-decoration: underline;
+}
+
+/* TABLE STYLING ============================================================*/
+
+table {
+    background-color: white;
+    border: solid 1px #888888;
+
+    padding: 0px;
+
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr,td,th {
+    padding: 0;
+    border: 0;
+}
+
+
+/* rollover effect for table rows, header cells */
+tr:hover, th:hover {
+    background: #dddddd;
+}
+
+th {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+th a {
+    color: #333333;
+}
+
+/* Don't show the 'Parent Directory' row */
+.row_parentdir {
+    display: none;
+}
+
+/* directories appear in bold */
+.dirlink {
+    font-weight: bold;
+}
+
+/* ICON header cell */
+.row_header .col_icon {
+    border-left: 1px solid #e0e0e0;
+    padding: 0px 0px 0px 1px;
+}
+
+/* all cells in ICON column */
+.row_normal .col_icon {
+    text-align: center;
+    width: 24px;
+}
+
+/* all cells in NAME column */
+.col_name {
+    text-align: left;
+    padding-left: 5px;
+    width: 350px;
+}
+
+/* all cells in LAST MODIFIED column */
+.col_date {
+    text-align: right;
+    padding-right: 5px;
+}
+
+/* SIZE header cell */
+.row_header .col_size {
+    border-right: 1px solid #e0e0e0;
+    padding-right: 5px;
+}
+
+/* all cells in SIZE column */
+.col_size {
+    text-align: right;
+    padding-right: 5px;
+}
+
+/* all DESCRIPTION cells (hide this column) */
+.col_desc {
+    display: none;
 }
 
 address{
