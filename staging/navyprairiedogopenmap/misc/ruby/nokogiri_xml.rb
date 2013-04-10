@@ -4,7 +4,7 @@ require 'rubygems'
 require 'nokogiri'
 
 icount = 0 
-xmlfeed = Nokogiri::XML(open("../parker-part.xml"))
+xmlfeed = Nokogiri::XML(open("../partial.xml"))
 #puts xmlfeed
 all_items = xmlfeed.xpath("//update-log-entry")
 	all_items.each do |adv|
