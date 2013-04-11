@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'UpsideDown';
+	src: url('UpsideDown.eot');
+	src: url('UpsideDown.eot?#iefix') format('embedded-opentype'),
+		url('UpsideDown.woff') format('woff'),
+		url('UpsideDown.ttf') format('truetype'),
+		url('UpsideDown.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
