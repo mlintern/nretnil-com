@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'UpsideDown';
-	src: url('UpsideDown.eot');
-	src: url('UpsideDown.eot?#iefix') format('embedded-opentype'),
-		url('UpsideDown.woff') format('woff'),
-		url('UpsideDown.ttf') format('truetype'),
-		url('UpsideDown.svg') format('svg');
+	src: url('UpsideDown-Reg-webfont.eot');
+	src: url('UpsideDown-Reg-webfont.eot?#iefix') format('embedded-opentype'),
+		url('UpsideDown-Reg-webfont.woff') format('woff'),
+		url('UpsideDown-Reg-webfont.ttf') format('truetype'),
+		url('UpsideDown-Reg-webfont.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
