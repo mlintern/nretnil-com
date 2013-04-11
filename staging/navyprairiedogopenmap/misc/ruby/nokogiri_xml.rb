@@ -10,6 +10,7 @@ xmlfeed = Nokogiri::XML(open("../partial.xml"))
 #all_items = xmlfeed.xpath("//update-log-entry")
 all_items = xmlfeed.xpath("//journal-entry")
 	all_items.each do |adv|
+		puts "\n\n"
 		puts icount
 		if (adv.children.filter("title").first.child != nil)
 		puts "Title: " + adv.children.filter("title").first.child.inner_text
@@ -22,7 +23,7 @@ all_items = xmlfeed.xpath("//journal-entry")
 		#end
 		if (adv.children.filter("body").first.child != nil)
 			plain = Base64.decode64(adv.children.filter("body").first.child.inner_text)
-			puts "Body: " + adv.children.filter("body").first.child.inner_text
+			#puts "Body: " + adv.children.filter("body").first.child.inner_text
 			puts "Body: " + plain
 		end
 		if (adv.children.filter("added-on").first.child != nil)
@@ -31,4 +32,3 @@ all_items = xmlfeed.xpath("//journal-entry")
 		#puts adv
 		icount = icount + 1
 	end
-puts icount
