@@ -1,7 +1,7 @@
 <?php
  
 $errorcode = $_GET["errorcode"];
-$errorcontrol = $_GET["errorControl"];
+$errorcontrol = $_GET["errorcontrol"];
  
 switch($errorcode) {
  
