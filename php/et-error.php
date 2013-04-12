@@ -23,6 +23,6 @@ default : $strError = "Other"; break;
 <HTML><HEAD>
 </HEAD>
 <BODY>
-<? echo 'Error: ('.$errorcode.') '.$strError; ?>
+<?php echo 'Error: ('.$errorcode.') '.$strError; ?>
 </BODY>
 </HTML>
