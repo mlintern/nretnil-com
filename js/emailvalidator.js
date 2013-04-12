@@ -61,7 +61,7 @@ function isWhitespace(s)
 		// Check that current character isn't whitespace.
 		var c = s.charAt(i);
 
-		if (whitespace.indexOf© == -1) return false;
+		if (whitespace.indexOf(c) == -1) return false;
     }
     // All characters are whitespace.
     return true;

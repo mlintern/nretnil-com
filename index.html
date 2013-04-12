@@ -244,67 +244,36 @@
 						</form>
 				</div>
 				<div class="tab-pane" id="ettest">
-				  	<form action="http://cl.exct.net/subscribe.aspx" name="subscribeForm" method="post" onSubmit="return checkForm();"> 
+				  	<form class="span10 offset1" action="http://cl.exct.net/subscribe.aspx" name="subscribeForm" method="post" onSubmit="return checkForm();"> 
 						<!-- <input type=hidden name="thx" value="Your thank you page here"> 
 						<input type=hidden name="err" value="Your error page here"> 
 						<input type=hidden name="usub" value="Your success unsub page here">
-						<input type="hidden" name="MID" value="10459392">
+						<input type="hidden" name="MID" value="Member ID Here">
+						<input type="hidden" name="lid" value="List ID Here">
 						<input type="hidden" name="SubAction" value="sub_add_update">
 						<input type="hidden" name="Email Type" value="HTML"> //-->
-						<table cellpadding="0" cellspacing="0" border="0"> 
-							<tr> 
-								<td><font> Exact Target Member ID:</font></td> 
-								<td><input type="text" name="MID"></td> 
-							</tr>
-							<tr> 
-								<td><font>Exact Target List ID:</font></td> 
-								<td><input type="text" name="lid"></td> 
-							</tr>
-							<tr> 
-								<td><font>Thank You Page:</font></td> 
-								<td><input type="text" name="thx"></td> 
-							</tr>
-							<tr> 
-								<td><font>Error Page:</font></td> 
-								<td><input type="text" name="err" value="http://dev.nretnil.com/php/et-error.php"></td> 
-							</tr>
-							<tr> 
-								<td><font>Unsubscribe Success Page:</font></td> 
-								<td><input type="text" name="usub"></td> 
-							</tr>
-							<tr> 
-								<td><font>Name:</font></td> 
-								<td><input type="text" name="Full Name"></td> 
-							</tr> 
-							<tr> 
-								<td><font>Company Name:</font></td> 
-								<td><input type="text" name="User Defined"></td> 
-							</tr>
-							<tr> 
-								<td><font>Email:</font></td> 
-								<td><input type="text" name="Email Address"></td> 
-							</tr> 
-							<tr> 
-								<td><input type="radio" name="Email Type" value="HTML" checked> 
-								<font>HTML</font>
-								</td> 
-								<td> 
-								<input type="radio" name="Email Type" value="TEXT"> 
-								<font> Text</font> 
-								</td> 
-							</tr> 
-							<tr> 
-								<td><input type="radio" name="SubAction" value="sub_add_update" checked> 
-								<font>Subscribe</font> 
-								</td> 
-								<td><input type="radio" name="SubAction" value="unsub"> 
-								<font>Unsubscribe</font> 
-								</td> 
-							</tr>
-							<tr> 
-								<td><input type="submit" value="Submit"></td> 
-							</tr> 
-						</table> 
+							 
+						<label>Exact Target Member ID:</label> 
+						<input type="text" name="MID">
+						<label>Exact Target List ID:</label> 
+						<input type="text" name="lid">
+						<label>Thank You Page:</label> 
+						<input type="text" name="thx">
+						<label>Error Page:</label> 
+						<input type="text" name="err" value="http://dev.nretnil.com/php/et-error.php">
+						<label>Unsubscribe Success Page:</label> 
+						<input type="text" name="usub">
+						<label>Name:</label> 
+						<input type="text" name="Full Name"> 
+						<label>Company Name:</label> 
+						<input type="text" name="User Defined"> 
+						<label>Email:</label> 
+						<input type="text" name="Email Address"> 
+						<label class="radio"><input type="radio" name="Email Type" value="HTML" checked> HTML</label>	 
+						<label class="radio"><input type="radio" name="Email Type" value="TEXT">Text</label> 	 	 
+						<label class="radio"><input type="radio" name="SubAction" value="sub_add_update" checked>Subscribe</label> 	 	
+						<label class="radio"><input type="radio" name="SubAction" value="unsub"> Unsubscribe</label> 
+						<input class="btn btn-primary" type="submit" value="Submit"> 
 					</form>
 				</div>
 				<div class="tab-pane" id="crontab">
