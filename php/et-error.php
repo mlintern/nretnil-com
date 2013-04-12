@@ -22,10 +22,28 @@ default : $strError = "Other"; break;
 }
  
 ?>
-<HTML><HEAD>
-</HEAD>
-<BODY>
-<?php echo 'Error: ('.$errorcode.') '.$strError; ?>
-<div>For More Information: <a href="http://help.exacttarget.com/en/documentation/exacttarget/subscribers/web_collect/">http://help.exacttarget.com/en/documentation/exacttarget/subscribers/web_collect/</a></div>
-</BODY>
-</HTML>
+<!Doctype html>
+<html>
+<head>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="host_name" content="http://dev.nretnil.com">
+<title>Nretnil Tools</title>
+
+<link type="text/css" href="http://dev.nretnil.com/css/bootstrap.css" rel="stylesheet">
+<link type="text/css" href="http://dev.nretnil.com/css/responsive.css" rel="stylesheet">
+
+</head>
+</head>
+<body>
+<div class="container">
+<div class="row-fluid">
+	<div class="span8 offset2">
+		<legend>ET List Subscribe/Unsubscribe Error Decoder</legend>
+		<?php echo 'Error: ('.$errorcode.') '.$strError; ?>
+		<div>For more information, please visit Exact Target's Help Page: <a href="http://help.exacttarget.com/en/documentation/exacttarget/subscribers/web_collect/">http://help.exacttarget.com/en/documentation/exacttarget/subscribers/web_collect/</a></div>
+	</div>
+</div>
+</div>
+</body>
+</html>
