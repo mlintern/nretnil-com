@@ -40,8 +40,12 @@ default : $strError = "Other"; break;
 <div class="row-fluid">
 	<div class="span8 offset2">
 		<legend>ET List Subscribe/Unsubscribe Error Decoder</legend>
-		<?php echo 'Error: ('.$errorcode.') '.$strError; ?>
-		<div>For more information, please visit Exact Target's Help Page: <a href="http://help.exacttarget.com/en/documentation/exacttarget/subscribers/web_collect/">http://help.exacttarget.com/en/documentation/exacttarget/subscribers/web_collect/</a></div>
+		<div class="alert alert-error">
+			<?php echo 'Error: ('.$errorcode.') '.$strError; ?>
+		</div>
+		<div>
+			For more information, please visit Exact Target's Help Page: <a href="http://help.exacttarget.com/en/documentation/exacttarget/subscribers/web_collect/">http://help.exacttarget.com/en/documentation/exacttarget/subscribers/web_collect/</a>
+		</div>
 	</div>
 </div>
 </div>
