@@ -1,4 +1,4 @@
-$.get('/php/ip.php', function(data,status,xhr){
+$.get('http://ip.nretnil.com', function(data,status,xhr){
 	console.log(data);
 	console.log(status);
 	console.log(xhr);
