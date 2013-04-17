@@ -40,6 +40,6 @@ $(function(){
         url += "?url=" + encodeURIComponent(page_url);
         url += "&description=" + encodeURIComponent(page_title);
         url += "&media=" + encodeURIComponent(current_img);
-        window.open(url, 'cp-pinterest', 'screenX=100,screenY=100,height=580,width=730');
+        window.open(url,'Pinterest','screenX=100,screenY=100,height=580,width=730');
     });
 });
