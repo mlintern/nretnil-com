@@ -27,9 +27,9 @@ $(document).ready(function () {
         $(imageSelector).mouseenter(function () {
             $('.pinit-wrapper').css("visibility", "hidden");
             clearTimeout(bsButtonHover);
-            //$hoveredImg = $(this);
-            //media = $hoveredImg.prop('src');
-            if ( $(this).attr('src').toLowerCase().indexOf("http") >= 0 ){
+            $hoveredImg = $(this);
+            media = $hoveredImg.prop('src');
+            /*if ( $(this).attr('src').toLowerCase().indexOf("http") >= 0 ){
 	        	media = $(this).attr('src');
 	        }else{
 	        	if ( $(this).attr('src').toLowerCase().indexOf("//") >= 0 ){
@@ -37,7 +37,7 @@ $(document).ready(function () {
 	        	}else{
 	        	media = page_protocol + "//" + page_domain + "/" + $(this).attr('src');
 	        	}
-	        }
+	        }*/
             description = $hoveredImg.closest('.post').find(descriptionSelector).text();
             var pinitURL = $hoveredImg.closest('.post').find(urlSelector).attr('href');
             if (pinitURL == undefined) {
