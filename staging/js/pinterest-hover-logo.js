@@ -27,8 +27,6 @@ $(document).ready(function () {
         $(imageSelector).mouseenter(function () {
             $('.pinit-wrapper').css("visibility", "hidden");
             clearTimeout(bsButtonHover);
-            //$(this) = $(this);
-            //media = $(this).prop('src');
             if ( $(this).attr('src').toLowerCase().indexOf("http") >= 0 ){
 	        	media = $(this).attr('src');
 	        }else{
