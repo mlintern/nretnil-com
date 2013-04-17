@@ -1,0 +1,153 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('a.popup-link').click(function() {
+
+		//Getting the variable's value from a link 
+		var popupBox = $(this).attr('href');
+
+		//Fade in the Popup
+		$(popupBox).fadeIn(300);
+
+		//Set the center alignment padding + border see css style
+		var popMargTop = ($(popupBox).height() + 24) / 2; 
+		var popMargLeft = ($(popupBox).width() + 24) / 2; 
+
+		$(popupBox).css({ 
+			'margin-top' : -popMargTop,
+			'margin-left' : -popMargLeft
+		});
+
+		// Add the mask to body
+		$('body').append('<div id="mask"></div>');
+		$('#mask').fadeIn(300);
+
+		return false;
+	});
+
+	// When clicking on the button close or the mask layer the popup closed
+	$('#mask').live("click touchstart", function(){
+		$('#mask , #popupform').fadeOut(300 , function() {
+			$('#mask').remove();  
+		}); 
+		return false;
+	});
+});
+</script>
+<style>
+/* POP UP FORM */
+#popupform {
+display:none;
+font-family: arial,helvetica,sans-serif;
+background-color: #FF8722;
+padding: 20px;     
+float: left;
+position: fixed;
+top: 50%; left: 50%;
+z-index: 999;
+box-shadow: 0px 0px 20px #999; /* CSS3 */
+border-radius:3px 3px 3px 3px;
+}
+#popupform .widget.html { 
+background: #FFFFFF;
+margin: 0px;
+padding: 10px;
+border-radius: 0;
+}
+#mask {
+display: none;
+background: #ffffff; 
+position: fixed; left: 0; top: 0; 
+z-index: 10;
+width: 100%; height: 100%;
+opacity: 0.8;
+z-index: 998;
+}
+#clearmask {
+display: none;
+background: transparent; 
+position: fixed; left: 0; top: 0; 
+z-index: 10;
+width: 100%; height: 100%;
+z-index: 998;
+}
+#blackmask {
+display: none;
+background: #000; 
+position: fixed; left: 0; top: 0; 
+z-index: 10;
+width: 100%; height: 100%;
+z-index: 998;
+}
+#popupform label{
+margin-top: 10px;
+display:block;
+font-size: 14px;
+padding-left: 3px;
+}
+#popupform input[type=text]{
+display:block;
+width: 90%;
+}
+#popupform input[type=submit]{
+display:block;
+width: 50%;
+margin: 20px auto 0;
+}
+#popupform .check-boxes .org{
+float: left;
+width: 150px;
+}
+</style>
+<a class="popup-link" href="#popupform">go</a>
+<div id="popupform">
+    <div class="widget html">
+        <form id="sign-up" action="http://cl.exct.net/subscribe.aspx" method="post">
+        <!--<input type="hidden" name="thx" value="YOUR THANK YOU PAGE HERE" /> -->
+		<input type="hidden" name="err" value="http://dev.nretnil.com/php/et-error.php" />
+		<input type="hidden" name="SubAction" value="sub_add_update" />
+		<input type="hidden" name="MID" value="9565" />
+        <div>
+            <label>First Name*</label>
+            <input type="text" name="First Name" />
+        </div>
+        <div>
+            <label>Last Name*</label>
+            <input type="text" name="Last Name" />
+        </div>
+        <div>
+            <label>Company*</label>
+            <input type="text" name="Company" />
+        </div>
+        <div>
+            <label>Title*</label>
+            <input type="text" name="Title" />
+        </div>
+        <div>
+            <label>Email Address*</label>
+            <input type="text" name="Email Address" />
+            <input type="hidden" name="Email Type" value="HTML" />
+        </div>
+        <div>
+            <label>Zip Code*</label>
+            <input type="text" name="Postal Code" />
+        </div>
+        <div class="check-boxes">
+            <label>I am interested in articles on...</label>
+            <div class="org">
+            	<input type="hidden" name="lid" value="18343230" />
+                <input type="checkbox" name="lid" value="18343280"> Community<br>
+                <input type="checkbox" name="lid" value="18343270"> Funding<br>
+                <input type="checkbox" name="lid" value="18343259"> Startup<br>
+            </div>
+            <div class="org">
+                <input type="checkbox" name="lid" value="18343252"> Tech<br>
+                <input type="checkbox" name="lid" value="18343287"> TechPoint<br>
+                <input type="checkbox" name="lid" value="18343275"> Trends<br>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <input type="submit"/>
+        </form>
+    </div>
+</div>
