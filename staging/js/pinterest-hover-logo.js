@@ -27,8 +27,8 @@ $(document).ready(function () {
         $(imageSelector).mouseenter(function () {
             $('.pinit-wrapper').css("visibility", "hidden");
             clearTimeout(bsButtonHover);
-            //$hoveredImg = $(this);
-            //media = $hoveredImg.prop('src');
+            //$(this) = $(this);
+            //media = $(this).prop('src');
             if ( $(this).attr('src').toLowerCase().indexOf("http") >= 0 ){
 	        	media = $(this).attr('src');
 	        }else{
@@ -38,36 +38,36 @@ $(document).ready(function () {
 	        	media = page_protocol + "//" + page_domain + "/" + $(this).attr('src');
 	        	}
 	        }
-            description = $hoveredImg.closest('.post').find(descriptionSelector).text();
-            var pinitURL = $hoveredImg.closest('.post').find(urlSelector).attr('href');
+            description = $(this).closest('.post').find(descriptionSelector).text();
+            var pinitURL = $(this).closest('.post').find(urlSelector).attr('href');
             if (pinitURL == undefined) {
                 pinitURL = $(location).attr('href')
             }
-            var $target = $hoveredImg.parent().is('a') ? $hoveredImg.parent() : $hoveredImg;
+            var $target = $(this).parent().is('a') ? $(this).parent() : $(this);
             if (!$target.next().hasClass('pinit-wrapper')) {
                 $target.after(getButtonHTML(media, description, pinitURL));
                 $target.next('.pinit-wrapper').attr("onmouseover", "this.style.opacity=1;this.style.visibility=visible;clearTimeout(bsButtonHover)")
             }
             switch (bs_pinButtonPos) {
                 case 'center':
-                    posY = $hoveredImg.position().top + $hoveredImg.outerHeight(true) / 2 - bs_pinButtonHeight / 2;
-                    posX = $hoveredImg.position().left + $hoveredImg.outerWidth(true) / 2 - bs_pinButtonWidth / 2;
+                    posY = $(this).position().top + $(this).outerHeight(true) / 2 - bs_pinButtonHeight / 2;
+                    posX = $(this).position().left + $(this).outerWidth(true) / 2 - bs_pinButtonWidth / 2;
                     break;
                 case 'topright':
-                    posY = $hoveredImg.position().top + 5;
-                    posX = $hoveredImg.position().left + $hoveredImg.outerWidth(true) - bs_pinButtonWidth - 5;
+                    posY = $(this).position().top + 5;
+                    posX = $(this).position().left + $(this).outerWidth(true) - bs_pinButtonWidth - 5;
                     break;
                 case 'topleft':
-                    posY = $hoveredImg.position().top + 5;
-                    posX = $hoveredImg.position().left + 5;
+                    posY = $(this).position().top + 5;
+                    posX = $(this).position().left + 5;
                     break;
                 case 'bottomright':
-                    posY = $hoveredImg.position().top + $hoveredImg.outerHeight(true) - bs_pinButtonHeight - 5;
-                    posX = $hoveredImg.position().left + $hoveredImg.outerWidth(true) - bs_pinButtonWidth - 5;
+                    posY = $(this).position().top + $(this).outerHeight(true) - bs_pinButtonHeight - 5;
+                    posX = $(this).position().left + $(this).outerWidth(true) - bs_pinButtonWidth - 5;
                     break;
                 case 'bottomleft':
-                    posY = $hoveredImg.position().top + $hoveredImg.outerHeight(true) - bs_pinButtonHeight - 5;
-                    posX = $hoveredImg.position().left + 5;
+                    posY = $(this).position().top + $(this).outerHeight(true) - bs_pinButtonHeight - 5;
+                    posX = $(this).position().left + 5;
                     break
             }
             $pinwrap = $target.next(".pinit-wrapper");
