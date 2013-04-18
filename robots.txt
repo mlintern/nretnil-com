@@ -7,3 +7,5 @@ Disallow: /less
 Disallow: /css
 Disallow: /staging
 Disallow: /indices
+Disallow: /ip
+Disallow: /jsb
