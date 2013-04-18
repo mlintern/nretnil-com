@@ -35,7 +35,7 @@
     //  $logoimageurl = "/images/titlebar-small.gif";
     //  $logolink     = "http://antisleep.com/";
     $logoimageurl = "http://dev.nretnil.com/img/sig.png";
-    $logolink     = "http://www.nretnil.com";
+    $logolink     = "#";
 
     //=======================================================================
     // (end of config)
@@ -63,7 +63,7 @@
         $logohtml = "<img src='" . $logoimageurl . "' alt=''/>";
 
         if ($logolink != "") {
-            $logohtml = "<a href='" . $logolink . "'>" . $logohtml . "</a>";
+            $logohtml = "<a href='" . $logolink . "' onclick='history.go(-1);return false;'>" . $logohtml . "</a>";
         }
 
         $logohtml = "<div class='logohtml'>$logohtml</div>";
