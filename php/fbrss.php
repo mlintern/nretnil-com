@@ -7,16 +7,22 @@ $fb = new facebook(array(
     'appId' =>  '356195464482194', // get this info from the facebook developers page
     'secret'=>  '8e2b8bc15c0a5e7b0c92255ba90235c2' // by registering an app
 ));
-$response = $fb->api('/mark.lintern/feed','GET'); // replace "spreetable" with your fb page name or username
 
+$facebook_id = $_GET["id"];
+$page_name = $_GET["name"];
+if ( !empty($facebook_id){
+$response = $fb->api("/$facebook_id/feed",'GET'); // replace "spreetable" with your fb page name or username
+}else{
+$response = $fb->api("/$page_name/feed",'GET'); // replace "spreetable" with your fb page name or username
+}
 // create the feedwriter object (we're using ATOM but there're other options like rss, etc)
 $feed = new FeedWriter(ATOM);
 
-$feed->setTitle('Spree Table'); // set your title
+$feed->setTitle("$page_name"); // set your title
 $feed->setLink('http://spreetable.com/facebook/feed.php'); // set the url to the feed page you're generating
 
 $feed->setChannelElement('updated', date(DATE_ATOM , time()));
-$feed->setChannelElement('author', array('name'=>'Spree Table')); // set the author name
+$feed->setChannelElement('author', array('name'=>"$page_name")); // set the author name
 
 // iterate through the facebook response to add items to the feed
 foreach($response['data'] as $entry){
