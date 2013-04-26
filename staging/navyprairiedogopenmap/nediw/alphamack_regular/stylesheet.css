@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'AlphaMack';
+	src: url('alphamackaoe-webfont.eot');
+	src: url('alphamackaoe-webfont.eot?#iefix') format('embedded-opentype'),
+		url('alphamackaoe-webfont.woff') format('woff'),
+		url('alphamackaoe-webfont.ttf') format('truetype'),
+		url('alphamackaoe-webfont.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
