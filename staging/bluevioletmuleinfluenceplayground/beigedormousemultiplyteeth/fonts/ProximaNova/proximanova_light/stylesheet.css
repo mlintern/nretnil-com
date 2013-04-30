@@ -28,7 +28,7 @@
     src: url('ProximaNova-Light-webfont.eot?iefix') format('eot'),
          url('ProximaNova-Light-webfont.woff') format('woff'),
          url('ProximaNova-Light-webfont.ttf') format('truetype'),
-         url('ProximaNova-Light-webfont.svg#webfontBtAcCspH') format('svg');
+         url('ProximaNova-Light-webfont.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 
