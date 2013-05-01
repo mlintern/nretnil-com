@@ -53,6 +53,7 @@
 			<ul class="nav nav-tabs">
 				<li><a href="#pswd1" data-toggle="tab">Password Generator <i class="icon-lock pull-right"></i></a></li>
 				<li><a href="#pswd2" data-toggle="tab">Passphrase Generator <i class="icon-lock pull-right"></i></a></li>
+				<li><a href="#reverse" data-toggle="tab">Reverse Text <i class="icon-resize-horizontal pull-right"></i></a></li>
 				<li class="active"><a href="#exip" data-toggle="tab">External IP<i class="icon-ok-circle pull-right"></i></a></li>
 				<li><a href="#dnstools" data-toggle="tab">DNS Tools<i class="icon-ok-circle pull-right"></i></a></li>
 				<li><a href="#fb-token" data-toggle="tab">Facebook Token Lookup <i class="icon-book pull-right"></i></a></li>
@@ -88,6 +89,13 @@
 						<code class="span12 align-center" id="passphrase_result" style="text-transform:lowercase;padding:10px;margin-bottom: 15px;"></code>
 						<button class="btn btn-large btn-success btn-block" onclick="passphrase_gen();return false;">Generate Another!</button>
 						<code class="align-center" id="passphrase_result_nospace" style="text-transform:lowercase;padding:10px;margin-top: 15px;display: block;"></code>
+					</div>
+				</div>
+				<div class="tab-pane" id="reverse">
+					<div class="span6 offset3">
+				        <input type="text" class="span12" value=""  placeholder="Text To Reverse…" id="reverse_text">
+						<button class="btn btn-large btn-success btn-block" onclick="reverse_text();return false;">Reverse Text!</button>
+						<code class="align-center" id="reverse-result" style="padding:10px;margin-top: 15px;display: block;"></code>
 					</div>
 				</div>
 				<div class="tab-pane active" id="exip">
