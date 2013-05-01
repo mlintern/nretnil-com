@@ -15,35 +15,45 @@
 <div class="container">
 <div class="row-fluid">
 <legend>ET List Subscribe/Unsubscribe</legend>
-<form action="http://cl.exct.net/subscribe.aspx" name="subscribeForm" method="post" onSubmit="return checkForm();"> 
+<form class="span8 offset1" action="http://cl.exct.net/subscribe.aspx" name="subscribeForm" method="post" onSubmit="return checkForm();"> 
 	<!-- <input type=hidden name="thx" value="Your thank you page here"> 
 	<input type=hidden name="err" value="Your error page here"> 
 	<input type=hidden name="usub" value="Your success unsub page here">
 	<input type="hidden" name="MID" value="Member ID Here">
 	<input type="hidden" name="lid" value="List ID Here">
 	<input type="hidden" name="SubAction" value="sub_add_update">
-	<input type="hidden" name="Email Type" value="HTML"> //-->	 
-	<label>Exact Target Member ID:</label> 
-	<input type="text" name="MID">
-	<label>Exact Target List ID:</label> 
-	<input type="text" name="lid">
-	<label>Thank You Page:</label> 
-	<input type="text" name="thx" value="http://dev.nretnil.com/staging/tools/thankyou.html">
-	<label>Error Page:</label> 
-	<input type="text" name="err" value="http://dev.nretnil.com/php/et-error.php">
-	<label>Unsubscribe Success Page:</label> 
-	<input type="text" name="usub">
-	<label>Name:</label> 
-	<input type="text" name="Full Name"> 
-	<label>Company Name:</label> 
-	<input type="text" name="User Defined"> 
-	<label>Email:</label> 
-	<input type="text" name="Email Address"> 
-	<label class="radio"><input type="radio" name="Email Type" value="HTML" checked> HTML</label>	 
-	<label class="radio"><input type="radio" name="Email Type" value="TEXT">Text</label> 	 	 
-	<label class="radio"><input type="radio" name="SubAction" value="sub_add_update" checked>Subscribe</label> 	 	
-	<label class="radio"><input type="radio" name="SubAction" value="unsub"> Unsubscribe</label> 
-	<input class="btn btn-primary" type="submit" value="Submit"> 
+	<input type="hidden" name="Email Type" value="HTML"> //-->
+	<div class="row-fluid">
+		<div class="span6"> 
+			<label>Exact Target Member ID:</label> 
+			<input type="text" name="MID">
+			<label>Exact Target List ID:</label> 
+			<input type="text" name="lid">
+			<label>Thank You Page:</label> 
+			<input type="text" name="thx">
+			<label>Error Page:</label> 
+			<input type="text" name="err" value="http://dev.nretnil.com/php/et-error.php">
+			<label>Unsubscribe Success Page:</label> 
+			<input type="text" name="usub">
+		</div>
+		<div class="span6">
+			<label>Name:</label> 
+			<input type="text" name="Full Name"> 
+			<label>Company Name:</label> 
+			<input type="text" name="User Defined"> 
+			<label>Email:</label> 
+			<input type="text" name="Email Address"> 
+			<label class="radio"><input type="radio" name="Email Type" value="HTML" checked> HTML</label>	 
+			<label class="radio"><input type="radio" name="Email Type" value="TEXT">Text</label> 	 	 
+			<label class="radio"><input type="radio" name="SubAction" value="sub_add_update" checked>Subscribe</label> 	 	
+			<label class="radio"><input type="radio" name="SubAction" value="unsub"> Unsubscribe</label> 
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="span6 offset2">
+		<input class="btn btn-primary btn-large btn-block" type="submit" value="Submit"> 
+		</div>
+	</div>
 </form>
 </div>
 </div>
