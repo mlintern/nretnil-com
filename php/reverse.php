@@ -1,10 +1,6 @@
 <?php
-
-
 $text = $_GET["text"];
-
 $reverse_text = strrev($text);
-
 ?>
 
 <html>
