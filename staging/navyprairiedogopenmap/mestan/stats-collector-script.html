@@ -35,6 +35,7 @@ function go () {
 
    $.ajax({type: "POST",
        url: "http://www.mystar12.com/proxy/pxCommunityTracking.cfc?method=storeTrackingData",
+       headers: { "Referer":"http://dev.nretnil.com/" },
        data: { trackingData: JSON.stringify({
                 orderTrackingNumber:otn,
                 userID:uid,
