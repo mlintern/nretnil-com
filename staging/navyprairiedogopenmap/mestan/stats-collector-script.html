@@ -9,49 +9,50 @@
 <script type="text/javascript">
 $(document).ready(function () {
 
-	function go () {
-	
-		/* var otn = '1234567890';
-		var uid = '0987654321';
-		var categories = '{{Post.CategoryBlogs[0].Name}}';
-		var author = '{{Post.Author.Name}}';
-		var title = '{{Post.PostTitle}}';
-		var date = new Date();
-		date = parseInt(date / 1000);
-		var action = 'Read';
-		var detail = '{{Post.PostUrl}}';
-		var origin = 'Organic'; */
-	
-		var otn = $('#otn').val();
-		var uid = $('#uid').val();
-		var categories = $('#cateogory').val();
-		var author = $('#author').val();
-		var title = $('#title').val();
-		var date = new Date();
-		date = parseInt(date / 1000);
-		var action = $('select#action option:selected').val();
-		var detail = $('#detail').val();
-		var origin = $('select#origin option:selected').val();
-	
-	   $.ajax({type: "POST",
-	       url: "http://www.mystar12.com/proxy/pxCommunityTracking.cfc?method=storeTrackingData",
-	       data: JSON.stringify({
-				orderTrackingNumber:otn,
-				userID:uid,
-				topicCategory:categories,
-				articleAuthor:author,
-				articleTitle:title,
-				datetimeAccessed:date,
-				Action:action,
-				ActionDetail:detail,
-				referrer:origin
-				})
-			});
-		};
+function go () {
+
+	/* var otn = '1234567890';
+	var uid = '0987654321';
+	var categories = '{{Post.CategoryBlogs[0].Name}}';
+	var author = '{{Post.Author.Name}}';
+	var title = '{{Post.PostTitle}}';
+	var date = new Date();
+	date = parseInt(date / 1000);
+	var action = 'Read';
+	var detail = '{{Post.PostUrl}}';
+	var origin = 'Organic'; */
+
+	var otn = $('#otn').val();
+	var uid = $('#uid').val();
+	var categories = $('#cateogory').val();
+	var author = $('#author').val();
+	var title = $('#title').val();
+	var date = new Date();
+	date = parseInt(date / 1000);
+	var action = $('select#action option:selected').val();
+	var detail = $('#detail').val();
+	var origin = $('select#origin option:selected').val();
+
+   $.ajax({type: "POST",
+       url: "http://www.mystar12.com/proxy/pxCommunityTracking.cfc?method=storeTrackingData",
+       data: { trackingData: JSON.stringify({
+                orderTrackingNumber:otn,
+                userID:uid,
+                topicCategory:categories,
+                articleAuthor:author,
+                articleTitle:title,
+                datetimeAccessed:date,
+                Action:action,
+                ActionDetail:detail,
+                referrer:origin
+                })
+			}
+    });
+}
 		
-	$('#go').click(function(){
-		go();
-	})
+$('#go').click(function(){
+	go();
+});
 	
 });
 </script>
