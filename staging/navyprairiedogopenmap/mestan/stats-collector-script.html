@@ -33,25 +33,46 @@ function go () {
 	var detail = $('#detail').val();
 	var origin = $('select#origin option:selected').val();
 
-   $.ajax({type: "POST",
-       url: "http://www.mystar12.com/proxy/pxCommunityTracking.cfc?method=storeTrackingData",
+   /*$.ajax({type: "POST",
+       url: "http://www.mystar12.com/proxy/pxCommunityTracking.cfc",
        headers: { 
        			"Referer":"http://dev.nretnil.com/",
        			"Origin":"http://dev.nretnil.com/",
        			 },
-       data: { trackingData: JSON.stringify({
-                orderTrackingNumber:otn,
-                userID:uid,
-                topicCategory:categories,
-                articleAuthor:author,
-                articleTitle:title,
-                datetimeAccessed:date,
-                Action:action,
-                ActionDetail:detail,
-                referrer:origin
+       data: {  method: 'storeTrackingData',
+       			trackingData: JSON.stringify({
+	                orderTrackingNumber:otn,
+	                userID:uid,
+	                topicCategory:categories,
+	                articleAuthor:author,
+	                articleTitle:title,
+	                datetimeAccessed:date,
+	                Action:action,
+	                ActionDetail:detail,
+	                referrer:origin
                 })
 			}
-    });
+    }); */
+    
+	var data = {
+	        "orderTrackingNumber":otn,
+	        "userID":uid,
+	        "topicCategory":categories,
+	        "articleAuthor":author,
+	        "articleTitle":title,
+	        "datetimeAccessed":date,
+	        "Action":action,
+	        "ActionDetail":detail,
+	        "referrer":origin
+	        };
+	data = JSON.stringify(data);
+	url = "http://www.mystar12.com/proxy/pxCommunityTracking.cfc?method=storeTrackingData&trackingData=" + data;
+	//console.log(url);
+	var img  = document.createElement("img");
+	img.src = url;
+	img.style.width=0;
+	img.style.height=0;
+	document.body.appendChild(img);
 }
 		
 $('#go').click(function(){
@@ -75,9 +96,9 @@ $('#go').click(function(){
 			<form>
 				<div class="span6">
 					<label>Order Tracking Number</label>
-					<input id="otn" type="text" value="1234567890"/>
+					<input id="otn" type="text" value="4ED7B0B2-7247-4A5A-A5FB-5629EDD5176B"/>
 					<label>User ID</label>
-					<input id="uid" type="text" value="0987654321"/>
+					<input id="uid" type="text" value="B9A88695-B520-43C8-AFBB-BD14908FB02B"/>
 					<label>Categories</label>
 					<input id="category" type="text" value="Training Trainers"/>
 					<label>Author</label>
