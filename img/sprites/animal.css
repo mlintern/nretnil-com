@@ -1,0 +1,57 @@
+.animal{
+background: url('animal-sprite.png') 0 0 no-repeat transparent;
+height: 200px;
+width: 200px;
+}
+/*Standing Right*/
+.animal_img_1{
+background-position: 0px -35px;
+height: 170px;
+width: 80px;
+}
+/*Walk / Run*/
+.animal_img_2{
+background-position: -125px -35px;
+height: 170px;
+width: 120px;
+}
+.animal_img_3{
+background-position: -260px -35px;
+height: 185px;
+width: 125px;
+}
+.animal_img_4{
+background-position: -395px -35px;
+height: 185px;
+width: 145px;
+}
+/*Jump*/
+.animal_img_5{
+background-position: -560px -35px;
+height: 185px;
+width: 145px;
+}
+/*Falling*/
+.animal_img_6{
+background-position: 0px -240px;
+height: 210px;
+width: 200px;
+}
+/*Hit*/
+.animal_img_7{
+background-position: -200px -265px;
+height: 160px;
+width: 160px;
+}
+/*Dead*/
+.animal_img_8{
+background-position: -375px -275px;
+height: 145px;
+width: 155px;
+}
+/*Stage Clear*/
+.animal_img_9{
+background-position: -590px -285px;
+height: 180px;
+width: 125px;
+}

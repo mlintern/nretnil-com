@@ -108,6 +108,8 @@
 				<li class="divider-vertical"></li>
 				<li><a href="http://beer.nretnil.com">Beer O'Clock</a></li>
 				<li class="divider-vertical"></li>
+				<li><a href="http://dev.nretnil.com/img/sprites/index.html">Sprites</a></li>
+				<li class="divider-vertical"></li>
 			</ul>
 		</div>
 	</div>
