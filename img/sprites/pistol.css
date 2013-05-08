@@ -1,0 +1,18 @@
+.pistol {
+background: url('pistol-sprite.png') 0 0 no-repeat 
+transparent;
+height: 100px;
+width: 64px;
+}
+.pistol_img_1{
+background-position: 0 0;
+}
+.pistol_img_2{
+background-position: -80px -15px;
+}
+.pistol_img_3{
+background-position: -160px -15px;
+}
+.pistol_img_4{
+background-position: -240px -15px;
+}
