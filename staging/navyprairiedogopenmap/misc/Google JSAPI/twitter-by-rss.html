@@ -5,21 +5,37 @@
 <!-- Google Feeds API Javascript Library -->
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <!--Moment Javascript Library used to format the Date-->
-<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/1.7.2/moment.min.js"></script>
+<script type="text/javascript" src="http://dev.nretnil.com/staging/js/moment.min.js"></script>
+
 <style type="text/css">
+.clear{
+clear:both;
+}
 a {
-	text-decoration: none;
-	color: #D5763B;
+text-decoration: none;
+color: #D5763B;
 }
 a:hover {
-	text-decoration: underline;
+text-decoration: underline;
 }
-.Date-Author{
-	color: #999999;
+.date{
+color: #999999;
+text-align: right;
 }
 li.post {
 list-style: none outside none;
-margin: 10px 0;
+height: 100px;
+width: 350px;
+float:left;
+border: solid 1px #000;
+}
+li .image{
+float: left;
+width: 50px;
+}
+li .tweet{
+float: left;
+width: 300px;
 }
 </style>
 </head>
@@ -38,17 +54,33 @@ margin: 10px 0;
           var entry = result.feed.entries[i];
           console.log(entry);
           var entrydate = new Date(entry.publishedDate);
-          entrydate = moment(entrydate).format('MMMM Do, YYYY');
+          entrydate = moment(entrydate).fromNow();
           var li = $('<li>')
           	.attr('class','post')
-            .append(
+          	.append(
               $('<div>')
-               .text(entrydate + ' by ' + entry.author)
-			   .attr('class','Date-Author'),
-			  $('<div>')
-			   .attr('class','Content')
-			   .html(entry.content)
-            );
+              .attr('class','image')
+              .append(
+              		$('<img>')
+              			.attr('src','http://dev.nretnil.com/staging/img/twitter-profile-img.jpeg')
+              		)
+              )
+          	.append(
+              $('<div>')
+              .attr('class','tweet')
+	            .append(
+	              $('<div>')
+	               .text(entrydate)
+				   .attr('class','date'),
+				  $('<div>')
+				   .attr('class','Content')
+				   .html(entry.content)
+				)
+			)
+			.append(
+              $('<div>')
+              .attr('class','clear')
+              )
           $('#googleFeedList').append(li);
         }
       }
