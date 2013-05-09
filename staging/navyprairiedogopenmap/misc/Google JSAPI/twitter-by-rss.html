@@ -8,6 +8,10 @@
 <script type="text/javascript" src="http://dev.nretnil.com/staging/js/moment.min.js"></script>
 
 <style type="text/css">
+body{
+margin:0;
+padding:0;
+}
 .clear{
 clear:both;
 }
@@ -29,6 +33,9 @@ width: 355px;
 float:left;
 border: solid 1px #00ACEE;
 padding:5px;
+border-radius: 10px 10px 10px 10px;
+box-shadow: 5px 5px 5px #888888;
+margin-right:10px;
 }
 li .image{
 float: left;
@@ -49,25 +56,44 @@ padding:0 0 0 5px;
 left: 0px;
 top: 0px;
 position: absolute;
+padding:0;
 margin:0;
-padding: 0;
 }
 #prev{
+position: absolute;
+left:0;
+top:20px;
 }
 #next{
+position: absolute;
+right:0;
+top:20px;
+}
+.twitter-container{
+position: relative;
+width:1228px;
+}
+.twitter-window{
+background-color: transparent;
+float: left;
+height: 120px;
+overflow: hidden;
+width: 1131px;
+margin-left: 50px;
+position:relative;
 }
 </style>
 
-<script type="text/javascript">
-$(document).ready(function(){
-	
-});
-</script>
 </head>
 <body>
-<a id="previous" href="javascript:void();"><img src="" width="50" height="50"/></a>
-<ul id="twitterFeedList"></ul>
-<a id="next" href="javascript:void();"><img src="" width="50" height="50"/></a>
+
+<div class="twitter-container">
+	<a id="prev" href="javascript:void();"><img src="http://dev.nretnil.com/staging/img/arrow-left.png" width="50" height="50"/></a>
+	<div class="twitter-window">
+		<ul id="twitterFeedList"></ul>
+	</div>
+	<a id="next" href="javascript:void();"><img src="http://dev.nretnil.com/staging/img/arrow-right.png" width="50" height="50"/></a>
+</div>
 
 <script type="text/javascript">
 	google.load("feeds", "1", { callback: function() {
@@ -75,64 +101,61 @@ $(document).ready(function(){
 	feed.setResultFormat(google.feeds.Feed.JSON_FORMAT);
 	feed.setNumEntries(20);
 	feed.load(function(result) {
-	if (!result.error) {
-		for (var i = 0, l=result.feed.entries.length; i < l; i++) {
-		  var entry = result.feed.entries[i];
-		  console.log(entry);
-		  var entrydate = new Date(entry.publishedDate);
-		  entrydate = moment(entrydate).fromNow();
-		  var li = $('<li>')
-		  	.attr('class','tweet')
-		  	.append(
-		      $('<div>')
-		      .attr('class','image')
-		      .append(
-		      		$('<img>')
-		      			.attr('src','http://dev.nretnil.com/staging/img/twitter-profile-img.jpeg')
-		      		)
-		      )
-		  	.append(
-		      $('<div>')
-		      .attr('class','tweet-data')
-		        .append(
-		          $('<div>')
-		           .text(entrydate)
-				   .attr('class','date'),
-				  $('<div>')
-				   .attr('class','Content')
-				   .append(
-		      		$('<a>')
-		      			.attr('href',entry.link)
-		      			.html('@'+entry.content)
-		      			)
+		if (!result.error) {
+			for (var i = 0, l=result.feed.entries.length; i < l; i++) {
+			  var entry = result.feed.entries[i];
+			  console.log(entry);
+			  var entrydate = new Date(entry.publishedDate);
+			  entrydate = moment(entrydate).fromNow();
+			  var li = $('<li>')
+			  	.attr('class','tweet')
+			  	.append(
+			      $('<div>')
+			      .attr('class','image')
+			      .append(
+			      		$('<img>')
+			      			.attr('src','http://dev.nretnil.com/staging/img/twitter-profile-img.jpeg')
+			      		)
+			      )
+			  	.append(
+			      $('<div>')
+			      .attr('class','tweet-data')
+			        .append(
+			          $('<div>')
+			           .text(entrydate)
+					   .attr('class','date'),
+					  $('<div>')
+					   .attr('class','Content')
+					   .append(
+			      		$('<a>')
+			      			.attr('href',entry.link)
+			      			.html('@'+entry.content)
+			      			)
+					)
 				)
-			)
-			.append(
-		      $('<div>')
-		      .attr('class','clear')
-		      )
-		  $('#twitterFeedList').append(li);
+				.append(
+			      $('<div>')
+			      .attr('class','clear')
+			      )
+			  $('#twitterFeedList').append(li);
+			}
+			var block_width = $(".tweet").width();
+			var block_count = $(".tweet").length;
+			var block_visible = 3;
+			var current_position = $("#twitterFeedList").position().left;
+			$("#twitterFeedList").css("width", (block_width + 22) * block_count);
 		}
-	}
-});
-
-var block_width = $(".tweet").first().outerWidth(true);
-console.log(block_width);
-var block_count = $(".tweet").length;
-var block_visible = 3;
-var current_position = $("#twitterFeedList").position().left;
-$("#twitterFeedList").css("width", block_width * block_count);
-
+	});
 }});
 
 $("#next").click(function() {
         var firstauthor = $('#twitterFeedList li:first').remove();
-        $(".author-list").append(firstauthor);
+        $("#twitterFeedList").append(firstauthor);
 });
 
-$("#previous").click(function() {
+$("#prev").click(function() {
         var lastauthor = $('#twitterFeedList li:last').remove();
-        $(".author-list").prepend(lastauthor);
+        $("#twitterFeedList").prepend(lastauthor);
 });
 </script>
 </body>
