@@ -13,80 +13,127 @@ clear:both;
 }
 a {
 text-decoration: none;
-color: #D5763B;
+color: #000000;
 }
 a:hover {
-text-decoration: underline;
+color:#D5763B;
 }
 .date{
 color: #999999;
 text-align: right;
 }
-li.post {
+li.tweet {
 list-style: none outside none;
 height: 100px;
-width: 350px;
+width: 355px;
 float:left;
-border: solid 1px #000;
+border: solid 1px #00ACEE;
+padding:5px;
 }
 li .image{
 float: left;
 width: 50px;
+padding: 20px 0 0 0;
 }
-li .tweet{
+li .image img{
+width: 100%;
+height: auto;
+border-radius: 5px;
+}
+li .tweet-data{
 float: left;
 width: 300px;
+padding:0 0 0 5px;
+}
+#twitterFeedList {
+left: 0px;
+top: 0px;
+position: absolute;
+margin:0;
+padding: 0;
+}
+#prev{
+}
+#next{
 }
 </style>
-</head>
-<body>
-
-<ul id="googleFeedList"></ul>
 
 <script type="text/javascript">
-  google.load("feeds", "1", { callback: function() {
-    var feed = new google.feeds.Feed("https://api.twitter.com/1/statuses/user_timeline.rss?screen_name=mlintern");
-    feed.setResultFormat(google.feeds.Feed.JSON_FORMAT);
-    feed.setNumEntries(10);
-    feed.load(function(result) {
-      if (!result.error) {
-        for (var i = 0, l=result.feed.entries.length; i < l; i++) {
-          var entry = result.feed.entries[i];
-          console.log(entry);
-          var entrydate = new Date(entry.publishedDate);
-          entrydate = moment(entrydate).fromNow();
-          var li = $('<li>')
-          	.attr('class','post')
-          	.append(
-              $('<div>')
-              .attr('class','image')
-              .append(
-              		$('<img>')
-              			.attr('src','http://dev.nretnil.com/staging/img/twitter-profile-img.jpeg')
-              		)
-              )
-          	.append(
-              $('<div>')
-              .attr('class','tweet')
-	            .append(
-	              $('<div>')
-	               .text(entrydate)
+$(document).ready(function(){
+	
+});
+</script>
+</head>
+<body>
+<a id="previous" href="javascript:void();"><img src="" width="50" height="50"/></a>
+<ul id="twitterFeedList"></ul>
+<a id="next" href="javascript:void();"><img src="" width="50" height="50"/></a>
+
+<script type="text/javascript">
+	google.load("feeds", "1", { callback: function() {
+	var feed = new google.feeds.Feed("https://api.twitter.com/1/statuses/user_timeline.rss?screen_name=mlintern");
+	feed.setResultFormat(google.feeds.Feed.JSON_FORMAT);
+	feed.setNumEntries(20);
+	feed.load(function(result) {
+	if (!result.error) {
+		for (var i = 0, l=result.feed.entries.length; i < l; i++) {
+		  var entry = result.feed.entries[i];
+		  console.log(entry);
+		  var entrydate = new Date(entry.publishedDate);
+		  entrydate = moment(entrydate).fromNow();
+		  var li = $('<li>')
+		  	.attr('class','tweet')
+		  	.append(
+		      $('<div>')
+		      .attr('class','image')
+		      .append(
+		      		$('<img>')
+		      			.attr('src','http://dev.nretnil.com/staging/img/twitter-profile-img.jpeg')
+		      		)
+		      )
+		  	.append(
+		      $('<div>')
+		      .attr('class','tweet-data')
+		        .append(
+		          $('<div>')
+		           .text(entrydate)
 				   .attr('class','date'),
 				  $('<div>')
 				   .attr('class','Content')
-				   .html(entry.content)
+				   .append(
+		      		$('<a>')
+		      			.attr('href',entry.link)
+		      			.html('@'+entry.content)
+		      			)
 				)
 			)
 			.append(
-              $('<div>')
-              .attr('class','clear')
-              )
-          $('#googleFeedList').append(li);
-        }
-      }
-    });
-  }});
-</script>
+		      $('<div>')
+		      .attr('class','clear')
+		      )
+		  $('#twitterFeedList').append(li);
+		}
+	}
+});
 
+var block_width = $(".tweet").first().outerWidth(true);
+console.log(block_width);
+var block_count = $(".tweet").length;
+var block_visible = 3;
+var current_position = $("#twitterFeedList").position().left;
+$("#twitterFeedList").css("width", block_width * block_count);
+
+}});
+
+$("#next").click(function() {
+        var firstauthor = $('#twitterFeedList li:first').remove();
+        $(".author-list").append(firstauthor);
+});
+
+$("#previous").click(function() {
+        var lastauthor = $('#twitterFeedList li:last').remove();
+        $(".author-list").prepend(lastauthor);
+});
+</script>
 </body>
 </html>
