@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <!-- JQuery Library -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <!-- Google Feeds API Javascript Library -->
@@ -21,7 +22,7 @@ text-decoration: none;
 color: #000000;
 }
 a:hover {
-color:#D5763B;
+color:#00ACEE;
 }
 .date{
 color: #999999;
@@ -96,7 +97,7 @@ position:relative;
 	<a id="next" href="javascript:void();"><img src="http://dev.nretnil.com/staging/img/arrow-right.png" width="50" height="50"/></a>
 </div>
 
-<script>
+<script type="text/javascript">
 google.load("feeds", "1", { callback: function() {
 	var feed = new google.feeds.Feed("https://api.twitter.com/1/statuses/user_timeline.rss?screen_name=mlintern");
 	feed.setResultFormat(google.feeds.Feed.JSON_FORMAT);
@@ -157,5 +158,6 @@ $("#prev").click(function() {
         $("#twitterFeedList").prepend(lastauthor);
 });
 </script>
+
 </body>
 </html>
