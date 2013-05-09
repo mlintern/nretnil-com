@@ -1,0 +1,60 @@
+<html>
+<head>
+<!-- JQuery Library -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<!-- Google Feeds API Javascript Library -->
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<!--Moment Javascript Library used to format the Date-->
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/1.7.2/moment.min.js"></script>
+<style type="text/css">
+a {
+	text-decoration: none;
+	color: #D5763B;
+}
+a:hover {
+	text-decoration: underline;
+}
+.Date-Author{
+	color: #999999;
+}
+li.post {
+list-style: none outside none;
+margin: 10px 0;
+}
+</style>
+</head>
+<body>
+
+<ul id="googleFeedList"></ul>
+
+<script type="text/javascript">
+  google.load("feeds", "1", { callback: function() {
+    var feed = new google.feeds.Feed("https://api.twitter.com/1/statuses/user_timeline.rss?screen_name=mlintern");
+    feed.setResultFormat(google.feeds.Feed.JSON_FORMAT);
+    feed.setNumEntries(10);
+    feed.load(function(result) {
+      if (!result.error) {
+        for (var i = 0, l=result.feed.entries.length; i < l; i++) {
+          var entry = result.feed.entries[i];
+          console.log(entry);
+          var entrydate = new Date(entry.publishedDate);
+          entrydate = moment(entrydate).format('MMMM Do, YYYY');
+          var li = $('<li>')
+          	.attr('class','post')
+            .append(
+              $('<div>')
+               .text(entrydate + ' by ' + entry.author)
+			   .attr('class','Date-Author'),
+			  $('<div>')
+			   .attr('class','Content')
+			   .html(entry.content)
+            );
+          $('#googleFeedList').append(li);
+        }
+      }
+    });
+  }});
+</script>
+
+</body>
+</html>

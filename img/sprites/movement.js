@@ -5,8 +5,9 @@ $(document).ready(function(){
 	var speed=500;
 	var i = start;
 	var j = 1;
+	var k = 2;
 	
-	var f = function(){
+	var f = function spin(){
 		if ( i == imageCount ){
 			$('.globe').removeClass('globe_img_'+i);
 			i = 1;
@@ -18,7 +19,7 @@ $(document).ready(function(){
 		}
 	}
 	
-	var g = function(){
+	var g = function shoot(){
 		if ( j == 4 ){
 			$('.pistol').removeClass('pistol_img_'+j);
 			j = 1;
@@ -30,8 +31,22 @@ $(document).ready(function(){
 		}
 	}
 	
+	var h = function walk(){
+		var	divClass = 'animal';
+		if ( k == 3 ){
+			$('.'+divClass).removeClass(divClass+'_img_'+k);
+			k = 2;
+			$('.'+divClass).addClass(divClass+'_img_'+k);
+		}else{
+			$('.'+divClass).removeClass(divClass+'_img_'+k);
+			k++;
+			$('.'+divClass).addClass(divClass+'_img_'+k);
+		}
+	}
+	
 	var spin = setInterval(f,100);
-	//var shoot = setInterval(g,150);
+	var shoot = setInterval(g,150);
+	var go = setInterval(h,750);
 	
 	
 });
