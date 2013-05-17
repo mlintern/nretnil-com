@@ -59,8 +59,9 @@ function validateForm(){
 	var h=document.forms["StoryCapture"]["Title"].value;
 	if (h==null || h=="")
 	{
-	var hAlert= "Title of your story must be filled out!\n";
-	alert = alert + hAlert;
+	var time = new Date().getTime();
+	time = parseInt(time / 1000);
+	document.forms["StoryCapture"]["Title"].value = time;
 	}
 	
 	var i=document.forms["StoryCapture"]["DataField_Country"].value;
@@ -76,7 +77,6 @@ function validateForm(){
 	var fAlert= "Disclaimer must be Checked!\n";
 	alert = alert + fAlert;
 	}
-	
 	if (alert == ""){
 	return true;
 	}else{
