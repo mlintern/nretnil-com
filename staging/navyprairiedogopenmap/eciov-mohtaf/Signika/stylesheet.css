@@ -3,7 +3,7 @@
 
 
 @font-face {
-    font-family: 'signikabold';
+    font-family: 'Signika Bold';
     src: url('signika-bold-webfont.eot');
     src: url('signika-bold-webfont.eot?#iefix') format('embedded-opentype'),
          url('signika-bold-webfont.woff') format('woff'),
@@ -18,7 +18,7 @@
 
 
 @font-face {
-    font-family: 'signikalight';
+    font-family: 'Signika Light';
     src: url('signika-light-webfont.eot');
     src: url('signika-light-webfont.eot?#iefix') format('embedded-opentype'),
          url('signika-light-webfont.woff') format('woff'),
@@ -33,7 +33,7 @@
 
 
 @font-face {
-    font-family: 'signikaregular';
+    font-family: 'Signika Regular';
     src: url('signika-regular-webfont.eot');
     src: url('signika-regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('signika-regular-webfont.woff') format('woff'),
@@ -48,7 +48,7 @@
 
 
 @font-face {
-    font-family: 'signikasemibold';
+    font-family: 'Signika Semibold';
     src: url('signika-semibold-webfont.eot');
     src: url('signika-semibold-webfont.eot?#iefix') format('embedded-opentype'),
          url('signika-semibold-webfont.woff') format('woff'),
