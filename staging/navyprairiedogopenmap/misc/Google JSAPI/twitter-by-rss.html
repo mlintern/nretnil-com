@@ -100,7 +100,8 @@ position:relative;
 
 <script type="text/javascript">
 google.load("feeds", "1", { callback: function() {
-	var feed = new google.feeds.Feed("https://api.twitter.com/1/statuses/user_timeline.rss?screen_name=mlintern");
+	var now = new Date()
+	var feed = new google.feeds.Feed("https://api.twitter.com/1/statuses/user_timeline.rss?screen_name=mlintern&gibberish="+now);
 	feed.setResultFormat(google.feeds.Feed.JSON_FORMAT);
 	feed.setNumEntries(20);
 	feed.load(function(result) {
