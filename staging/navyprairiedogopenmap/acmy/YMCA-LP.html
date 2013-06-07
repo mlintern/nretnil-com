@@ -56,13 +56,9 @@ function validateForm(){
 	alert = alert + gAlert;
 	}
 	
-	var h=document.forms["StoryCapture"]["Title"].value;
-	if (h==null || h=="")
-	{
 	var time = new Date().getTime();
 	time = parseInt(time / 1000);
 	document.forms["StoryCapture"]["Title"].value = time;
-	}
 	
 	var i=document.forms["StoryCapture"]["DataField_Country"].value;
 	if (i==null || i=="")
@@ -804,10 +800,7 @@ Please share some basic information with us and write your story.
 	<label for="DataField_Member">Are you currently a YMCA member? </label> <input id="DataField_Member" name="DataField[Member]" type="radio" value="Yes"><span class="radio-buttons">Yes</span><br>
 	<input id="DataField_Member" name="DataField[Member]" type="radio" value="No"><span class="radio-buttons">No</span>
 	</div>
-	<div class="form_item">
-	<label for="Title"><b>Title of your story</b> </label> <input id="Title" name="Title" size="30" type="text" value="">
-	</div>
-	<br>
+	<input id="Title" name="Title" size="30" type="hidden" value="Title">
 	<!--<label for="DataField_Description">Give us one or two words to help describe your Y story. </label> --> <input id="DataField_Description" name="DataField[Description]" size="30" type="hidden" value="Update Description">
 	<br>
 	<div class="form_item">
