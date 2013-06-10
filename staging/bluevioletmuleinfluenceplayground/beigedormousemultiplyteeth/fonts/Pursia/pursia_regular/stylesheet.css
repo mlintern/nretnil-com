@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Purisa';
+    src: url('purisa-webfont.eot');
+    src: url('purisa-webfont.eot?#iefix') format('embedded-opentype'),
+         url('purisa-webfont.woff') format('woff'),
+         url('purisa-webfont.ttf') format('truetype'),
+         url('purisa-webfont.svg#purisa') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

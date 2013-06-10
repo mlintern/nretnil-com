@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Purisa Bold Oblique';
+    src: url('purisa-boldoblique-webfont.eot');
+    src: url('purisa-boldoblique-webfont.eot?#iefix') format('embedded-opentype'),
+         url('purisa-boldoblique-webfont.woff') format('woff'),
+         url('purisa-boldoblique-webfont.ttf') format('truetype'),
+         url('purisa-boldoblique-webfont.svg#purisaboldoblique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

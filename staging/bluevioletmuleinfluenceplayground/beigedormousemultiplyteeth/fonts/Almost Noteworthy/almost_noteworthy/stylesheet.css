@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Almost Noteworthy';
+    src: url('almost-noteworthy-webfont.eot');
+    src: url('almost-noteworthy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('almost-noteworthy-webfont.woff') format('woff'),
+         url('almost-noteworthy-webfont.ttf') format('truetype'),
+         url('almost-noteworthy-webfont.svg#almost_noteworthy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
