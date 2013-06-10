@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Finger Paint';
+    src: url('fingerpaint-regular-webfont.eot');
+    src: url('fingerpaint-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fingerpaint-regular-webfont.woff') format('woff'),
+         url('fingerpaint-regular-webfont.ttf') format('truetype'),
+         url('fingerpaint-regular-webfont.svg#finger_paintregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
