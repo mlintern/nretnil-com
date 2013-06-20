@@ -99,13 +99,6 @@ $(function ()
 		json : false,
 		post : function ()
 		{
-			var message;
-			
-			if (!$('.message').length)
-			{
-				$('#demonstrations').after('<div class="message" style="display:none; padding:10px; text-align:center" />');
-			}
-			
 			
 			if ($('input').val().length)
 			{
