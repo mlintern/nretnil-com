@@ -115,7 +115,7 @@ $(function ()
 			else
 			{
 				$('.message')
-					.html('Error')
+					.html('Fill in Form')
 					.css({
 						color : '#9c0006',
 						background : '#ffc7ce',
@@ -137,6 +137,7 @@ $(function ()
 			{
 				$('.message').slideUp(function ()
 				{
+					console.log(response);
 					$(this)
 						.html('Error')
 						.css({
