@@ -145,7 +145,7 @@ $(function ()
 				$('.message').slideUp(function ()
 				{
 					$(this)
-						.html('There was a problem with the image you uploaded')
+						.html('Error')
 						.css({
 							color : '#9c0006',
 							background : '#ffc7ce',
@@ -156,35 +156,11 @@ $(function ()
 			}
 			
 			else
-			{
-				html += '<p>Below is the uploaded image and the values that were posted when you submitted the demonstration form.</p>';
-				
-				
-				if (response.postedValues)
-				{
-					for (title in response.postedValues)
-					{
-						html += '<strong>' + title + ':</strong> ' + response.postedValues[title] + '<br />';
-					}
-				}
-				
-				
-				if (response.imageSize)
-				{
-					width = response.imageSize[0] > 500 ? 500 : response.imageSize[0];
-				}
-				
-				
-				if (response.imageSource)
-				{
-					html += '<img src="' + response.imageSource + '" width="' + width + '" alt="Your uploaded image" />';
-				}
-				
-				
+			{				
 				$('.message').slideUp(function ()
 				{
 					$(this)
-						.html(html)
+						.html('Success')
 						.css({
 							color : '#006100',
 							background : '#c6efce',
