@@ -96,7 +96,7 @@ $(function ()
 {
 	$('form').iframePostForm
 	({
-		json : true,
+		json : false,
 		post : function ()
 		{
 			var message;
@@ -107,10 +107,10 @@ $(function ()
 			}
 			
 			
-			if ($('input[type=file]').val().length)
+			if ($('input').val().length)
 			{
 				$('.message')
-					.html('Uploading file&hellip;')
+					.html('Working')
 					.css({
 						color : '#006100',
 						background : '#c6efce',
@@ -122,7 +122,7 @@ $(function ()
 			else
 			{
 				$('.message')
-					.html('Please select an image for uploading.')
+					.html('Error')
 					.css({
 						color : '#9c0006',
 						background : '#ffc7ce',
