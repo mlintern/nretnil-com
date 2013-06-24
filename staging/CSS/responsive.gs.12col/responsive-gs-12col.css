@@ -50,16 +50,16 @@
 
 /* COLUMN WIDTH ON DISPLAYS +768px */
 @media ( min-width : 768px ) {
-	.span_1 { width: 6.5%; }
-	.span_2 { width: 15.0%; }
-	.span_3 { width: 23.5%; }
-	.span_4 { width: 32.0%; }
-	.span_5 { width: 40.5%; }
-	.span_6 { width: 49.0%; }
-	.span_7 { width: 57.5%; }
-	.span_8 { width: 66.0%; }
-	.span_9 { width: 74.5%; }
-	.span_10 { width: 83.0%; }
-	.span_11 { width: 91.5%; }
-	.span_12 { width: 100%; }
+	.span1 { width: 6.5%; }
+	.span2 { width: 15.0%; }
+	.span3 { width: 23.5%; }
+	.span4 { width: 32.0%; }
+	.span5 { width: 40.5%; }
+	.span6 { width: 49.0%; }
+	.span7 { width: 57.5%; }
+	.span8 { width: 66.0%; }
+	.span9 { width: 74.5%; }
+	.span10 { width: 83.0%; }
+	.span11 { width: 91.5%; }
+	.span12 { width: 100%; }
 }
