@@ -6,7 +6,6 @@
 	LICENSED UNDER GPL & MIT
 */
 
-
 /* 	SET ALL ELEMENTS BOX-SIZING TO BORDER-BOX
 	If you need support for IE7 and lower use polyfill: https://github.com/Schepp/box-sizing-polyfill */
 * { -webkit-box-sizing: border-box;
@@ -16,7 +15,6 @@
 /* MAIN CONTAINER */
 .container						{ margin: 0 auto; }
 
-
 /* SELF CLEARING FLOATS - CLEARFIX METHOD */
 .row:after, .col:after, .clr:after, .group:after { 
 	content: ""; 
@@ -25,11 +23,9 @@
 	clear: both; 
 	visibility: hidden; }
 
-
 /* DEFAULT ROW STYLES */
 .row { margin-bottom: 0; } /* set according to preference*/
-			
-								  
+											  
 /* DEFAULT COLUMN STYLES */
 .col { 
 	display: block;
@@ -41,12 +37,11 @@
 	.col {
 		margin-left: 2%;
 	}
+	.mobile-only{display: none;}
 }
-
 
 /* RESET MARGINS */
 .col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
-
 
 /* COLUMN WIDTH ON DISPLAYS +768px */
 @media ( min-width : 768px ) {
@@ -62,4 +57,14 @@
 	.span10 { width: 83.0%; }
 	.span11 { width: 91.5%; }
 	.span12 { width: 100%; }
+}
+
+@media (max-width: 767px) {
+.mobile-only{display: block;}
+.desktop-only{display: none;}
+body{padding 0 20px;}
+}
+
+@media (max-width: 480px) {
+
 }
