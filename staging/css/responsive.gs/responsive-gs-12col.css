@@ -8,36 +8,24 @@
 
 /* 	SET ALL ELEMENTS BOX-SIZING TO BORDER-BOX
 	If you need support for IE7 and lower use polyfill: https://github.com/Schepp/box-sizing-polyfill */
-* { -webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box; }
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 /* MAIN CONTAINER */
-.container						{ margin: 0 auto; }
+.container {max-width: 100%;margin: 0 auto; }
 
 /* SELF CLEARING FLOATS - CLEARFIX METHOD */
-.row:after, .col:after, .clr:after, .group:after { 
-	content: ""; 
-	display: block; 
-	height: 0; 
-	clear: both; 
-	visibility: hidden; }
+.row:after, .col:after, .clr:after, .group:after { content: "";display: block; height: 0; clear: both; visibility: hidden; }
 
 /* DEFAULT ROW STYLES */
 .row { margin-bottom: 0; } /* set according to preference*/
-											  
+
+							  
 /* DEFAULT COLUMN STYLES */
-.col { 
-	display: block;
-	float:left;
-	width: 100%;
-}
+.col {display: block;float:left;width: 100%;}
 
 @media ( min-width : 768px ) {
-	.col {
-		margin-left: 2%;
-	}
-	.mobile-only{display: none;}
+	.col {margin-left: 2%;}
+    .mobile-only{display: none;}
 }
 
 /* RESET MARGINS */
@@ -59,10 +47,14 @@
 	.span12 { width: 100%; }
 }
 
+@media (max-width: 1050px) {
+img{max-width: 100%;}    
+}
+
 @media (max-width: 767px) {
 .mobile-only{display: block;}
 .desktop-only{display: none;}
-body{padding 0 20px;}
+body{padding: 0 10px;}
 }
 
 @media (max-width: 480px) {
