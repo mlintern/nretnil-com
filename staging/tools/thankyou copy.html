@@ -20,10 +20,30 @@
 	<form action="#" method="post" id="formId_0077725483009056921372280126990" _lpchecked="1">
 		<fieldset>
 		  <legend>Example of form validation</legend>
-			<p><label for="field1" class="displayBlock">Email:</label><input type="text" id="field1" class="  LV_invalid_field"><span class=" LV_validation_message LV_invalid">Must be a valid email address!</span></p>
-			<p><label for="field2" class="displayBlock">Acceptance *:</label><input type="checkbox" id="field2" class="checkbox   LV_valid_field"><span class=" LV_validation_message LV_valid">Thankyou!</span></p>
-			<p><label for="field3" class="displayBlock">Presence *:</label><textarea id="field3" class="shallow   LV_invalid_field" rows="2" cols="10"></textarea><span class=" LV_validation_message LV_invalid">Can't be empty!</span></p>
-	    <p><input type="submit" class="submit" value="Test me!"></p>
+			
+			<div>
+			<label for="field1" class="displayBlock">Email:</label>
+			<input type="text" id="field1" class="  LV_invalid_field">
+			<span class=" LV_validation_message LV_invalid">Must be a valid email address!</span>
+			</div>
+			
+			<div>
+			<label for="field2" class="displayBlock">Acceptance *:</label>
+			<input type="checkbox" id="field2" class="checkbox   LV_valid_field">
+			</div>
+			
+			<div>
+			<span class=" LV_validation_message LV_valid">Thankyou!</span>
+			<label for="field3" class="displayBlock">Presence *:</label>
+			</div>
+			
+			<div>
+			<textarea id="field3" class="shallow   LV_invalid_field" rows="2" cols="10"></textarea>
+			<span class=" LV_validation_message LV_invalid">Can't be empty!</span>
+	    	</div>
+	    	
+	    	<div><input type="submit" class="submit" value="Go"></div>
+	    	
 	  </fieldset>
 	</form>
 </div>
