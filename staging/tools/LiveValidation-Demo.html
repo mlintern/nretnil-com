@@ -57,17 +57,17 @@
 	</div>
 	<script type="text/javascript" src="http://dev.nretnil.com/staging/js/LiveValidation/livevalidation_standalone.js"></script>
 	<script>
-	var field1 = new LiveValidation( 'field1', {onlyOnSubmit: true } );
+	var field1 = new LiveValidation( 'field1' );
 	field1.add( Validate.Email );
 	
-	var field2 = new LiveValidation( 'field2', {onlyOnSubmit: true, validMessage: "Wooooo!!" } );
+	var field2 = new LiveValidation( 'field2', {onlyOnSubmit: true, validMessage:"Wooooo!!" } );
 	field2.add( Validate.Acceptance, {failureMessage:"Check The Box Now!!!"} );
 	
 	var field3 = new LiveValidation( 'field3', {onlyOnSubmit: true } );
 	field3.add( Validate.Presence );
 	
-	var field4 = new LiveValidation( 'field4', {onlyOnSubmit: true } );
-	field4.add( Validate.Numericallity );
+	var field4 = new LiveValidation( 'field4', {validMessage:"Now is a number my friend."} );
+	field4.add( Validate.Numericality, {notANumberMessage:"That does not look like a number."} );
 	
 	var field5 = new LiveValidation( 'field5' );
 	field5.add( Validate.Presence );
