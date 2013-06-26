@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="host_name" content="http://dev.nretnil.com">
+<title>Nretnil Tools / Thank You</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link type="text/css" href="http://dev.nretnil.com/css/bootstrap.css" rel="stylesheet">
+<link type="text/css" href="http://dev.nretnil.com/css/responsive.css" rel="stylesheet">
+<link type="text/css" href="http://dev.nretnil.com/staging/js/LiveValidation/livevalidation.css" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="container">
+	<div class="row-fluid">
+		<form action="#" method="post" id="formId_0077725483009056921372280126990">
+			<fieldset>
+			  <legend>Example of form validation</legend>
+				
+				<div>
+				<label>Email:</label>
+				<input type="text" id="field1">
+				</div>
+				
+				<div>
+				<label>Acceptance *:</label>
+				<input type="checkbox" id="field2" class="checkbox">
+				</div>
+				
+				<div>
+				<label>Presence *:</label>
+				<textarea id="field3" rows="2" cols="10"></textarea>
+		    	</div>
+		    	
+		    	<div>
+				<label>Number:</label>
+				<input type="text" id="field4">
+				</div>
+				
+				<div>
+				<label>Password:</label>
+				<input type="password" id="field5">
+				</div>
+				
+				<div>
+				<label>Confirm:</label>
+				<input type="password" id="field6">
+				</div>
+		    	
+		    	<div><input type="submit" class="submit" value="Go"></div>
+		    	
+		  </fieldset>
+		</form>
+	</div>
+	<script type="text/javascript" src="http://dev.nretnil.com/staging/js/LiveValidation/livevalidation_standalone.js"></script>
+	<script>
+	var field1 = new LiveValidation( 'field1', {onlyOnSubmit: true } );
+	field1.add( Validate.Email );
+	
+	var field2 = new LiveValidation( 'field2', {onlyOnSubmit: true, validMessage: "Wooooo!!" } );
+	field2.add( Validate.Acceptance, {failureMessage:"Check The Box Now!!!"} );
+	
+	var field3 = new LiveValidation( 'field3', {onlyOnSubmit: true } );
+	field3.add( Validate.Presence );
+	
+	var field4 = new LiveValidation( 'field4', {onlyOnSubmit: true } );
+	field4.add( Validate.Numericallity );
+	
+	var field5 = new LiveValidation( 'field5' );
+	field5.add( Validate.Presence );
+	field5.add( Validate.Length, { minimum: 8, maximum: 20 } );
+	
+	var field6 = new LiveValidation( 'field6' );
+	field6.add( Validate.Confirmation, { match : 'field5' } );
+	
+	var automaticOnSubmit = field1.form.onsubmit;
+	field1.form.onsubmit = function(){
+		var valid = automaticOnSubmit();
+		if(valid){ 
+			alert('The form is valid!');
+		}
+		return false;
+	}
+    	  
+	</script>
+</div>
+
+</body>
+</html>
