@@ -3,8 +3,8 @@
 <head>
 <link type="text/css" href="http://dev.nretnil.com/css/bootstrap.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/css/responsive.css" rel="stylesheet">
-<script type="text/javascript" src="http://dev.nretnil.com/js/bootstrap.js"></script>
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
 </head>
 <body>
 <div class="container">
@@ -25,10 +25,23 @@ Default
 </code>
 </div>
 
-<a class="twitter-timeline" href="https://twitter.com/mlintern" data-widget-id="341567210726244353" data-theme="light" data-link-color="#cc0000"  data-related="compendiumit,compendiumhelp"  data-tweet-limit="10" data-aria-polite="assertive" width="300" height="500" lang="EN" data-chrome="nofooter noborders transparent noheader">Tweets by @mlintern</a>
-
+<a class="twitter-timeline" href="https://twitter.com/mlintern" data-widget-id="341567210726244353" data-theme="light" data-link-color="#cc0000"  data-related="compendiumit,compendiumhelp"  data-tweet-limit="10" data-aria-polite="assertive" height="500" lang="EN" data-chrome="nofooter noborders transparent noheader">Tweets by @mlintern</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+    var i = setInterval(function(){
+        if($("#twitter-widget-0").length) {
+        	$("#twitter-widget-0").width('100%');
+            $("#twitter-widget-0").contents().find("body").append("<style type='text/css'>.avatar{display:none;}.var-chromeless .tweet {padding:12px 2px 10px 2px;float:left;width:220px;height:115px;margin-right:10px;}</style>");
+            clearInterval(i);
+        }
+    }, 500)
+});
+</script>
 </div>
 </div>
+<script type="text/javascript" src="http://dev.nretnil.com/js/bootstrap.js"></script>
 </body>
 </html>
