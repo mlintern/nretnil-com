@@ -23,7 +23,7 @@
 /* DEFAULT COLUMN STYLES */
 .col {display: block;float:left;width: 100%;}
 
-@media ( min-width : 768px ) {
+@media ( min-width : 480px ) {
 	.col {margin-left: 2%;}
     .mobile-only{display: none;}
 }
@@ -31,8 +31,8 @@
 /* RESET MARGINS */
 .col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
 
-/* COLUMN WIDTH ON DISPLAYS +768px */
-@media ( min-width : 768px ) {
+/* COLUMN WIDTH ON DISPLAYS +480px */
+@media ( min-width : 480px ) {
 	.span1 { width: 6.5%; }
 	.span2 { width: 15.0%; }
 	.span3 { width: 23.5%; }
@@ -47,16 +47,33 @@
 	.span12 { width: 100%; }
 }
 
-@media (max-width: 1050px) {
-img{max-width: 100%;}    
+@media screen and (max-width: 1050px) {
+img{max-width: 100%;height: auto;}    
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
+input, textarea{max-width: 100%;}
+}
+
+@media screen and (max-width: 480px) {
+body{padding: 0 10px;}
 .mobile-only{display: block;}
 .desktop-only{display: none;}
-body{padding: 0 10px;}
+img{margin-right:auto;margin-left:auto;}
 }
 
-@media (max-width: 480px) {
-
-}
+/*For IE8 and Below*/
+.col {margin-left: 2%\9;}
+.mobile-only{display: none\9;}
+.span1 { width: 6.5%\9; }
+.span2 { width: 15.0%\9; }
+.span3 { width: 23.5%\9; }
+.span4 { width: 32.0%\9; }
+.span5 { width: 40.5%\9; }
+.span6 { width: 49.0%\9; }
+.span7 { width: 57.5%\9; }
+.span8 { width: 66.0%\9; }
+.span9 { width: 74.5%\9; }
+.span10 { width: 83.0%\9; }
+.span11 { width: 91.5%\9; }
+.span12 { width: 100%\9; }
