@@ -1,3 +1,6 @@
+.align-center{
+text-align: center;
+}
 #cron-creator .cron-item{
 min-height: 200px;
 }
@@ -7,4 +10,5 @@ font-weight: bold;
 /*FOOTER*/
 .footer-email{
 color:blue;
+padding: 30px 0;
 }
