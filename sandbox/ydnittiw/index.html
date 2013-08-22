@@ -19,7 +19,7 @@
 <body data-spy="scroll" data-target="#main-navbar" data-offset="100">
 
 <div class="container">		
-	<div class="row">
+	<div id="wittindy" class="row">
 		<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -60,15 +60,16 @@
 	</div>
 </div> <!-- End Container -->
 
+<div id="wittindy" style="height: 70px;"></div>
+
 <div class="container fog40">	
-	
-	<div id="wittindy" class="row">
+	<div class="row">
 		<div class="page-header">
 			<h1 class="text-center">#WittIndy</h1>
 		</div>
 	</div>
 	
-	<div style="height: 50px;"></div>
+	<div style="height: 30px;"></div>
 	
 	<div id="slides" class="row">
 		<div id="carousel-example-generic" class="carousel slide bs-docs-carousel-example">
@@ -202,6 +203,16 @@
 <script type="text/javascript" src="js/tab.js"></script>
 <script type="text/javascript" src="js/transition.js"></script>
 <script type="text/javascript" src="http://dev.nretnil.com/staging/js/jquery-backstretch/jquery.backstretch.js"></script>
+
+<script>
+var offset = 70;
+
+$('.navbar li a').click(function(event) {
+    event.preventDefault();
+    $($(this).attr('href'))[0].scrollIntoView();
+    scrollBy(0, -offset);
+});
+</script>
 
 </body>
 </html>
