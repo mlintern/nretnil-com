@@ -14,11 +14,11 @@
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#main-navbar" data-offset="100">
 
 <div class="container">		
 	<div class="row">
-		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -27,24 +27,14 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Brand</a>
+				<a class="navbar-brand" href="#wittindy">#WittIndy</a>
 			</div>
 			
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li><a href="#">Separated link</a></li>
-							<li><a href="#">One more separated link</a></li>
-						</ul>
-					</li>
+					<li><a href="#slides">Slide Show</a></li>
+					<li><a href="#events">Indy Events</a></li>
 				</ul>
 				<form class="navbar-form navbar-left" role="search">
 					<div class="form-group">
@@ -53,14 +43,12 @@
 					<button type="submit" class="btn btn-default">Submit</button>
 				</form>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Link</a></li>
+					<li><a target="_blank" href="http://www.wittenberg.edu">Wittenberg</a></li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Social <b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li><a href="#">Separated link</a></li>
+							<li><a target="_blank" href="https://www.facebook.com/groups/528497160544392/">Facebook</a></li>
+							<li><a target="_blank" href="https://twitter.com/search?q=%23wittindy">Twitter</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -70,34 +58,48 @@
 </div> <!-- End Container -->
 
 <div class="container fog40">	
-	<div class="row">
+	<div id="wittindy" class="row">
 		<div class="page-header">
-			<h1 class="text-center">Witt Indy</h1>
+			<h1 class="text-center">#WittIndy</h1>
 		</div>
 	</div>
 	
-	<div class="row">
+	<div id="slides" class="row">
 		<div id="carousel-example-generic" class="carousel slide bs-docs-carousel-example">
 	        <ol class="carousel-indicators">
 				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 				<li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
 				<li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+				<li data-target="#carousel-example-generic" data-slide-to="3" class=""></li>
+				<li data-target="#carousel-example-generic" data-slide-to="4" class=""></li>
 	        </ol>
 	        <div class="carousel-inner">
 				<div class="item active">
-					<img src="http://placehold.it/1170x600&text=[First Image]"/>
+					<img src="img/wittindyjune2013-1.JPG"/>
 					<div class="carousel-caption">
 					Caption
 					</div>
 				</div>
 				<div class="item">
-					<img src="http://placehold.it/1170x600&text=[Second Image]"/>
+					<img src="img/wittindyjune2013-2.JPG"/>
 					<div class="carousel-caption">
 					Caption
 					</div>
 				</div>
 				<div class="item">
-					<img src="http://placehold.it/1170x600&text=[Third Image]"/>
+					<img src="http://placehold.it/1024x600&text=[Third Image]"/>
+					<div class="carousel-caption">
+					Caption
+					</div>
+				</div>
+				<div class="item">
+					<img src="http://placehold.it/1024x600&text=[Fourth Image]"/>
+					<div class="carousel-caption">
+					Caption
+					</div>
+				</div>
+				<div class="item">
+					<img src="http://placehold.it/1024x600&text=[Fifth Image]"/>
 					<div class="carousel-caption">
 					Caption
 					</div>
@@ -111,10 +113,40 @@
 	        </a>
 	      </div>
 	</div>
+		
+	<div id="events" class="row">
+		<div class="bs-example bs-example-tabs col-lg-10 col-lg-offset-1">
+			<h2>Events</h2>
+			<ul id="myTab" class="nav nav-tabs">
+				<li class="active"><a href="#event1" data-toggle="tab">Happy Hour</a></li>
+				<li class=""><a href="#event2" data-toggle="tab">Tiger Tailgate</a></li>
+				<li class=""><a href="#event3" data-toggle="tab">House Party</a></li>
+			</ul>
+			<div id="myTabContent" class="tab-content">
+				<div class="tab-pane fade active in" id="event1">
+					<p>Wednesday, August 19th, 2013</p>
+					<p class="align-center">Indianapolis Happy Hour - Moe & Johnny's <br>
+					5:00 PM to 8:00 PM <br>
+					Indianapolis, IN <br>
+					Happy Hour at Moe & Johnny's</p>
+				</div>
+				<div class="tab-pane fade" id="event2">
+					<p class="warning">Saturday, September 07, 2013</p>
+					<p class="align-center">Wittenberg vs. Butler Tailgate <br>
+					Gather for a tailgate and watch the Tigers take on the Butler Bulldogs in the Butler Bowl!<br>
+					Tailgate begins at 4 p.m</p>
+				</div>
+				<div class="tab-pane fade" id="event3">
+					<p>TBD</p>
+					<p class="align-center">Old school Kegger with details to be worked out and announced at a later date.</p>
+				</div>
+			</div>
+	    </div>
+	</div>	
 			
 	<div class="row">
 		<div class="footer">
-			<div class="footer-email" style="text-align:center;">indianapolisalumnichapter@wittenberg.edu</div>
+			<div class="footer-email" style="text-align:center;"><a href="mailto:IndianapolisWittAlumni@Wittenberg.edu">IndianapolisWittAlumni@Wittenberg.edu</div>
 		</div>
 	</div>
 </div> <!-- End Container -->
@@ -133,6 +165,7 @@
 <script type="text/javascript" src="js/scrollspy.js"></script>
 <script type="text/javascript" src="js/tab.js"></script>
 <script type="text/javascript" src="js/transition.js"></script>
+<script type="text/javascript" src="http://dev.nretnil.com/staging/js/jquery-backstretch/jquery.backstretch.js"></script>
 
 </body>
 </html>
