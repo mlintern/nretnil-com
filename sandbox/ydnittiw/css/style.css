@@ -9,9 +9,6 @@ color: #FFF;
 a:hover{
 color: #b90102;
 }
-.align-center{
-text-align: center;
-}
 /*Navbar Updates*/
 .navbar-default{
 background-color: #b90102;
@@ -34,7 +31,7 @@ color:
 .alight-center{
 text-align: center;
 }
-h1{
+h1, h2, h3, h4, h5, h6{
 font-family: 'Headland One', serif;
 }
 /*Carousel*/
