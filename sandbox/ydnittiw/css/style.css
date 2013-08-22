@@ -1,0 +1,32 @@
+body{
+	position:relative;
+    background: url('../img/witt-seal.jpg') fixed center no-repeat #666;
+    color: #ffffff;
+    padding-top: 70px;
+}
+.align-center{
+text-align: center;
+}
+/*Navbar Updates*/
+.navbar-default{
+background-color: #b90102;
+}
+.navbar-default .navbar-nav > li > a {
+color: 
+#FFF;
+}
+.navbar-default .navbar-nav > .dropdown > a .caret {
+border-top-color: 
+#FFF;
+border-bottom-color: 
+#FFF;
+}
+.navbar-default .navbar-brand {
+color: 
+#FFF;
+}
+/*FOOTER*/
+.footer-email{
+color: #FFF;
+padding: 30px 0;
+}
