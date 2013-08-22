@@ -34,6 +34,9 @@ text-align: center;
 h1, h2, h3, h4, h5, h6{
 font-family: 'Headland One', serif;
 }
+.thumbnail{
+color: #b90102;
+}
 /*Carousel*/
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
 margin: 0 auto;
