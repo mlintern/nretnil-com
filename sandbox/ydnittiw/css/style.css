@@ -1,6 +1,10 @@
 body{
 position:relative;
-background: url('../img/witt-seal.jpg') fixed center no-repeat #666;
+background-image: url('../img/witt-seal.jpg');
+background-color: #666;
+background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
 color: #FFF;
 }
 a {
