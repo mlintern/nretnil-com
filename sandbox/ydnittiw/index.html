@@ -23,7 +23,7 @@
 		<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top r-fog80" role="navigation">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -33,7 +33,7 @@
 			</div>
 			
 			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<div class="collapse navbar-collapse navbar-collapse">
 				<ul class="nav navbar-nav">
 					<li><a href="#slides" class="local">Slide Show <span class="glyphicon glyphicon-picture"></span></a></li>
 					<li><a href="#events" class="local">Indy Events <span class="glyphicon glyphicon-bullhorn"></span></a></li>
@@ -130,27 +130,35 @@
 		<div class="bs-example bs-example-tabs col-md-10 col-md-offset-1">
 			<h2>Events</h2>
 			<ul id="myTab" class="nav nav-tabs">
-				<li class="active"><a href="#event1" data-toggle="tab">Happy Hour <span class="glyphicon glyphicon-glass"></span></a></li>
-				<li class=""><a href="#event2" data-toggle="tab">Tiger Tailgate <span class="glyphicon glyphicon-glass"></span></a></li>
+				<li class=""><a href="#event1" data-toggle="tab">Happy Hour <span class="glyphicon glyphicon-glass"></span></a></li>
+				<li class="active"><a href="#event2" data-toggle="tab">Tiger Tailgate <span class="glyphicon glyphicon-glass"></span></a></li>
+				<li class=""><a href="#event4" data-toggle="tab">Homecoming  <span class="glyphicon glyphicon-glass"></span></a></li>
 				<li class=""><a href="#event3" data-toggle="tab">House Party <span class="glyphicon glyphicon-glass"></span></a></li>
 			</ul>
 			<div style="height: 20px;"></div>
 			<div id="myTabContent" class="tab-content">
-				<div class="tab-pane fade active in" id="event1">
+				<div class="tab-pane fade" id="event1">
 					<p>Wednesday, August 21th, 2013</p>
-					<p class="text-center">Indianapolis Happy Hour - Moe & Johnny's <br>
-					5:00 PM to 8:00 PM <br>
+					<h4 class="text-center">Indianapolis Happy Hour - Moe & Johnny's</h4>
+					<p class="text-center">5:00 PM to 8:00 PM <br>
 					Indianapolis, IN <br>
 					Happy Hour at Moe & Johnny's</p>
 				</div>
-				<div class="tab-pane fade" id="event2">
+				<div class="tab-pane fade active in" id="event2">
 					<p>Saturday, September 07, 2013</p>
-					<p class="text-center">Wittenberg vs. Butler Tailgate <br>
-					Gather for a tailgate and watch the Tigers take on the Butler Bulldogs in the Butler Bowl!<br>
+					<h4 class="text-center">Wittenberg vs. Butler Tailgate</h4>
+					<p class="text-center">Gather for a tailgate and watch the Tigers take on the Butler Bulldogs in the Butler Bowl!<br>
 					Tailgate begins at 4 p.m</p>
+				</div>
+				<div class="tab-pane fade" id="event4">
+					<p>October 11-13, 2013</p>
+					<h4 class="text-center">Homecoming</h4>
+					<p class="text-center">There will be a get together for the Indianapolis Alumni Chapter on Saturday.<br>
+					Time TBD</p>
 				</div>
 				<div class="tab-pane fade" id="event3">
 					<p>TBD</p>
+					<h4 class="text-center">House Party</h4>
 					<p class="text-center">College Days Party complete with Games and Festivities.</p>
 				</div>
 				<div style="height: 20px;"></div>
@@ -199,7 +207,7 @@
 	</div>
 
 	<!-- Modal -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal fade" id="myModal">
 		<div class="modal-dialog">
 			<form class="form-horizontal" role="form" action="#" method="post">
 				<div class="modal-content">
