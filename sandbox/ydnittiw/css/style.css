@@ -19,6 +19,9 @@ color: #FFF;
 a:hover{
 color: #b90102;
 }
+h2 a:hover{
+color: #FFF;
+}
 /*Navbar Updates*/
 .navbar-default .navbar-nav > li > a {
 color: #FFF;

@@ -31,7 +31,7 @@ $(document).ready(function() {
     var i = setInterval(function(){
         if($("#twitter-widget-0").length) {
         	$("#twitter-widget-0").width('100%');
-            $("#twitter-widget-0").contents().find("body").append('&lt;style type='text/css'&gt;.avatar{display:none;}.var-chromeless .tweet {padding:12px 2px 10px 2px;float:left;width:220px;height:115px;margin-right:10px;}&lt;/style&gt;');
+            $("#twitter-widget-0").contents().find("body").append("&lt;style type='text/css'&gt;.avatar{display:none;}.var-chromeless .tweet {padding:12px 2px 10px 2px;float:left;width:220px;height:115px;margin-right:10px;}&lt;/style&gt;");
             clearInterval(i);
         }
     }, 500)
