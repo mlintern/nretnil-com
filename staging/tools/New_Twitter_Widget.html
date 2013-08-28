@@ -51,36 +51,31 @@ $(document).ready(function() {
         	
         	clearInterval(i);
         	
-        	var html = "<style type='text/css'>";
-        	html += ".avatar{display:none;}";
-        	html += ".var-chromeless .tweet {padding:12px 2px 10px 2px;float:left;width:220px;height:115px;margin-right:10px;}";
-        	html += "ol.pagination-controls {text-align:center;clear:both;}";
-        	html += "ol.pagination-controls li {background: url('http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/accf0d87-0d14-4aa7-bbf3-193b90c8d68c/Image/21ac3a1c54376a0766b33cd5bf89e491/light_dot3.png') no-repeat scroll 0 0 transparent;cursor: pointer;display: inline-block;height: 12px;list-style: none outside none;margin: 0 1px;text-align: left;text-indent: -8000px;width: 13px;}"
-			html += "ol.pagination-controls li:hover {background: url('http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/accf0d87-0d14-4aa7-bbf3-193b90c8d68c/Image/ee5e37656b6fa092894e045eb3367638/blue_dot.png') no-repeat scroll 0 0 transparent;}"
-			html += "ol.pagination-controls li.current {background: url('http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/accf0d87-0d14-4aa7-bbf3-193b90c8d68c/Image/ee5e37656b6fa092894e045eb3367638/blue_dot.png') no-repeat scroll 0 0 transparent;}"
-        	html += "</style>";
-
-        	$("#twitter-widget-0").width('100%');
-            $("#twitter-widget-0").contents().find("body").append(html);
-            
-            var script = $('<script>')
-	        .attr('src', 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
-            
-            $("#twitter-widget-0").contents().find("body").append(script);
-            
-            var script = $('<script>')
-	        .attr('src', 'http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/5449f829-a13a-44bb-8103-38ecafc13d5d/File/c25ce97005aaf82ab16b8b24facd59ca/easypaginate_custom.js')
-	        .attr('onload','$(".h-feed").easyPaginate({step:5, clickstop:false, nextprev: false, controls: "twitter-controls" });');
-            
-            $("#twitter-widget-0").contents().find("body").append(script);
-            
-            
-            /*script = $('<script>')
-            .html('$(document).ready(function(){$(".h-feed").easyPaginate({step:5, clickstop:false, nextprev: false, controls: "twitter-controls" });});');
-            
-            setTimeout(function(){
-            	$("#twitter-widget-0").contents().find("body").append(script);
-            }, 500);*/
+        	setTimeout(function(){
+	        	var html = "<style type='text/css'>";
+	        	html += ".avatar{display:none;}";
+	        	html += ".var-chromeless .tweet {padding:12px 2px 10px 2px;float:left;width:220px;height:115px;margin-right:10px;}";
+	        	html += "ol.pagination-controls {text-align:center;clear:both;}";
+	        	html += "ol.pagination-controls li {background: url('http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/accf0d87-0d14-4aa7-bbf3-193b90c8d68c/Image/21ac3a1c54376a0766b33cd5bf89e491/light_dot3.png') no-repeat scroll 0 0 transparent;cursor: pointer;display: inline-block;height: 12px;list-style: none outside none;margin: 0 1px;text-align: left;text-indent: -8000px;width: 13px;}"
+				html += "ol.pagination-controls li:hover {background: url('http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/accf0d87-0d14-4aa7-bbf3-193b90c8d68c/Image/ee5e37656b6fa092894e045eb3367638/blue_dot.png') no-repeat scroll 0 0 transparent;}"
+				html += "ol.pagination-controls li.current {background: url('http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/accf0d87-0d14-4aa7-bbf3-193b90c8d68c/Image/ee5e37656b6fa092894e045eb3367638/blue_dot.png') no-repeat scroll 0 0 transparent;}"
+	        	html += "</style>";
+	
+	        	$("#twitter-widget-0").width('100%');
+	            $("#twitter-widget-0").contents().find("body").append(html);
+	            
+	            var script = $('<script>')
+		        .attr('src', 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
+	            
+	            $("#twitter-widget-0").contents().find("body").append(script);
+	            
+	            var script = $('<script>')
+		        .attr('src', 'http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/5449f829-a13a-44bb-8103-38ecafc13d5d/File/c25ce97005aaf82ab16b8b24facd59ca/easypaginate_custom.js')
+		        .attr('onload','$(".h-feed").easyPaginate({step:5, clickstop:false, nextprev: false, controls: "twitter-controls" });');
+	            
+	            $("#twitter-widget-0").contents().find("body").append(script);
+	            
+            }, 500)
         }
     }, 500);
 });
