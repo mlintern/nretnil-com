@@ -3,7 +3,9 @@ function codify_text(){
 	
 	text = text.replaceAll("<", "&lt;");
 	text = text.replaceAll(">", "&gt;");
-	text = text.replaceAll("\n", "<br>");
+	if ($('#usebreaks').is(':checked')){
+		text = text.replaceAll("\n", "<br> \n");
+	}
 	
 	$('#codified_result').text(text);
 }

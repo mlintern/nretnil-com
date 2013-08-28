@@ -102,10 +102,13 @@
 					</div>
 				</div>
 				<div class="tab-pane" id="codify">
-					<div class="span6 offset3">
+					<div class="span10 offset1">
 				        <textarea type="text" class="span12" value="" rows="5" placeholder="Text To Codify…" id="code_text"></textarea>
+				        <label class="checkbox">
+				        	<input id="usebreaks" type="checkbox" checked /> Use Breaks?
+				        </label>
 						<button class="btn btn-large btn-success btn-block" onclick="codify_text();return false;">Codify Text!</button>
-						<code class="align-center" id="codified_result" style="padding:10px;margin-top: 15px;display: block;white-space:normal;"></code>
+						<div class="well" id="codified_result" style="padding:10px;margin-top: 15px;display: block;white-space:pre;"></div>
 					</div>
 				</div>
 				<div class="tab-pane active" id="exip">
