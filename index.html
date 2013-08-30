@@ -52,28 +52,6 @@
 			</div><!-- /.navbar-collapse -->
 		</nav>
 	</div>
-	<!--<div class="row">
-		<div class="navbar">
-			<div class="navbar-inner">
-				<a class="navbar-brand" href="/">Tools</a>
-				<ul class="nav navbar-nav">
-					<li><a href="map/index.html">Maps</a></li>
-					<li><a href="jsb/index.html">JS Beautify</a></li>
-					<li><a href="http://dev.nretnil.com/staging">Staging</a></li>
-					<li><a href="http://beer.nretnil.com">Beer O'Clock</a></li>
-					<li><a href="http://dev.nretnil.com/img/sprites/index.html">Sprites</a></li>
-				</ul>
-				<ul class="nav pull-right">
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown">Sandbox<b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="sandbox/ydnittiw/index.html">#WittIndy</a></li>
-					</ul>
-				</li>
-			</ul>
-			</div>
-		</div>
-	</div> -->
 	
 	<div class="row">
 		<ul class="nav nav-tabs nav-justified">
@@ -85,7 +63,7 @@
 		<div class="tab-content">
 			<div class="tab-pane" id="SetOne">
 				<ul class="nav nav-pills nav-justified">
-					<li><a href="#pig-latin" data-toggle="tab">Pig Latin Generator <i class="glyphicon glyphicon-bookmark pull-right"></i></a></li>
+					<li><a href="#pig-latin" data-toggle="tab">Pig Latin Generator <i class="glyphicon glyphicon-list-alt pull-right"></i></a></li>
 					<li><a href="#lorem" data-toggle="tab">Lorem Ipsum Text <i class="glyphicon glyphicon-list-alt pull-right"></i></a></li>
 					<li><a href="#reverse" data-toggle="tab">Reverse Text <i class="glyphicon glyphicon-resize-horizontal pull-right"></i></a></li>	
 					<li><a href="#codify" data-toggle="tab">Codify Text <i class="glyphicon glyphicon-edit pull-right"></i></a></li>
@@ -101,8 +79,8 @@
 			</div>
 			<div class="tab-pane" id="SetThree">
 				<ul class="nav nav-pills nav-justified">
-					<li><a href="#pswd1" data-toggle="tab">Password Generator <i class="glyphicon glyphicon-lock pull-right"></i></a></li>
-					<li><a href="#pswd2" data-toggle="tab">Passphrase Generator <i class="glyphicon glyphicon-lock pull-right"></i></a></li>
+					<li><a href="#pswd1" data-toggle="tab">Password Generator <i class="glyphicon glyphicon-ban-circle pull-right"></i></a></li>
+					<li><a href="#pswd2" data-toggle="tab">Passphrase Generator <i class="glyphicon glyphicon-ban-circle pull-right"></i></a></li>
 					<li><a href="#human2unix" data-toggle="tab">Human To Unix Time<i class="glyphicon glyphicon-time pull-right"></i></a></li>
 					<li><a href="#crontab" data-toggle="tab">Cron Generator <i class="glyphicon glyphicon-time pull-right"></i></a></li>
 				</ul>
@@ -117,9 +95,10 @@
 		<div class="tab-content">
 		<div style="height:40px;"></div>
 			<div class="tab-pane" id="pswd1">
-			  	<form class="col-sm-4 col-sm-offset-2 col-sm-10">
+			  	<form class="col-sm-6 col-sm-offset-3">
 					<fieldset>
 						<legend>Password Generator</legend>
+						<div style="height: 20px;"></div>
 						<label>Length:</label>
 						<input class="col-2" id="Length" type="text" value="15"/>
 						<label class="checkbox">
@@ -135,8 +114,8 @@
 				</form>
 			</div>
 			<div class="tab-pane" id="pswd2">
-				<div class="col-sm-6 col-sm-offset-3 col-sm-10">
-					<code class="col-sm-12 align-center" id="passphrase_result" style="text-transform:lowercase;padding:10px;margin-bottom: 15px;"></code>
+				<div class="col-sm-6 col-sm-offset-3">
+					<code class="col-sm-12 align-center" id="passphrase_result" style="text-transform:lowercase;padding:10px;margin-bottom: 15px;display: block;"></code>
 					<button class="btn btn-large btn-success btn-block" onclick="passphrase_gen();return false;">Generate Another!</button>
 					<code class="align-center" id="passphrase_result_nospace" style="text-transform:lowercase;padding:10px;margin-top: 15px;display: block;"></code>
 				</div>
@@ -281,7 +260,7 @@
 						<input class="btn btn-large btn-success col-sm-12" value="Create Text" onclick="loremExecute();return false;" type="button">
 					</fieldset>
 				</form>
-				<div class="col-sm-10 col-sm-offset-1"><textarea class="hidden ipsum col-sm-12" style="display:block; height: 300px;"></textarea></div>
+				<div class="col-sm-10 col-sm-offset-1" style="margin-top: 10px;"><textarea class="hidden ipsum col-sm-12" style="display:block; height: 300px;"></textarea></div>
 			</div>
 			<div class="tab-pane" id="human2unix">
 				<div class="col-sm-5">
@@ -359,7 +338,7 @@
 					</div>
 					<div class="row" style="margin-top: 40px;">
 						<div class="col-sm-12">
-						<input class="btn btn-primary btn-large btn-block btn-warning" type="submit" value="Submit"> 
+							<input class="btn btn-primary btn-large btn-block btn-warning" type="submit" value="Submit"> 
 						</div>
 					</div>
 				</form>
