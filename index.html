@@ -216,13 +216,15 @@
 					
 					<textarea id="taEng" class="col-sm-12" rows="7" name="taEng">Enter the English text here that you want translated into Pig Latin.</textarea>
 					
+					<div class="row" style="margin: 20px 0;">
 					<input class="btn btn-success col-sm-6" value="Translate" onclick="fTranslate()" type="button">
 					<input  class="btn btn-danger col-sm-6" value="Clear Text" onclick="fClearText()" type="button">
+					</div>
 					
 					<label>Igpay Atinlay Anslationtray:</label>
 					<textarea id="taPL" class="col-sm-12" rows="7" name="taPL"></textarea>
 					
-					<input class="btn btn-warning col-sm-12" value="Select All Text" onclick="fSelectText('taPL')" type="button">
+					<input class="btn btn-warning col-sm-12" value="Select All Text" onclick="fSelectText('taPL')" type="button" style="margin: 20px 0;">
 					
 					<label>Maximum Line Length:</label>
 					<input class="col-sm-2" name="txtMaxLength" value="65" maxlength="2" onchange="fVerifyEntry(this.value)" type="text">
