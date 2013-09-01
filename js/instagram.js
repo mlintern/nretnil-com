@@ -1,10 +1,10 @@
-/*function lookupID(){
+function lookupID(){
     $('.result').addClass("hidden");
     var username = $("#username").val();
     $(".result .text").empty();
     $(".result .avatar").empty();
     $(".result .id").empty();
-    $.getJSON("https://api.instagram.com/v1/users/search?q="+username+"&access_token=43653944.59a3a9f.cbdc471769354bfa95dd55ef414a3dae&callback=?",
+    $.getJSON("https://api.instagram.com/v1/users/search?q="+username+"&access_token=657b8d758d69482d8b9f615c9582b2e4&callback=?",
       {
         format: "json"
       },
@@ -29,8 +29,8 @@
              
             $('.result').toggleClass("hidden");
     });
-}*/
-
+}
+/*
 function lookupID(){
     $('.result').addClass("hidden");
     var username = $("#username").val();
@@ -65,3 +65,4 @@ function lookupID(){
             $('.result').toggleClass("hidden");
     });
 }
+*/
