@@ -13,6 +13,12 @@ color: #FFF;
 	background-position: center top;
 	}
 }
+@media handheld {
+	body{
+	background-repeat: repeat-y;
+	background-position: center top;
+	}
+}
 a {
 color: #FFF;
 }
