@@ -4,7 +4,7 @@ function lookupID(){
     $(".result .text").empty();
     $(".result .avatar").empty();
     $(".result .id").empty();
-    $.getJSON("https://api.instagram.com/v1/users/search?q="+username+"&access_token=657b8d758d69482d8b9f615c9582b2e4&callback=?",
+    $.getJSON("https://api.instagram.com/v1/users/search?q="+username+"&access_token=205224010.b4dbc01.934a2808f4454f89bef3ae8b33bc120a&callback=?",
       {
         format: "json"
       },

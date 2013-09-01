@@ -42,5 +42,5 @@
         
         function getToken(){
             var id = $("#authId").val();
-            window.location.href = 'https://instagram.com/oauth/authorize/?client_id='+id+'&redirect_uri=http://www.nretnil.com/Instagram/Auth&response_type=token&scope=likes+comments+relationships+basic';
+            window.location.href = 'https://instagram.com/oauth/authorize/?client_id='+id+'&redirect_uri=http://www.nretnil.com&response_type=token&scope=likes+comments+relationships+basic';
         }
