@@ -129,10 +129,11 @@
 				</div>
 			</div>
 			<div class="tab-pane" id="codify">
-				<div class="col-sm-6 col-sm-offset-3">
-			        <textarea type="text" class="col-sm-12" value="" rows="5" placeholder="Text To Codify…" id="code_text"></textarea>
+				<div class="col-sm-10 col-sm-offset-1">
+			        <textarea type="text" class="col-sm-12" value="" rows="10" placeholder="Text To Codify…" id="code_text"style="margin-bottom: 10px;display: block;"></textarea>
 					<button class="btn btn-large btn-success btn-block" onclick="codify_text();return false;">Codify Text!</button>
-					<pre class="well" id="codified_result" style="padding:10px;margin-top: 15px;display: block;"></pre>
+					<!-- <code class="well" id="codified_result" style="padding:10px;margin-top: 15px;display: block;white-space: pre-wrap;"></code> -->
+					<textarea id="codified_result" class="hidden col-sm-12" style="display:block;height:;margin-top:10px;"></textarea>
 				</div>
 			</div>
 			<div class="tab-pane active" id="exip">

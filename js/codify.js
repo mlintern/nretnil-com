@@ -7,7 +7,15 @@ function codify_text(){
 		text = text.replaceAll("\n", "<br> \n");
 	}
 	
-	$('#codified_result').text(text);
+	var lines = text.split("\n");
+	var linecount = lines.length;
+	
+	$('#codified_result').attr('rows', linecount);
+	
+	$('#codified_result').text(text);	
+	$('#codified_result').toggleClass('hidden');
+	$('#codified_result').focus();
+  	$('#codified_result').select();
 }
 
 /**
