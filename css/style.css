@@ -10,6 +10,16 @@ min-height: 200px;
 .cron-section-title{
 font-weight: bold;
 }
+.top-border{
+border-top: solid 4px #f58426;
+padding-top: 10px
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+background-color: #f58426;
+}
+.nav-tabs.nav-justified > .active > a {
+border-bottom-color: #f58426;
+}
 /*FOOTER*/
 .footer-email{
 color:blue;
