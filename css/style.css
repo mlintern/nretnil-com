@@ -47,6 +47,9 @@ color: #FFF;
 color: #FFF;
 text-decoration: underline;
 }
+.dropdown-backdrop{
+display: none;
+}
 /*FOOTER*/
 .footer-email{
 color:blue;
