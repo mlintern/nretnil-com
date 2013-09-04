@@ -1,0 +1,160 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>
+function updateForm(){
+
+	var b=$("#HiddenField_EmailAddress").val();
+	$('#cb_web_to_post').append("<input type='hidden' name='CustomField[Email_Address]' value='" + b + "'>");
+	
+	return true;
+}
+</script>
+<style>
+#form_container {
+	width: 550px;
+	margin: 15px;
+	padding: 10px;
+}
+#form_container label {
+	width:150px;
+	font-weight: bold;
+	float:left;
+} 
+#form_container .form_item{
+	margin: 0;
+	padding: 5px;
+	clear: left;
+}
+#form_container a{
+	color: #3C3D3C;
+}
+#form_container .form_item input{
+	border: solid 1px #69584d;
+	background: #fffcf6;
+}
+#form_container .form_item button {
+	margin-left:100px;
+	margin-top: 10px;
+	height:auto;
+	font-size: 13px;
+}
+iframe.fb_connect_frame, #cb_connect {  
+	border: 0; 
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	width: 80px;
+	height: 25px;
+}
+#cb_connect {
+	float: right;
+}
+#form_item_name {
+	width: 400px;
+}
+</style>
+
+<div id='form_container'>
+	<form id="cb_web_to_post" action="https://app.compendium.com/app/posts/webtopost" method="post" enctype="multipart/form-data" onsubmit="return updateform();">
+		<input type="hidden" name="BlogKey" value="Na6288HfmQ0wm3oYHpwbk8T2J1IcZeyTbdzl23gHLu4vC/sPAB4qwTAg+ZTOzzXrEAaVGVHAdfZug17HuExAvw==">
+		<input type="hidden" name="RetUrl" value="http://solutions.borderstates.com/thank-you">
+		<div class="form_item">
+			<label for="Title">Question: </label>
+			<input type="text" name="Title" id="Title" size="30" value="">
+		</div>
+		<input type="hidden" id="Body" name="Body" value="Answer"/>
+		<div class="form_item">
+			<label>Customer Type:</label>
+			<select name="DataField[CustomerType]">
+				<option value="None Selected">Select One</option>
+				<option value="Construction">Construction</option>
+				<option value="Industrial">Industrial</option>
+				<option value="Utility">Utility</option>
+			</select>
+		</div>
+		<div id="form_item_name" class="form_item">
+			<label for="DataField_Name">Name: </label>
+			<input id="DataField_Name" type="text" name="DataField[Name]" value="">
+		</div>
+				<div class="form_item">
+			<label for="DataField_Company">Title: </label>
+			<input type="text" value="" name="DataField[Title]" id="DataField_Company">
+		</div>
+		<div class="form_item">
+			<label for="HiddenField_EmailAddress">E-mail: </label>
+			<input id="HiddenField_EmailAddress" type="text" name="HiddenField[EmailAddress]" value="">
+			<div><label>&nbsp;</label><input name="Settings[Notify]" type="checkbox" checked="checked" value="yes"> Notify me when my story goes live</div>
+		</div>
+				<div class="form_item">
+			<label>Branch:</label>
+			<select name="DataField[Branch]">
+				<option value="None Selected">Select One</option>
+				<option value="Arizona - Phoenix">Arizona - Phoenix</option>
+				<option value="Arizona - Tucson">Arizona - Tucson</option>
+				<option value="Colorado - Denver">Colorado - Denver</option>
+				<option value="Colorado - Greeley">Colorado - Greeley</option>
+				<option value="Iowa - Cedar Rapids">Iowa - Cedar Rapids</option>
+				<option value="Michigan - Grand Haven">Michigan - Grand Haven</option>
+				<option value="Michigan - Kingsford">Michigan - Kingsford</option>
+				<option value="Minnesota - Albertville">Minnesota - Albertville</option>
+				<option value="Minnesota - Alexandria">Minnesota - Alexandria</option>
+				<option value="Minnesota - Bemidji">Minnesota - Bemidji</option>
+				<option value="Minnesota - Brooklyn Park">Minnesota - Brooklyn Park</option>
+				<option value="Minnesota - Duluth">Minnesota - Duluth</option>
+				<option value="Minnesota - Faribault">Minnesota - Faribault</option>
+				<option value="Minnesota - Mankato">Minnesota - Mankato</option>
+				<option value="Minnesota - Marshall">Minnesota - Marshall</option>
+				<option value="Minnesota - Rochester">Minnesota - Rochester</option>
+				<option value="Minnesota - St. Cloud">Minnesota - St. Cloud</option>
+				<option value="Minnesota - Willmar">Minnesota - Willmar</option>
+				<option value="Montana - Billings">Montana - Billings</option>
+				<option value="Montana - Missoula">Montana - Missoula</option>
+				<option value="New Mexico - Alamogordo">New Mexico - Alamogordo</option>
+				<option value="New Mexico - Albuquerque">New Mexico - Albuquerque</option>
+				<option value="New Mexico - Clovis">New Mexico - Clovis</option>
+				<option value="New Mexico - Farmington">New Mexico - Farmington</option>
+				<option value="New Mexico - Hobbs">New Mexico - Hobbs</option>
+				<option value="North Dakota - Bismarck">North Dakota - Bismarck</option>
+				<option value="North Dakota - Dickinson">North Dakota - Dickinson</option>
+				<option value="North Dakota - Fargo">North Dakota - Fargo</option>
+				<option value="North Dakota - Grand Forks">North Dakota - Grand Forks</option>
+				<option value="North Dakota - Minot">North Dakota - Minot</option>
+				<option value="North Dakota - Williston">North Dakota - Williston</option>
+				<option value="South Dakota - Rapid City">South Dakota - Rapid City</option>
+				<option value="South Dakota - Sioux Falls">South Dakota - Sioux Falls</option>
+				<option value="Tennessee - Clarksville">Tennessee - Clarksville</option>
+				<option value="Tennessee - Cookeville">Tennessee - Cookeville</option>
+				<option value="Tennessee - Hendersonville">Tennessee - Hendersonville</option>
+				<option value="Tennessee - Jackson">Tennessee - Jackson</option>
+				<option value="Tennessee - Lebanon">Tennessee - Lebanon</option>
+				<option value="Tennessee - Murfreesboro">Tennessee - Murfreesboro</option>
+				<option value="Tennessee - Nashville">Tennessee - Nashville</option>
+				<option value="Texas - Abilene">Texas - Abilene</option>
+				<option value="Texas - Amarillo">Texas - Amarillo</option>
+				<option value="Texas - Big Spring">Texas - Big Spring</option>
+				<option value="Texas - El Paso">Texas - El Paso</option>
+				<option value="Texas - Lubbock">Texas - Lubbock</option>
+				<option value="Texas - Lubbock Spur">Texas - Lubbock Spur</option>
+				<option value="Texas - Midland">Texas - Midland</option>
+				<option value="Texas - Odessa">Texas - Odessa</option>
+				<option value="Texas - San Angelo">Texas - San Angelo</option>
+				<option value="Wisconsin - Eau Claire">Wisconsin - Eau Claire</option>
+				<option value="Wisconsin - Green Bay">Wisconsin - Green Bay</option>
+				<option value="Wisconsin - Janesville">Wisconsin - Janesville</option>
+				<option value="Wisconsin - Pewaukee">Wisconsin - Pewaukee</option>
+				<option value="Wyoming - Gillette">Wyoming - Gillette</option>
+			</select>
+		</div>
+		<div id="image_fields" style="display: none;">
+			<div class="form_item">
+				<label for="UserFiles_0">Image: </label>
+				<input id="UserFiles" type="file" name="UserFiles[0]">
+			</div>
+		</div>
+		<div class="form_item" id="add_another_image_link" style="display: none;"></div>
+		<div class="cb_captcha" id="cb_captcha"></div>	
+		<div class="form_item">
+			<button type="submit">Submit Your Question</button>
+		</div>
+		<script src="http://app.compendium.com/js/w2p.js" type="text/javascript"></script>
+	</form>
+</div>
