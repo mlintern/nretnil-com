@@ -11,8 +11,8 @@ min-height: 200px;
 font-weight: bold;
 }
 .top-border{
-border-top: solid 4px #b90102;
-padding-top: 10px
+border: solid 4px #b90102;
+padding: 10px;
 }
 /*Nav Bar Updates*/
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
