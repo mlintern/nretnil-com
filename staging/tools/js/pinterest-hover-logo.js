@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	
-	var bs_pinButtonURL = "http://dev.nretnil.com/staging/img/pinterest.png";
+	var bs_pinButtonURL = "http://dev.nretnil.com/staging/tools/img/pinterest.png";
 	var bs_pinButtonPos = "center";
 	var bs_pinPrefix = "";
 	var bs_pinSuffix = "";

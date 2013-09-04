@@ -1,5 +1,5 @@
 $(function(){
-    var img = "http://dev.nretnil.com/staging/img/pinit.png";
+    var img = "http://dev.nretnil.com/staging/tools/img/pinit.png";
     var img_w = 46;
     var img_h = 26;
     var distance_from_corner = 10;
