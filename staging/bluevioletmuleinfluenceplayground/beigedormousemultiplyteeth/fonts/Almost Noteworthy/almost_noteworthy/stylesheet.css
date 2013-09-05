@@ -8,3 +8,23 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Almost Noteworthy';
+    src: url('almost-noteworthy-bold-webfont.eot');
+    src: url('almost-noteworthy-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('almost-noteworthy-bold-webfont.woff') format('woff'),
+         url('almost-noteworthy-bold-webfont.ttf') format('truetype'),
+         url('almost-noteworthy-bold-webfont.svg#almost_noteworthy_bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Almost Noteworthy';
+    src: url('almost-noteworthy-light-webfont.eot');
+    src: url('almost-noteworthy-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('almost-noteworthy-light-webfont.woff') format('woff'),
+         url('almost-noteworthy-light-webfont.ttf') format('truetype'),
+         url('almost-noteworthy-light-webfont.svg#almost_noteworthy_light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
