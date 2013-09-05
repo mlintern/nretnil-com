@@ -59,9 +59,12 @@ iframe.fb_connect_frame, #cb_connect {
 		<input type="hidden" name="RetUrl" value="http://solutions.borderstates.com/thank-you">
 		<div class="form_item">
 			<label for="Title">Question: </label>
-			<input type="text" name="Title" id="Title" size="30" value="">
+			<input type="text" name="Title" id="Title" value="">
 		</div>
-		<input type="hidden" id="Body" name="Body" value="Answer"/>
+		<div class="form_item">
+			<label for="Title">Answer: </label>
+			<textarea type="text" id="Body" name="Body" value=""></textarea>
+		</div>
 		<div class="form_item">
 			<label>Customer Type:</label>
 			<select name="DataField[CustomerType]">
@@ -84,7 +87,7 @@ iframe.fb_connect_frame, #cb_connect {
 			<input id="HiddenField_EmailAddress" type="text" name="HiddenField[EmailAddress]" value="">
 			<div><label>&nbsp;</label><input name="Settings[Notify]" type="checkbox" checked="checked" value="yes"> Notify me when my story goes live</div>
 		</div>
-				<div class="form_item">
+			<div class="form_item">
 			<label>Branch:</label>
 			<select name="DataField[Branch]">
 				<option value="None Selected">Select One</option>
