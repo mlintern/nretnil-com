@@ -45,7 +45,7 @@
          url('VerbRegular-webfont.woff') format('woff'),
          url('VerbRegular-webfont.ttf') format('truetype'),
          url('VerbRegular-webfont.svg#verb_regularregular') format('svg');
-    font-weight: 400;
+    font-weight: normal;
     font-style: normal;
 }
 @font-face {
@@ -55,7 +55,7 @@
          url('VerbRegular-Italic-webfont.woff') format('woff'),
          url('VerbRegular-Italic-webfont.ttf') format('truetype'),
          url('VerbRegular-Italic-webfont.svg#verb_regularitalic') format('svg');
-    font-weight: 400;
+    font-weight: normal;
     font-style: italic;
 }
 @font-face {
