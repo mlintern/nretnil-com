@@ -165,7 +165,7 @@
          url('VerbUltra-webfont.woff') format('woff'),
          url('VerbUltra-webfont.ttf') format('truetype'),
          url('VerbUltra-webfont.svg#verbultra') format('svg');
-    font-weight: 1000;
+    font-weight: 100;
     font-style: normal;
 }
 @font-face {
@@ -175,6 +175,6 @@
          url('VerbUltra-Italic-webfont.woff') format('woff'),
          url('VerbUltra-Italic-webfont.ttf') format('truetype'),
          url('VerbUltra-Italic-webfont.svg#verb_ultraitalic') format('svg');
-    font-weight: 1000;
+    font-weight: 100;
     font-style: italic;
 }
