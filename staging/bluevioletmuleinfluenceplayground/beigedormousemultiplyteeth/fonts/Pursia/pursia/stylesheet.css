@@ -18,23 +18,3 @@
     font-weight: 700;
     font-style: normal;
 }
-@font-face {
-    font-family: 'Purisa Oblique';
-    src: url('purisa-oblique-webfont.eot');
-    src: url('purisa-oblique-webfont.eot?#iefix') format('embedded-opentype'),
-         url('purisa-oblique-webfont.woff') format('woff'),
-         url('purisa-oblique-webfont.ttf') format('truetype'),
-         url('purisa-oblique-webfont.svg#purisaoblique') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Purisa Oblique';
-    src: url('purisa-boldoblique-webfont.eot');
-    src: url('purisa-boldoblique-webfont.eot?#iefix') format('embedded-opentype'),
-         url('purisa-boldoblique-webfont.woff') format('woff'),
-         url('purisa-boldoblique-webfont.ttf') format('truetype'),
-         url('purisa-boldoblique-webfont.svg#purisaboldoblique') format('svg');
-    font-weight: 700;
-    font-style: normal;
-}
