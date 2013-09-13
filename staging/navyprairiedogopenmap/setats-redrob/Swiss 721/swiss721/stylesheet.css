@@ -1,0 +1,350 @@
+@font-face {
+    font-family: 'swiss_721roman';
+    src: url('swz721n-webfont.eot');
+    src: url('swz721n-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721n-webfont.woff') format('woff'),
+         url('swz721n-webfont.ttf') format('truetype'),
+         url('swz721n-webfont.svg#swiss_721roman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721lightcondensed';
+    src: url('swz721lc-webfont.eot');
+    src: url('swz721lc-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721lc-webfont.woff') format('woff'),
+         url('swz721lc-webfont.ttf') format('truetype'),
+         url('swz721lc-webfont.svg#swiss_721lightcondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721light';
+    src: url('swz721l-webfont.eot');
+    src: url('swz721l-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721l-webfont.woff') format('woff'),
+         url('swz721l-webfont.ttf') format('truetype'),
+         url('swz721l-webfont.svg#swiss_721light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721black';
+    src: url('swz721k-webfont.eot');
+    src: url('swz721k-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721k-webfont.woff') format('woff'),
+         url('swz721k-webfont.ttf') format('truetype'),
+         url('swz721k-webfont.svg#swiss_721black') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721italic';
+    src: url('swz721i-webfont.eot');
+    src: url('swz721i-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721i-webfont.woff') format('woff'),
+         url('swz721i-webfont.ttf') format('truetype'),
+         url('swz721i-webfont.svg#swiss_721italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721bolditalic';
+    src: url('swz721bi-webfont.eot');
+    src: url('swz721bi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721bi-webfont.woff') format('woff'),
+         url('swz721bi-webfont.ttf') format('truetype'),
+         url('swz721bi-webfont.svg#swiss_721bolditalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721boldcondensed';
+    src: url('swz721bc-webfont.eot');
+    src: url('swz721bc-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721bc-webfont.woff') format('woff'),
+         url('swz721bc-webfont.ttf') format('truetype'),
+         url('swz721bc-webfont.svg#swiss_721boldcondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721bold';
+    src: url('swz721b-webfont.eot');
+    src: url('swz721b-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721b-webfont.woff') format('woff'),
+         url('swz721b-webfont.ttf') format('truetype'),
+         url('swz721b-webfont.svg#swiss_721bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721thin';
+    src: url('swz721t-webfont.eot');
+    src: url('swz721t-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721t-webfont.woff') format('woff'),
+         url('swz721t-webfont.ttf') format('truetype'),
+         url('swz721t-webfont.svg#swiss_721thin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721thinitalic';
+    src: url('swz721ti-webfont.eot');
+    src: url('swz721ti-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721ti-webfont.woff') format('woff'),
+         url('swz721ti-webfont.ttf') format('truetype'),
+         url('swz721ti-webfont.svg#swiss_721thinitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721boldoutline';
+    src: url('swz721bo-webfont.eot');
+    src: url('swz721bo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721bo-webfont.woff') format('woff'),
+         url('swz721bo-webfont.ttf') format('truetype'),
+         url('swz721bo-webfont.svg#swiss_721boldoutline') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721heavyitalic';
+    src: url('swz721hi-webfont.eot');
+    src: url('swz721hi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721hi-webfont.woff') format('woff'),
+         url('swz721hi-webfont.ttf') format('truetype'),
+         url('swz721hi-webfont.svg#swiss_721heavyitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721heavy';
+    src: url('swz721h-webfont.eot');
+    src: url('swz721h-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721h-webfont.woff') format('woff'),
+         url('swz721h-webfont.ttf') format('truetype'),
+         url('swz721h-webfont.svg#swiss_721heavy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721romancondensed';
+    src: url('swz721c-webfont.eot');
+    src: url('swz721c-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721c-webfont.woff') format('woff'),
+         url('swz721c-webfont.ttf') format('truetype'),
+         url('swz721c-webfont.svg#swiss_721romancondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721blackcondensed';
+    src: url('swz721kc-webfont.eot');
+    src: url('swz721kc-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721kc-webfont.woff') format('woff'),
+         url('swz721kc-webfont.ttf') format('truetype'),
+         url('swz721kc-webfont.svg#swiss_721blackcondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721italiccondensed';
+    src: url('swz721ci-webfont.eot');
+    src: url('swz721ci-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721ci-webfont.woff') format('woff'),
+         url('swz721ci-webfont.ttf') format('truetype'),
+         url('swz721ci-webfont.svg#swiss_721italiccondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721blackcondenseditalic';
+    src: url('sw721kci-webfont.eot');
+    src: url('sw721kci-webfont.eot?#iefix') format('embedded-opentype'),
+         url('sw721kci-webfont.woff') format('woff'),
+         url('sw721kci-webfont.ttf') format('truetype'),
+         url('sw721kci-webfont.svg#swiss_721blackcondenseditalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721blackextended';
+    src: url('swz721ke-webfont.eot');
+    src: url('swz721ke-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721ke-webfont.woff') format('woff'),
+         url('swz721ke-webfont.ttf') format('truetype'),
+         url('swz721ke-webfont.svg#swiss_721blackextended') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721romanextended';
+    src: url('swz721e-webfont.eot');
+    src: url('swz721e-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721e-webfont.woff') format('woff'),
+         url('swz721e-webfont.ttf') format('truetype'),
+         url('swz721e-webfont.svg#swiss_721romanextended') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721boldextended';
+    src: url('swz721be-webfont.eot');
+    src: url('swz721be-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721be-webfont.woff') format('woff'),
+         url('swz721be-webfont.ttf') format('truetype'),
+         url('swz721be-webfont.svg#swiss_721boldextended') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721blackno2';
+    src: url('swz721k2-webfont.eot');
+    src: url('swz721k2-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721k2-webfont.woff') format('woff'),
+         url('swz721k2-webfont.ttf') format('truetype'),
+         url('swz721k2-webfont.svg#swiss_721blackno2') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721blackrounded';
+    src: url('swz721kr-webfont.eot');
+    src: url('swz721kr-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721kr-webfont.woff') format('woff'),
+         url('swz721kr-webfont.ttf') format('truetype'),
+         url('swz721kr-webfont.svg#swiss_721blackrounded') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721boldrounded';
+    src: url('swz721br-webfont.eot');
+    src: url('swz721br-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721br-webfont.woff') format('woff'),
+         url('swz721br-webfont.ttf') format('truetype'),
+         url('swz721br-webfont.svg#swiss_721boldrounded') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721lightcondenseditalic';
+    src: url('sw721lci-webfont.eot');
+    src: url('sw721lci-webfont.eot?#iefix') format('embedded-opentype'),
+         url('sw721lci-webfont.woff') format('woff'),
+         url('sw721lci-webfont.ttf') format('truetype'),
+         url('sw721lci-webfont.svg#swiss_721lightcondenseditalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721boldcondensedoutline';
+    src: url('sw721bco-webfont.eot');
+    src: url('sw721bco-webfont.eot?#iefix') format('embedded-opentype'),
+         url('sw721bco-webfont.woff') format('woff'),
+         url('sw721bco-webfont.ttf') format('truetype'),
+         url('sw721bco-webfont.svg#swiss_721boldcondensedoutline') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721blackrounded';
+    src: url('swz721kr-webfont.eot');
+    src: url('swz721kr-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721kr-webfont.woff') format('woff'),
+         url('swz721kr-webfont.ttf') format('truetype'),
+         url('swz721kr-webfont.svg#swiss_721blackrounded') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721boldrounded';
+    src: url('swz721br-webfont.eot');
+    src: url('swz721br-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721br-webfont.woff') format('woff'),
+         url('swz721br-webfont.ttf') format('truetype'),
+         url('swz721br-webfont.svg#swiss_721boldrounded') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721lightcondenseditalic';
+    src: url('sw721lci-webfont.eot');
+    src: url('sw721lci-webfont.eot?#iefix') format('embedded-opentype'),
+         url('sw721lci-webfont.woff') format('woff'),
+         url('sw721lci-webfont.ttf') format('truetype'),
+         url('sw721lci-webfont.svg#swiss_721lightcondenseditalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721boldcondenseditalic';
+    src: url('sw721bci-webfont.eot');
+    src: url('sw721bci-webfont.eot?#iefix') format('embedded-opentype'),
+         url('sw721bci-webfont.woff') format('woff'),
+         url('sw721bci-webfont.ttf') format('truetype'),
+         url('sw721bci-webfont.svg#swiss_721boldcondenseditalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721lightextended';
+    src: url('swz721le-webfont.eot');
+    src: url('swz721le-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721le-webfont.woff') format('woff'),
+         url('swz721le-webfont.ttf') format('truetype'),
+         url('swz721le-webfont.svg#swiss_721lightextended') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721blackoutline';
+    src: url('swz721ko-webfont.eot');
+    src: url('swz721ko-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721ko-webfont.woff') format('woff'),
+         url('swz721ko-webfont.ttf') format('truetype'),
+         url('swz721ko-webfont.svg#swiss_721blackoutline') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721mediumitalic';
+    src: url('swz721mi-webfont.eot');
+    src: url('swz721mi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721mi-webfont.woff') format('woff'),
+         url('swz721mi-webfont.ttf') format('truetype'),
+         url('swz721mi-webfont.svg#swiss_721mediumitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721medium';
+    src: url('swz721m-webfont.eot');
+    src: url('swz721m-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721m-webfont.woff') format('woff'),
+         url('swz721m-webfont.ttf') format('truetype'),
+         url('swz721m-webfont.svg#swiss_721medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721lightitalic';
+    src: url('swz721li-webfont.eot');
+    src: url('swz721li-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721li-webfont.woff') format('woff'),
+         url('swz721li-webfont.ttf') format('truetype'),
+         url('swz721li-webfont.svg#swiss_721lightitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721blackitalic';
+    src: url('swz721ki-webfont.eot');
+    src: url('swz721ki-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721ki-webfont.woff') format('woff'),
+         url('swz721ki-webfont.ttf') format('truetype'),
+         url('swz721ki-webfont.svg#swiss_721blackitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

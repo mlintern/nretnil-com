@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'swiss_721lightcondensed';
+    src: url('swz721lc-webfont.eot');
+    src: url('swz721lc-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721lc-webfont.woff') format('woff'),
+         url('swz721lc-webfont.ttf') format('truetype'),
+         url('swz721lc-webfont.svg#swiss_721lightcondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721boldcondensed';
+    src: url('swz721bc-webfont.eot');
+    src: url('swz721bc-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721bc-webfont.woff') format('woff'),
+         url('swz721bc-webfont.ttf') format('truetype'),
+         url('swz721bc-webfont.svg#swiss_721boldcondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721romancondensed';
+    src: url('swz721c-webfont.eot');
+    src: url('swz721c-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721c-webfont.woff') format('woff'),
+         url('swz721c-webfont.ttf') format('truetype'),
+         url('swz721c-webfont.svg#swiss_721romancondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721blackcondensed';
+    src: url('swz721kc-webfont.eot');
+    src: url('swz721kc-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721kc-webfont.woff') format('woff'),
+         url('swz721kc-webfont.ttf') format('truetype'),
+         url('swz721kc-webfont.svg#swiss_721blackcondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721italiccondensed';
+    src: url('swz721ci-webfont.eot');
+    src: url('swz721ci-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721ci-webfont.woff') format('woff'),
+         url('swz721ci-webfont.ttf') format('truetype'),
+         url('swz721ci-webfont.svg#swiss_721italiccondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721blackcondenseditalic';
+    src: url('sw721kci-webfont.eot');
+    src: url('sw721kci-webfont.eot?#iefix') format('embedded-opentype'),
+         url('sw721kci-webfont.woff') format('woff'),
+         url('sw721kci-webfont.ttf') format('truetype'),
+         url('sw721kci-webfont.svg#swiss_721blackcondenseditalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721lightcondenseditalic';
+    src: url('sw721lci-webfont.eot');
+    src: url('sw721lci-webfont.eot?#iefix') format('embedded-opentype'),
+         url('sw721lci-webfont.woff') format('woff'),
+         url('sw721lci-webfont.ttf') format('truetype'),
+         url('sw721lci-webfont.svg#swiss_721lightcondenseditalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721boldcondensedoutline';
+    src: url('sw721bco-webfont.eot');
+    src: url('sw721bco-webfont.eot?#iefix') format('embedded-opentype'),
+         url('sw721bco-webfont.woff') format('woff'),
+         url('sw721bco-webfont.ttf') format('truetype'),
+         url('sw721bco-webfont.svg#swiss_721boldcondensedoutline') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721lightcondenseditalic';
+    src: url('sw721lci-webfont.eot');
+    src: url('sw721lci-webfont.eot?#iefix') format('embedded-opentype'),
+         url('sw721lci-webfont.woff') format('woff'),
+         url('sw721lci-webfont.ttf') format('truetype'),
+         url('sw721lci-webfont.svg#swiss_721lightcondenseditalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'swiss_721boldcondenseditalic';
+    src: url('sw721bci-webfont.eot');
+    src: url('sw721bci-webfont.eot?#iefix') format('embedded-opentype'),
+         url('sw721bci-webfont.woff') format('woff'),
+         url('sw721bci-webfont.ttf') format('truetype'),
+         url('sw721bci-webfont.svg#swiss_721boldcondenseditalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
