@@ -79,16 +79,7 @@ $(document).ready(function () {
             })
         });
         $(imageSelector).on('mouseleave', function () {
-            if ($.browser.msie) {
-                $targetIE1 = $(this).next('.pinit-wrapper');
-                $targetIE2 = $(this).parent('a').next('.pinit-wrapper');
-                bsButtonHover = setTimeout(function () {
-                    $targetIE1.stop().css("visibility", "hidden");
-                    $targetIE2.stop().css("visibility", "hidden")
-                }, 3000)
-            } else {
-                $('.pinit-wrapper').stop().fadeTo(0, 0.0)
-            }
+            $('.pinit-wrapper').stop().fadeTo(0, 0.0)
         })
     }
         
