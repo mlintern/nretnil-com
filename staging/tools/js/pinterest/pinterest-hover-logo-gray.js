@@ -20,7 +20,7 @@ $(document).ready(function () {
     });
 
     function getButtonHTML(media, description, pinitURL) {
-        $HTML = '<div class="pinit-wrapper" style="display:none;position: absolute;z-index: 9999; cursor: pointer;background: url(http://dev.nretnil.com/staging/tools/css/fog/fog_50.png) 0 0 transparent repeat;" ><a href="http://pinterest.com/pin/create/button/?url=' + pinitURL + '&media=' + encodeURIComponent(media) + '&description=' + description + '" style="display:block;outline:none;" target="_blank"><img class="pinimg" style="-moz-box-shadow:none;-webkit-box-shadow:none;-o-box-shadow:none;box-shadow:none;background:transparent;margin: 0;padding: 0;border:0;" src="' + bs_pinButtonURL + '"></a></div>';
+        $HTML = '<div class="fog" style="background: url(http://dev.nretnil.com/staging/tools/css/fog/fog_50.png) 0 0 transparent repeat;"></div><div class="pinit-wrapper" style="display:none;position: absolute;z-index: 9999; cursor: pointer;" ><a href="http://pinterest.com/pin/create/button/?url=' + pinitURL + '&media=' + encodeURIComponent(media) + '&description=' + description + '" style="display:block;outline:none;" target="_blank"><img class="pinimg" style="-moz-box-shadow:none;-webkit-box-shadow:none;-o-box-shadow:none;box-shadow:none;background:transparent;margin: 0;padding: 0;border:0;" src="' + bs_pinButtonURL + '"></a></div>';
         return $HTML
     }
     function hoverCheck() {
