@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'CamingoDos';
+    src: url('camingodos-bold-webfont.eot');
+    src: url('camingodos-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('camingodos-bold-webfont.woff') format('woff'),
+         url('camingodos-bold-webfont.ttf') format('truetype'),
+         url('camingodos-bold-webfont.svg#camingodosbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CamingoDos';
+    src: url('camingodos-regular-webfont.eot');
+    src: url('camingodos-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('camingodos-regular-webfont.woff') format('woff'),
+         url('camingodos-regular-webfont.ttf') format('truetype'),
+         url('camingodos-regular-webfont.svg#camingodos_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

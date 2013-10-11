@@ -72,66 +72,78 @@
     $pathtext = "<div class='path'>$uri</div>";
 ?>
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title><?php print $titletext; ?></title>
-    
-	<link rel="shortcut icon" href="http://www.nretnil.com/favicon.ico" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="host_name" content="http://www.nretnil.com">
+<title>Nretnil Tools</title>
 
-    <link type="text/css" href="http://dev.nretnil.com/css/bootstrap.css" rel="stylesheet">
-	<link type="text/css" href="http://dev.nretnil.com/css/responsive.css" rel="stylesheet">
-	
-    <link type="text/css" href="http://dev.nretnil.com/indices/style-js.css" rel="stylesheet">
-	<script type="text/javascript" src="http://dev.nretnil.com/indices/script.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link type="text/css" href="http://dev.nretnil.com/css/bootstrap3.css" rel="stylesheet">
+<link type="text/css" href="http://dev.nretnil.com/css/style.css" rel="stylesheet">
+<link type="text/css" href="http://dev.nretnil.com/css/bootstrap-glyphicons.css" rel="stylesheet">
+<link type="text/css" href="http://dev.nretnil.com/staging/tools/css/fog/fog.css" rel="stylesheet">
 
 </head>
 
 <body>
-
 <div class="container">
-
-<div class="row-fluid">
-	<div class="span12 page-header">
-		<h1 class="text-center">Nretnil Tools</h1>
-	</div>
-</div>
-
-<div class="row-fluid">
-	<div class="navbar span12">
-		<div class="navbar-inner">
-			<a class="brand" href="/">Tools</a>
-			<ul class="nav">
-				<li class="divider-vertical"></li>
-				<li><a href="http://www.nretnil.com/map/index.html">Maps</a></li>
-				<li class="divider-vertical"></li>
-				<li><a href="http://www.nretnil.com/jsb/index.html">JS Beautify</a></li>
-				<li class="divider-vertical"></li>
-				<li><a href="http://dev.nretnil.com/staging">Staging</a></li>
-				<li class="divider-vertical"></li>
-				<li><a href="http://beer.nretnil.com">Beer O'Clock</a></li>
-				<li class="divider-vertical"></li>
-				<li><a href="http://dev.nretnil.com/img/sprites/index.html">Sprites</a></li>
-				<li class="divider-vertical"></li>
-			</ul>
+	<div class="row">
+		<div class="page-header">
+			<h1 class="text-center">Nretnil Tools</h1>
 		</div>
 	</div>
-</div>
-<div class="row-fluid">
-	<div id="pagecontainer" class="span10 offset1">
-	    <script>
-	    <!--
-	    <?php print $pcjstext; ?>
-	    -->
-	    </script>
-	
-	    <div class='header'>
-	        <?php print $logohtml; ?>
-	        <?php print $pathtext; ?>
-	    </div>
+	<div class="row">
+		<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top r-fog80" role="navigation">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			<a class="navbar-brand" href="/">Tools</a>
+			</div>
+			
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="map/index.html">Maps</a></li>
+					<li><a href="jsb/index.html">JS Beautify</a></li>
+					<li><a href="http://dev.nretnil.com/staging">Staging</a></li>
+					<li><a href="http://beer.nretnil.com">Beer O'Clock</a></li>
+					<li><a href="http://dev.nretnil.com/img/sprites/index.html">Sprites</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Sandbox <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a target="_blank" href="sandbox/ydnittiw/index.html">#WittIndy</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</nav>
 	</div>
-</div>
+	
+	<div class="row">
+		<div id="pagecontainer" class="col-md-10 col-md-offset-1">
+		    <script>
+		    <!--
+		    <?php print $pcjstext; ?>
+		    -->
+		    </script>
+		
+		    <div class='header'>
+		        <?php print $logohtml; ?>
+		        <?php print $pathtext; ?>
+		    </div>
+		</div>
+	</div>
 	
 </div>
-<script type="text/javascript" src="http://dev.nretnil.com/js/bootstrap.js"></script>
+<script type="text/javascript" src="http://dev.nretnil.com/js/bootstrap3.js"></script>
 </body>
 </html>
