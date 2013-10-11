@@ -84,6 +84,8 @@
 <link type="text/css" href="http://dev.nretnil.com/css/style.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/css/bootstrap-glyphicons.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/tools/css/fog/fog.css" rel="stylesheet">
+<link type="text/css" href="http://dev.nretnil.com/indices/style-js.css" rel="stylesheet">
+<script type="text/javascript" src="http://dev.nretnil.com/indices/script.js"></script>
 
 </head>
 
