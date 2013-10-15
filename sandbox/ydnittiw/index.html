@@ -132,9 +132,9 @@
 			<h2>Events</h2>
 			<ul id="myTab" class="nav nav-tabs nav-justified">
 				<li class=""><a href="#event1" data-toggle="tab">Happy Hour <span class="glyphicon glyphicon-glass"></span></a></li>
-				<li class="active"><a href="#event2" data-toggle="tab">Tiger Tailgate <span class="glyphicon glyphicon-glass"></span></a></li>
+				<li class=""><a href="#event2" data-toggle="tab">Tiger Tailgate <span class="glyphicon glyphicon-glass"></span></a></li>
 				<li class=""><a href="#event4" data-toggle="tab">Homecoming  <span class="glyphicon glyphicon-glass"></span></a></li>
-				<li class=""><a href="#event3" data-toggle="tab">House Party <span class="glyphicon glyphicon-glass"></span></a></li>
+				<li class="active"><a href="#event3" data-toggle="tab">House Party <span class="glyphicon glyphicon-glass"></span></a></li>
 			</ul>
 			<div style="height: 20px;"></div>
 			<div id="myTabContent" class="tab-content">
@@ -154,7 +154,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="tab-pane fade active in" id="event2">
+				<div class="tab-pane fade" id="event2">
 					<div class="row">
 						<div class="col-sm-3">
 							<a href="http://www.wittenbergtigers.com/sports/fball/index" class="thumbnail">
@@ -184,7 +184,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="tab-pane fade" id="event3">
+				<div class="tab-pane fade active in" id="event3">
 					<div class="row">
 						<div class="col-sm-3">
 							<a href="#" class="thumbnail">
@@ -242,7 +242,7 @@
 	<div id="twitter" class="row r-fog80">
 		<div class="col-lg-10 col-lg-offset-1">
 			<h2>What's Everyone Saying About <a target="_blank" href="https://twitter.com/search?q=%23wittindy">#wittindy</a>?</h2>
-			<a class="twitter-timeline" href="https://twitter.com/search?q=%23wittindy" data-widget-id="372798438653427712" data-link-color="#FFFFFF" height="280" data-tweet-limit="8" data-theme="light" data-chrome="nofooter noborders transparent noheader">Tweets about "#wittindy"</a>
+			<a class="twitter-timeline" href="https://twitter.com/search?q=%23wittindy" data-widget-id="372798438653427712" data-link-color="#FFFFFF" height="350" data-tweet-limit="8" data-theme="light" data-chrome="nofooter noborders transparent noheader">Tweets about "#wittindy"</a>
 			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		</div>
 	</div>
@@ -287,43 +287,8 @@
 </div> <!-- End Container -->
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script type="text/javascript" src="js/affix.js"></script>
-<!-- <script type="text/javascript" src="js/bootstrap.js"></script> -->
-<script type="text/javascript" src="js/button.js"></script>
-<script type="text/javascript" src="js/collapse.js"></script>
-<script type="text/javascript" src="js/carousel.js"></script>
-<script type="text/javascript" src="js/collapse.js"></script>
-<script type="text/javascript" src="js/dropdown.js"></script>
-<script type="text/javascript" src="js/modal.js"></script>
-<script type="text/javascript" src="js/tooltip.js"></script>
-<script type="text/javascript" src="js/popover.js"></script>
-<script type="text/javascript" src="js/scrollspy.js"></script>
-<script type="text/javascript" src="js/tab.js"></script>
-<script type="text/javascript" src="js/transition.js"></script>
-<script type="text/javascript" src="js/holder.js"></script>
-<script>
-var offset = 70;
-
-$('.navbar li a.local').click(function(event) {
-    event.preventDefault();
-    $($(this).attr('href'))[0].scrollIntoView();
-    scrollBy(0, -offset);
-});
-</script>
-<script type="text/javascript">
-$(document).ready(function() {
-    var i = setInterval(function(){
-        if($("#twitter-widget-0").length) {
-        	setTimeout(function(){ 
-        		$("#twitter-widget-0").width('100%');
-        		$("#twitter-widget-0").height('200');
-        		$("#twitter-widget-0").contents().find("body").append("<style type='text/css'> html, .p-author .profile .p-name, .cards-base p, .cards-base p a, .timeline-header .summary, .timeline-header .summary a:link, .timeline-header .summary a:visited, .p-author a.profile:hover .p-name, .p-author a.profile:focus .p-name {color: #cfcfcf;} .header .avatar {float:left;position:relative;left:0;margin-right: 5px;} .var-chromeless .tweet {padding:12px 2px 10px 2px;float:left;width:200px;margin-right:10px;color: #cfcfcf;} .var-static .stream {height: 100%;} .var-chromeless span.p-geo {padding: 0;} .tweet .e-entry-title {margin: 0;overflow: visible;} a:link, a:visited, .stats span, .byline, .retweet-credit, .no-more-pane, .no-tweets-pane p, .p-geo, .cards-base .byline-user {color: #aaaaaa;}</style>");
-            	clearInterval(i);
-            }, 500);
-        }
-    }, 500)
-});
-</script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/misc.js"></script>
 
 </body>
 </html>

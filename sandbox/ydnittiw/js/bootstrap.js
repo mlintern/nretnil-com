@@ -1962,5 +1962,4 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
       $spy.affix(data)
     })
   })
-
 }(window.jQuery);
