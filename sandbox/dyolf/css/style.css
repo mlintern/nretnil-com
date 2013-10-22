@@ -25,6 +25,7 @@ color: #FFF;
 }
 a:hover{
 color: #DDD;
+cursor: url("../img/frog_footprint_30.png"), pointer;
 }
 h2 a:hover{
 color: #FFF;
@@ -96,4 +97,23 @@ max-height: 400px;
 	color: #FFF;
 	background-color: #428bca;
 	}
+}
+#floyd {
+    display:none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: url('../img/Floyd-Through-Glass.png') center center fixed transparent;
+    background-size: cover;
+    z-index: 1032;
+}
+#mask {
+	display:none;
+    background: url('http://cdn2.content.compendiumblog.com/uploads/user/12a67f85-8b31-465a-93a1-99f578338c75/f30e0815-ecbe-453c-a2aa-16ced8dba3cf/Image/b2a9da57b5a1970dc35a32bdca85be15/fog_60.png') 0 0 repeat black;
+    display: none;
+    position: fixed; left: 0; top: 0; 
+    z-index: 1031;
+    width: 100%; height: 100%;
 }
