@@ -120,9 +120,14 @@ max-height: 400px;
 .chalkboard{
 	background: url('http://dev.nretnil.com/staging/tools/img/chalkboard.jpeg') 0 0 no-repeat #000;
 	background-size: cover;
-	font-family: 'Chalk';
 	font-size: 65px;
 	height: 600px;
 	border: solid 8px #CCC; 
 	padding: 80px;
+}
+.chalk1{
+	font-family: 'Chalk';
+}
+.chalk2{
+	font-family: 'Chalkboard';
 }
