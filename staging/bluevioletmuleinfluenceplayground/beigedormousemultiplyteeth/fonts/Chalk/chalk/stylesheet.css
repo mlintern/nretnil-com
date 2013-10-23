@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Chalk';
+    src: url('chalk-webfont.eot');
+    src: url('chalk-webfont.eot?#iefix') format('embedded-opentype'),
+         url('chalk-webfont.woff') format('woff'),
+         url('chalk-webfont.ttf') format('truetype'),
+         url('chalk-webfont.svg#chalkregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
