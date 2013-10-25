@@ -124,6 +124,7 @@ max-height: 400px;
 	height: 600px;
 	border: solid 8px #CCC; 
 	padding: 80px;
+	margin: 0 15px;
 }
 .chalk1{
 	font-family: 'Chalk';
