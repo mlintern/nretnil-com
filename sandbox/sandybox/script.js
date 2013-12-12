@@ -4,7 +4,11 @@ $(document).ready(function() {
 		runCode();
 	});
 
-	setTimeout(function(){$('#run').click();},1000)
+	setTimeout(function(){runCode();},1000)
+	
+	editor.getSession().on('change', function(e) {
+    	runCode();
+	});
 	
 });
 
