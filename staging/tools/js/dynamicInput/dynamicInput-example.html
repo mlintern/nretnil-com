@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+var counter = 1;
+var limit = 3;
+var counterText = 0;
+var counterRadioButton = 0;
+var counterCheckBox = 0;
+var counterTextArea = 0;
+
+function addInput(divName){
+     if (counter == limit)  {
+          alert("You have reached the limit of adding " + counter + " inputs");
+     }
+     else {
+          var newdiv = document.createElement('div');
+          newdiv.innerHTML = "Entry " + (counter + 1) + " <br><input type='text' name='myInputs[]'>";
+          document.getElementById(divName).appendChild(newdiv);
+          counter++;
+     }
+}
+
+function addAllInputs(divName, inputType){
+     var newdiv = document.createElement('div');
+     switch(inputType) {
+          case 'text':
+               newdiv.innerHTML = "Text " + (counterText + 1) + " <br><input type='text' name='myInputs[]'>";
+               counterText++;
+               break;
+          case 'radio':
+               newdiv.innerHTML = "Radio " + (counterRadioButton + 1) + " <br><input type='radio' name='myRadioButtons[]'>";
+               counterRadioButton++;
+               break;
+          case 'checkbox':
+               newdiv.innerHTML = "Checkbox " + (counterCheckBox + 1) + " <br><input type='checkbox' name='myCheckBoxes[]'>";
+               counterCheckBox++;
+               break;
+          case 'textarea':
+	       newdiv.innerHTML = "TextArea " + (counterTextArea + 1) + " <br><textarea name='myTextAreas[]'>type here...</textarea>";
+               counterTextArea++;
+               break;
+          }
+     document.getElementById(divName).appendChild(newdiv);
+}
+</script>
+
+</head>
+<body>
+
+<form method="POST">
+     <div id="dynamicInput">
+          Entry 1<br><input type="text" name="myInputs[]">
+     </div>
+     <input type="button" value="Add another text input" onClick="addInput('dynamicInput');">
+</form>
+
+
+
+<div style="height: 100px;"></div>
+
+
+
+<form name="myForm" method="POST">
+	<div id="dynamicInputs">
+		Let’s start adding some inputs of different types.
+	</div>
+	<select name="inputSelect">
+		<option value="text">text field</option>
+		<option value="radio">radio button</option>
+		<option value="checkbox">checkbox</option>
+		<option value="textarea">textarea</option>
+	</select>
+	<input type="button" value="Add selected input" onclick="addAllInputs('dynamicInputs', document.myForm.inputSelect.value);"><br>
+</form>
+
+</body>
+</html>
