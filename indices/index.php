@@ -117,12 +117,15 @@
 					<li><a href="http://dev.nretnil.com/staging">Staging</a></li>
 					<li><a href="http://beer.nretnil.com">Beer O'Clock</a></li>
 					<li><a href="http://dev.nretnil.com/img/sprites/index.html">Sprites</a></li>
+					<li><a href="sandbox/sandybox/index.html">HTML SandyBox</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Sandbox <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a target="_blank" href="sandbox/ydnittiw/index.html">#WittIndy</a></li>
+							<li><a target="_blank" href="sandbox/dyolf/index.html">Floyd</a></li>
+							<li><a target="_blank" href="sandbox/trats-hserf/index.html">Fresh Start</a></li>
 						</ul>
 					</li>
 				</ul>
