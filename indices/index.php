@@ -123,9 +123,9 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Sandbox <b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a target="_blank" href="sandbox/ydnittiw/index.html">#WittIndy</a></li>
-							<li><a target="_blank" href="sandbox/dyolf/index.html">Floyd</a></li>
-							<li><a target="_blank" href="sandbox/trats-hserf/index.html">Fresh Start</a></li>
+							<li><a target="_blank" href="/sandbox/ydnittiw/index.html">#WittIndy</a></li>
+							<li><a target="_blank" href="/sandbox/dyolf/index.html">Floyd</a></li>
+							<li><a target="_blank" href="/sandbox/trats-hserf/index.html">Fresh Start</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -149,6 +149,7 @@
 	</div>
 	
 </div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="http://dev.nretnil.com/js/bootstrap3.js"></script>
 </body>
 </html>
