@@ -34,8 +34,10 @@
 <div id="editor">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-	&lt;title&gt;My Website&lt;/title&gt;
+	&lt;title&gt;Website Title&lt;/title&gt;
 	&lt;meta charset="UTF-8" /&gt;
+	
+	&lt;script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"&gt;&lt;/script&gt;
 	
 	&lt;style type="text/css"&gt;
 		body { 
@@ -50,9 +52,15 @@
 &lt;/head&gt;
 
 &lt;body&gt;
+    &lt;button id="default"&gt;Default&lt;/button&gt;
+    &lt;button id="red"&gt;Red&lt;/button&gt;
+    &lt;button id="blue"&gt;Blue&lt;/button&gt;
+    &lt;button id="purple"&gt;Purple&lt;/button&gt;
+    &lt;button id="green"&gt;Green&lt;/button&gt;
+    
 	&lt;h1&gt;Header&lt;/h1&gt;
 	&lt;h2&gt;Nemo&lt;/h2&gt;
-	&lt;img height="150" src="http://images.nationalgeographic.com/wpf/media-live/photos/000/005/cache/clown-fish_500_600x450.jpg" /&gt
+	&lt;img height="150" src="http://images.nationalgeographic.com/wpf/media-live/photos/000/005/cache/clown-fish_500_600x450.jpg" /&gt;
 	&lt;h3&gt;SubSubHeader&lt;/h3&gt;
 	&lt;p&gt;Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.&lt;/p&gt;
 	&lt;p&gt;Wisi nulla at ut ornare, risus elit convallis orci volutpat quam scelerisque. Vestibulum pretium scelerisque. Pulvinar placerat id dictum eros a, sed facilisi vulputate ut integer, nec lacinia magna dolore dolor lacus, sed scelerisque vel dolor adipiscing sagittis. Natus urna a faucibus eu iaculis consectetuer, vivamus massa sed, vel et, morbi rhoncus nibh, etiam wisi iaculis amet dolor pharetra nisl. Amet ante rhoncus leo vel dictum, morbi duis massa, pretium amet vitae, eleifend laoreet mattis id imperdiet integer.&lt;/p&gt;
@@ -64,6 +72,25 @@
 	&lt;p&gt;Amet laoreet quis, sit dolor ligula justo, elementum scelerisque in id proin justo nulla, non tempor sit consequat aliquet. Ultricies urna vel nisl mollis semper, maecenas velit integer turpis dolor habitasse. Sagittis sodales. Ullamcorper ornare sapien dolor porttitor porta tellus, volutpat rutrum et dolor. Urna ut, elit sed tempus. Mi feugiat donec amet tellus, aliquam vitae justo sodales nibh sem.&lt;/p&gt;
 	&lt;p&gt;Vel id odio fringilla pede at est, morbi faucibus feugiat sed tellus velit praesent. Arcu aliquet ea placerat morbi purus. Nec vulputate, euismod curabitur integer duis aliquam. Integer tellus, placerat dictum fermentum ornare, eget eget ultricies. Nulla aliquam, et massa velit nulla vivamus.&lt;/p&gt;
 	&lt;p&gt;Purus nec urna senectus placerat, imperdiet fringilla, quis eget, odio lobortis. Morbi commodo integer mauris eget nulla, turpis proin sagittis qui congue ipsum, cras pede in sit tincidunt diamlorem. Quis tincidunt eget vestibulum lorem nisl cum, convallis mollis, in pulvinar pulvinar. Faucibus lectus in at qui magna, et orci rhoncus bibendum mollis amet sem. Sit dolorum leo enim sed. Id turpis pretium vestibulum proin lacus dignissim, ante tincidunt ultricies molestie, quia faucibus phasellus aenean hac, et vivamus vivamus, erat suscipit nulla. Eros lacinia dolor fermentum fermentum. In pulvinar eu, morbi at ut cursus congue. Vehicula eget tortor adipiscing, quis sed non, massa ornare. Quis et egestas vivamus suspendisse, ante nulla scelerisque mauris arcu, nullam urna quisque lectus velit, nunc euismod adipiscing morbi.&lt;/p&gt;
+
+    &lt;script&gt;
+        $('#default').click(function(){
+            console.log('here');
+            $('p').css('color','black');
+        });
+        $('#red').click(function(){
+            $('p').css('color','red');
+        });
+        $('#blue').click(function(){
+            $('p').css('color','blue');
+        });
+        $('#purple').click(function(){
+            $('p').css('color','purple');
+        });
+        $('#green').click(function(){
+            $('p').css('color','green');
+        });
+    &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</div>
 		
@@ -71,8 +98,8 @@
 		</div>
 	</div>
 	
-	<div id="preview">
-		<iframe name="preview" src="index.html"></iframe>
+	<div id="preview-pane">
+		<iframe name="preview" id="preview" src=""></iframe>
 	</div>
 </div>
 
