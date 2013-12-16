@@ -17,3 +17,5 @@ body { background-color: #fff; cursor: default; margin: 0; padding: 0; }
 .navbar-default { background-color: #f8f8f8;border-color: #e7e7e7;border: none;border-bottom: solid 2px #FFF; }
 
 .navbar-default .navbar-brand { color: #FFF; }
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus { color: #FFF;background-color: transparent; }
