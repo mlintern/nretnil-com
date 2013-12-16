@@ -38,9 +38,22 @@ $(document).ready(function() {
 		$(this).addClass('btn-warning');
 	});
 	
+	$(".theme-change").submit(function(event){
+		event.preventDefault();
+	});
+	
 });
 
 function runCode() {
 	window['preview'].document.write(editor.getValue());
 	window['preview'].document.close();
+}
+
+function themeUpdate() {
+	var theme = $("select[name=theme] option:selected").val();
+	console.log(theme);
+	
+	editor.setTheme("ace/theme/"+theme);
+	
+	return false;
 }
