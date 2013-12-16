@@ -10,33 +10,26 @@ $(document).ready(function() {
     	runCode();
 	});
 	
+	$('.all-code').bind('click', function() {
+		$('.preview-pane').css('width','0%');
+		$('.content').css('width','100%');
+	});
+	
+	$('.split').bind('click', function() {
+		$('.preview-pane').css('width','60%');
+		$('.preview-pane').css('margin-left','40%');
+		$('.content').css('width','40%');
+	});
+	
+	$('.all-display').bind('click', function() {
+		$('.preview-pane').css('width','100%');
+		$('.preview-pane').css('margin-left','0%');
+		$('.content').css('width','0%');
+	});
+	
 });
 
 function runCode() {
-	//window['preview'].document.body.innerHTML = editor.getValue();
-	
 	window['preview'].document.write(editor.getValue());
 	window['preview'].document.close();
-	
-	/*
-	
-	$('#preview-pane').find('iframe').remove();
-	
-	var iframe = document.createElement("iframe");
-	iframe.id = "preview";
-	iframe.src="about:blank"; //or blank.html
-	//iframe.onload = function() {
-	  // var domdoc = iframe.contentDocument || iframe.contentWindow.document;
-	  // domdoc.body.innerHTML = editor.getValue();    
-	//}
-	//$.parseHTML(editor.getValue())
-	
-	console.log($.parseHTML(editor.getValue()));
-	
-	//iframe.appendChild($.parseHTML(editor.getValue()));
-	iframe.contentDocument = $.parseHTML(editor.getValue());
-	
-	document.getElementById("preview-pane").appendChild(iframe);
-	
-	*/
 }

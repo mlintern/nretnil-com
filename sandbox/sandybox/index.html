@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
 
-<title>SandyBox</title>
+<title>Nretnil SandyBox</title>
 <meta charset="UTF-8" />
 
-<link href="style.css" rel="stylesheet" type="text/css">
 <link type="text/css" href="http://dev.nretnil.com/staging/tools/css/fog/fog.css" rel="stylesheet">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link type="text/css" href="bootstrap.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet" type="text/css">
 
 <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
 
@@ -14,21 +16,32 @@
 <body class="r-fog90">
 
 <div id="container">
-	<div id="nav" class="r-fog90">
-		<div id="nav-left">
-			<span style="display:none;" id="nav-code" class="nav-link">Code</span>
-
-			<span class="nav-link nav-run" id="run">Test Your Code &raquo;</span>
+	<nav class="navbar navbar-default r-fog90" role="navigation">
+	<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">SandyBox</a>
 		</div>
-		<div id="nav-right">
-			SandyBox
-		</div>
-	</div>
+		
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<button class="btn btn-default navbar-btn btn-success" id="run">Test Your Code &raquo;</button>
+			<div class="btn-group navbar-btn-group pull-right">
+				<button type="button" class="btn btn-default all-code btn-primary navbar-btn"><i class="fa fa-fast-backward"></i></button>
+				<button type="button" class="btn btn-default split btn-warning navbar-btn"><i class="fa fa-columns"></i></button>
+				<button type="button" class="btn btn-default all-display btn-primary navbar-btn"><i class="fa fa-fast-forward"></i></button>
+			</div>
+		</div><!-- /.navbar-collapse -->
+	</nav>
 	
-	<div id="content">
-		<div id="content-code" class="content-section">
-			
-			
+	<div class="content">
+		<div class="content-code" class="content-section">
+				
 <div id="editor">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -66,10 +79,6 @@
 	&lt;p&gt;Magna ad, mauris sit quisque amet porta rutrum nunc, in justo metus fringilla pellentesque venenatis, metus eget praesent, blanditiis maecenas suscipit aliquam nec placerat. Potenti erat dolor sit lobortis, pellentesque sit vestibulum commodo at mauris ipsum, wisi justo nulla leo feugiat nonummy, non non porta tortor et elit quis, ut lectus lorem rhoncus. Ut ligula fusce enim lectus condimentum, wisi magna et, suspendisse lacus lobortis, mi vulputate suspendisse eget vestibulum enim. Nam parturient, fermentum semper, sed parturient sed vitae consequat. Eget metus felis dictum, vulputate et morbi molestie. Consequat etiam arcu amet bibendum aenean eu, egestas lacus sed fusce arcu id sociis. Id nulla est morbi sed eu in, neque nullam eros amet vestibulum ornare odio, dignissim adipiscing, in nunc tincidunt ut mattis quis. Consectetuer enim nullam. Fermentum malesuada adipiscing ridiculus morbi sed, in ultrices nulla, erat id cursus, risus litora. Lacus egestas pede accumsan augue euismod, posuere nunc ullamcorper maecenas consectetuer et, aenean in at dui justo lacus ullamcorper. Eros aenean ante erat posuere, sit amet pellentesque.&lt;/p&gt;
 	&lt;p&gt;At sit. Nullam elit quam sapien at nec. Amet sociis sociosqu, ultricies amet, mattis donec hendrerit aliquet lorem, tellus nulla velit hendrerit dui. Et vestibulum dolor eget fermentum, orci arcu quam sed, curabitur duis elit nulla sed dignissim. Quis aliquam arcu viverra lacinia quis. Est sed convallis vehicula justo venenatis vulputate, consequat odio integer sed, integer ipsum eget turpis odio, neque odio nec, lacinia egestas. Nibh eu luctus ligula, felis faucibus vulputate suspendisse aliquam torquent, faucibus proin justo odio cras, sed orci tellus adipiscing, proin mauris eu blandit vel lacus.&lt;/p&gt;
 	&lt;p&gt;Tristique lacus hendrerit imperdiet, porta vulputate nec curabitur. Quam aptent vulputate a sodales, blandit purus vivamus et wisi donec nibh. Cum lorem nam elit proin orci, risus est tincidunt. Cursus vulputate sociis non, sit a duis in commodo, est libero massa faucibus sit lobortis, leo est eget id aliquet magna. Augue magna amet eget quam maecenas, adipiscing magna amet varius mauris dui, pede lorem cras urna diam, ante varius aliquam in vestibulum felis neque. Lectus duis tristique purus nullam. Enim interdum facilisis eu in elementum diam, posuere iusto placerat pede eget urna, sed etiam semper morbi dapibus tristique. Per ipsum luctus dolor. Sit curabitur at. Feugiat felis ipsum. Tellus vehicula malesuada adipiscing justo fusce aliquam, laoreet id ullamcorper lacinia arcu aliquam, id praesent rhoncus ipsum libero. Lobortis mauris et nisl, nonummy sed ut, suspendisse id risus ultricies quisque, ipsum eu adipiscing orci ante eget elementum.&lt;/p&gt;
-	&lt;p&gt;Quia morbi, et integer, augue neque, eu pede quisque parturient iaculis quam tristique. Dui nec suspendisse libero donec a iaculis, volutpat eros odio hendrerit. Eu vulputate lacinia ullamcorper eget libero. Dapibus tempor dapibus convallis aliquet ac ac, tempus vivamus rem, eget dolor consectetuer fusce diam. Proin at adipiscing eu at. Aliquam et nam in, ac volutpat ut impedit, maecenas morbi tortor scelerisque, feugiat ligula in donec, pede mauris venenatis placerat velit. Wisi amet viverra viverra non tempus mauris, elit nulla in suspendisse amet, libero ut. Dolor feugiat varius dolor arcu ac in, nonummy diam augue ultrices mauris nec, porta nibh fermentum urna urna nam tempor, purus mauris nulla lacinia lorem venenatis, vivamus litora laoreet nunc tellus. Sapien tellus nascetur metus justo turpis elit, elit cras lectus nam, nec fermentum tempus, id vel, quis sit amet vitae.&lt;/p&gt;
-	&lt;p&gt;Amet laoreet quis, sit dolor ligula justo, elementum scelerisque in id proin justo nulla, non tempor sit consequat aliquet. Ultricies urna vel nisl mollis semper, maecenas velit integer turpis dolor habitasse. Sagittis sodales. Ullamcorper ornare sapien dolor porttitor porta tellus, volutpat rutrum et dolor. Urna ut, elit sed tempus. Mi feugiat donec amet tellus, aliquam vitae justo sodales nibh sem.&lt;/p&gt;
-	&lt;p&gt;Vel id odio fringilla pede at est, morbi faucibus feugiat sed tellus velit praesent. Arcu aliquet ea placerat morbi purus. Nec vulputate, euismod curabitur integer duis aliquam. Integer tellus, placerat dictum fermentum ornare, eget eget ultricies. Nulla aliquam, et massa velit nulla vivamus.&lt;/p&gt;
-	&lt;p&gt;Purus nec urna senectus placerat, imperdiet fringilla, quis eget, odio lobortis. Morbi commodo integer mauris eget nulla, turpis proin sagittis qui congue ipsum, cras pede in sit tincidunt diamlorem. Quis tincidunt eget vestibulum lorem nisl cum, convallis mollis, in pulvinar pulvinar. Faucibus lectus in at qui magna, et orci rhoncus bibendum mollis amet sem. Sit dolorum leo enim sed. Id turpis pretium vestibulum proin lacus dignissim, ante tincidunt ultricies molestie, quia faucibus phasellus aenean hac, et vivamus vivamus, erat suscipit nulla. Eros lacinia dolor fermentum fermentum. In pulvinar eu, morbi at ut cursus congue. Vehicula eget tortor adipiscing, quis sed non, massa ornare. Quis et egestas vivamus suspendisse, ante nulla scelerisque mauris arcu, nullam urna quisque lectus velit, nunc euismod adipiscing morbi.&lt;/p&gt;
 
     &lt;script&gt;
         $('#default').click(function(){
@@ -90,13 +99,12 @@
         });
     &lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;</div>
-		
+&lt;/html&gt;</div>	
 		
 		</div>
 	</div>
 	
-	<div id="preview-pane">
+	<div class="preview-pane">
 		<iframe name="preview" id="preview" src=""></iframe>
 	</div>
 </div>

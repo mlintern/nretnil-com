@@ -2,23 +2,18 @@ body { background-color: #fff; cursor: default; margin: 0; padding: 0; }
 
 #container { overflow: hidden; }
 
-#content { width: 40%; height: 90%; position: absolute; border-right: 2px solid #193878; border-bottom: 2px solid #193878; }
-
-#nav {border-bottom: 3px solid #2958b9; overflow: hidden; }
-#nav-left { width: 60%; float: left; padding-left: 50px; }
-#nav-right { width: 25%; float: right; text-align: right; padding: 8px 30px 0 0; font: 13pt Arial, sans-serif; color: #FFF; }
-#nav span, #nav a {font: 10pt Arial, sans-serif; color: #FFF; background-color: #ecbb76; border-radius: 5px;margin: 7px 3px; padding: 3px 7px; display: inline-block; cursor: pointer;}
-#nav span:hover, #nav a:hover { text-decoration: underline; }
-#nav a { text-decoration: none; }
-#nav a img, #nav span img { border: 0; display: inline-block; margin: 1px 0 0 5px; }
-.nav-active { background-color: #e39522 !important; }
-.nav-run { background-color: #000 !important; }
-.nav-run-first { margin-left: 165px !important; }
+.content { width: 40%; height: 90%; position: absolute; border-bottom: 2px solid #193878; }
 
 .content-section { height: 100%; overflow: scroll; }
 .content-section td, .content-section th { font-family: Verdana, Arial, sans-serif; font-size: 10pt; color: #000; }
 
-#preview-pane { width: 60%; height: 90%; position: absolute; margin-left: 40%; left: 2px; border-bottom: 2px solid #193878;background-color: #FFF; }
-#preview-pane iframe { width: 100%; height: 100%; border: 0; }
+.preview-pane { width: 60%; height: 90%; position: absolute; margin-left: 40%; border-bottom: 2px solid #193878;background-color: #FFF; }
+.preview-pane iframe { width: 100%; height: 100%; border: 0; }
 
 #editor { position: absolute; width: 100%; height: 100%; }
+
+.navbar { margin-bottom: 0; }
+
+.navbar-default { background-color: #f8f8f8;border-color: #e7e7e7;border: none;border-bottom: solid 2px #FFF; }
+
+.navbar-default .navbar-brand { color: #FFF; }
