@@ -91,16 +91,22 @@
 	
 	&lt;!-- Latest compiled and minified CSS --&gt;
     &lt;link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"&gt;
-	
+	&lt;style&gt;
+	    .black:focus{outline-color:black;}
+	    .red:focus{outline-color:red;}
+	    .blue:focus{outline-color:blue;}
+	    .orange:focus{outline-color:orange;}
+	    .green:focus{outline-color:green;}
+	&lt;/style&gt;
 &lt;/head&gt;
 
 &lt;body&gt;
     &lt;div class="container"&gt;
-        &lt;button id="default" class="btn btn-default"&gt;Default&lt;/button&gt;
-        &lt;button id="red" class="btn btn-danger"&gt;Red&lt;/button&gt;
-        &lt;button id="blue" class="btn btn-primary"&gt;Blue&lt;/button&gt;
-        &lt;button id="purple" class="btn btn-warning"&gt;Orange&lt;/button&gt;
-        &lt;button id="green" class="btn btn-success"&gt;Green&lt;/button&gt;
+        &lt;button data-color="black" class="btn btn-default body-color-change"&gt;Default&lt;/button&gt;
+        &lt;button data-color="red" class="red btn btn-danger body-color-change"&gt;Red&lt;/button&gt;
+        &lt;button data-color="blue" class="blue btn btn-primary body-color-change"&gt;Blue&lt;/button&gt;
+        &lt;button data-color="orange" class="orange btn btn-warning body-color-change"&gt;Orange&lt;/button&gt;
+        &lt;button data-color="green" class="green btn btn-success body-color-change"&gt;Green&lt;/button&gt;
         
     	&lt;h1&gt;Header&lt;/h1&gt;
     	&lt;h2&gt;Nemo&lt;/h2&gt;
@@ -114,21 +120,9 @@
     	&lt;p&gt;Tristique lacus hendrerit imperdiet, porta vulputate nec curabitur. Quam aptent vulputate a sodales, blandit purus vivamus et wisi donec nibh. Cum lorem nam elit proin orci, risus est tincidunt. Cursus vulputate sociis non, sit a duis in commodo, est libero massa faucibus sit lobortis, leo est eget id aliquet magna. Augue magna amet eget quam maecenas, adipiscing magna amet varius mauris dui, pede lorem cras urna diam, ante varius aliquam in vestibulum felis neque. Lectus duis tristique purus nullam. Enim interdum facilisis eu in elementum diam, posuere iusto placerat pede eget urna, sed etiam semper morbi dapibus tristique. Per ipsum luctus dolor. Sit curabitur at. Feugiat felis ipsum. Tellus vehicula malesuada adipiscing justo fusce aliquam, laoreet id ullamcorper lacinia arcu aliquam, id praesent rhoncus ipsum libero. Lobortis mauris et nisl, nonummy sed ut, suspendisse id risus ultricies quisque, ipsum eu adipiscing orci ante eget elementum.&lt;/p&gt;
     &lt;/div&gt;
     &lt;script&gt;
-        $('#default').click(function(){
-            console.log('here');
-            $('body').css('color','black');
-        });
-        $('#red').click(function(){
-            $('body').css('color','red');
-        });
-        $('#blue').click(function(){
-            $('body').css('color','blue');
-        });
-        $('#purple').click(function(){
-            $('body').css('color','orange');
-        });
-        $('#green').click(function(){
-            $('body').css('color','green');
+        $('.body-color-change').click(function(){
+            var color = $(this).data("color");
+            $('body').css('color',color);
         });
     &lt;/script&gt;
     
