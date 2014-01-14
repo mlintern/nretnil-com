@@ -57,12 +57,14 @@ function themeUpdate() {
 	
 	return false;
 }
+
 function download(filename, text) {
     var pom = document.createElement('a');
     pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
     pom.setAttribute('download', filename);
     pom.click();
 }
+
 function download_html() {
 	name = new Date().getTime();
 	var iframeDoc = document.getElementById('preview').contentWindow.document.documentElement.innerHTML;
