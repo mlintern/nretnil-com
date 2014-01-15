@@ -3,9 +3,9 @@ User-agent: *
 Disallow: /php
 Disallow: /img
 Disallow: /js
-Disallow: /less
 Disallow: /css
 Disallow: /staging
 Disallow: /indices
 Disallow: /ip
 Disallow: /jsb
+Disallow: /sandbox

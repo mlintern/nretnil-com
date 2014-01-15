@@ -111,14 +111,6 @@
 			
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li><a href="map/index.html">Maps</a></li>
-					<li><a href="jsb/index.html">JS Beautify</a></li>
-					<li><a href="http://dev.nretnil.com/staging">Staging</a></li>
-					<li><a href="http://beer.nretnil.com">Beer O'Clock</a></li>
-					<li><a href="http://dev.nretnil.com/img/sprites/index.html">Sprites</a></li>
-					<li><a href="sandbox/sandybox/index.html">HTML SandyBox</a></li>
-				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Sandbox <b class="caret"></b></a>
