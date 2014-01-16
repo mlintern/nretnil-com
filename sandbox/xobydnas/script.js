@@ -66,8 +66,15 @@ function download(filename, text) {
 }
 
 function download_html() {
-	name = new Date().getTime();
+	console.log('here');
+	var filename = $('#filename').val();
+	if (filename.length > 0) {
+		var name = filename
+	}else{
+		var name = new Date().getTime();
+	}
 	var iframeDoc = document.getElementById('preview').contentWindow.document.documentElement.innerHTML;
 	console.log(iframeDoc);
 	download(name+".html", iframeDoc);
+	return false;
 }
