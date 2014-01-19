@@ -169,7 +169,7 @@
 						<a href="http://dev.nretnil.com/sandbox" class="btn btn-danger btn-block">Sandbox</a>
 						<a href="http://dev.nretnil.com/sandbox/dyolf/index.html" class="btn btn-warning btn-sm btn-block">Floyd</a>
 						<a href="http://dev.nretnil.com/sandbox/trats-hserf/index.html" class="btn btn-warning btn-sm btn-block">Fresh Start</a>
-						<a href="http://dev.nretnil.com/sandbox/xobydnas/index.html" class="btn btn-warning btn-sm btn-block">SandyBox</a>
+						<a href="http://sandybox.nretnil.com" class="btn btn-warning btn-sm btn-block">SandyBox</a>
 						<a href="http://dev.nretnil.com/sandbox/ydnittiw/index.html" class="btn btn-warning btn-sm btn-block">WittIndy</a>
 					</div>
 				</div>
