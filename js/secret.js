@@ -18,10 +18,11 @@ $(document).keydown(function(e){
     } else if (keyone && keytwo && keythree && keyfour && keyfive && keysix && keyseven && !keyeight && e.keyCode == 66) { //B Key
            keyeight = true;
            $('#secret-modal').modal('show');
-           //window.alert('Secret Area');
+           console.log(keyone+' '+keytwo+' '+keythree+' '+keyfour+' '+keyfive+' '+keysix+' '+keyseven+' '+keyeight+' ');
+           keyone=false;keytwo=false;keythree=false;keyfour=false;keyfive=false;keysix=false;keyseven=false;keyeight=false;
     } else {
         keyone=false;keytwo=false;keythree=false;keyfour=false;keyfive=false;keysix=false;keyseven=false;keyeight=false;
     }
     //console.log(e.keyCode);
-    //console.log(keyone+' '+keytwo+' '+keythree+' '+keyfour+' '+keyfive+' '+keysix+' '+keyseven+' '+keyeight+' ');
+    console.log(keyone+' '+keytwo+' '+keythree+' '+keyfour+' '+keyfive+' '+keysix+' '+keyseven+' '+keyeight+' ');
 });
