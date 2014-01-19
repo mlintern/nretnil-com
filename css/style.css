@@ -78,3 +78,8 @@ max-height: 400px;
 	background-color: #428bca;
 	}
 }
+@media (min-width: 768px) {
+	.nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus {
+	border-bottom-color: transparent;
+	}
+}
