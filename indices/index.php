@@ -117,7 +117,6 @@
 						<ul class="dropdown-menu">
 							<li><a target="_blank" href="/sandbox/ydnittiw/index.html">#WittIndy</a></li>
 							<li><a target="_blank" href="/sandbox/dyolf/index.html">Floyd</a></li>
-							<li><a target="_blank" href="/sandbox/trats-hserf/index.html">Fresh Start</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -139,9 +138,51 @@
 		    </div>
 		</div>
 	</div>
-	
 </div>
+
+<div id="secret-modal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Secret Area</h4>
+			</div>
+			<div class="modal-body">
+				<a href="http://dev.nretnil.com/staging" class="btn btn-default btn-lg btn-block">Staging</a>
+				<div style="height: 5px;"></div>	
+				<div class="row">
+					<div class="col-sm-6">
+						<a href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/Fonts.html" class="btn btn-success btn-block">Fonts</a>
+						<a href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/Fonts.html" class="btn btn-info btn-sm btn-block">Fonts Example</a>
+						<a href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/" class="btn btn-info btn-sm btn-block">Font Directories</a>
+					</div>
+					<div class="col-sm-6">
+						<a href="http://dev.nretnil.com/staging/tools" class="btn btn-danger btn-block">Tools</a>
+						<a href="http://dev.nretnil.com/staging/tools/css" class="btn btn-warning btn-sm btn-block">CSS</a>
+						<a href="http://dev.nretnil.com/staging/tools/js" class="btn btn-warning btn-sm btn-block">Javascript</a>
+						<a href="http://dev.nretnil.com/staging/tools/img" class="btn btn-warning btn-sm btn-block">Images</a>
+					</div>
+				</div>
+				<div style="height: 5px;"></div>
+				<div class="row">
+					<div class="col-sm-6">
+						<a href="http://dev.nretnil.com/sandbox" class="btn btn-danger btn-block">Sandbox</a>
+						<a href="http://dev.nretnil.com/sandbox/dyolf/index.html" class="btn btn-warning btn-sm btn-block">Floyd</a>
+						<a href="http://dev.nretnil.com/sandbox/trats-hserf/index.html" class="btn btn-warning btn-sm btn-block">Fresh Start</a>
+						<a href="http://dev.nretnil.com/sandbox/xobydnas/index.html" class="btn btn-warning btn-sm btn-block">SandyBox</a>
+						<a href="http://dev.nretnil.com/sandbox/ydnittiw/index.html" class="btn btn-warning btn-sm btn-block">WittIndy</a>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/secret.js"></script>
 <script type="text/javascript" src="http://dev.nretnil.com/js/bootstrap3.js"></script>
 </body>
 </html>
