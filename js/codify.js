@@ -13,7 +13,7 @@ function codify_text(){
 	$('#codified_result').attr('rows', linecount);
 	
 	$('#codified_result').text(text);	
-	$('#codified_result').toggleClass('hidden');
+	$('#codified_result').removeClass('hidden');
 	$('#codified_result').focus();
   	$('#codified_result').select();
 }
