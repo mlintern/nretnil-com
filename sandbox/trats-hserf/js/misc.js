@@ -19,3 +19,39 @@ $(document).ready(function() {
         }
     }, 500)
 });
+
+function progressUp(id,amount) {
+	var current = parseInt($(id).attr('aria-valuenow'));
+	var max = parseInt($(id).attr('aria-valuemax'));
+	var min = parseInt($(id).attr('aria-valuemin'));
+	var full = parseInt($(id).attr('aria-valuefull')); 
+	var newval = current + amount;
+	var percent = (newval / full)*100;
+
+	if ( newval > max ){
+		$(id).attr('aria-valuenow', max);
+		percent = (((max) / full)*100);
+		$(id).css('width', percent+'%');
+	}else{
+		$(id).attr('aria-valuenow', newval );
+		$(id).css('width', percent+'%');
+	}
+}
+
+function progressDown(id,amount) {
+	var current = parseInt($(id).attr('aria-valuenow'));
+	var max = parseInt($(id).attr('aria-valuemax'));
+	var min = parseInt($(id).attr('aria-valuemin'));
+	var full = parseInt($(id).attr('aria-valuefull')); 
+	var newval = current - amount;
+	var percent = (newval / full)*100;
+
+	if ( newval < min ){
+		$(id).attr('aria-valuenow', min);
+		percent = ((min / full)*100);
+		$(id).css('width', percent+'%');
+	}else{
+		$(id).attr('aria-valuenow', newval );
+		$(id).css('width', percent+'%');
+	}
+}
