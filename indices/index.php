@@ -80,7 +80,7 @@
 <title>Nretnil Tools</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link type="text/css" href="http://dev.nretnil.com/css/bootstrap3.css" rel="stylesheet">
+<link type="text/css" href="http://dev.nretnil.com/staging/tools/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/css/style.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/css/bootstrap-glyphicons.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/tools/css/fog/fog.css" rel="stylesheet">
@@ -159,6 +159,8 @@
 					</div>
 					<div class="col-sm-6">
 						<a target="_blank" href="http://dev.nretnil.com/staging/tools" class="btn btn-danger btn-block">Tools</a>
+						<a target="_blank" href="http://dev.nretnil.com/staging/tools/bootstrap2" class="btn btn-warning btn-sm btn-block">Bootstrap 2.3.2</a>
+						<a target="_blank" href="http://dev.nretnil.com/staging/tools/bootstrap3" class="btn btn-warning btn-sm btn-block">Bootstrap 3.1.0</a>
 						<a target="_blank" href="http://dev.nretnil.com/staging/tools/css" class="btn btn-warning btn-sm btn-block">CSS</a>
 						<a target="_blank" href="http://dev.nretnil.com/staging/tools/js" class="btn btn-warning btn-sm btn-block">Javascript</a>
 						<a target="_blank" href="http://dev.nretnil.com/staging/tools/img" class="btn btn-warning btn-sm btn-block">Images</a>
@@ -182,8 +184,8 @@
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="http://dev.nretnil.com/js/secret.js"></script>
-<script type="text/javascript" src="http://dev.nretnil.com/js/bootstrap3.js"></script>
+<script type="text/javascript" src="http://dev.nretnil.com/staging/tools/bootstrap3/js/bootstrap.min.js"></script>
 </body>
 </html>
