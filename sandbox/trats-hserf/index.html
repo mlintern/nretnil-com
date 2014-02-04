@@ -37,12 +37,12 @@
 				<ul class="nav navbar-nav">
 					<li><a href="#local-one" class="local">Area One <span class="glyphicon glyphicon-picture"></span></a></li>
 					<li><a href="#local-two" class="local">Area Two <span class="glyphicon glyphicon-bullhorn"></span></a></li>
-					<li><a href="#local-three" class="local">Area Three <span class="glyphicon glyphicon-user"></span></a></li>
+					<li><a href="#local-three" class="local">Area Three <i class="fa fa-picture-o"></i></a></li>
 					<li><a href="#local-four" class="local">Area Four <span class="glyphicon glyphicon-phone"></span></a></li>
 					<li><a href="#local-five" class="local">Area Five <i class="fa fa-list"></i></a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><button type="submit" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-envelope"></span> Button</button></li>
+					<li><button class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-envelope"></span> Button</button></li>
 					
 					<li><a target="_blank" href="#">Link <span class="glyphicon glyphicon-globe"></span></a></li>
 					<li class="dropdown">
@@ -241,13 +241,55 @@
 	</div>
 	
 	<div style="height: 50px;"></div>
-	<div id="local-four" class="row">
-		<img src="http://placehold.it/1170x400/FF0/F0F&text=[Area Four]"/>
+	<div id="local-four">
+		<div style="height: 50px;"></div>
+		<div class="row">
+			<ul class="nav nav-tabs nav-justified">
+				<li class="active"><a href=".twitter" data-toggle="tab"><i class="fa fa-twitter fa-2x"></i> Twitter</a></li>
+				<li><a href=".facebook" data-toggle="tab"><i class="fa fa-facebook fa-2x"></i> Facebook</a></li>
+				<li><a href=".instagram" data-toggle="tab"><i class="fa fa-instagram fa-2x"></i> Instagram</a></li>
+				<li><a href=".pinterest" data-toggle="tab"><i class="fa fa-pinterest fa-2x"></i> Pinterest</a></li>
+			</ul>
+			<div style="height: 20px;"></div>
+			<div class="row">
+				<div class="tab-content col-sm-10 col-sm-offset-1 social-content">
+					<div class="tab-pane active twitter">
+						<div class="row">
+							<div class="col-sm-3 left"><a href="#"><i class="fa fa-twitter fa-5x"></i></a></div>
+							<div class="col-sm-9 right"><div class="inner-content">Twitter</div></div>
+						</div>
+					</div>
+					<div class="tab-pane facebook">
+						<div class="row">
+							<div class="col-sm-3 left"><a href="#"><i class="fa fa-facebook fa-5x"></i></a></div>
+							<div class="col-sm-9 right"><div class="inner-content">Facebook</div></div>
+						</div>
+					</div>
+					<div class="tab-pane instagram">
+						<div class="row">
+							<div class="col-sm-3 left"><a href="#"><i class="fa fa-instagram fa-5x"></i></a></div>
+							<div class="col-sm-9 right"><div class="inner-content">Instagram</div></div>
+						</div>
+					</div>
+					<div class="tab-pane pinterest">
+						<div class="row">
+							<div class="col-sm-3 left"><a href="#"><i class="fa fa-pinterest fa-5x"></i></a></div>
+							<div class="col-sm-9 right"><div class="inner-content">Pinterest</div></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	
-	<div style="height: 50px;"></div>
+	<div style="height: 100px;"></div>
 	<div id="local-five">
-		
+		<div class="row">
+			<div class="page-header">
+				<h1 class="text-center">Progress</h1>
+			</div>
+		</div>
+		<div style="height: 40px;"></div>
 		<div class="row">
 			<div class="col-xs-2">
 				<a href="javascript:void(0)" onclick="progressDown('#progress_one', 10);"><i class="fa fa-minus-circle fa-3x pull-right"></i></a>
@@ -304,27 +346,27 @@
 		
 		<div class="row">
 			<div class="col-xs-2">
-				<a href="javascript:void(0)" onclick="progressDown('#progress_four', 10);"><i class="fa fa-minus-circle fa-3x pull-right"></i></a>
-				<a href="javascript:void(0)" onclick="progressDown('#progress_five', 10);"><i class="fa fa-minus-circle fa-3x pull-right"></i></a>
-				<a href="javascript:void(0)" onclick="progressDown('#progress_six', 10);"><i class="fa fa-minus-circle fa-3x pull-right"></i></a>
+				<a href="javascript:void(0)" onclick="progressDown('#progress_four', 5);"><i class="fa fa-minus-circle fa-3x pull-right"></i></a>
+				<a href="javascript:void(0)" onclick="progressDown('#progress_five', 5);"><i class="fa fa-minus-circle fa-3x pull-right"></i></a>
+				<a href="javascript:void(0)" onclick="progressDown('#progress_six', 5);"><i class="fa fa-minus-circle fa-3x pull-right"></i></a>
 			</div>
 			<div class="col-xs-8">
-				<div class="progress progress-striped active progress-lg">
+				<div class="progress progress-lg">
 					<div id="progress_four" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="33" aria-valuefull="100" style="width: 5%">
 						<span class="sr-only">5% Complete (success)</span>
 					</div>
-					<div id="progress_five" class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="34" aria-valuefull="100" style="width: 10%">
+					<div id="progress_five" class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="34" aria-valuefull="100" style="width: 15%">
 						<span class="sr-only">10% Complete (success)</span>
 					</div>
-					<div id="progress_six" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="33" aria-valuefull="100" style="width: 5%">
+					<div id="progress_six" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="33" aria-valuefull="100" style="width: 10%">
 						<span class="sr-only">5% Complete (success)</span>
 					</div>
 				</div>
 			</div>
 			<div class="col-xs-2">
-				<a href="javascript:void(0)" onclick="progressUp('#progress_four', 10);"><i class="fa fa-plus-circle fa-3x"></i></a>
-				<a href="javascript:void(0)" onclick="progressUp('#progress_five', 10);"><i class="fa fa-plus-circle fa-3x"></i></a>
-				<a href="javascript:void(0)" onclick="progressUp('#progress_six', 10);"><i class="fa fa-plus-circle fa-3x"></i></a>
+				<a href="javascript:void(0)" onclick="progressUp('#progress_four', 5);"><i class="fa fa-plus-circle fa-3x"></i></a>
+				<a href="javascript:void(0)" onclick="progressUp('#progress_five', 5);"><i class="fa fa-plus-circle fa-3x"></i></a>
+				<a href="javascript:void(0)" onclick="progressUp('#progress_six', 5);"><i class="fa fa-plus-circle fa-3x"></i></a>
 			</div>
 		</div>
 		
@@ -338,6 +380,24 @@
 	</div>
 	
 </div> <!-- End Container -->
+
+<div class="modal fade" id="myModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Modal title</h4>
+			</div>
+			<div class="modal-body">
+				<p>Content</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript" src="http://dev.nretnil.com/staging/tools/bootstrap3/js/bootstrap.min.js"></script>
