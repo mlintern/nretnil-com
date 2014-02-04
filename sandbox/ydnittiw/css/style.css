@@ -97,3 +97,8 @@ max-height: 400px;
 	background-color: #428bca;
 	}
 }
+@media (min-width: 768px) {
+	.navbar-nav.navbar-right:last-child {
+	margin-right: 0;
+	}
+}
