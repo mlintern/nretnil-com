@@ -1,6 +1,6 @@
 body{
 position:relative;
-background-image: url('../img/boot-3.png');
+background-image: url('../img/boot-bg.png');
 background-color: #FFF;
 background-repeat: no-repeat;
 background-position: center center;
@@ -61,6 +61,12 @@ color: #b90102;
 /*Carousel*/
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
 margin: 0 auto;
+}
+.carousel-indicators li {
+border: 1px solid #0F0;
+}
+.carousel-indicators .active {
+background-color: #0F0;
 }
 /*Footer*/
 .footer{
