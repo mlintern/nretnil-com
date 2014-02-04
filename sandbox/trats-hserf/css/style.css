@@ -99,3 +99,10 @@ max-height: 400px;
 .progress-lg{
 height: 40px; 
 }
+.rank{
+position: absolute;
+top: 5px;
+left: 24px;
+font-size: 50px;
+line-height: 1;
+}
