@@ -95,3 +95,10 @@ max-height: 400px;
 .tab-content .fa.fa-lg{
 padding-top: 4px;
 }
+.secret-button{
+position: fixed;
+bottom: 0;
+left: 0;
+height: 60px;
+width: 60px;
+}
