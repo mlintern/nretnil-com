@@ -45,6 +45,12 @@ border-bottom-color: #777;
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
 color: #FFF;
 }
+.nav-tabs > li > a {
+border: 1px solid #b90102;
+}
+.nav-tabs > li > a:hover {
+border-color: #b90102 #b90102 #b90102;
+}
 .navbar-default .navbar-brand {
 color: #FFF;
 }
@@ -56,6 +62,9 @@ text-decoration: underline;
 display: none;
 }
 /*FOOTER*/
+.footer{
+padding-bottom: 50px;
+}
 .footer-email{
 color:blue;
 padding-top: 30px;
