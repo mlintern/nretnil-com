@@ -47,9 +47,13 @@ color: #FFF;
 }
 .nav-tabs > li > a {
 border: 1px solid #b90102;
+border-color: #b90102 #b90102 transparent #b90102;
 }
 .nav-tabs > li > a:hover {
-border-color: #b90102 #b90102 #b90102;
+border-color: #b90102 #b90102 transparent #b90102;
+}
+.nav-tabs>li.active>a{
+border-color: #b90102;
 }
 .navbar-default .navbar-brand {
 color: #FFF;
