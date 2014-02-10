@@ -1,3 +1,4 @@
+/* Used for ScrollSpy
 var offset = 70;
 
 $('.navbar li a.local').click(function(event) {
@@ -5,6 +6,8 @@ $('.navbar li a.local').click(function(event) {
     $($(this).attr('href'))[0].scrollIntoView();
     scrollBy(0, -offset);
 });
+*/
+
 
 
 $(document).ready(function() {
@@ -17,6 +20,12 @@ $(document).ready(function() {
 	$('.plusOne').click(function(){
 		$(this).parents('.thumbnail').find('.rank').remove();
 		$(this).parents('.thumbnail').append('<div class="rank"><i class="fa fa-check text-success"></i></div>')
+	});
+	
+	$('a[data-toggle="collapse"]').click(function(){
+		var nav = $(this).data('nav-active');
+		$('.navbar-nav li').removeClass("active");
+		$('#'+nav).addClass("active");
 	});
 
 });
