@@ -63,10 +63,10 @@ color: #b90102;
 margin: 0 auto;
 }
 .carousel-indicators li {
-border: 1px solid #0F0;
+border: 1px solid #428bca;
 }
 .carousel-indicators .active {
-background-color: #0F0;
+background-color: #428bca;
 }
 /*Footer*/
 .footer{
