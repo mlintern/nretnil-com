@@ -1,13 +1,4 @@
 $(document).ready(function() {
-	
-	$('#run').bind('click', function() {
-		runCode();
-		$('.preview-pane').css('width','100%');
-		$('.preview-pane').css('margin-left','0%');
-		$('.content').css('width','0%');
-		$('.btn-default').removeClass('btn-warning');
-		$('.all-display').addClass('btn-warning');
-	});
 
 	setTimeout(function(){runCode();},1000)
 	
