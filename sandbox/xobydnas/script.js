@@ -44,6 +44,12 @@ $(document).ready(function() {
 	
 });
 
+function reset() {
+	$('#preview').remove();
+	$('.preview-pane').append('<iframe name="preview" id="preview" src=""></iframe>');
+	runCode();
+}
+
 function runCode() {
 	window['preview'].document.write(editor.getValue());
 	window['preview'].document.close();
