@@ -23,6 +23,9 @@ color: #FFF;
 a {
 color: #FFF;
 }
+a:hover {
+color: #FFF;
+}
 h2 a:hover{
 color: #FFF;
 }
