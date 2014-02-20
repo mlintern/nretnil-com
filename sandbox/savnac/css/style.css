@@ -2,6 +2,6 @@ body {
 margin: 0px;
 padding: 0px;
 }
-.container{
+canvas {
 border: solid #000;
 }
