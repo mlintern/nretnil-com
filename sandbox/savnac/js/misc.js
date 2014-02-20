@@ -13,22 +13,22 @@ var layer1 = new Kinetic.Layer();
 var layer2 = new Kinetic.Layer();
 
 var line1 = new Kinetic.Line({
-    points: [400, 0, 400, 500],
+    points: [450, 0, 450, 500],
     stroke: "black",
     strokeWidth: 10
 });
 var line2 = new Kinetic.Line({
-    points: [600, 0, 600, 500],
+    points: [650, 0, 650, 500],
     stroke: "black",
     strokeWidth: 10
 });
 var line3 = new Kinetic.Line({
-    points: [200, 125, 800, 125],
+    points: [250, 125, 850, 125],
     stroke: "black",
     strokeWidth: 10
 });
 var line4 = new Kinetic.Line({
-    points: [200, 275, 800, 275],
+    points: [250, 275, 850, 275],
     stroke: "black",
     strokeWidth: 10
 });
@@ -180,4 +180,4 @@ layer1.add(line4);
 stage.add(layer1);
 stage.add(layer2);
 
-document.getElementById('canvas-container').style.background = '#0f0';
+document.getElementById('canvas-container').style.background = '#fff';
