@@ -3,6 +3,11 @@ margin: 0px;
 padding: 0px;
 background: #dedede;
 }
-canvas {
-border: solid #000;
+.color-change{
+height: 30px;
+width: 30px;
+float: left;
+}
+#can {
+cursor: pointer;
 }
