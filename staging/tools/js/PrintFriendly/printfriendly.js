@@ -158,12 +158,12 @@ var PF_VERSION = "2014-03-07-090624306",
                     var a;
                     this.config.urls = {
                         js: {
-                            jquery: f + "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js",
-                            core: "http://dev.nretnil.com/staging/tools/js/PrintFriendly/versions/2014-03-07-090624306/js/core.js",
-                            algo: "http://dev.nretnil.com/staging/tools/js/PrintFriendly/versions/2014-03-07-090624306/js/algo.js"
+                            jquery: "http://dev.nretnil.com/staging/tools/js/PrintFriendly/js/jquery.min.js",
+                            core: "http://dev.nretnil.com/staging/tools/js/PrintFriendly/js/core.js",
+                            algo: "http://dev.nretnil.com/staging/tools/js/PrintFriendly/js/algo.js"
                         },
                         css: {
-                            page: this.config.hosts.cdn + "/versions/" + this.version + "/css/main.css"
+                            page: "http://dev.nretnil.com/staging/tools/js/PrintFriendly/css/main.css"
                         },
                         pdfMake: this.config.hosts.pdf + "/pdfs/make",
                         email: this.config.hosts.email + "/email/new"

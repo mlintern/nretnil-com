@@ -44,7 +44,7 @@ a.printfriendly, div.printfriendly a {
   display: none;
 }
 .pf-sprite{
-  background: url('../../../images/pf-app-sprite.png') no-repeat;
+  background: url('../images/pf-app-sprite.png') no-repeat;
 }
 
 .pf-app a{
@@ -335,7 +335,7 @@ a.printfriendly, div.printfriendly a {
    -moz-box-shadow: inset 1px 1px 1px #d0d0d0, 1px 1px 0px #fff;
    box-shadow: inset 1px 1px 1px #d0d0d0, 1px 1px 0px #fff;
    opacity: 1;
-   background: url('../../../images/ajax-loader.gif') no-repeat 12px 50% #efefef!important;
+   background: url('../images/ajax-loader.gif') no-repeat 12px 50% #efefef!important;
    cursor: wait!important;
    padding-left: 60px;
  }
@@ -343,7 +343,7 @@ a.printfriendly, div.printfriendly a {
 .pdf-download{
   padding:4px 12px 0px 40px;
   margin-left: -.125em;
-  background: url(../../../images/lightbox_sprite2.png) no-repeat 0 -797px;
+  background: url(../images/lightbox_sprite2.png) no-repeat 0 -797px;
   display: inline-block;
 }
 .pdf-download {
