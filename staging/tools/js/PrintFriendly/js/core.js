@@ -257,8 +257,8 @@ var imageFreeDomains = "skinnytaste.com pieceofcakekitchen.com naturesgarden.co.
                     settings.brandFree = a.domain_settings.brand_free;
                     ad.create();
                     settings.brandFree || $("#pf-ft").show()
-                //}
-            })
+                /*}
+            })*/
         },
         localizeClickToDelete: function () {
             settings.localeInformationFetched && settings.algoRunFinished && $("body", pf.algoDoc).append('<style>.hilight:before { content:"' + settings.localizedClickToDelTitle + '" !important;"}</style>')
