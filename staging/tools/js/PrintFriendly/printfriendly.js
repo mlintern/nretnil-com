@@ -1,3 +1,13 @@
+var pfHeaderImgUrl = '';
+var pfHeaderTagline = '';
+var pfdisableClickToDel = 0;
+var pfHideImages = 0;
+var pfImageDisplayStyle = 'right';
+var pfDisablePDF = 1;
+var pfDisableEmail = 1;
+var pfDisablePrint = 0;
+var pfCustomCSS = '';
+var pfBtVersion='1';
 var PF_VERSION="2014-03-07-090624306",pfMod=window.pfMod||function(c,k){var f=c.document.location.protocol,h={environment:"production",protocol:f,dir:"ltr",usingBM:!1,hosts:{cdn:"https:"==f?"https://d3nekkt1lmmhms.cloudfront.net":"http://cdn.printnicer.com",pf:f+"//www.printfriendly.com",ds:f+"//ds.printfriendly.com",pdf:f+"//pdf.printfriendly.com",email:f+"//email-srv.printfriendly.com",tracker:f+"//log.printfriendly.com",page:c.location.host},domains:{page:c.location.host.split(":")[0].split("www.").pop()}},
 d={isReady:!1,readyBound:!1,addStyles:function(){var a=document.getElementsByTagName("head")[0],b=document.createElement("style");b.type="text/css";b.styleSheet?b.styleSheet.cssText="body * { z-index: 0 !important; }":b.appendChild(document.createTextNode("body * { z-index: 0 !important; }"));a.appendChild(b)},setWidthOfImages:function(){for(var a=document.getElementsByTagName("img"),b=0;b<a.length;b++){var c=a[b];c.width=c.width}},convertRelativetoAbsolute:function(a){for(var b=document.getElementsByTagName(a),
 c=0;c<b.length;c++){var d=b[c];try{"img"===a?d.src=d.src:d.href=d.href}catch(e){}}},removeScripts:function(){for(var a=document.getElementsByTagName("script"),b=a.length-1;0<=b;b-=1)if("undefined"===typeof a[b].src||-1===a[b].src.indexOf("printfriendly"))a[b].nodeValue="",a[b].removeAttribute("src"),a[b].parentNode&&a[b].parentNode.removeChild(a[b])},markHiddenElements:function(){var a,b;c.getComputedStyle?a="standard":document.body.currentStyle&&(a="ie");for(var d=document.body.getElementsByTagName("*"),
