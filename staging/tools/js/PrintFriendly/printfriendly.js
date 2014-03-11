@@ -19,7 +19,7 @@ var PF_VERSION = "2014-03-07-090624306",
                 hosts: {
                     cdn: "https:" == f ? "https://d3nekkt1lmmhms.cloudfront.net" : "http://cdn.printnicer.com",
                     pf: f + "//www.printfriendly.com",
-                    ds: f + "//ds.printfriendly.com",
+                    ds: "http://ds.printfriendly.com",
                     pdf: f + "//pdf.printfriendly.com",
                     email: f + "//email-srv.printfriendly.com",
                     tracker: f + "//log.printfriendly.com",
