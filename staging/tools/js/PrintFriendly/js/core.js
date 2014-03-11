@@ -245,7 +245,7 @@ var imageFreeDomains = "skinnytaste.com pieceofcakekitchen.com naturesgarden.co.
                     url: pf.config.urls.page
                 },
                 success: function (a) {*/
-                	a = {"translations":{"print":"Print","pdf":"PDF","email":"Email","remove-images":"Remove Images","undo":"Undo","txt-size":"Text Size","delete":"Click to delete","dialog-close":"Close","dialog-title":"Printing Your Page","dialog-text":"Sending to your printer. \u003Ca  class='re-send'  href='#'\u003Ere-send\u003C/a\u003E","pdf-head":"Generating Your PDF"},"domain_settings":{"ad_free":false,"adsense":false,"delete_disabled":false,"image_hidden":false,"brand_free":false,"banned":false,"ad_type":"lijit"}};
+                	a = {"translations":{"print":"Print","pdf":"PDF","email":"Email","remove-images":"Remove Images","undo":"Undo","txt-size":"Text Size","delete":"Click to delete","dialog-close":"Close","dialog-title":"Printing Your Page","dialog-text":"Sending to your printer. \u003Ca  class='re-send'  href='#'\u003Ere-send\u003C/a\u003E","pdf-head":"Generating Your PDF"},"domain_settings":{"ad_free":true,"adsense":false,"delete_disabled":false,"image_hidden":false,"brand_free":true,"banned":false,"ad_type":"lijit"}};
                     $(".localize").map(function () {
                         this.innerHTML = a.translations[this.id] || this.innerHTML
                     });
