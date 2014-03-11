@@ -238,25 +238,26 @@ var imageFreeDomains = "skinnytaste.com pieceofcakekitchen.com naturesgarden.co.
             pf.loadHtmlInIframe(document, b, a)
         },
         getSettingsFromPFServer: function () {
-            $.ajax({
+            /*$.ajax({
                 url: pf.config.hosts.ds + "/domains/settings",
                 dataType: "jsonp",
                 data: {
                     url: pf.config.urls.page
                 },
-                success: function (a) {
+                success: function (a) {*/
+                	a = {"translations":{"print":"Print","pdf":"PDF","email":"Email","remove-images":"Remove Images","undo":"Undo","txt-size":"Text Size","delete":"Click to delete","dialog-close":"Close","dialog-title":"Printing Your Page","dialog-text":"Sending to your printer. \u003Ca  class='re-send'  href='#'\u003Ere-send\u003C/a\u003E","pdf-head":"Generating Your PDF"},"domain_settings":{"ad_free":false,"adsense":false,"delete_disabled":false,"image_hidden":false,"brand_free":false,"banned":false,"ad_type":"lijit"}};
                     $(".localize").map(function () {
                         this.innerHTML = a.translations[this.id] || this.innerHTML
                     });
                     settings.localizedClickToDelTitle = a.translations["delete"];
                     settings.localeInformationFetched = !0;
                     core.localizeClickToDelete();
-                    settings.adFree = true;
+                    settings.adFree = a.domain_settings.ad_free;
                     settings.adType = a.domain_settings.ad_type;
-                    settings.brandFree = true;
-                    //ad.create();
-                    //settings.brandFree || $("#pf-ft").show()
-                }
+                    settings.brandFree = a.domain_settings.brand_free;
+                    ad.create();
+                    settings.brandFree || $("#pf-ft").show()
+                //}
             })
         },
         localizeClickToDelete: function () {
