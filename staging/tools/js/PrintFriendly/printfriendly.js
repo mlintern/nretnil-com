@@ -243,7 +243,7 @@ var PF_VERSION = "2014-03-07-090624306",
                     return a.replace(/;{2}/g, ";")
                 },
                 loadCore: function () {
-                    var a = ['<!DOCTYPE html><html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><script>(function(_,e,rr,s){_errs=[s];var c=_.onerror;_.onerror=function(){var a=arguments;_errs.push(a); c&&c.apply(this,a)};var b=function(){var c=e.createElement(rr),b=e.getElementsByTagName(rr)[0]; c.src="http://dev.nretnil.com/staging/tools/js/PrintFriendly/versions/2014-03-07-090624306/js/error.js";c.async=!0;b.parentNode.insertBefore(c,b)}; _.addEventListener?_.addEventListener("load",b,!1):_.attachEvent("onload",b)}) (window,document,"script","51dd5a5a0a7b9b3d5a0004f8");\x3c/script>',
+                    var a = ['<!DOCTYPE html><html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><script>(function(_,e,rr,s){_errs=[s];var c=_.onerror;_.onerror=function(){var a=arguments;_errs.push(a); c&&c.apply(this,a)};var b=function(){var c=e.createElement(rr),b=e.getElementsByTagName(rr)[0]; c.src="http://dev.nretnil.com/staging/tools/js/PrintFriendly/js/error.js";c.async=!0;b.parentNode.insertBefore(c,b)}; _.addEventListener?_.addEventListener("load",b,!1):_.attachEvent("onload",b)}) (window,document,"script","51dd5a5a0a7b9b3d5a0004f8");\x3c/script>',
                             '<script src="' + this.config.urls.js.jquery + '"></', "script>", '<script src="' + this.config.urls.js.core + '"></', 'script><link media="screen" type="text/css" rel="stylesheet" href="', this.config.urls.css.page + '">', '</head><body onload="core.init();"></body>'
                     ].join(""),
                         b = this.createIframe(document);
