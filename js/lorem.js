@@ -31,7 +31,8 @@
 	lorem[18] = "At sit. Nullam elit quam sapien at nec. Amet sociis sociosqu, ultricies amet, mattis donec hendrerit aliquet lorem, tellus nulla velit hendrerit dui. Et vestibulum dolor eget fermentum, orci arcu quam sed, curabitur duis elit nulla sed dignissim. Quis aliquam arcu viverra lacinia quis. Est sed convallis vehicula justo venenatis vulputate, consequat odio integer sed, integer ipsum eget turpis odio, neque odio nec, lacinia egestas. Nibh eu luctus ligula, felis faucibus vulputate suspendisse aliquam torquent, faucibus proin justo odio cras, sed orci tellus adipiscing, proin mauris eu blandit vel lacus.";
 	lorem[19] = "Purus nec urna senectus placerat, imperdiet fringilla, quis eget, odio lobortis. Morbi commodo integer mauris eget nulla, turpis proin sagittis qui congue ipsum, cras pede in sit tincidunt diamlorem. Quis tincidunt eget vestibulum lorem nisl cum, convallis mollis, in pulvinar pulvinar. Faucibus lectus in at qui magna, et orci rhoncus bibendum mollis amet sem. Sit dolorum leo enim sed. Id turpis pretium vestibulum proin lacus dignissim, ante tincidunt ultricies molestie, quia faucibus phasellus aenean hac, et vivamus vivamus, erat suscipit nulla. Eros lacinia dolor fermentum fermentum. In pulvinar eu, morbi at ut cursus congue. Vehicula eget tortor adipiscing, quis sed non, massa ornare. Quis et egestas vivamus suspendisse, ante nulla scelerisque mauris arcu, nullam urna quisque lectus velit, nunc euismod adipiscing morbi.";
 	lorem[20] = "Sit commodo tellus aenean tincidunt et, nunc et lorem. Lorem arcu, bibendum dolore pellentesque morbi nonummy leo, auctor pede ipsum, sed ultrices eu nulla. Felis arcu sapien et bibendum amet vitae, consequat quisque, voluptatem sed ornare non elit. A facilisi inceptos quam quam, ornare feugiat vestibulum soluta est eu tortor. Sed non nulla urna. Vulputate sodales condimentum ut, mollis non morbi at urna non varius. Tellus magna augue blandit eu posuere eu. Vestibulum justo libero pellentesque mollis ultricies dictum, ante dapibus, imperdiet aenean purus, non faucibus porta placerat nec, ligula libero arcu mi condimentum arcu amet.";
-function makeipsum(){
+
+	function makeipsum(){
 		var ipsum_text = "";
 		for (var i = 0; i < howmany; i++){
 			rnd_number=Math.floor(Math.random()*diff + min_num); 
@@ -67,6 +68,9 @@ function makeipsum(){
 		       		iWordCount++;
 				}
 				ipsum_text = list.join(' '); // changed
+				if(opts.ptags==true){
+					ipsum_text+="</p>";
+				}
 			break;
 			}
 			case 'characters':
@@ -90,7 +94,7 @@ function makeipsum(){
 	}
 
 
-return this.each(function() {
+	return this.each(function() {
 	  $this = $(this);
 	  var markup = makeipsum();
 	  $this.html(markup);
@@ -101,14 +105,15 @@ return this.each(function() {
 })(jQuery);
 
 function loremExecute(){
-	
+
 	$('.ipsum').addClass('hidden');
 	
 	if ($("input:radio[name='typeoftext']:checked").val() == "paragraphs"){
-		if ($('#ptags').attr("checked")){
-			$('.ipsum').lorem({ type: 'paragraphs',amount:$('#numpara').val() ,ptags:true});
+		console.log('paragraphs');
+		if ($('#ptags').is(':checked')){
+			$('.ipsum').lorem({ type: 'paragraphs',amount: $('#numpara').val(),ptags: true });
 		}else{
-			$('.ipsum').lorem({ type: 'paragraphs',amount:$('#numpara').val() ,ptags:false});
+			$('.ipsum').lorem({ type: 'paragraphs',amount: $('#numpara').val(),ptags: false });
 		}
 		$('.ipsum').toggleClass('hidden');
 		$('.ipsum').focus();
@@ -116,19 +121,19 @@ function loremExecute(){
 	}else if ($("input:radio[name='typeoftext']:checked").val() == "words"){
 		console.log('words');
 		if ($('#ptags').is(":checked")){
-			$('.ipsum').lorem({ type: 'words',amount:$('#numwords').val(),ptags:true});
+			$('.ipsum').lorem({ type: 'words',amount: $('#numwords').val(),ptags: true });
 		}else{
-			$('.ipsum').lorem({ type: 'words',amount:$('#numwords').val(),ptags:false});
+			$('.ipsum').lorem({ type: 'words',amount: $('#numwords').val(),ptags: false });
 		}
-		$('.ipsum').toggleClass('hidden');
+		$('.ipsum').removeClass('hidden');
 		$('.ipsum').focus();
   		$('.ipsum').select();
 	}else{
 		console.log('characters');
 		if ($('#ptags').is(":checked")){
-			$('.ipsum').lorem({ type: 'characters',amount:$('#numchars').val(),ptags:true});
+			$('.ipsum').lorem({ type: 'characters',amount: $('#numchars').val(),ptags: true });
 		}else{
-			$('.ipsum').lorem({ type: 'characters',amount:$('#numchars').val(),ptags:false});
+			$('.ipsum').lorem({ type: 'characters',amount: $('#numchars').val(),ptags: false });
 		}
 		$('.ipsum').toggleClass('hidden');
 		$('.ipsum').focus();
