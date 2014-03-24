@@ -9,7 +9,7 @@ $(document).ready(function() {
 	$('.all-code').bind('click', function() {
 		$('.preview-pane').css('width','0%');
 		$('.content').css('width','100%');
-		$('.btn-default').removeClass('btn-warning');
+		$('.screen-ctrl').removeClass('btn-warning');
 		$(this).addClass('btn-warning');
 	});
 	
@@ -17,7 +17,7 @@ $(document).ready(function() {
 		$('.preview-pane').css('width','60%');
 		$('.preview-pane').css('margin-left','40%');
 		$('.content').css('width','40%');
-		$('.btn-default').removeClass('btn-warning');
+		$('.screen-ctrl').removeClass('btn-warning');
 		$(this).addClass('btn-warning');
 	});
 	
@@ -25,7 +25,7 @@ $(document).ready(function() {
 		$('.preview-pane').css('width','100%');
 		$('.preview-pane').css('margin-left','0%');
 		$('.content').css('width','0%');
-		$('.btn-default').removeClass('btn-warning');
+		$('.screen-ctrl').removeClass('btn-warning');
 		$(this).addClass('btn-warning');
 	});
 	

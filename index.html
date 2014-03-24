@@ -9,6 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
     
 <link type="text/css" href="http://dev.nretnil.com/staging/tools/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="http://dev.nretnil.com/staging/tools/bootstrap3/css/bootstrap-theme.min.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/tools/css/fog/fog.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Almost%20Noteworthy/almost_noteworthy/stylesheet.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/font-awesome-4/css/font-awesome.css" rel="stylesheet">
@@ -123,8 +124,10 @@
 					<fieldset>
 						<legend>Password Generator</legend>
 						<div style="height: 20px;"></div>
-						<label>Length:</label>
-						<input class="col-2" id="Length" type="text" value="15"/>
+						<div class="row">
+							<label class="col-sm-4">Length:</label>
+							<div class="col-sm-2"><input class="form-control" id="Length" type="text" value="15"/></div>
+						</div>
 						<label class="checkbox">
 						<input id="Symbols" type="checkbox" /> Punctuation (!, @, #, $, %, and so on)
 						</label>
@@ -146,7 +149,7 @@
 			</div>
 			<div class="tab-pane" id="reverse">
 				<div class="col-sm-6 col-sm-offset-3">
-			        <input type="text" class="col-sm-12" value=""  placeholder="Text To Reverse…" id="reverse_text">
+			        <input type="text" class="col-sm-12 form-control" value=""  placeholder="Text To Reverse…" id="reverse_text">
 					<button class="btn btn-large btn-success btn-block" onclick="reverse_text();return false;">Reverse Text!</button>
 					<code class="align-center" id="reverse_result" style="padding:10px;margin-top:15px;display:block;white-space:normal;"></code>
 				</div>
@@ -160,7 +163,7 @@
 					<form class="col-sm-12">
 						<fieldset>
 			                <label>Reverse IP Lookup</label>
-			                <input type="text" class="col-sm-12" value=""  placeholder="IP Address..." id="ip-info">
+			                <input type="text" class="col-sm-12 form-control" value=""  placeholder="IP Address..." id="ip-info">
 	                		<button class="btn btn-large btn-primary btn-block" onclick="iplookup();return false;">Lookup</button>
 	                		<div style="margin-top:10px;" id="ip-info-div"></div>
 	                	</fieldset>
@@ -170,7 +173,7 @@
 					<form class="col-sm-12">
 						<fieldset>
 			                <label>Who Is</label>
-			                <input type="text" class="col-sm-12" value=""  placeholder="Target..." id="whois-info">
+			                <input type="text" class="col-sm-12 form-control" value=""  placeholder="Target..." id="whois-info">
 	                		<button class="btn btn-large btn-primary btn-block" onclick="whoislookup();return false;">Lookup</button>
 	                		<div style="margin-top:10px;" id="whois-info-div"></div>
 	                	</fieldset>
@@ -180,7 +183,7 @@
 	                <form class="col-sm-12">
 						<fieldset>
 			                <label>DIG</label>
-			                <input type="text" class="col-sm-12" value="" placeholder="Hostname..." id="hostname-info">
+			                <input type="text" class="col-sm-12 form-control" value="" placeholder="Hostname..." id="hostname-info">
 	                		<button class="btn btn-large btn-primary btn-block" onclick="hostnamelookup();return false;">Lookup</button>
 	                		<div style="margin-top:10px;" id="hostname-info-div"></div>
 	                	</fieldset>
@@ -190,7 +193,7 @@
 	                <form class="col-sm-12">
 						<fieldset>
 			                <label>Trace Route</label>
-			                <input type="text" class="col-sm-12" value="" placeholder="Target..." id="traceroute-info">
+			                <input type="text" class="col-sm-12 form-control" value="" placeholder="Target..." id="traceroute-info">
 	                		<button id="tr-btn" class="btn btn-large btn-primary btn-block" onclick="traceroute();return false;" data-loading-text="Loading...">Lookup</button>
 	                		<div style="margin-top:10px;" id="traceroute-info-div"></div>
 	                	</fieldset>
@@ -202,7 +205,7 @@
 				<form class="col-sm-6 col-sm-offset-3">
 					<fieldset>
 		                <label>Look up Facebook ID</label>
-		                <input type="text" class="col-sm-12" value="mark.lintern" id="fb-user">
+		                <input type="text" class="col-sm-12 form-control" value="mark.lintern" id="fb-user">
 	            		<button id="fb-button" class="btn btn-large btn-primary btn-block" onclick="updatefacebook();return false;">Go</button>
 	            		<div style="margin-top:10px;" id="facebook-info"></div>
 	            	</fieldset>
@@ -212,7 +215,7 @@
 				<form class="col-sm-6 col-sm-offset-3">
 					<fieldset>
 		                <label>Look up Instagram User ID</label>
-		                <input type="text" class="input-block-level" value="mlintern" id="username">
+		                <input type="text" class="input-block-level form-control" value="mlintern" id="username">
 		                <button class="btn btn-large btn-primary btn-block" onclick="lookupID();return false;">Go</button>
 		                <div><a href="http://jelled.com/instagram/lookup-user-id">Lookup Tool From Jelled</a></div>
 		        	</fieldset>
@@ -231,7 +234,7 @@
 				<form class="col-sm-6 col-sm-offset-3">
 					<fieldset>
 		                <label>Look up Instagram Auth Token</label>
-		                <input type="text" class="input-block-level" value="b4dbc0111231442697e1ab382961f06e" id="authId">
+		                <input type="text" class="input-block-level form-control" value="b4dbc0111231442697e1ab382961f06e" id="authId">
 		                <button class="btn btn-large btn-primary btn-block" onclick="getToken();return false;">Go</button>
 		                <div><a href="http://jelled.com/instagram/access-token">Auth Tool From Jelled</a></div>
 		        	</fieldset>
@@ -242,7 +245,7 @@
 			  	<fieldset>
 					<label>Enter English Text to Translate:</label>
 					
-					<textarea id="taEng" class="col-sm-12" rows="7" name="taEng">Enter the English text here that you want translated into Pig Latin.</textarea>
+					<textarea id="taEng" class="col-sm-12 form-control" rows="7" name="taEng">Enter the English text here that you want translated into Pig Latin.</textarea>
 					
 					<div class="row" style="margin: 20px 0;">
 					<input class="btn btn-success col-sm-6" value="Translate" onclick="fTranslate()" type="button">
@@ -250,12 +253,12 @@
 					</div>
 					
 					<label>Igpay Atinlay Anslationtray:</label>
-					<textarea id="taPL" class="col-sm-12" rows="7" name="taPL"></textarea>
+					<textarea id="taPL" class="col-sm-12 form-control" rows="7" name="taPL"></textarea>
 					
 					<input class="btn btn-warning col-sm-12" value="Select All Text" onclick="fSelectText('taPL')" type="button" style="margin: 20px 0;">
 					
 					<label>Maximum Line Length:</label>
-					<input class="col-sm-2" name="txtMaxLength" value="65" maxlength="2" onchange="fVerifyEntry(this.value)" type="text">
+					<input class="col-sm-2 form-control" name="txtMaxLength" value="65" maxlength="2" onchange="fVerifyEntry(this.value)" type="text">
 					
 					<div class="clearfix"></div>
 					<label class="checkbox">
@@ -271,19 +274,19 @@
 						<label class="radio col-sm-4">
 							<input name="typeoftext" type="radio" value="words">Words
 						</label>
-						<input class="col-sm-6" type="text" id="numwords" value="150"/>
+						<input class="col-sm-6 form-control" type="text" id="numwords" value="150"/>
 					</div>	
 					<div class="row">
 						<label class="radio col-sm-4">
 							<input name="typeoftext" type="radio" value="words">Characters
 						</label>
-						<input class="col-sm-6" type="text" id="numchars" value="500"/>
+						<input class="col-sm-6 form-control" type="text" id="numchars" value="500"/>
 					</div>	
 					<div class="row">
 						<label class="radio col-sm-4">
 							<input name="typeoftext" type="radio" value="paragraphs" checked>Paragraphs
 						</label>
-						<input class="col-sm-6" type="text" id="numpara" value="5"/>
+						<input class="col-sm-6 form-control" type="text" id="numpara" value="5"/>
 					</div>
 						<label class="checkbox">
 							<input id="ptags" type="checkbox">Include &lt;p&gt; tags
@@ -291,7 +294,7 @@
 						<input class="btn btn-large btn-success col-sm-12" value="Create Text" onclick="loremExecute();return false;" type="button">
 					</fieldset>
 				</form>
-				<div class="col-sm-10 col-sm-offset-1" style="margin-top: 10px;"><textarea class="hidden ipsum col-sm-12" style="display:block; height: 300px;"></textarea></div>
+				<div class="col-sm-10 col-sm-offset-1" style="margin-top: 10px;"><textarea class="hidden ipsum col-sm-12 form-control" style="display:block; height: 300px;"></textarea></div>
 			</div>
 			<div class="tab-pane" id="human2unix">
 				<div class="col-sm-5">
@@ -302,7 +305,7 @@
 						<input type="text" class="form-control" id="timeStamp" style="margin-bottom: 25px;">
 						<input class="btn btn-large btn-success col-sm-6" type="button" value="Submit" onClick="timeToHuman();">
 						<input class="btn btn-large btn-warning col-sm-6" type="reset" value="Reset">
-						<input style="margin-top: 25px;" id="u2h-result" type="text" value="" class="col-sm-12 align-center" READONLY>
+						<input style="margin-top: 25px;" id="u2h-result" type="text" value="" class="col-sm-12 align-center form-control" READONLY>
 					</form>
 				</div>	
 				<div class="col-sm-7">
@@ -478,7 +481,7 @@
 			</div>
 			<div class="tab-pane" id="codify">
 				<div class="col-sm-10 col-sm-offset-1">
-			        <textarea type="text" value="" rows="10" placeholder="Text To Codify…" id="code_text" style="margin-bottom: 10px;width: 100%"></textarea>
+			        <textarea type="text" value="" rows="10" class="form-control" placeholder="Text To Codify…" id="code_text" style="margin-bottom: 10px;width: 100%"></textarea>
 					<button class="btn btn-large btn-success btn-block" onclick="codify_text();return false;">Codify Text!</button>
 					<!-- <code class="well" id="codified_result" style="padding:10px;margin-top: 15px;display: block;white-space: pre-wrap;"></code> -->
 					<textarea id="codified_result" class="hidden" style="width: 100%; margin-top:10px;"></textarea>
@@ -486,12 +489,12 @@
 			</div>
 			<div class="tab-pane" id="dencode">
 				<div class="col-sm-10 col-sm-offset-1">
-					<textarea cols="100" rows="10"  placeholder="Url to Dencode..." id="dencoder" style="width: 100%;"></textarea>
+					<textarea cols="100" rows="5" class="form-control" placeholder="Url to Dencode..." id="dencoder" style="width: 100%;"></textarea>
 					<div class="row" style="margin: 10px 0;">
-						<button class="btn btn-large btn-warning col-sm-6" onclick="decode()">Decode</button>
-						<button class="btn btn-large btn-info col-sm-6" onclick="encode()">Encode</button>
+						<button class="btn btn-large btn-warning col-xs-6" onclick="decode();">Decode</button>
+						<button class="btn btn-large btn-info col-xs-6" onclick="encode();">Encode</button>
 					</div>
-					<textarea cols="100" class="hidden" rows="10" id="dencoder-result" style="width: 100%;"></textarea>
+					<textarea cols="100" class="hidden form-control" rows="5" id="dencoder-result" style="width: 100%;"></textarea>
 				</div>
 			</div>
 			<div class="tab-pane" id="ask">
@@ -503,6 +506,7 @@
 					<input class="form-control" type="text" name="email">
 					<label>Question</label>
 					<textarea class="form-control" name="comments" rows="6"></textarea>
+					<div style="height: 15px;"></div>
 					<input type="submit" class="btn btn-large btn-success col-sm-12" value="Send">
 				</fieldset>
 			</form>
