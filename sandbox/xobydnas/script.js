@@ -71,7 +71,8 @@ function download_html() {
 		var name = new Date().getTime();
 	}
 	var iframeDoc = document.getElementById('preview').contentWindow.document.documentElement.innerHTML;
-	console.log(iframeDoc);
-	download(name+".html", iframeDoc);
+	var html_code = "<!DOCTYPE html>\n<html>\n" + iframeDoc + "\n</html>"
+	console.log(html_code);
+	download(name+".html", html_code);
 	return false;
 }
