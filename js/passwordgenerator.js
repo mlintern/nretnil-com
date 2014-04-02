@@ -132,8 +132,8 @@ function displayPassword() {
 	var newStrongPasswordArray;
 	var passwordIsOK = false;
 	while (!passwordIsOK) {
-		newStrongPasswordArray = GeneratePassword($("#Length").val(), $("#Symbols").attr('checked'));
-		passwordIsOK = Validate(newStrongPasswordArray, $("#Length").val(), $("#Symbols").attr('checked'));
+		newStrongPasswordArray = GeneratePassword($("#Length").val(), $("#Symbols").is(':checked'));
+		passwordIsOK = Validate(newStrongPasswordArray, $("#Length").val(), $("#Symbols").is(':checked'));
 	}
 	var StrongPassword = "";
 	for (var i = 0; i < newStrongPasswordArray.length; i++) {
@@ -145,6 +145,5 @@ function displayPassword() {
 }
 
 $(document).ready(function(){
-
 	$('#btnGenerate').click(function(){displayPassword()});
 });
