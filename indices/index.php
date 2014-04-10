@@ -82,7 +82,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link type="text/css" href="http://dev.nretnil.com/staging/tools/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/css/style.css" rel="stylesheet">
-<link type="text/css" href="http://dev.nretnil.com/css/bootstrap-glyphicons.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/tools/css/fog/fog.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/indices/style-js.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Almost%20Noteworthy/almost_noteworthy/stylesheet.css" rel="stylesheet">
