@@ -1,4 +1,5 @@
 /* Black Fog Background Images*/
+.fog0 {background-color: transparent;}
 .fog10 {background: url('fog_10.png') 0 0 transparent;}
 .fog20 {background: url('fog_20.png') 0 0 transparent;}
 .fog30 {background: url('fog_30.png') 0 0 transparent;}
@@ -9,6 +10,7 @@
 .fog80 {background: url('fog_80.png') 0 0 transparent;}
 .fog90 {background: url('fog_90.png') 0 0 transparent;}
 /* White Fog Background Images*/
+.w-fog0 {background-color: transparent;}
 .w-fog10 {background: url('w_fog_10.png') 0 0 transparent;}
 .w-fog20 {background: url('w_fog_20.png') 0 0 transparent;}
 .w-fog30 {background: url('w_fog_30.png') 0 0 transparent;}
@@ -19,6 +21,7 @@
 .w-fog80 {background: url('w_fog_80.png') 0 0 transparent;}
 .w-fog90 {background: url('w_fog_90.png') 0 0 transparent;}
 /* Red Fog Background Images*/
+.r-fog0 {background-color: transparent;}
 .r-fog10 {background: url('r_fog_10.png') 0 0 transparent;}
 .r-fog20 {background: url('r_fog_20.png') 0 0 transparent;}
 .r-fog30 {background: url('r_fog_30.png') 0 0 transparent;}
@@ -29,6 +32,7 @@
 .r-fog80 {background: url('r_fog_80.png') 0 0 transparent;}
 .r-fog90 {background: url('r_fog_90.png') 0 0 transparent;}
 /* Green Fog Background Images*/
+.g-fog0 {background-color: transparent;}
 .g-fog10 {background: url('g_fog_10.png') 0 0 transparent;}
 .g-fog20 {background: url('g_fog_20.png') 0 0 transparent;}
 .g-fog30 {background: url('g_fog_30.png') 0 0 transparent;}
