@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  border: 0;
+  font-family: sans-serif;
+  color: white;
+  background: #303030;
+}
+
+hr {
+  border: 0px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid #606060;
+}
+
+em {
+  font-weight: bold;
+}
+
+.btn-roll {
+  position: absolute;
+  z-index: 10;
+  margin: 10px;
+}
+
+.settings-close {
+  color: #FFF;
+  position: absolute;
+  font-size: 25px;
+  right: 5px;
+  top: 0;
+}
+.settings-close:hover {
+  color: #FFF
+}
+
+.Content {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.DiceBox {
+  position: relative;
+  background: #FFF;
+  border: 2px #E0E0E0 solid;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-box-shadow: black 0px 2px 4px;
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  -webkit-user-select: none;
+  display: inline-block;
+
+}
+
+.Dice {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  font-size: 130px;
+  color: #000;
+  margin-top: 10px;
+}
+
+.RollHint {
+  font-size: 9px;
+  text-align: center;
+}
+
+.RollHistory {
+  margin-top: 0px;
+  cursor: pointer;
+}
+
+.ShowSetup {
+  float: right;
+}
+
+.Setup {
+  display: none;
+  text-align: center;
+  position: relative;
+}
