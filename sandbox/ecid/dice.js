@@ -1,9 +1,10 @@
 var settingsCookie = null;
 var SPEED = {ACC:0, HOLD:1, BRAKE: 2};
 var customLetters = "";
-var die_count = 0
-var dice = []
-var count = 0
+var die_count = 0;
+var dice = [];
+var count = 0;
+var option = "";
 
 var die = function ( id ) {
   this.id = id;
@@ -17,11 +18,11 @@ die.prototype.roll = function () {
   if (this.diceTimer) {
     clearTimeout(this.diceTimer);
   }
-  var ch = String.fromCharCode(65 + Math.random() * 26);
-  if (customLetters.length > 0 && $(".CustomCheck").is(':checked')) {
-    ch = customLetters.charAt(Math.random() * customLetters.length);
+  var ch = customLetters.charAt(Math.random() * customLetters.length);
+  if (option == 'dice') {
+  	ch = '<span class="die die'+ch+'"></span>';
   }
-  $(".Dice[data-die="+this.id+"]").text(ch);
+  $(".Dice[data-die="+this.id+"]").html(ch);
   switch (this.speedMode) {
     case 0:
       this.setDiceSpeed(this.diceSpeed - 25);
@@ -124,28 +125,29 @@ function closeSetup() {
 }
 
 function customChanged() {
-  var custom = $(".CustomCheck").is(":checked");
-  if (custom) {
-    $(".CustomHint").html("Roll these letter:");
-    $(".CustomLetters").disabled = false;
-  }
-  else {
-    $(".CustomHint").html("Roll A...Z");
-    $(".CustomLetters").disabled = true;
-  }
-  changeLetters();
-}
-
-function changeLetters() {
-  customLetters = $(".CustomLetters").val();
-  customLetters = customLetters.replace(/\s/g, "");
-  customLetters = customLetters.toUpperCase();
-  $(".CustomLetters").value = customLetters;
-  saveSettings();
+	option = $("input:radio[name=DiceType]:checked").val();
+	switch (option) {
+		case 'dice':
+			customLetters = "123456";
+			break;
+		case 'num':
+			customLetters = "0123456789";
+			break;
+		case 'alpha':
+			customLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+			break;
+		case 'custom':
+			customLetters = $(".CustomLetters").val();
+			customLetters = customLetters.replace(/\s/g, "");
+			customLetters = customLetters.toUpperCase();
+			$(".CustomLetters").value = customLetters;
+			break;
+	} 
+	saveSettings();
 }
 
 function saveSettings() {
-  var text = "custom:" + $(".CustomCheck").is(':checked');
+  var text = "option:" + $("input:radio[name=DiceType]:checked").val();
   text += ",letters:'" + $(".CustomLetters").val().replace(/\'/g, "") + "'";
   settingsCookie.store(text);
 }

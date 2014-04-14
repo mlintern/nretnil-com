@@ -15,26 +15,51 @@
 </head>
 <body onload="setup()" onorientationchange="orientationChanged()">
 	
-	<a href="javascript:void(0);" class="settings-open pull-right" onclick="showSetup()"><i class="fa fa-gear"></i></a>
+	<a href="javascript:void(0);" class="settings-open pull-right" onclick="showSetup()"><i class="fa fa-gears"></i></a>
 	<div class="Setup">
-		<a href="javascript:void(0);" class="settings-close pull-right" onclick="closeSetup()"><i class="fa fa-times-circle-o"></i></a>
+		<a href="javascript:void(0);" class="settings-close pull-right" onclick="closeSetup()"><i class="fa fa-times"></i></a>
 		<div class="container">
+			<div class="RollHistory">&nbsp;</div>
 			<div class="row">
-				<div class="col-sm-6 col-sm-offset-3">
-		    		<div class="RollHistory" onclick="clearHistory()">&nbsp;</div>
-				    <div class="CustomHint" class="hint">Roll A...Z</div>
-				    <div class="form-horizontal">
+				<div class="col-sm-4 col-sm-offset-4">
+		    		<div style="cursor: pointer;" onclick="clearHistory()"> Clear History</div>
+				    <div class="CustomHint text-center" class="hint">Roll A...Z</div>
+				    <div class="form">
 				    	<div class="form-group">
-				    		<div class="col-xs-1">
-				    			<input class="CustomCheck form-control" type="CheckBox" onchange="customChanged()">&nbsp;<label for="CustomCheck"></label>
+				    		<div class="radio">
+				    			<label>
+				    				<input class="CustomCheck" type="radio" value="dice" name="DiceType" value="" onclick="customChanged()" checked> 
+				    				Dice
+				    			</label>
 				    		</div>
-				    		<div class="col-xs-11">
-				    			<input class="CustomLetters form-control" placeholder="dice characters" autocomplete="false" onblur="changeLetters()"/>
+				    	</div>
+				    	<div class="form-group">
+				    		<div class="radio">
+				    			<label>
+				    				<input class="CustomCheck" type="radio" value="num" name="DiceType" onclick="customChanged()"> 
+				    				Numbers
+				    			</label>
+				    		</div>
+				    	</div>
+				    	<div class="form-group">
+				    		<div class="radio">
+				    			<label>
+				    				<input class="CustomCheck" type="radio" value="alpha" name="DiceType" onclick="customChanged()"> 
+				    				ABCs
+				    			</label>
+				    		</div>
+				    	</div>
+				    	<div class="form-group">
+				    		<div class="radio">
+				    			<label>
+				    			<input class="CustomCheck" type="radio" value="custom" name="DiceType" onclick="customChanged()"> 
+				    			<input class="CustomLetters form-control" placeholder="dice characters" autocomplete="false" value="dice characters" onblur="changeLetters()"/>
+				    			</label>
 				    		</div>
 				    	</div>
 				    </div>
 				    <div>
-			    		<div>Add / Remove Dice</div>
+			    		<div class="text-center">Add / Remove Dice</div>
 			    		<button class="btn btn-info col-sm-4 col-sm-offset-2" onclick="plusOne()">+</button>
 			    	    <button class="btn btn-danger col-sm-4" onclick="minusOne()">-</button>
 			    	</div> 
