@@ -20,9 +20,13 @@ die.prototype.roll = function () {
   }
   var ch = customLetters.charAt(Math.random() * customLetters.length);
   if (option == 'dice') {
-  	ch = '<span class="die die'+ch+'"></span>';
+  	img = '<span class="die die'+ch+'"></span>';
+  	$(".Dice[data-die="+this.id+"]").html(img);
+  	$(".Dice[data-die="+this.id+"]").data('value',ch);
+  } else {
+  	$(".Dice[data-die="+this.id+"]").html(ch);
+  	$(".Dice[data-die="+this.id+"]").data('value',ch);
   }
-  $(".Dice[data-die="+this.id+"]").html(ch);
   switch (this.speedMode) {
     case 0:
       this.setDiceSpeed(this.diceSpeed - 25);
@@ -64,7 +68,7 @@ die.prototype.stopRolling = function () {
   this.setDiceSpeed(300);
   this.speedMode = SPEED.HOLD;
   this.diceTimer = null;
-  $(".RollHistory").text($(".RollHistory").text() + $(".Dice[data-die="+this.id+"]").text() + " ");
+  $(".RollHistory").text($(".RollHistory").text() + $(".Dice[data-die="+this.id+"]").data('value') + " ");
 }
 
 function setup() {
