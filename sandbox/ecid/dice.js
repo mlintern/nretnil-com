@@ -36,7 +36,6 @@ die.prototype.roll = function () {
       }
       break;
     case 1:
-      setTimeout(function(){}, 100);
       break;
     case 2:
       this.setDiceSpeed(this.diceSpeed + 10);
@@ -102,20 +101,22 @@ function minusOne() {
 }
 
 function go() {
-  for ( i=0; i<die_count; i++ ) {
-    curr_die = dice[i];
-    curr_die.diceTimer = null;
-    curr_die.diceSpeed = 0;
-    curr_die.speedMode = SPEED.ACC;
-    curr_die.startRoll();
-    
-    curr_die.stopRoll();
-    //setTimeout(function(){curr_die.stopRoll()},1000)
-  }
+	$(".RollHistory").text($(".RollHistory").text() + "- ");
+	for ( i=0; i<die_count; i++ ) {
+		curr_die = dice[i];
+		curr_die.diceTimer = null;
+		curr_die.diceSpeed = 0;
+		curr_die.speedMode = SPEED.ACC;
+		curr_die.startRoll();
+		
+		curr_die.stopRoll();
+		//setTimeout(function(){curr_die.stopRoll()},1000)
+	}
 }
 
 function clearHistory() {
   $(".RollHistory").html("&nbsp;");
+  $(".RollHistory").text($(".RollHistory").text() + "- ");
 }
 
 function showSetup() {
