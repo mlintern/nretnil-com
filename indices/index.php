@@ -172,6 +172,7 @@
 				<div class="row">
 					<div class="col-sm-6">
 						<a target="_blank" href="http://dev.nretnil.com/sandbox" class="btn btn-danger btn-block">Sandbox</a>
+						<a target="_blank" href="http://dev.nretnil.com/sandbox/ecid/index.html" class="btn btn-warning btn-sm btn-block">Dice</a>
 						<a target="_blank" href="http://dev.nretnil.com/sandbox/dyolf/index.html" class="btn btn-warning btn-sm btn-block">Floyd</a>
 						<a target="_blank" href="http://dev.nretnil.com/sandbox/trats-hserf/index.html" class="btn btn-warning btn-sm btn-block">Fresh Start</a>
 						<a target="_blank" href="http://sandybox.nretnil.com" class="btn btn-warning btn-sm btn-block">SandyBox</a>
