@@ -92,7 +92,7 @@ function plusOne() {
 
 function minusOne() {
   dice.pop();
-  $('.DiceSection').last().remove();
+  $('.DiceBox').last().remove();
   die_count--;
 }
 
@@ -102,8 +102,8 @@ function go() {
     curr_die.diceTimer = null;
     curr_die.diceSpeed = 0;
     curr_die.speedMode = SPEED.ACC;
-    console.log(curr_die);
     curr_die.startRoll();
+    
     curr_die.stopRoll();
     //setTimeout(function(){curr_die.stopRoll()},1000)
   }
@@ -115,22 +115,22 @@ function clearHistory() {
 
 function showSetup() {
   $(".Setup").show();
-  $(".ShowSetup").hide();
+  $(".settings-open").hide();
 }
 
 function closeSetup() {
   $(".Setup").hide();
-  $(".ShowSetup").show();
+  $(".settings-open").show();
 }
 
 function customChanged() {
-  var custom = $(".CustomCheck").checked;
+  var custom = $(".CustomCheck").is(":checked");
   if (custom) {
-    $(".CustomHint").innerHTML = "Roll these letter:";
+    $(".CustomHint").html("Roll these letter:");
     $(".CustomLetters").disabled = false;
   }
   else {
-    $(".CustomHint").innerHTML = "Roll A...Z";
+    $(".CustomHint").html("Roll A...Z");
     $(".CustomLetters").disabled = true;
   }
   changeLetters();

@@ -2,40 +2,62 @@
 <html>
 <head>
 	<meta name="viewport" content="width = device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-  <title>Letter Dice</title>
-  
-  <link type="text/css" href="http://dev.nretnil.com/staging/tools/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
-  <link type="text/css" href="http://dev.nretnil.com/staging/tools/bootstrap3/css/bootstrap-theme.min.css" rel="stylesheet">
-  <link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/font-awesome-4/css/font-awesome.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="dice.css" />
-
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Roll The Dice</title>
+	
+	<link type="text/css" href="http://dev.nretnil.com/staging/tools/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" href="http://dev.nretnil.com/staging/tools/bootstrap3/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/font-awesome-4/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="dice.css" />
+	
 	<link rel="shortcut icon" type="image/x-icon" href="dice.png" />
 	<link rel="icon" type="image/png" href="dice.png" />
 </head>
 <body onload="setup()" onorientationchange="orientationChanged()">
-  <div class="btn-roll">
-    <button class="btn btn-success pull-left" onclick="go()">Roll</button>
-    <button class="btn btn-info pull-left" onclick="plusOne()">+</button>
-    <button class="btn btn-danger pull-left" onclick="minusOne()">-</button>
-  </div>
-  <div class="Content">
+	
+	<a href="javascript:void(0);" class="settings-open pull-right" onclick="showSetup()"><i class="fa fa-gear"></i></a>
+	<div class="Setup">
+		<a href="javascript:void(0);" class="settings-close pull-right" onclick="closeSetup()"><i class="fa fa-times-circle-o"></i></a>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3">
+		    		<div class="RollHistory" onclick="clearHistory()">&nbsp;</div>
+				    <div class="CustomHint" class="hint">Roll A...Z</div>
+				    <div class="form-horizontal">
+				    	<div class="form-group">
+				    		<div class="col-xs-1">
+				    			<input class="CustomCheck form-control" type="CheckBox" onchange="customChanged()">&nbsp;<label for="CustomCheck"></label>
+				    		</div>
+				    		<div class="col-xs-11">
+				    			<input class="CustomLetters form-control" placeholder="dice characters" autocomplete="false" onblur="changeLetters()"/>
+				    		</div>
+				    	</div>
+				    </div>
+				    <div>
+			    		<div>Add / Remove Dice</div>
+			    		<button class="btn btn-info col-sm-4 col-sm-offset-2" onclick="plusOne()">+</button>
+			    	    <button class="btn btn-danger col-sm-4" onclick="minusOne()">-</button>
+			    	</div> 
+				</div>
+			</div>   
+		</div>
+		<hr/>
+	</div>
 
-  </div>
-  <img class="ShowSetup" src="gear.png" width="24" onclick="showSetup()"/>
-  <div style="clear:both"></div>
-  <div class="Setup">
-    <hr />
-    <a  href="javascript:void(0);" class="settings-close pull-right" onclick="closeSetup()"><i class="fa fa-times-circle-o"></i></a>
-    <div class="RollHistory" onclick="clearHistory()">&nbsp;</div>
-    <div class="CustomHint" class="hint">Roll A...Z</div>
-    <input class="CustomCheck" type="CheckBox" onchange="customChanged()">&nbsp;<label for="CustomCheck"></label>
-    <input class="CustomLetters" placeholder="dice letters" autocomplete="false" onblur="changeLetters()"/>
-  </div>
-
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script type="text/javascript" src="http://dev.nretnil.com/staging/tools/bootstrap3/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="Cookie.js"></script>
-  <script type="text/javascript" src="dice.js"></script>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div style="height: 10px;"></div>
+				<button class="btn btn-success btn-lg" onclick="go()">Roll</button>
+			</div>
+		</div>
+		<div class="Content"></div>
+	</div>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://dev.nretnil.com/staging/tools/bootstrap3/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="Cookie.js"></script>
+	<script type="text/javascript" src="dice.js"></script>
+	
 </body>
 </html>
