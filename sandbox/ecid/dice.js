@@ -39,7 +39,7 @@ die.prototype.roll = function () {
       setTimeout(function(){}, 100);
       break;
     case 2:
-      this.setDiceSpeed(this.diceSpeed + 25);
+      this.setDiceSpeed(this.diceSpeed + 10);
       if (this.diceSpeed > 300) {
         this.stopRolling(this.diceTimer);
         return;
