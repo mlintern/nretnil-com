@@ -85,29 +85,33 @@ function setup() {
 		}  
 	}
 	customChanged();
-	plusOne();
+	moreDice(1);
 }
 
-function plusOne() {
-	var name = new die(die_count);
-	dice.push(name);
-	$('.Content').append('<div class="DiceBox"><div class="Dice" data-die="'+die_count+'">&nbsp;</div></div>');
-	$('.Dice[data-die='+die_count+']').parent().on('click',function(){
-		if ( $(this).hasClass('lock') ) {
-			$(this).find('.upper-left').remove();
-			$(this).removeClass('lock');
-		}else{
-			$(this).append('<i class="upper-left fa fa-lock"></i>');
-			$(this).addClass('lock');
-		}
-	});
-	die_count++;
+function moreDice(num) {
+	for (i=0;i<num;i++) {
+		var name = new die(die_count);
+		dice.push(name);
+		$('.Content').append('<div class="DiceBox"><div class="Dice" data-die="'+die_count+'">&nbsp;</div></div>');
+		$('.Dice[data-die='+die_count+']').parent().on('click',function(){
+			if ( $(this).hasClass('lock') ) {
+				$(this).find('.upper-left').remove();
+				$(this).removeClass('lock');
+			}else{
+				$(this).append('<i class="upper-left fa fa-lock"></i>');
+				$(this).addClass('lock');
+			}
+		});
+		die_count++;
+	}
 }
 
-function minusOne() {
-	dice.pop();
-	$('.DiceBox').last().remove();
-	die_count--;
+function lessDice(num) {
+	for (i=0;i<num;i++) {
+		dice.pop();
+		$('.DiceBox').last().remove();
+		die_count--;
+	}
 }
 
 function go() {
