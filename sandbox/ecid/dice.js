@@ -7,10 +7,11 @@ var count = 0;
 var option = "";
 
 var die = function ( id ) {
-  this.id = id;
-  this.diceTimer = null;
-  this.diceSpeed = 0;
-  this.speedMode = SPEED.ACC;
+	this.id = id;
+	this.diceTimer = null;
+	this.diceSpeed = 0;
+	this.speedMode = SPEED.ACC;
+	this.locked = false;
 }
 
 die.prototype.roll = function () {
@@ -71,33 +72,42 @@ die.prototype.stopRolling = function () {
 }
 
 function setup() {
-  orientationChanged();
-  settingsCookie = new Cookie("DiceBox");
-  if (settingsCookie.get()) {
-    try {
-      var settings = eval("new Object({" + settingsCookie.get() + "})");
-      $(".CustomCheck").checked = settings.custom;
-      $(".CustomLetters").value = settings.letters;
-    }
-    catch (e) {
-      debug("LoadingSettings failed: " + e);
-    }  
-  }
-  customChanged();
-  plusOne()
+	orientationChanged();
+	settingsCookie = new Cookie("DiceBox");
+	if (settingsCookie.get()) {
+		try {
+			var settings = eval("new Object({" + settingsCookie.get() + "})");
+			$(".CustomCheck").checked = settings.custom;
+			$(".CustomLetters").value = settings.letters;
+		}
+		catch (e) {
+			debug("LoadingSettings failed: " + e);
+		}  
+	}
+	customChanged();
+	plusOne();
 }
 
 function plusOne() {
-  var name = new die(die_count);
-  dice.push(name);
-  $('.Content').append('<div class="DiceBox"><div class="Dice" data-die="'+die_count+'">&nbsp;</div></div>');
-  die_count++;
+	var name = new die(die_count);
+	dice.push(name);
+	$('.Content').append('<div class="DiceBox"><div class="Dice" data-die="'+die_count+'">&nbsp;</div></div>');
+	$('.Dice[data-die='+die_count+']').parent().on('click',function(){
+		if ( $(this).hasClass('lock') ) {
+			$(this).find('.upper-left').remove();
+			$(this).removeClass('lock');
+		}else{
+			$(this).append('<i class="upper-left fa fa-lock"></i>');
+			$(this).addClass('lock');
+		}
+	});
+	die_count++;
 }
 
 function minusOne() {
-  dice.pop();
-  $('.DiceBox').last().remove();
-  die_count--;
+	dice.pop();
+	$('.DiceBox').last().remove();
+	die_count--;
 }
 
 function go() {
@@ -107,10 +117,12 @@ function go() {
 		curr_die.diceTimer = null;
 		curr_die.diceSpeed = 0;
 		curr_die.speedMode = SPEED.ACC;
-		curr_die.startRoll();
 		
+		if ( !$('.Dice[data-die='+curr_die.id+']').parent().hasClass('lock') ) {
+		curr_die.startRoll();		
 		curr_die.stopRoll();
 		//setTimeout(function(){curr_die.stopRoll()},1000)
+		}
 	}
 }
 

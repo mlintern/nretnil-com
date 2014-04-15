@@ -68,6 +68,14 @@ text-align: center;
 
 }
 
+.upper-left{
+position: absolute;
+top: 5px;
+left: 5px;
+color: red;
+font-size: 20px;
+}
+
 .Dice {
   position: absolute;
   width: 200px;
