@@ -146,22 +146,22 @@ if(isset($_REQUEST['email']) && !empty($_REQUEST['email'])){
 $_REQUEST['email'] = trim($_REQUEST['email']);
 
 	if(substr_count($_REQUEST['email'],"@") != 1 || stristr($_REQUEST['email']," ") || stristr($_REQUEST['email'],"\\") || stristr($_REQUEST['email'],":")){
-		$errors[] = "Email address is invalid"; break;
+		$errors[] = "Email address is invalid";
 	}else{
 		$exploded_email = explode("@",$_REQUEST['email']);
 		if(empty($exploded_email[0]) || strlen($exploded_email[0]) > 64 || empty($exploded_email[1])){
-			$errors[] = "Email address is invalid"; break;
+			$errors[] = "Email address is invalid";
 		}else{
 			if(substr_count($exploded_email[1],".") == 0){
-				$errors[] = "Email address is invalid"; break;
+				$errors[] = "Email address is invalid";
 			}else{
 				$exploded_domain = explode(".",$exploded_email[1]);
 				if(in_array("",$exploded_domain)){
-					$errors[] = "Email address is invalid"; break;
+					$errors[] = "Email address is invalid";
 				}else{
 					foreach($exploded_domain as $value){
 						if(strlen($value) > 63 || !preg_match('/^[a-z0-9-]+$/i',$value)){
-							$errors[] = "Email address is invalid"; break;
+							$errors[] = "Email address is invalid";
 						}
 					}
 				}
