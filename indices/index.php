@@ -137,6 +137,7 @@
 		        <?php print $logohtml; ?>
 		        <?php print $pathtext; ?>
 		    </div>
+		    <div style="height: 50px;"></div>
 		</div>
 	</div>
 </div>
