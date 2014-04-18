@@ -89,7 +89,7 @@
 
 </head>
 
-<body>
+<body style="padding-bottom: 50px;">
 <div class="container">
 	<div class="row">
 		<div class="page-header">
@@ -186,8 +186,6 @@
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-
-<div style="height: 50px;"></div>
 
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="http://dev.nretnil.com/js/secret.js"></script>
