@@ -137,7 +137,6 @@
 		        <?php print $logohtml; ?>
 		        <?php print $pathtext; ?>
 		    </div>
-		    <div style="height: 50px;"></div>
 		</div>
 	</div>
 </div>
@@ -187,6 +186,8 @@
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+<div style="height: 50px;"></div>
 
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="http://dev.nretnil.com/js/secret.js"></script>
