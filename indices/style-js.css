@@ -25,7 +25,7 @@ img {
     vertical-align: bottom;
 }
 
-header a {
+.header a {
     font-weight: bold;
 }
 
@@ -94,11 +94,12 @@ th {
     padding: 8px;
 }
 
-.col_name {
+.table>tfoot>tr>td.col_name {
     padding:0;
 }
 
 .col_date {
+    text-align: left;
     padding-left: 5px;
 }
 
