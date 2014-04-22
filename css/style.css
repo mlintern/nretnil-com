@@ -121,3 +121,9 @@ margin: 5px 0px;
 .btn-block {
 display: inline-block;
 }
+.chosen-container-multi .chosen-choices li.search-field{
+	padding: 3px;
+}
+.chosen-container-multi .chosen-choices{
+	border-radius: 3px;
+}

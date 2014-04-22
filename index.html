@@ -398,90 +398,100 @@
 					<form id="cron-creator">
 					<div class="row">	
 						<div class="col-sm-6 cron-item">
-							<label class="cron-section-title" align="center">MINUTES</label>
-							<div class="col-sm-5">
-								<label class="radio"><input type="radio" name="minutes" value="*" checked>Every Minute</label>
-								<label class="radio"><input type="radio" name="minutes" value="0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58">Even Minutes</label>
-								<label class="radio"><input type="radio" name="minutes" value="1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59">Odd Minutes</label>
-								<label class="radio"><input type="radio" name="minutes" value="*/5">Every 5 Min</label>
-								<label class="radio"><input type="radio" name="minutes" value="*/15">Every 15 Min</label>
-								<label class="radio"><input type="radio" name="minutes" value="*/30">Every 30 min</label>
-								<label class="radio"><input type="radio" name="minutes" value="0">Once Per Hour</label>
-							</div>
-							<div class="col-sm-3">
-								<label class="radio"><input type="radio" name="minutes" value="custom">Custom</label>
-								  <select class="cron" name="custminutes[]" size="5" multiple>
-									<option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option>
-								  </select>
+							<div class="row">
+								<div class="cron-section-title" align="center">MINUTES</div>
+								<div class="col-sm-6">
+									<label class="radio"><input type="radio" name="minutes" value="*" checked>Every Minute</label>
+									<label class="radio"><input type="radio" name="minutes" value="0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58">Even Minutes</label>
+									<label class="radio"><input type="radio" name="minutes" value="1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59">Odd Minutes</label>
+									<label class="radio"><input type="radio" name="minutes" value="*/5">Every 5 Min</label>
+									<label class="radio"><input type="radio" name="minutes" value="*/15">Every 15 Min</label>
+									<label class="radio"><input type="radio" name="minutes" value="*/30">Every 30 min</label>
+									<label class="radio"><input type="radio" name="minutes" value="0">Once Per Hour</label>
+								</div>
+								<div class="col-sm-6">
+									<label class="radio"><input type="radio" name="minutes" value="custom">Custom</label>
+									  <select class="cron chosen-select form-control" name="custminutes[]" size="5" multiple>
+										<option></option><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option>
+									  </select>
+								</div>
 							</div>
 						</div>	
 						<div class="col-sm-6 cron-item">
-							<label class="cron-section-title" align="center">HOURS</label>
-							<div class="col-sm-5">
-								<label class="radio"><input type="radio" name="hours" value="*" checked>Every Hour</label>
-								<label class="radio"><input type="radio" name="hours" value="0,2,4,6,8,10,12,14,16,18,20,22">Even Hours</label>
-								<label class="radio"><input type="radio" name="hours" value="1,3,5,7,9,11,13,15,17,19,21,23">Odd Hours</label>
-								<label class="radio"><input type="radio" name="hours" value="0,6,12,18">Every 6 Hours</label>
-								<label class="radio"><input type="radio" name="hours" value="0,12">Every 12 Hours</label>
-								<label class="radio"><input type="radio" name="hours" value="0">Once Per Day</label>
-							</div>
-							<div class="col-sm-3">	
-								<label class="radio"><input type="radio" name="hours" value="custom">Custom</label>
-								  <select class="cron" name="custhours[]" size="5" multiple>
-								    <option value="0">Midnight</option><option value="1">1am</option><option value="2">2am</option><option value="3">3am</option><option value="4">4am</option><option value="5">5am</option><option value="6">6am</option><option value="7">7am</option><option value="8">8am</option><option value="9">9am</option><option value="10">10am</option><option value="11">11am</option><option value="12">Noon</option><option value="13">1pm</option><option value="14">2pm</option><option value="15">3pm</option><option value="16">4pm</option><option value="17">5pm</option><option value="18">6pm</option><option value="19">7pm</option><option value="20">8pm</option><option value="21">9pm</option><option value="22">10pm</option><option value="23">11pm</option>
-							  	</select>
+							<div class="row">
+								<div class="cron-section-title" align="center">HOURS</div>
+								<div class="col-sm-6">
+									<label class="radio"><input type="radio" name="hours" value="*" checked>Every Hour</label>
+									<label class="radio"><input type="radio" name="hours" value="0,2,4,6,8,10,12,14,16,18,20,22">Even Hours</label>
+									<label class="radio"><input type="radio" name="hours" value="1,3,5,7,9,11,13,15,17,19,21,23">Odd Hours</label>
+									<label class="radio"><input type="radio" name="hours" value="0,6,12,18">Every 6 Hours</label>
+									<label class="radio"><input type="radio" name="hours" value="0,12">Every 12 Hours</label>
+									<label class="radio"><input type="radio" name="hours" value="0">Once Per Day</label>
+								</div>
+								<div class="col-sm-6">	
+									<label class="radio"><input type="radio" name="hours" value="custom">Custom</label>
+									  <select class="cron chosen-select form-control" name="custhours[]" size="5" multiple>
+									    <option></option><option value="0">Midnight</option><option value="1">1am</option><option value="2">2am</option><option value="3">3am</option><option value="4">4am</option><option value="5">5am</option><option value="6">6am</option><option value="7">7am</option><option value="8">8am</option><option value="9">9am</option><option value="10">10am</option><option value="11">11am</option><option value="12">Noon</option><option value="13">1pm</option><option value="14">2pm</option><option value="15">3pm</option><option value="16">4pm</option><option value="17">5pm</option><option value="18">6pm</option><option value="19">7pm</option><option value="20">8pm</option><option value="21">9pm</option><option value="22">10pm</option><option value="23">11pm</option>
+								  	</select>
+								</div>
 							</div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-6 cron-item">
-							<label class="cron-section-title" align="center">DAYS OF MONTH</label>
-							<div class="col-sm-5">
-								<label class="radio"><input type="radio" name="days" value="*" checked>Every Day</label>
-								<label class="radio"><input type="radio" name="days" value="2,4,6,8,10,12,14,16,18,20,22,24,26,28,30">Even Days</label>
-								<label class="radio"><input type="radio" name="days" value="1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31">Odd Days</label>
-								<label class="radio"><input type="radio" name="days" value="1,15">Twice Per Month</label>
-								<label class="radio"><input type="radio" name="days" value="1">Once Per Month</label>
-							</div>
-							<div class="col-sm-3">	
-								<label class="radio"><input type="radio" name="days" value="custom">Custom</label>
-							      <select class="cron" name="custdays[]" size="5" multiple>
-							        <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
-							    </select>
+							<div class="row">
+								<div class="cron-section-title" align="center">DAYS OF MONTH</div>
+								<div class="col-sm-6">
+									<label class="radio"><input type="radio" name="days" value="*" checked>Every Day</label>
+									<label class="radio"><input type="radio" name="days" value="2,4,6,8,10,12,14,16,18,20,22,24,26,28,30">Even Days</label>
+									<label class="radio"><input type="radio" name="days" value="1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31">Odd Days</label>
+									<label class="radio"><input type="radio" name="days" value="1,15">Twice Per Month</label>
+									<label class="radio"><input type="radio" name="days" value="1">Once Per Month</label>
+								</div>
+								<div class="col-sm-6">	
+									<label class="radio"><input type="radio" name="days" value="custom">Custom</label>
+								      <select class="cron chosen-select form-control" name="custdays[]" multiple>
+								        <option></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
+								    </select>
+								 </div>
 							 </div>
 						</div>	
 						<div class="col-sm-6 cron-item">
-							<label class="cron-section-title" align="center">MONTH</label>
-							<div class="col-sm-5">
-								<label class="radio"><input type="radio" name="months" value="*" checked>Every Month</label>
-								<label class="radio"><input type="radio" name="months" value="2,4,6,8,10,12">Even Months</label>
-								<label class="radio"><input type="radio" name="months" value="1,3,5,7,9,11">Odd Months</label>
-								<label class="radio"><input type="radio" name="months" value="1,4,7,10">Every 3 Months</label>
-								<label class="radio"><input type="radio" name="months" value="1,7">Every 6 Months</label>
-								<label class="radio"><input type="radio" name="months" value="1">Once Per Year</label>
-							</div>
-							<div class="col-sm-3">
-								<label class="radio"><input type="radio" name="months" value="custom">Custom</label>
-							      <select class="cron" name="custmonths[]" size="5" multiple>
-							        <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option><option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option><option value="7">Jul</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
-							      </select>
+							<div class="row">
+								<div class="cron-section-title" align="center">MONTH</div>
+								<div class="col-sm-6">
+									<label class="radio"><input type="radio" name="months" value="*" checked>Every Month</label>
+									<label class="radio"><input type="radio" name="months" value="2,4,6,8,10,12">Even Months</label>
+									<label class="radio"><input type="radio" name="months" value="1,3,5,7,9,11">Odd Months</label>
+									<label class="radio"><input type="radio" name="months" value="1,4,7,10">Every 3 Months</label>
+									<label class="radio"><input type="radio" name="months" value="1,7">Every 6 Months</label>
+									<label class="radio"><input type="radio" name="months" value="1">Once Per Year</label>
+								</div>
+								<div class="col-sm-6">
+									<label class="radio"><input type="radio" name="months" value="custom">Custom</label>
+								      <select class="cron chosen-select form-control" name="custmonths[]" size="5" multiple>
+								        <option></option><option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option><option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option><option value="7">Jul</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+								      </select>
+							    </div>
 						    </div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-6 cron-item">
-							<label class="cron-section-title" align="center">WEEKDAYS</label>
-							<div class="col-sm-5">
-								<label class="radio"><input type="radio" name="weekdays" value="*" checked>Every Day of the Week</label>
-							    <label class="radio"><input type="radio" name="weekdays" value="1-5">Weekdays (Mon-Fri)</label>
-							    <label class="radio"><input type="radio" name="weekdays" value="0,6">Weekend</label>
-							    <label class="radio"><input type="radio" name="weekdays" value="0">Once Per Week (Sunday)</label>
-							</div>
-							<div class="col-sm-3">
-								<label class="radio"><input type="radio" name="weekdays" value="custom">Custom</label>
-							      <select class="cron" name="custweekdays[]" size="7" multiple>
-									<option value="0">Sun</option><option value="1">Mon</option><option value="2">Tue</option><option value="3">Wed</option><option value="4">Thu</option><option value="5">Fri</option><option value="6">Sat</option>
-							      </select>
+							<div class="row">
+								<div class="cron-section-title" align="center">WEEKDAYS</div>
+								<div class="col-sm-6">
+									<label class="radio"><input type="radio" name="weekdays" value="*" checked>Every Day of the Week</label>
+								    <label class="radio"><input type="radio" name="weekdays" value="1-5">Weekdays (Mon-Fri)</label>
+								    <label class="radio"><input type="radio" name="weekdays" value="0,6">Weekend</label>
+								    <label class="radio"><input type="radio" name="weekdays" value="0">Once Per Week (Sunday)</label>
+								</div>
+								<div class="col-sm-6">
+									<label class="radio"><input type="radio" name="weekdays" value="custom">Custom</label>
+								      <select class="cron chosen-select form-control" name="custweekdays[]" size="7" multiple>
+										<option></option><option value="0">Sun</option><option value="1">Mon</option><option value="2">Tue</option><option value="3">Wed</option><option value="4">Thu</option><option value="5">Fri</option><option value="6">Sat</option>
+								      </select>
+								</div>
 							</div>
 						</div>										
 						<div class="col-sm-6 cron-item">
@@ -618,5 +628,8 @@
   ga('send', 'pageview');
 
 </script>
+
+<script>$(".chosen-select").chosen({width: "95%"})</script>
+
 </body>
 </html>
