@@ -91,15 +91,15 @@ th {
 
 .dirlink{
     display: block;
+    padding: 8px;
 }
 
 .col_name {
-    padding-left: 5px;
+    padding:0;
 }
 
 .col_date {
-    text-align: right;
-    padding-right: 5px;
+    padding-left: 5px;
 }
 
 .row_header .col_size {
