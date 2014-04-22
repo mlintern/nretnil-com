@@ -94,7 +94,7 @@ th {
     padding: 8px;
 }
 
-.table>tfoot>tr>td.col_name {
+.table>tbody>tr>td.col_name {
     padding:0;
 }
 
