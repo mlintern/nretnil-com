@@ -9,18 +9,18 @@ function init() {
         var currow = tablerows[i];
 
         if (i == 0) {
-            currow.className += " row_header";
+            currow.className += "row_header";
         } else if (i == 1) {
-            currow.className += " row_parentdir";
+            currow.className += "row_parentdir";
         } else {
-            currow.className += " row_normal";
+            currow.className += "row_normal";
         }
 
         var rowcells = currow.getElementsByTagName((i == 0 ? "th" : "td"));
-        rowcells[0].className += " col_icon";
-        rowcells[1].className += " col_name";
-        rowcells[2].className += " col_date";
-        rowcells[3].className += " col_size";
+        rowcells[0].className += "col_icon";
+        rowcells[1].className += "col_name";
+        rowcells[2].className += "col_date";
+        rowcells[3].className += "col_size";
         // apache output is sort of broken-tabley for the description column
         if (rowcells[4]) rowcells[4].className += " col_desc";
 
