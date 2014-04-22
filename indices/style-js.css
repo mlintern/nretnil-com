@@ -62,6 +62,10 @@ table {
     margin: 0 auto;
 }
 
+.table{
+width: 70%;
+}
+
 /* rollover effect for table rows, header cells */
 tr:hover{
     background: #dddddd;
