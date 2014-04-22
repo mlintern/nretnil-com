@@ -89,7 +89,7 @@
 
 </head>
 
-<body style="padding-bottom: 50px;">
+<body style="padding-bottom: 50px;" onload="$('table').addClass('table');">
 <div class="container">
 	<div class="row">
 		<div class="page-header">
@@ -190,6 +190,5 @@
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="http://dev.nretnil.com/js/secret.js"></script>
 <script type="text/javascript" src="http://dev.nretnil.com/staging/tools/bootstrap3/js/bootstrap.min.js"></script>
-<script>$('table').addClass('table');</script>
 </body>
 </html>
