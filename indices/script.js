@@ -2,6 +2,8 @@
 // directory output, and injects useful class names throughout.
 
 function init() {
+    //$('table').addClass('table');
+    document.getElementsByTagName("table").className = "table";
     var tablerows = document.getElementsByTagName("tr");
 
     for (var i=0; i < tablerows.length; i++) {
