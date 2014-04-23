@@ -122,33 +122,28 @@ function clearHistory() {
 	$(".RollHistory").text($(".RollHistory").text() + "- ");
 }
 
-function showSetup() {
-	$(".Setup").show();
-	$(".settings-open").hide();
-}
-
-function closeSetup() {
-	$(".Setup").hide();
-	$(".settings-open").show();
-}
-
 function customChanged() {
+	console.log('here');
 	option = $("input:radio[name=DiceType]:checked").val();
 	switch (option) {
 		case 'dice':
 			customLetters = "123456";
+			$('.hint').text('6 Sided Dice Value');
 			break;
 		case 'num':
 			customLetters = "0123456789";
+			$('.hint').text('Numbers 0 - 9');
 			break;
 		case 'alpha':
 			customLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+			$('.hint').text('Letters A - Z');
 			break;
 		case 'custom':
 			customLetters = $(".CustomLetters").val();
 			customLetters = customLetters.replace(/\s/g, "");
 			customLetters = customLetters.toUpperCase();
 			$(".CustomLetters").value = customLetters;
+			$('.hint').text("Custom '"+customLetters+"'");
 			break;
 	} 
 }

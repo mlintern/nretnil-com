@@ -103,11 +103,6 @@ font-size: 40px;
   float: right;
 }
 
-.Setup {
-  display: none;
-  position: relative;
-}
-
 .die{
 position: absolute;
 width: 200px;
@@ -134,4 +129,9 @@ background: url('6dice.png') -200px -200px transparent no-repeat;
 }
 .die6{
 background: url('6dice.png') -400px -200px transparent no-repeat;
+}
+
+.modal-content{
+background-color: #cbcbcb;
+color: #454545;
 }
