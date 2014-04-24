@@ -89,7 +89,7 @@ th {
     width: 24px;
 }
 
-.dirlink{
+.dirlink, .filelink{
     display: block;
     padding: 8px;
 }
