@@ -25,15 +25,14 @@ $(document).ready(function() {
         var cur_height = parseInt($(this).height());
         var window_width = parseInt($(window).width());
         var window_height = parseInt($(window).height());
-        var cur_left = parseInt($(this).css("left"));
-        var cur_top = parseInt($(this).css("top"));
-        var factor = .75; // Figure out how to calculate the factor
-        var new_top = ( ((cur_top/window_height)*100) * factor ) + "%";
-        var new_left = ( ((cur_left/window_width)*100) * factor )+ "%";
+        var topbottom_margin = "-" + ((cur_height*magnification)/4) + "px";
+        var rightleft_margin = "-" + ((cur_width*magnification)/4) + "px";
         var styles = {
-            top: new_top,
-            left: new_left,
-            width: (cur_width*magnification)
+            "margin-left": rightleft_margin,
+            "margin-right": rightleft_margin,
+            "margin-top": topbottom_margin,
+            "margin-bottom": topbottom_margin,
+            "width": (cur_width*magnification)
         };
         $(this).css( styles );
     },function(){
