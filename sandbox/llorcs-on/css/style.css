@@ -80,8 +80,13 @@ img{
 		left: 15%;
 	}
 	.item-three{
-		width: 20%;
+		width: 15%;
 		top: 65%;
 		left: 65%;
+	}
+	.item-four{
+		width: 25%;
+		top: 68%;
+		left: 13%;
 	}
 }
