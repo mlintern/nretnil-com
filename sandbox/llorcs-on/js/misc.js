@@ -55,6 +55,34 @@ jQuery.fn.zoomIn = function(settings){
 
 };
 
+jQuery.fn.autoHide = function(settings){
+
+    var options = jQuery.extend({
+        delay: 10000, // in milliseconds
+        min_width: 768,
+        slide_speed: 1000
+    }, settings);
+
+    $(this).hover(function(){
+
+        var magnification = options.magnification;
+
+        if ($(window).width() >= options.min_width) {
+            $(this).slideToggle( option.slide_speed );
+        }
+
+    },function(){
+
+        if ($(window).width() >= options.min_width) {
+            setTimeout(function(){
+                $(this).slideToggle( option.slide_speed );
+            },option.delay)
+        }
+
+    });
+
+};
+
 
 $(document).ready(function() {
     $('.item').zoomIn();
