@@ -65,8 +65,6 @@ jQuery.fn.autoHide = function(settings){
 
     $(this).hover(function(){
 
-        var magnification = options.magnification;
-
         if ($(window).width() >= options.min_width) {
             $(this).slideToggle( option.slide_speed );
         }
@@ -82,7 +80,6 @@ jQuery.fn.autoHide = function(settings){
     });
 
 };
-
 
 $(document).ready(function() {
     $('.item').zoomIn();
