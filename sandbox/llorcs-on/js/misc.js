@@ -17,14 +17,23 @@ jQuery.fn.removeInlineCss = function(property){
     });
 };
 
+jQuery.fn.zoomIn = function(settings){
 
-$(document).ready(function() {
-    $(".item").hover(function(){
-        var magnification = $(this).data('magnification-times');
+    var options = jQuery.extend({
+        magnification: 2,
+        min_width: 768
+    }, settings);
+
+    $(this).hover(function(){
+
+        var magnification = options.magnification;
+
+        if ($(this).data('magnification-times') != null){
+            magnification = $(this).data('magnification-times');
+        }
+
         var cur_width = parseInt($(this).width());
         var cur_height = parseInt($(this).height());
-        var window_width = parseInt($(window).width());
-        var window_height = parseInt($(window).height());
         var topbottom_margin = "-" + ((cur_height*magnification)/4) + "px";
         var rightleft_margin = "-" + ((cur_width*magnification)/4) + "px";
         var styles = {
@@ -34,8 +43,19 @@ $(document).ready(function() {
             "margin-bottom": topbottom_margin,
             "width": (cur_width*magnification)
         };
-        $(this).css( styles );
+        if ($(window).width() >= options.min_width) {
+            $(this).css( styles );
+        }
+
     },function(){
+
         $(this).removeInlineCss();
+
     });
+
+};
+
+
+$(document).ready(function() {
+    $('.item').zoomIn();
 });
