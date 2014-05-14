@@ -73,10 +73,12 @@ jQuery.fn.autoHide = function(settings){
 
         $(this).hover(function(){
 
+            $(this).stop(true);
             $(this).animate({top: 0},options.slide_speed);
 
         },function(){
 
+            $(this).stop(true);
             $(this).animate({ top: -(cur_height - options.show_height) },2*options.slide_speed);
 
         });
