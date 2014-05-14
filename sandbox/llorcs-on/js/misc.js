@@ -24,63 +24,69 @@ jQuery.fn.zoomIn = function(settings){
         min_width: 768
     }, settings);
 
-    $(this).hover(function(){
+    if ($(window).width() >= options.min_width) {
 
-        var magnification = options.magnification;
+        $(this).hover(function(){
 
-        if ($(this).data('magnification-times') != null){
-            magnification = $(this).data('magnification-times');
-        }
+            var magnification = options.magnification;
 
-        var cur_width = parseInt($(this).width());
-        var cur_height = parseInt($(this).height());
-        var topbottom_margin = "-" + ((cur_height*magnification)/4) + "px";
-        var rightleft_margin = "-" + ((cur_width*magnification)/4) + "px";
-        var styles = {
-            "margin-left": rightleft_margin,
-            "margin-right": rightleft_margin,
-            "margin-top": topbottom_margin,
-            "margin-bottom": topbottom_margin,
-            "width": (cur_width*magnification)
-        };
-        if ($(window).width() >= options.min_width) {
+            if ($(this).data('magnification-times') != null){
+                magnification = $(this).data('magnification-times');
+            }
+
+            var cur_width = parseInt($(this).width());
+            var cur_height = parseInt($(this).height());
+            var topbottom_margin = "-" + ((cur_height*magnification)/4) + "px";
+            var rightleft_margin = "-" + ((cur_width*magnification)/4) + "px";
+            var styles = {
+                "margin-left": rightleft_margin,
+                "margin-right": rightleft_margin,
+                "margin-top": topbottom_margin,
+                "margin-bottom": topbottom_margin,
+                "width": (cur_width*magnification)
+            };
+            
             $(this).css( styles );
-        }
 
-    },function(){
+        },function(){
 
-        $(this).removeInlineCss();
+            $(this).removeInlineCss();
 
-    });
+        });
+
+    }
 
 };
 
 jQuery.fn.autoHide = function(settings){
 
     var options = jQuery.extend({
-        delay: 10000, // in milliseconds
-        min_width: 768,
-        slide_speed: 1000
+        delay: 1000, // in milliseconds
+        min_width: 768, // in px
+        slide_speed: 300, // in milliseconds
+        show_height: 2 // in px
     }, settings);
 
-    $(this).hover(function(){
+    var cur_height = $(this).height();
 
-        if ($(window).width() >= options.min_width) {
-            $(this).slideToggle( option.slide_speed );
-        }
+    if ($(window).width() >= options.min_width) {
 
-    },function(){
+        $(this).hover(function(){
 
-        if ($(window).width() >= options.min_width) {
-            setTimeout(function(){
-                $(this).slideToggle( option.slide_speed );
-            },option.delay)
-        }
+            $(this).animate({top: 0},options.slide_speed);
 
-    });
+        },function(){
+
+            $(this).animate({ top: -(cur_height - options.show_height) },2*options.slide_speed);
+
+        });
+
+        $(this).animate({top: -(cur_height - options.show_height)},options.slide_speed);
+    }
 
 };
 
 $(document).ready(function() {
     $('.item').zoomIn();
+    $(".navbar-auto-hide").autoHide();
 });

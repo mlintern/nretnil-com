@@ -23,11 +23,11 @@ body{
 a {
 	color: #FFF;
 }
-a:hover{
-	color: #8BE2D2;
-}
-h2 a:hover{
-	color: #FFF;
+.icon-gun{
+width: 20px;
+position: relative;
+top: -2px;
+margin-left: 10px;
 }
 /*Font Updates*/
 .alight-center{
@@ -100,4 +100,15 @@ img{
 		top: 10%;
 		left: 70%;
 	}
+}
+/* Nav Bar */
+.navbar-default .navbar-nav>li>a {
+	color: #FFF;
+}
+.navbar-default .navbar-nav>li>a:hover {
+	color: #FFF;
+	background-color: #aaa;
+}
+.navbar-auto-hide{
+	margin: 0;
 }
