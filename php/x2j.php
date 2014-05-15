@@ -83,9 +83,10 @@ if (isset($_GET["xml"])) {
     $url = $_GET["url"];
     $xml = simplexml_load_file('http://news.stanford.edu/rss/index.xml');
     $json_data = json_encode(xmlToArray($xml));
-    print $json_data;
 } else {
     $json_data = 'Please send XML with request!';
 }
 
 ?>
+
+<?php print $json_data;?>
