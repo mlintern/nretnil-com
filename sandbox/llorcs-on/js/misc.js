@@ -50,7 +50,7 @@ jQuery.fn.zoomIn = function(settings){
 
         },function(){
 
-            $(this).removeInlineCss();
+            $(this).removeAttr('style');
 
         });
 
