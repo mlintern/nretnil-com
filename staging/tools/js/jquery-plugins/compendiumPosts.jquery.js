@@ -1,5 +1,5 @@
 /*
- * jQuery Remove Inline CSS plugin 1.0.0
+ * jQuery Compendium Post 1.0.0
  *
  * Author: Mark Lintern (mlintern)
  *

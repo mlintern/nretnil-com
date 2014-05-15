@@ -78,7 +78,7 @@ function xmlToArray($xml, $options = array()) {
 
 if (isset($_GET["url"])) {
     $url = $_GET["url"];
-    $xml = simplexml_load_file('http://news.stanford.edu/rss/index.xml');
+    $xml = simplexml_load_file($url);
     $json_data = json_encode(xmlToArray($xml));
 } else {
     $json_data = 'Please send XML with request!  http://www.this.com/here.php?url=http://www.example.com/rss';
