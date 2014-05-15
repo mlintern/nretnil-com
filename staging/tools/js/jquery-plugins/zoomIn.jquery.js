@@ -1,5 +1,5 @@
 /*
- * jQuery Auto Hide plugin 1.0.0
+ * jQuery Zoom In plugin 1.0.0
  *
  * Mark Lintern
  *
