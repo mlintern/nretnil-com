@@ -129,15 +129,13 @@ if(window.jQuery) (function($){
 			// OLD isNum function: (for reference only)
 			//var isNum = function(s){ return (typeof s == "number") || String((s && typeof s == "string") ? s : '').test(/^((-)?([0-9]*)((\.{0,1})([0-9]+))?$)/); };
 																
-   var myArr = function(o){
-    
-				// http://forum.jquery.com/topic/jquery-jquery-xml2json-problems-when-siblings-of-the-same-tagname-only-have-a-textnode-as-a-child
-				//if(!o.length) o = [ o ]; o.length=o.length;
-    if(!$.isArray(o)) o = [ o ]; o.length=o.length;
-				
-				// here is where you can attach additional functionality, such as searching and sorting...
-    return o;
-   };
+    var myArr = function(o){
+      // http://forum.jquery.com/topic/jquery-jquery-xml2json-problems-when-siblings-of-the-same-tagname-only-have-a-textnode-as-a-child
+      //if(!o.length) o = [ o ]; o.length=o.length;
+      if(!$.isArray(o)) o = [ o ]; o.length=o.length;
+      // here is where you can attach additional functionality, such as searching and sorting...
+      return o;
+    };
    // Utility functions End
    //### PARSER LIBRARY END
    
@@ -163,25 +161,7 @@ if(window.jQuery) (function($){
   
   // Convert text to XML DOM
   text2xml: function(str) {
-   // NOTE: I'd like to use jQuery for this, but jQuery makes all tags uppercase
-   //return $(xml)[0];
-   
-   /* prior to jquery 1.9 */
-   /*
-   var out;
-   try{
-    var xml = ((!$.support.opacity && !$.support.style))?new ActiveXObject("Microsoft.XMLDOM"):new DOMParser();
-    xml.async = false;
-   }catch(e){ throw new Error("XML Parser could not be instantiated") };
-   try{
-    if((!$.support.opacity && !$.support.style)) out = (xml.loadXML(str))?xml:false;
-    else out = xml.parseFromString(str, "text/xml");
-   }catch(e){ throw new Error("Error parsing XML string") };
-   return out;
-   */
-
-   /* jquery 1.9+ */
-   return $.parseXML(str);
+    return $.parseXML(str);
   }
 		
  }); // extend $
