@@ -76,15 +76,12 @@ function xmlToArray($xml, $options = array()) {
     );
 }
 
-if (isset($_GET["xml"])) {
-    $xml = $_GET["xml"];
-    $json_data = json_encode(xmlToArray($xml));
-} elseif (isset($_GET["url"])) {
+if (isset($_GET["url"])) {
     $url = $_GET["url"];
     $xml = simplexml_load_file('http://news.stanford.edu/rss/index.xml');
     $json_data = json_encode(xmlToArray($xml));
 } else {
-    $json_data = 'Please send XML with request!';
+    $json_data = 'Please send XML with request!  http://www.this.com/here.php?url=http://www.example.com/rss';
 }
 
 ?>
