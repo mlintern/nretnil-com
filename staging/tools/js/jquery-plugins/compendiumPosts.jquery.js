@@ -178,36 +178,41 @@ jQuery.fn.compendiumPosts = function(settings){
     }, settings);
 
     var self = this;
-    $.get(options.rss_url,function(xml){ 
-        var json = $.xml2json(xml); 
-        var posts = json.channel.item;
-        var received_count = posts.length;
+    $.ajax({
+        type: 'get',
+        url: options.rss_url,
+        dataType: 'xml',
+        success: function(xml){ 
+            var json = $.xml2json(xml); 
+            var posts = json.channel.item;
+            var received_count = posts.length;
 
-        if (received_count < options.count) {
-            options.count = received_count;
-        }
+            if (received_count < options.count) {
+                options.count = received_count;
+            }
 
-        for (i=0;i<options.count;i++){
-            var div = $('<div>')
-                .attr('class','post')
-                .append(
-                    $('<div>')
-                    .attr('class','post-title')
-                    .html(posts[i].title)
-                )
-                .append(
-                    $('<div>')
-                    .attr('class','post-meta-data')
-                    .html(posts[i].pubDate)
-                )
-                .append(
-                    $('<div>')
-                    .attr('class','post-content')
-                    .html(posts[i].description)
-                );
-            $(self).append(div);
+            for (i=0;i<options.count;i++){
+                var div = $('<div>')
+                    .attr('class','post')
+                    .append(
+                        $('<div>')
+                        .attr('class','post-title')
+                        .html(posts[i].title)
+                    )
+                    .append(
+                        $('<div>')
+                        .attr('class','post-meta-data')
+                        .html(posts[i].pubDate)
+                    )
+                    .append(
+                        $('<div>')
+                        .attr('class','post-content')
+                        .html(posts[i].description)
+                    );
+                $(self).append(div);
+            }
+            
         }
-        
     });
 
 };
