@@ -1,3 +1,14 @@
+/*
+ * jQuery Mini Site plugin 1.0.0
+ *
+ * Mark Lintern
+ *
+ * Dual licensed under the MIT and GPL licenses:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *   http://www.gnu.org/licenses/gpl.html
+ *
+ * Date: May 05 2014
+ */
 jQuery.fn.showMiniSite = function(settings) {
 
     var options = jQuery.extend({
@@ -22,7 +33,3 @@ jQuery.fn.showMiniSite = function(settings) {
     })
 
 };
-
-$(document).ready(function(){
-    $('.mini-site').showMiniSite();
-})

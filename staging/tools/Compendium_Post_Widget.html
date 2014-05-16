@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<style>
-.post{
-    margin-bottom: 50px;
-    clear: both;
-}
-</style>
+  <style>
+    body{font-family: arial;font-size: 16px;}
+    .posts{width: 400px;margin: 0 auto;}
+    .post{margin-bottom: 50px;clear: both;}
+    .post img{max-width: 100%;height: auto !important;margin: 0!important;}
+    .post-title{font-size: 24px;}
+    .post-meta-data{font-size: 14px;}
+  </style>
 </head>
 <body>
 
-<div class="posts"></div>
+  <div class="posts"></div>
 
-<script type="text/javascript" src="http://dev.nretnil.com/staging/tools/js/jquery-plugins/compendiumPosts.jquery.js"></script> <!-- -->
-
-<script>
-$('.posts').compendiumPosts({rss_url:'http://www.nretnil.com/php/rss2xml.php?url=http://blog.greatwolf.com/rss',count:4,no_images:true});
-</script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://dev.nretnil.com/staging/tools/js/jquery-plugins/compendiumPosts.jquery.js"></script> <!-- -->
+  <script>
+  $('.posts').compendiumPosts({rss_url:'http://www.nretnil.com/php/rss2xml.php?url=http://blog.greatwolf.com/rss',count:4,no_images:false});
+  </script>
 </body>
 </html>
