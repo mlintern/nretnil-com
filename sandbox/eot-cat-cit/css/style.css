@@ -1,0 +1,13 @@
+body {
+margin: 0px;
+padding: 0px;
+background: #dedede;
+}
+.color-change{
+height: 30px;
+width: 30px;
+float: left;
+}
+#can {
+cursor: pointer;
+}

@@ -59,7 +59,14 @@
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript" src="http://dev.nretnil.com/staging/tools/bootstrap3/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/misc.js"></script>
+<script type="text/javascript" src="http://dev.nretnil.com/staging/tools/js/jquery-plugins/zoomIn.jquery.js"></script>
+<script type="text/javascript" src="http://dev.nretnil.com/staging/tools/js/jquery-plugins/autoHide.jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.item').zoomIn();
+    $(".navbar-auto-hide").autoHide();
+});
+</script>
 
 </body>
 </html>
