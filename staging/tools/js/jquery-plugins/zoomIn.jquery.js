@@ -1,5 +1,5 @@
 /*
- * jQuery Zoom In plugin 1.0.0
+ * jQuery Zoom In plugin 1.0.1
  *
  * Mark Lintern
  *
@@ -28,14 +28,13 @@ jQuery.fn.zoomIn = function(settings){
 
             var cur_width = parseInt($(this).width());
             var cur_height = parseInt($(this).height());
-            var topbottom_margin = "-" + ((cur_height*magnification)/4) + "px";
-            var rightleft_margin = "-" + ((cur_width*magnification)/4) + "px";
+            var top_margin = ((cur_height*magnification)/2)-(cur_height/2);
+            var left_margin = ((cur_width*magnification)/2)-(cur_width/2);
+            console.log(cur_width*magnification);
             var styles = {
-                "margin-left": rightleft_margin,
-                "margin-right": rightleft_margin,
-                "margin-top": topbottom_margin,
-                "margin-bottom": topbottom_margin,
-                "width": (cur_width*magnification)
+                "margin-left": "-"+left_margin+"px",
+                "margin-top": "-"+top_margin+"px",
+                "width": (cur_width*magnification)+"px"
             };
             
             $(this).css( styles );
