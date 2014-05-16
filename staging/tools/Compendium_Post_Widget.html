@@ -5,19 +5,18 @@
 <style>
 .post{
     margin-bottom: 50px;
+    clear: both;
 }
 </style>
 </head>
 <body>
-<div class="container">
 
 <div class="posts"></div>
 
-</div>
+<script type="text/javascript" src="http://dev.nretnil.com/staging/tools/js/jquery-plugins/compendiumPosts.jquery.js"></script> <!-- -->
 
-<script type="text/javascript" src="http://dev.nretnil.com/staging/tools/js/jquery-plugins/compendiumPosts.jquery.js"></script>
 <script>
-$('.posts').compendiumPosts({rss_url:'http://www.nretnil.com/php/rss2xml.php?url=http://blog.greatwolf.com/rss',count:4});
+$('.posts').compendiumPosts({rss_url:'http://www.nretnil.com/php/rss2xml.php?url=http://blog.greatwolf.com/rss',count:4,no_images:true});
 </script>
 </body>
 </html>

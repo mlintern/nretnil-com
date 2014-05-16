@@ -171,48 +171,53 @@ if(window.jQuery) (function($){
 })(jQuery);
 
 jQuery.fn.compendiumPosts = function(settings){
+  var options = jQuery.extend({
+    count: 3, // 3 posts by default
+    no_images: false, // show images by default
+    rss_url: 'http://www.npr.org/rss/rss.php?id=1019' // npr:technology rss feed
+  }, settings);
 
-    var options = jQuery.extend({
-        count: 3, // 3 posts by default
-        rss_url: 'http://www.npr.org/rss/rss.php?id=1019' // npr:technology rss feed
-    }, settings);
+  var self = this;
+  $.ajax({
+    type: 'get',
+    url: options.rss_url,
+    dataType: 'xml',
+    success: function(xml){ 
+      var json = $.xml2json(xml); 
+      var posts = json.channel.item;
+      var received_count = posts.length;
 
-    var self = this;
-    $.ajax({
-        type: 'get',
-        url: options.rss_url,
-        dataType: 'xml',
-        success: function(xml){ 
-            var json = $.xml2json(xml); 
-            var posts = json.channel.item;
-            var received_count = posts.length;
+      if (received_count < options.count) {
+        options.count = received_count;
+      }
 
-            if (received_count < options.count) {
-                options.count = received_count;
-            }
+      for (i=0;i<options.count;i++){
 
-            for (i=0;i<options.count;i++){
-                var div = $('<div>')
-                    .attr('class','post')
-                    .append(
-                        $('<div>')
-                        .attr('class','post-title')
-                        .html(posts[i].title)
-                    )
-                    .append(
-                        $('<div>')
-                        .attr('class','post-meta-data')
-                        .html(posts[i].pubDate)
-                    )
-                    .append(
-                        $('<div>')
-                        .attr('class','post-content')
-                        .html(posts[i].description)
-                    );
-                $(self).append(div);
-            }
-            
+        var content = $('<div>')
+          .attr('class','post-content')
+          .html(posts[i].description);
+
+        if ( options.no_images ) {
+          content.find('img').remove();
         }
-    });
 
-};
+        var div = $('<div>')
+          .attr('class','post')
+          .append(
+            $('<div>')
+            .attr('class','post-title')
+            .html(posts[i].title)
+          )
+          .append(
+            $('<div>')
+            .attr('class','post-meta-data')
+            .html(posts[i].pubDate)
+          )
+          .append(
+            content
+          );
+        $(self).append(div);
+      }
+    }
+  });
+}
