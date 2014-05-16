@@ -82,28 +82,28 @@ img{
 	}
 	.item-two{
 		width: 10%;
-		top: 15%;
-		left: 15%;
+		top: 18%;
+		left: 10%;
 	}
 	.item-three{
 		width: 10%;
 		top: 65%;
-		left: 70%;
+		left: 55%;
 	}
 	.item-four{
 		width: 25%;
-		top: 68%;
-		left: 15%;
+		top: 75%;
+		left: 20%;
 	}
 	.item-five{
 		width: 15%;
 		top: 10%;
-		left: 70%;
+		left: 75%;
 	}
 	.item-six{
-		width: 20%;
-		top: 10%;
-		left: 40%;
+		width: 16%;
+		top: 14%;
+		left: 42%;
 	}
 }
 /* Nav Bar */
