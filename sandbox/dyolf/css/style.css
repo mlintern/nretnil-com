@@ -27,118 +27,132 @@ a:hover{
 color: #DDD;
 cursor: url("../img/frog_footprint_30.png"), pointer;
 }
+button:hover{
+cursor: url("../img/frog_footprint_30.png"), pointer;
+}
 h2 a:hover{
 color: #FFF;
 }
-/*Navbar Updates*/
-.navbar-default .navbar-nav > li > a {
-color: #FFF;
+.right-side{
+	float: right;
 }
-.navbar-default .navbar-nav > li > a:hover {
-color: #FFF;
-background-color: transparent;
+.left-side{
+	float: left;
 }
-.navbar-default .navbar-nav > .dropdown > a .caret, .navbar-default .navbar-nav > .dropdown > a:hover .caret {
-border-top-color: #FFF;
-border-bottom-color: #FFF;
+@media (min-width: 768px) {
+	.right-side .btn, .left-side .btn {
+		display: block;
+		margin-bottom: 10px;
+		width: 80px;
+	}
+	.right-side{
+		position: fixed;
+		right: 20px;
+		top: 50px;
+	}
+	.left-side{
+		position: fixed;
+		left: 20px;
+		top: 50px;
+	}
 }
-.navbar-default .navbar-nav > .dropdown.open > a .caret, .navbar-default .navbar-nav > .dropdown.open > a:hover .caret {
-border-top-color: #777;
-border-bottom-color: #777;
+/*Buttons*/
+.btn-twitter{
+	color: #fff;
+	background-color: #5bc0de;
+	border-color: #46b8da;
 }
-.navbar-default .navbar-brand {
-color: #FFF;
+.btn-twitter:hover{
+	color: #fff;
+	background-color: #2aabd2;
+	border-color: #269abc;
+}
+.btn-facebook{
+	color: #fff;
+	background-color: #4661A2;
+	border-color: #2F467E;
+}
+.btn-facebook:hover{
+	color: #fff;
+	background-color: #2F467E;
+	border-color: #2F467E;
+}
+.btn-pinterest{
+	color: #fff;
+	background-color: #d9534f;
+	border-color: #d43f3a;
+}
+.btn-pinterest:hover{
+	color: #fff;
+	background-color: #c12e2a;
+	border-color: #ac2925;
 }
 /*Font Updates*/
 .alight-center{
-text-align: center;
+	text-align: center;
 }
 h1, h2, h3, h4, h5, h6{
 
 }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
-color: #bbb;
+	color: #bbb;
 }
 .thumbnail, .modal-content{
-color: #b90102;
+	color: #b90102;
 }
 /*Carousel*/
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
-margin: 0 auto;
+	margin: 0 auto;
 }
 /*Footer*/
 .footer{
-border-top: solid 1px #FFF;
-margin-top: 20px;
+	border-top: solid 1px #FFF;
+	margin-top: 20px;
 }
 .footer-email{
 color: #FFF;
-padding: 30px 0;
+	padding: 30px 0;
 }
 /*Fixes*/
 img{
-max-width: 100%;
+	max-width: 100%;
 }
 body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom {
-margin-right: 0;
-}
-.navbar-collapse {
-max-height: 400px;
-}
-@media (max-width: 767px) {
-	.navbar-default .navbar-nav .open .dropdown-menu {
-	background-color: #fff;
-	}
-	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
-	color: #333;
-	background-color: transparent;
-	}
-	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
-	color: #FFF;
-	background-color: #428bca;
-	}
+	margin-right: 0;
 }
 #floyd {
-display:none;
-position: fixed;
-left: 0;
-right: 0;
-top: 0;
-height: 100%;
-background: url('../img/Floyd-Through-Glass.png') center center fixed transparent;
-background-size: cover;
-z-index: 1032;
+	display:none;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	height: 100%;
+	background: url('../img/Floyd-Through-Glass.png') center center fixed transparent;
+	background-size: cover;
+	z-index: 1032;
 }
 #mask {
-display:none;
-background: url('http://cdn2.content.compendiumblog.com/uploads/user/12a67f85-8b31-465a-93a1-99f578338c75/f30e0815-ecbe-453c-a2aa-16ced8dba3cf/Image/b2a9da57b5a1970dc35a32bdca85be15/fog_60.png') 0 0 repeat black;
-display: none;
-position: fixed; left: 0; top: 0; 
-z-index: 1031;
-width: 100%; height: 100%;
+	display:none;
+	background: black;
+	position: fixed; left: 0; top: 0; bottom: 0; right: 0;
+	z-index: 1031;
+	width: 100%; height: 100%;
 }
 .chalkboard{
-background: url('http://dev.nretnil.com/staging/tools/img/chalkboard.jpeg') 0 0 no-repeat #000;
-background-size: cover;
-font-size: 65px;
-min-height: 800px;
-border: solid 8px #CCC; 
-padding: 80px;
-margin: 0 15px;
+	background: url('http://dev.nretnil.com/staging/tools/img/chalkboard.jpeg') 0 0 repeat-y #000;
+	background-size: cover;
+	font-size: 55px;
+	border: solid 8px #CCC; 
+	padding: 50px 80px;
+	margin: 0 15px;
 }
-@media (max-width: 500px) {
+@media (max-width: 768px) {
 	.chalkboard{
-	padding: 20px;
-	}
-}
-@media (min-width: 768px) {
-	.navbar-nav.navbar-right:last-child {
-	margin-right: 0;
+		padding: 20px;
+		font-size: 40px;
 	}
 }
 .chalk1{
-font-family: 'Chalk';
-}
-.chalk2{
-font-family: 'Chalkboard';
+	font-family: 'Chalk';
+	line-height: 1;
 }
