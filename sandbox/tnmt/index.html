@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="host_name" content="http://www.nretnil.com">
+<title>TMNT</title>
+
+<link rel="shortcut icon" href="favicon.ico" type="image/png">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<link type="text/css" href="http://dev.nretnil.com/staging/tools/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="http://dev.nretnil.com/staging/tools/bootstrap3/css/bootstrap-theme.min.css" rel="stylesheet">
+<link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/font-awesome-4/css/font-awesome.css" rel="stylesheet">
+<link type="text/css" href="http://dev.nretnil.com/staging/tools/css/fog/fog.css" rel="stylesheet">
+<link type="text/css" href="css/style.css" rel="stylesheet">
+</head>
+
+<body onload="$('.loading').hide();">
+<div class="loading" style="position: fixed; top: 0; bottom: 0; right: 0; left: 0; background: #000; color: #fff; z-index: 10000;"><i class="fa fa-4x fa-spinner fa-spin" style="position: absolute; top: 50%; left: 50%; margin-left: -23px;z-index: 10001;"></i></div>
+
+<div class="w-fog20 haze">
+
+	<img class="item item-one spin-right" src="img/leonardo.png"/>
+
+	<img class="item item-two spin-left" data-magnification-times="2.5" src="img/donatello.png"/>
+
+	<img class="item item-three spin-left" src="img/raphael.png"/>
+
+	<img class="item item-four spin-right" src="img/michelangelo.png"/>
+
+	<img class="item item-five spin-left" data-magnification-direction="left" src="img/splinter.png"/>
+
+</div>
+
+<button class="btn btn-success btn-spin" onclick="spin();"><i class="fa fa-spinner"></i></button>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://dev.nretnil.com/staging/tools/bootstrap3/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://dev.nretnil.com/staging/tools/js/jquery-plugins/zoomIn.jquery.js"></script> <!-- -->
+<script src="http://dev.nretnil.com/staging/tools/js/jquery-plugins/clickSpin.jquery.js"></script>
+<script src="http://dev.nretnil.com/staging/tools/js/jquery-plugins/spinObj.jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".item").zoomIn();
+    $(".item").clickSpin({delta_degrees: 30});
+});
+function spin(){
+	console.log('here');
+	$('.spin-right').spinObj({delta_degrees: 10});
+	$('.spin-left').spinObj({direction: 'counter', delta_degrees: 10});
+}
+</script>
+
+</body>
+</html>

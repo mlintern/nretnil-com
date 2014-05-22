@@ -1,0 +1,104 @@
+body{
+	position:relative;
+	background-image: url('../img/dojo.jpg');
+	background-color: #666;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	color: #FFF;
+}
+@media (max-width: 768px) {
+	body{
+		background-repeat: repeat-y;
+		background-position: center top;
+	}
+}
+@media handheld {
+	body{
+		background-repeat: repeat-y;
+		background-position: center top;
+	}
+}
+a {
+	color: #FFF;
+}
+.btn-spin {
+z-index: 1000;
+position: fixed;
+right: 10px;
+top: 10px;
+}
+/*Font Updates*/
+.alight-center{
+	text-align: center;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
+	color: #bbb;
+}
+/*Carousel*/
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+	margin: 0 auto;
+}
+/*Footer*/
+.footer{
+	border-top: solid 1px #FFF;
+	margin-top: 50px;
+}
+.footer-email{
+	color: #FFF;
+	padding: 30px 0;
+}
+/*Fixes*/
+img{
+	max-width: 100%;
+}
+/*Item*/
+.item{
+	position: relative;
+	height: auto;
+	width: 60%;
+	left: 20%;
+}
+@media (min-width: 768px) {
+	.haze{
+		position: fixed;
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
+	}
+	.item{
+		position: absolute;
+		height: auto;
+	}
+	.item:hover{
+		z-index: 100;
+	}
+	.item-one{
+		width: 8%;
+		top: 45%;
+		left: 30%;
+	}
+	.item-two{
+		width: 6%;
+		top: 42%;
+		left: 50%;
+	}
+	.item-three{
+		width: 10%;
+		top: 65%;
+		left: 15%;
+	}
+	.item-four{
+		width: 11%;
+		top: 62%;
+		left: 62%;
+	}
+	.item-five{
+		width: 9%;
+		top: 50%;
+		right: 5%;
+		left: auto;
+	}
+}

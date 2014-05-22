@@ -1,5 +1,5 @@
 /*
- * jQuery Click Spin plugin 1.0.0
+ * jQuery Click Spin plugin 1.1.0
  *
  * Mark Lintern
  *
@@ -12,7 +12,7 @@
 jQuery.fn.clickSpin = function(settings){
 
   var options = jQuery.extend({
-    delta_degrees: 3,
+    delta_degrees: 5,
     rotations: 1,
     direction: 'clockwise' // clockwise, counter
   }, settings);
@@ -50,7 +50,7 @@ jQuery.fn.clickSpin = function(settings){
       }else{
       clearInterval(interval);
       }
-    }, 10);
+    }, 1);
   
   })
  
