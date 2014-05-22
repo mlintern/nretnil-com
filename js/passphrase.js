@@ -29,8 +29,6 @@ function passphrase_gen()
         
     var phrase = choices.join(" ");
     
-    console.log(phrase);
-    
     $("#passphrase_result").text(phrase);
 	$("#passphrase_result_nospace").text(phrase.replace(/\s/g, ''));
 }
