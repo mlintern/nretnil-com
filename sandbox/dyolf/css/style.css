@@ -30,6 +30,9 @@ cursor: url("../img/frog_footprint_30.png"), pointer;
 button:hover{
 cursor: url("../img/frog_footprint_30.png"), pointer;
 }
+button a:hover{
+color: #FFF;
+}
 h2 a:hover{
 color: #FFF;
 }
