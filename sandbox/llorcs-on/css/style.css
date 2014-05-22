@@ -105,6 +105,16 @@ img{
 		top: 14%;
 		left: 42%;
 	}
+	.item-seven{
+		width: 12%;
+		top: 48%;
+		left: 16%;
+	}
+	.item-eight{
+		width: 10%;
+		top: 70%;
+		left: 75%;
+	}
 }
 /* Nav Bar */
 .navbar-default .navbar-nav>li>a {

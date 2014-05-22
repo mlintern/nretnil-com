@@ -34,9 +34,11 @@
 		<div class="collapse navbar-collapse navbar-collapse">
 			<ul class="nav navbar-nav">
 				<li><a href="http://www.benelliusa.com/" target="_blank">Benelli <img class="icon-gun" src="img/gun-icon.png"/></a></li>
+				<li><a href="https://www.berettausa.com/Default.aspx" target="_blank">Beretta <img class="icon-gun" src="img/gun-icon.png"/></a></li>
 				<li><a href="http://www.colt.com/" target="_blank">Colt <img class="icon-gun" src="img/gun-icon.png"/></a></li>
 				<li><a href="http://us.glock.com/" target="_blank">Glock <img class="icon-gun" src="img/gun-icon.png"/></a></li>
 				<li><a href="http://www.henryrifles.com/" target="_blank">Henry <img class="icon-gun" src="img/gun-icon.png"/></a></li>
+				<li><a href="http://www.magnumresearch.com/" target="_blank">Magnum Research <img class="icon-gun" src="img/gun-icon.png"/></a></li>
 				<li><a href="http://www.sigsauer.com/" target="_blank">Sig Sauer <img class="icon-gun" src="img/gun-icon.png"/></a></li>
 				<li><a href="http://www.uberti.com/" target="_blank">Uberti <img class="icon-gun" src="img/gun-icon.png"/></a></li>
 				<li><a href="http://www.waltherarms.com/" target="_blank">Walther <img class="icon-gun" src="img/gun-icon.png"/></a></li>
@@ -47,9 +49,9 @@
 
 <div class="w-fog40 haze">
 
-	<div class="item item-one" data-magnification-times="4"><a href="http://www.colt.com/" target="_blank"><img src="img/m4-2.png"/></a></div>
+	<div class="item item-one" data-magnification-times="4" data-magnification-direction="middle" ><a href="http://www.colt.com/" target="_blank"><img src="img/m4-2.png"/></a></div>
 
-	<div class="item item-two" data-magnification-times="2.5"><a href="http://www.sigsauer.com/" target="_blank"><img src="img/226.gif"/></a></div>
+	<div class="item item-two" data-magnification-times="2.5" data-magnification-direction="down"><a href="http://www.sigsauer.com/" target="_blank"><img src="img/226.gif"/></a></div>
 
 	<div class="item item-three" data-magnification-times="3"><a href="http://www.uberti.com/" target="_blank"><img src="img/uberti.png"/></a></div>
 
@@ -59,13 +61,83 @@
 
 	<div class="item item-six" data-magnification-times="5"><a href="http://www.benelliuse.com/" target="_blank"><img src="img/b-m4.png"/></a></div>
 
+	<div class="item item-seven" data-magnification-times="3"><a href="http://www.magnumresearch.com/" target="_blank"><img src="img/de.png"/></a></div>
+
+	<div class="item item-eight" data-magnification-times="3"><a href="https://www.berettausa.com/Default.aspx" target="_blank"><img src="img/bobcat.png"/></a></div>
+
 </div>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript" src="http://dev.nretnil.com/staging/tools/bootstrap3/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="http://dev.nretnil.com/staging/tools/js/jquery-plugins/zoomIn.jquery.js"></script>
+<!-- <script type="text/javascript" src="http://dev.nretnil.com/staging/tools/js/jquery-plugins/zoomIn.jquery.js"></script> <!-- -->
 <script type="text/javascript" src="http://dev.nretnil.com/staging/tools/js/jquery-plugins/autoHide.jquery.js"></script>
 <script type="text/javascript">
+
+jQuery.fn.zoomIn = function(settings){
+
+    var options = jQuery.extend({
+        magnification: 2,
+        min_width: 768,
+        direction: 'middle' // up, down, left, right, middle
+    }, settings);
+
+    if ($(window).width() >= options.min_width) {
+
+        $(this).hover(function(){
+
+        	var magnification = options.magnification;
+        	var direction = options.direction;
+
+            if ($(this).data('magnification-times') != null){
+                magnification = $(this).data('magnification-times');
+            }
+            if ($(this).data('magnification-direction') != null){
+                direction = $(this).data('magnification-direction');
+            }
+
+            var cur_width = parseInt($(this).width());
+            var cur_height = parseInt($(this).height());
+            var top_margin = ((cur_height*magnification)/2)-(cur_height/2);
+            var left_margin = ((cur_width*magnification)/2)-(cur_width/2);
+            var styles = {
+            	"width": (cur_width*magnification)+"px"
+            }
+
+            switch (direction) {
+                case 'up':
+                	styles['margin-left'] = '-'+left_margin+'px';
+	                styles['margin-top'] = '-'+(2*top_margin)+'px';
+	                break;
+                case 'down':
+                	styles['margin-left'] = '-'+left_margin+'px';
+	                styles['margin-bottom'] = '-'+(2*top_margin)+'px';
+	                break;
+                case 'left':
+                	styles['margin-left'] = '-'+(2*left_margin)+'px';
+	                styles['margin-top'] = '-'+top_margin+'px';
+	                break;
+                case 'right':
+                	styles['margin-right'] = '-'+(2*left_margin)+'px';
+	                styles['margin-top'] = '-'+top_margin+'px';
+	                break;
+	            default:
+                    styles['margin-left'] = '-'+left_margin+'px';
+                    styles['margin-top'] = '-'+top_margin+'px';
+                    break;
+            }
+            
+            $(this).css( styles );
+
+        },function(){
+
+            $(this).removeAttr('style');
+
+        });
+
+    }
+
+};
+
 $(document).ready(function() {
     $(".item").zoomIn();
     $(".navbar-auto-hide").autoHide();
