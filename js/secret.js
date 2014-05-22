@@ -18,13 +18,13 @@ $(document).keydown(function(e){
     } else if (keyone && keytwo && keythree && keyfour && keyfive && keysix && keyseven && !keyeight && e.keyCode == 66) { //B Key
            keyeight = true;
            $('#secret-modal').modal('show');
-           console.log(keyone+' '+keytwo+' '+keythree+' '+keyfour+' '+keyfive+' '+keysix+' '+keyseven+' '+keyeight+' ');
+           //console.log(keyone+' '+keytwo+' '+keythree+' '+keyfour+' '+keyfive+' '+keysix+' '+keyseven+' '+keyeight+' ');
            keyone=false;keytwo=false;keythree=false;keyfour=false;keyfive=false;keysix=false;keyseven=false;keyeight=false;
     } else {
         keyone=false;keytwo=false;keythree=false;keyfour=false;keyfive=false;keysix=false;keyseven=false;keyeight=false;
     }
     //console.log(e.keyCode);
-    console.log('code1: ' + keyone+' '+keytwo+' '+keythree+' '+keyfour+' '+keyfive+' '+keysix+' '+keyseven+' '+keyeight+' ');
+    //console.log('code1: ' + keyone+' '+keytwo+' '+keythree+' '+keyfour+' '+keyfive+' '+keysix+' '+keyseven+' '+keyeight+' ');
 });
 
 
@@ -53,11 +53,11 @@ $(document).keydown(function(e){
     } else if (press_1_one && press_1_two && press_1_three && press_1_four && press_1_five && press_1_six && press_1_seven && press_1_eight && press_1_nine && !press_1_ten && e.keyCode == 65) { //A Key
        press_1_ten = true;
        $('#secret-modal').modal('show');
-       console.log('code2: ' + press_1_one+' '+press_1_two+' '+press_1_three+' '+press_1_four+' '+press_1_five+' '+press_1_six+' '+press_1_seven+' '+press_1_eight+' '+press_1_nine+' '+press_1_ten);
+       //console.log('code2: ' + press_1_one+' '+press_1_two+' '+press_1_three+' '+press_1_four+' '+press_1_five+' '+press_1_six+' '+press_1_seven+' '+press_1_eight+' '+press_1_nine+' '+press_1_ten);
        press_1_one=false;press_1_two=false;press_1_three=false;press_1_four=false;press_1_five=false;press_1_six=false;press_1_seven=false;press_1_eight=false;press_1_nine=false;press_1_ten=false;
     } else {
         press_1_one=false;press_1_two=false;press_1_three=false;press_1_four=false;press_1_five=false;press_1_six=false;press_1_seven=false;press_1_eight=false;press_1_nine=false;press_1_ten=false;
     }
     //console.log(e.press_1_Code);
-    console.log('code2: ' + press_1_one+' '+press_1_two+' '+press_1_three+' '+press_1_four+' '+press_1_five+' '+press_1_six+' '+press_1_seven+' '+press_1_eight+' '+press_1_nine+' '+press_1_ten);
+    //console.log('code2: ' + press_1_one+' '+press_1_two+' '+press_1_three+' '+press_1_four+' '+press_1_five+' '+press_1_six+' '+press_1_seven+' '+press_1_eight+' '+press_1_nine+' '+press_1_ten);
 });

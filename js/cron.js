@@ -29,7 +29,6 @@ function generatecron(){
 	}
 
 	var full = min+" "+hour+" "+day+" "+month+" "+weekday+" "+command;
-	console.log(full);
 	$("#cron-code").text(full);
-	window-alert(full);
+	window.alert(full);
 }
