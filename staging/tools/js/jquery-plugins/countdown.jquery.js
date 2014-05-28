@@ -1,5 +1,5 @@
 /*
- * jQuery Count Down plugin 1.2.2
+ * jQuery Count Down plugin 1.3.0
  *
  * Mark Lintern
  *
@@ -14,7 +14,8 @@ jQuery.fn.countdown = function(settings){
   var options = jQuery.extend({
     until: null,
     compactLabel: false,
-    pause: false
+    pause: false,
+    showMonths: true
   }, settings);
 
   var year = 31556926;
@@ -68,7 +69,7 @@ jQuery.fn.countdown = function(settings){
       diff = diff-(y*year);
     }
 
-    if (diff > month) {
+    if (diff > month && options.showMonths) {
       m = Math.floor(diff/month);
       diff = diff-Math.round((m*month));
     }
