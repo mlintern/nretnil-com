@@ -1,5 +1,5 @@
 /*
- * jQuery Count Down plugin 1.2.0
+ * jQuery Count Down plugin 1.2.1
  *
  * Mark Lintern
  *
@@ -94,7 +94,8 @@ jQuery.fn.countdown = function(settings){
         $("<div>").attr('class','days timeframe '+d).append($('<h4>').html(dayLabel),$('<div>').attr('class','timeValue').html(d)),
         $("<div>").attr('class','hours timeframe '+h).append($('<h4>').html(hourLabel),$('<div>').attr('class','timeValue').html(h)),
         $("<div>").attr('class','minutes timeframe '+mn).append($('<h4>').html(minuteLabel),$('<div>').attr('class','timeValue').html(mn)),
-        $("<div>").attr('class','seconds timeframe '+diff).append($('<h4>').html(secondLabel),$('<div>').attr('class','timeValue').html(diff))
+        $("<div>").attr('class','seconds timeframe '+diff).append($('<h4>').html(secondLabel),$('<div>').attr('class','timeValue').html(diff)),
+        $("<div>").attr('class','clearfix')
       );
 
     //console.log(y+' '+m+' '+d+' '+h+' '+mn+' '+diff);
