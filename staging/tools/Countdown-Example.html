@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website Title</title>
+  <meta charset="UTF-8">
+  
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+  <style>
+  .countdown-box{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-left: -360px;
+  }
+  .timeframe{
+    display: inline-block;
+    margin: 10px;
+    background: #dedede;
+    padding: 5px;
+    min-width: 100px;
+    text-align: center;
+    border: solid 1px #999;
+  }
+  .timeValue{
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .null{
+    display: none;
+  }
+  </style>
+
+</head>
+<body>
+  <div class="container">
+    <div class="countdown-box"></div>
+  </div>
+
+<!-- Latest compiled and minified JavaScript -->
+<script type="text/javascript" src="http://dev.nretnil.com/staging/tools/bootstrap3/js/bootstrap.min.js"></script>
+<script src="http://dev.nretnil.com/staging/tools/js/jquery-plugins/countdown.jquery.js"></script>
+<script>
+var futureDate = new Date(2015,12,08,08,08,08);
+$('.countdown-box').countdown({until: futureDate});
+</script>
+
+</body>
+</html>
