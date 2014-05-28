@@ -13,7 +13,8 @@ jQuery.fn.countdown = function(settings){
 
   var options = jQuery.extend({
     until: null,
-    compactLabel: false
+    compactLabel: false,
+    pause: false
   }, settings);
 
   var year = 31556926;
@@ -101,7 +102,10 @@ jQuery.fn.countdown = function(settings){
     $self.append(div);
   }
 
-  setInterval(function(){updateCountdown(options.until)},1000);
-  //updateCountdown(options.until);
+  if (options.pause) {
+    updateCountdown(options.until);
+  }else{
+    setInterval(function(){updateCountdown(options.until)},1000);
+  }
 
 };
