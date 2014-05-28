@@ -1,56 +1,77 @@
 body{
-position:relative;
-background-image: url('../img/keys.jpg');
-background-color: #666;
-background-repeat: no-repeat;
-background-position: center center;
-background-attachment: fixed;
-background-size: cover;
-color: #FFF;
-padding: 100px 0;
+	position:relative;
+	background-image: url('../img/keys.jpg');
+	background-color: #666;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	color: #FFF;
+	padding: 100px 0;
 }
 @media (max-width: 768px) {
 	body{
-	background-repeat: repeat-y;
-	background-position: center top;
+		background-repeat: repeat-y;
+		background-position: center top;
 	}
 }
 @media handheld {
 	body{
-	background-repeat: repeat-y;
-	background-position: center top;
+		background-repeat: repeat-y;
+		background-position: center top;
 	}
 }
 a {
-color: #FFF;
+	color: #FFF;
 }
 a:hover{
-color: #8BE2D2;
+	color: #8BE2D2;
 }
 h2 a:hover{
-color: #FFF;
+	color: #FFF;
 }
 /*Font Updates*/
 .alight-center{
-text-align: center;
+	text-align: center;
 }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
-color: #bbb;
+	color: #bbb;
 }
 /*Carousel*/
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
-margin: 0 auto;
+	margin: 0 auto;
 }
 /*Footer*/
 .footer{
-border-top: solid 1px #FFF;
-margin-top: 50px;
+	border-top: solid 1px #FFF;
+	margin-top: 50px;
 }
 .footer-email{
-color: #FFF;
-padding: 30px 0;
+	color: #FFF;
+	padding: 30px 0;
 }
 /*Fixes*/
 img{
-max-width: 100%;
+	max-width: 100%;
+}
+/*Count Down*/
+.countdown-div{
+	text-align: center;
+}
+.timeframe{
+	display: inline-block;
+	margin: 10px;
+	background: #dedede;
+	padding: 5px;
+	min-width: 100px;
+	text-align: center;
+	border: solid 1px #999;
+	color: #444;
+}
+.timeValue{
+	font-size: 40px;
+	font-weight: bold;
+}
+.null{
+	display: none;
 }

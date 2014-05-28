@@ -19,3 +19,6 @@ $(document).ready(function() {
         }
     }, 500)
 });
+
+var endDate = new Date(2014,12,18,18,00,00,00,00);
+$('.countdown-div').countdown({until: endDate});
