@@ -1,5 +1,5 @@
 /*
- * jQuery Count Down plugin 1.2.1
+ * jQuery Count Down plugin 1.2.2
  *
  * Mark Lintern
  *
@@ -88,7 +88,7 @@ jQuery.fn.countdown = function(settings){
       diff = diff-(mn*minute);
     }
 
-    var div = $("<div>").attr('class','countDownInternal').append(
+    var div = $("<div>").attr('class','countdownInternal').append(
         $("<div>").attr('class','years timeframe '+y).append($('<h4>').html(yearLabel),$('<div>').attr('class','timeValue').html(y)),
         $("<div>").attr('class','months timeframe '+m).append($('<h4>').html(monthLabel),$('<div>').attr('class','timeValue').html(m)),
         $("<div>").attr('class','days timeframe '+d).append($('<h4>').html(dayLabel),$('<div>').attr('class','timeValue').html(d)),
@@ -99,7 +99,7 @@ jQuery.fn.countdown = function(settings){
       );
 
     //console.log(y+' '+m+' '+d+' '+h+' '+mn+' '+diff);
-    $self.find('.countDownInternal').remove();
+    $self.find('.countdownInternal').remove();
     $self.append(div);
   }
 
