@@ -9,7 +9,7 @@
  *
  * Date: May 28 2014
  */
-jQuery.fn.countDown = function(settings){
+jQuery.fn.countdown = function(settings){
 
   var options = jQuery.extend({
     until: null,
