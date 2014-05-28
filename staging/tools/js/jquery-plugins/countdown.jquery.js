@@ -1,5 +1,5 @@
 /*
- * jQuery Count Down plugin 1.1.0
+ * jQuery Count Down plugin 1.2.0
  *
  * Mark Lintern
  *
