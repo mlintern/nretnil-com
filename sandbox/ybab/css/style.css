@@ -63,15 +63,86 @@ img{
 	margin: 10px;
 	background: #dedede;
 	padding: 5px;
-	min-width: 100px;
+	min-width: 240px;
 	text-align: center;
 	border: solid 1px #999;
 	color: #444;
+	border-radius: 20px;
+}
+.timeframe h4{
+	font-size: 60px;
 }
 .timeValue{
-	font-size: 40px;
+	font-size: 100px;
 	font-weight: bold;
 }
 .null{
 	display: none;
+}
+
+/**/
+.float-left{
+	float: left;	
+	margin: 0 0 0 20px;
+}
+
+.float-right{
+	float: right;
+	margin: 0 20px 0 0;
+}
+
+.center{
+	font-size: 2.5em;
+	padding: 80px 0 0 0;
+	text-align: center;
+}
+
+.first{
+	background:url(../images/firstBG.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 600px;
+	margin: 0 auto;
+	padding: 0;
+	background-size: cover;
+}
+
+.second{
+	background: url(../images/secondBG.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 1300px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+	background-size: cover;
+}
+
+.second .bg{
+	background: url(../images/trainers.png) 50% 0 no-repeat fixed;
+	height: 1300px;
+	margin: 0 auto;
+	padding: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 200;
+}
+
+.third{
+	background: url(../images/thirdBG.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 475px;
+	padding: 50px 0 0 0;
+	background-size: cover;
+}
+
+.fixed{
+	background: transparent;
+	min-height: 500px;
+	margin: 0 auto;
+	padding: 100px 0 0 0;
+}
+
+.story .float-left, .story .float-right{
+	padding: 100px 0 0 0;
+	position: relative;
+	width: 350px;	
 }
