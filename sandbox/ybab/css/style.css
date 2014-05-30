@@ -40,7 +40,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small
 	font-family: 'Permanent Marker', sans-serif;
 	font-size: 100px;
 	color: #000;
-	text-shadow: 0 10px 8px rgba(256,256,256,1);
+	text-shadow: 5px 5px 0px rgba(256,256,256,1);
 }
 /*Carousel*/
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
@@ -48,11 +48,28 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small
 }
 .carousel-caption.dark{
 	color: #000;
-	text-shadow: 0 1px 2px rgba(256,256,256,1);
+	text-shadow: 0 3px 3px rgba(256,256,256,1);
 }
 .carousel-caption.light{
 	color: #fff;
-	text-shadow: 0 1px 2px rgba(0,0,0,.6);
+	text-shadow: 0 3px 3px rgba(0,0,0,.6);
+}
+.carousel-indicators li {
+display: inline-block;
+width: 10px;
+height: 10px;
+margin: 1px;
+text-indent: -999px;
+border: 1px solid #fff;
+border-radius: 10px;
+cursor: pointer;
+background-color: #000;
+}
+.carousel-indicators .active {
+margin: 0;
+width: 12px;
+height: 12px;
+background-color: #ff0;
 }
 /*Footer*/
 .footer{
@@ -127,7 +144,7 @@ img{
 .first{
 	background:url(../img/firstBG.jpg) 50% 0 no-repeat fixed;
 	color: white;
-	height: 800px;
+	height: 950px;
 	margin: 0 auto;
 	padding: 0;
 	background-size: cover;
@@ -135,7 +152,7 @@ img{
 
 .first .bg{
 	background: url(../img/stork.png) 50% 50% no-repeat fixed;
-	height: 800px;
+	height: 950px;
 	margin: 0 auto;
 	padding: 0;
 	position: absolute;
