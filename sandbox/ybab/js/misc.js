@@ -18,12 +18,7 @@ $(document).ready(function() {
             }, 500);
         }
     }, 500)
-});
 
-var endDate = new Date(2014,12,18,18,00,00,00,00);
-$('.countdown-div').countdown({until: endDate, pause: false});
-
-$(document).ready(function(){
     $('#nav').localScroll(800);
     
     //.parallax(xPosition, speedFactor, outerHeight) options:
@@ -36,4 +31,9 @@ $(document).ready(function(){
     $('.first .bg').parallax("50%", 0.6);
     $('.second .bg').parallax("50%", 0.5);
     $('.third .bg').parallax("50%", 0.4);
+
+    $('.carousel').carousel('cycle');
 })
+
+var endDate = new Date(2014,12,18,18,00,00,00,00);
+$('.countdown-div').countdown({until: endDate, pause: false});
