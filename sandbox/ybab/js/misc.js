@@ -21,7 +21,7 @@ $(document).ready(function() {
 });
 
 var endDate = new Date(2014,12,18,18,00,00,00,00);
-$('.countdown-div').countdown({until: endDate, pause: true});
+$('.countdown-div').countdown({until: endDate, pause: false});
 
 $(document).ready(function(){
     $('#nav').localScroll(800);
@@ -31,8 +31,9 @@ $(document).ready(function(){
     //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
     //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
     $('.first').parallax("50%", 0.1);
-    $('.second').parallax("50%", 0.1);
-    $('.bg').parallax("50%", 0.4);
-    $('.third').parallax("50%", 0.3);
-
+    $('.second').parallax("50%", 0.2);
+    $('.third').parallax("50%", 0.2);
+    $('.first .bg').parallax("50%", 0.6);
+    $('.second .bg').parallax("50%", 0.5);
+    $('.third .bg').parallax("50%", 0.4);
 })

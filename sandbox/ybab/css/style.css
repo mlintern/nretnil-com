@@ -7,7 +7,6 @@ body{
 	background-attachment: fixed;
 	background-size: cover;
 	color: #FFF;
-	padding: 100px 0;
 }
 @media (max-width: 768px) {
 	body{
@@ -37,9 +36,23 @@ h2 a:hover{
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
 	color: #bbb;
 }
+.title{
+	font-family: 'Permanent Marker', sans-serif;
+	font-size: 100px;
+	color: #000;
+	text-shadow: 0 10px 8px rgba(256,256,256,1);
+}
 /*Carousel*/
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
 	margin: 0 auto;
+}
+.carousel-caption.dark{
+	color: #000;
+	text-shadow: 0 1px 2px rgba(256,256,256,1);
+}
+.carousel-caption.light{
+	color: #fff;
+	text-shadow: 0 1px 2px rgba(0,0,0,.6);
 }
 /*Footer*/
 .footer{
@@ -59,36 +72,50 @@ img{
 	text-align: center;
 }
 .timeframe{
+	font-family: 'AlphaMack', sans-serif;
 	display: inline-block;
 	margin: 10px;
 	background: #dedede;
 	padding: 5px;
-	min-width: 240px;
+	min-width: 160px;
 	text-align: center;
-	border: solid 1px #999;
+	border: solid 5px #FFF;
 	color: #444;
 	border-radius: 20px;
 }
+.timeframe.months, .timeframe.hours, .timeframe.seconds{
+	background: #FFD5E0;
+}
+.timeframe.days, .timeframe.minutes{
+	background: #CCFFFF;
+}
 .timeframe h4{
-	font-size: 60px;
+	font-size: 50px;
 }
 .timeValue{
-	font-size: 100px;
+	font-size: 60px;
+	line-height: 1;
 	font-weight: bold;
 }
 .null{
 	display: none;
 }
 
-/**/
+/* */
+.content{
+	width: 450px;
+	margin: 50px;
+	padding: 20px;
+}
+.content p{
+	font-size: 20px;
+}
 .float-left{
 	float: left;	
-	margin: 0 0 0 20px;
 }
 
 .float-right{
 	float: right;
-	margin: 0 20px 0 0;
 }
 
 .center{
@@ -98,16 +125,26 @@ img{
 }
 
 .first{
-	background:url(../images/firstBG.jpg) 50% 0 no-repeat fixed;
+	background:url(../img/firstBG.jpg) 50% 0 no-repeat fixed;
 	color: white;
-	height: 600px;
+	height: 800px;
 	margin: 0 auto;
 	padding: 0;
 	background-size: cover;
 }
 
+.first .bg{
+	background: url(../img/stork.png) 50% 50% no-repeat fixed;
+	height: 800px;
+	margin: 0 auto;
+	padding: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 200;
+}
+
 .second{
-	background: url(../images/secondBG.jpg) 50% 0 no-repeat fixed;
+	background: url(../img/secondBg.png) 50% 0 no-repeat fixed;
 	color: white;
 	height: 1300px;
 	margin: 0 auto;
@@ -117,7 +154,7 @@ img{
 }
 
 .second .bg{
-	background: url(../images/trainers.png) 50% 0 no-repeat fixed;
+	background: url(../img/pacifier.png) 50% 0 no-repeat fixed;
 	height: 1300px;
 	margin: 0 auto;
 	padding: 0;
@@ -127,22 +164,25 @@ img{
 }
 
 .third{
-	background: url(../images/thirdBG.jpg) 50% 0 no-repeat fixed;
+	background: url(../img/thirdBG.png) 50% 0 no-repeat fixed;
 	color: white;
-	height: 475px;
-	padding: 50px 0 0 0;
+	height: 650px;
 	background-size: cover;
+}
+
+.third .bg{
+	background: url(../img/bottle.png) 50% 0 no-repeat fixed;
+	height: 650px;
+	margin: 0 auto;
+	padding: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 200;
 }
 
 .fixed{
 	background: transparent;
-	min-height: 500px;
+	min-height: 300px;
 	margin: 0 auto;
-	padding: 100px 0 0 0;
-}
-
-.story .float-left, .story .float-right{
-	padding: 100px 0 0 0;
-	position: relative;
-	width: 350px;	
+	padding: 100px 0;
 }

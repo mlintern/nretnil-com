@@ -12,28 +12,21 @@
 <link type="text/css" href="http://dev.nretnil.com/staging/tools/bootstrap3/css/bootstrap-theme.min.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/tools/css/fog/fog.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/font-awesome-4/css/font-awesome.css" rel="stylesheet">
+<link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Permanent%20Marker/permanent_marker_regular/stylesheet.css" rel="stylesheet">
+<link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/AlphaMackAOE/alphamack_regular/stylesheet.css" rel="stylesheet">
 <link type="text/css" href="css/style.css" rel="stylesheet">
 </head>
 
 <body onload="$('.loading').hide();">
 <div class="loading" style="position: absolute; top: 0; bottom: 0; right: 0; left: 0; background: #000; color: #fff; z-index: 1000;"><i class="fa fa-4x fa-spinner fa-spin" style="position: absolute; top: 50%; left: 50%; margin-left: -23px;"></i></div>
 
-<div class="row fog30">
-	<div class="page-header">
-		<h1 class="text-center">Baby Lintern <small>News, Images and Updates</small></h1>
-	</div>
-</div>
-
-<div style="height: 75px;"></div>
-
 <div class="first">
 	<div class="story">
-    	<div class="float-left">
-		<h2>(Almost) Static Background</h2>
-        <p>This section has a background that moves slightly slower than the user scrolls. This is achieved by changing the top position of the background for every pixel the page is scrolled.</p>
-        </div>
+		<div class="bg"></div>
+		<div style="height: 100px;"></div>
+		<h1 class="text-center title">Baby Lintern</h1>
     </div> <!--.story-->
-</div> <!--#intro-->
+</div> <!--.first-->
 
 <div class="fixed">
 	<div class="story">
@@ -41,18 +34,18 @@
 		<div class="countdown-div"></div>
 	    
     </div> <!--.story-->
-</div> <!--#fixed-->
+</div> <!--.fixed-->
 
 <div class="second">
-	<div class="story"><div class="bg"></div>
-    	<div class="float-right">
-            <h2>Multiple Backgrounds</h2>
-            <p>The multiple backgrounds applied to this section are moved in a similar way to the first section -- every time the user scrolls down the page by a pixel, the positions of the backgrounds are changed.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nibh erat, sagittis sit amet congue at, aliquam eu libero. Integer molestie, turpis vel ultrices facilisis, nisi mauris sollicitudin mauris, volutpat elementum enim urna eget odio. Donec egestas aliquet facilisis. Nunc eu nunc eget neque ornare fringilla. Nam vel sodales lectus. Nulla in pellentesque eros. Donec ultricies, enim vitae varius cursus, risus mauris iaculis neque, euismod sollicitudin metus erat vitae sapien. Sed pulvinar.</p>
+	<div class="story">
+	<div class="bg"></div>
+    	<div class="content pull-right fog30">
+        	<h2>Section One</h2>
+            <p>Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.Wisi nulla at ut ornare, risus elit convallis orci volutpat quam scelerisque.</p>
         </div>
     </div> <!--.story-->
     
-</div> <!--#second-->
+</div> <!--.second-->
 
 <div class="fixed">
 	<div class="story">
@@ -72,31 +65,31 @@
 						<div class="carousel-inner">
 							<div class="item active">
 								<img src="img/eggo-prego.png"/>
-								<div class="carousel-caption">
+								<div class="carousel-caption dark">
 								My Eggo is Prego!
 								</div>
 							</div>
 							<div class="item">
 								<img src="img/img-4.jpg"/>
-								<div class="carousel-caption">
+								<div class="carousel-caption dark">
 								Baby Bourbon on the way!
 								</div>
 							</div>
 							<div class="item">
 								<img src="img/img-2.jpg"/>
-								<div class="carousel-caption">
+								<div class="carousel-caption light">
 								Boom Baby!
 								</div>
 							</div>
 							<div class="item">
 								<img src="http://placehold.it/1140x1140&text=[Fourth Image]"/>
-								<div class="carousel-caption">
+								<div class="carousel-caption dark">
 								Caption
 								</div>
 							</div>
 							<div class="item">
 								<img src="http://placehold.it/1140x1140&text=[Fifth Image]"/>
-								<div class="carousel-caption">
+								<div class="carousel-caption dark">
 								Caption
 								</div>
 							</div>
@@ -111,33 +104,20 @@
 				</div>
 			</div>
 
-			<div style="height: 75px;"></div>
-
 		</div> <!-- End Container -->
 	    
     </div> <!--.story-->
-</div> <!--#fixed-->
+</div> <!--.fixed-->
 
 <div class="third">
 	<div class="story">
-    	<div class="float-left">
-        	<h2>What Happens When JavaScript is Disabled?</h2>
-            <p>The user gets a slap! Actually, all that jQuery does is moves the backgrounds relative to the position of the scrollbar. Without it, the backgrounds simply stay put and the user would never know they are missing out on the awesome! CSS2 does a good enough job to still make the effect look cool.</p>
+		<div class="bg"></div>
+    	<div class="content pull-left fog30">
+        	<h2>Section Two</h2>
+            <p>Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet.</p>
         </div>
     </div> <!--.story-->
-</div> <!--#third-->
-
-<div class="fixed">
-	<div class="story">
-	    
-    </div> <!--.story-->
-</div> <!--#fixed-->
-		
-<div class="row fog30">
-	<div class="footer">
-		<div class="footer-email" style="text-align:center;"><a href="mailto:mark@lintern.us">mark@lintern.us</a></div>
-	</div>
-</div>
+</div> <!--.third-->
 
 <!-- Modal -->
 <div class="modal fade" id="myModal">
