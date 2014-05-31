@@ -35,5 +35,5 @@ $(document).ready(function() {
     $('.carousel').carousel('cycle');
 })
 
-var endDate = new Date(2014,12,18,18,00,00,00,00);
+var endDate = new Date(2014,11,08,08,00,00,00,00);
 $('.countdown-div').countdown({until: endDate, pause: false});

@@ -1,5 +1,5 @@
 /*
- * jQuery Count Down plugin 1.3.0
+ * jQuery Count Down plugin 1.3.1
  *
  * Mark Lintern
  *
@@ -19,7 +19,7 @@ jQuery.fn.countdown = function(settings){
   }, settings);
 
   var year = 31556926;
-  var month = year / 12;
+  var month = Math.round(year / 12);
   var week = 604800;
   var day =  week / 7;
   var hour =  day / 24;
@@ -51,7 +51,7 @@ jQuery.fn.countdown = function(settings){
     var now = new Date();
     var end_date = endDate;
 
-    var diff = Math.round((end_date - now)/1000); // remove milliseconds and round off
+    var diff = Math.round((end_date-now)/1000); // remove milliseconds and round off
     
     if (diff < 0){ // This fixed past Dates
       diff = 0 - diff;
@@ -66,27 +66,27 @@ jQuery.fn.countdown = function(settings){
     
     if (diff > year) {
       y = Math.floor(diff/year);
-      diff = diff-(y*year);
+      diff = diff%year;
     }
 
     if (diff > month && options.showMonths) {
       m = Math.floor(diff/month);
-      diff = diff-Math.round((m*month));
+      diff = diff%month;
     }
 
     if (diff > day) {
       d = Math.floor(diff/day);
-      diff = diff-(d*day);
+      diff = diff%day;
     }
 
     if (diff > hour) {
       h = Math.floor(diff/hour);
-      diff = diff-(h*hour);
+      diff = diff%hour;
     }
 
     if (diff > minute) {
       mn = Math.floor(diff/minute);
-      diff = diff-(mn*minute);
+      diff = diff%minute;
     }
 
     var div = $("<div>").attr('class','countdownInternal').append(
