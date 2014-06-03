@@ -38,9 +38,14 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small
 }
 .title{
 	font-family: 'Permanent Marker', sans-serif;
-	font-size: 100px;
-	color: #000;
+	font-size: 150px;
+	font-size: 14vw;
+	color: #FFD5E0;
 	text-shadow: 5px 5px 0px rgba(256,256,256,1);
+	text-shadow: 10px 10px 0px rgba(0,0,0,1);
+}
+.title span{
+	color: #CCFFFF;
 }
 /*Carousel*/
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
@@ -105,6 +110,9 @@ img{
 }
 .timeframe.days, .timeframe.minutes{
 	background: #CCFFFF;
+}
+.timeframe.minutes, .timeframe.hours, .timeframe.seconds{
+	display: none;
 }
 .timeframe h4{
 	font-size: 50px;
