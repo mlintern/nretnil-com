@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="host_name" content="http://www.nretnil.com">
+<title>Nretnil Tools</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<link type="text/css" href="http://dev.nretnil.com/staging/tools/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="http://dev.nretnil.com/staging/tools/bootstrap3/css/bootstrap-theme.min.css" rel="stylesheet">
+<link type="text/css" href="http://dev.nretnil.com/staging/tools/js/chosen_v1/chosen.min.css" rel="stylesheet">
+<link type="text/css" href="http://dev.nretnil.com/staging/tools/css/fog/fog.css" rel="stylesheet">
+<link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Almost%20Noteworthy/almost_noteworthy/stylesheet.css" rel="stylesheet">
+<link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/font-awesome-4/css/font-awesome.css" rel="stylesheet">
+<script type="text/javascript" src="js/ie-fix.js"></script>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link type="text/css" href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+	<div class="row">
+		<div class="page-header">
+			<h1 class="text-center">Nretnil Tools</h1>
+		</div>
+	</div>
+	<div class="row">
+		<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top r-fog80" role="navigation">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			<a class="navbar-brand" href="http://www.nretnil.com">Tools</a>
+			</div>
+			
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a target="_blank" href="http://dev.nretnil.com/map/index.html">Maps</a></li>
+					<li><a target="_blank" href="http://dev.nretnil.com/jsb/index.html">JS Beautify</a></li>
+					<li><a target="_blank" href="http://beer.nretnil.com">Beer O'Clock</a></li>
+					<li><a target="_blank" href="http://dev.nretnil.com/img/sprites/index.html">Sprites</a></li>
+					<li><a target="_blank" href="http://sandybox.nretnil.com">HTML SandyBox</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Sandbox <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a target="_blank" href="http://dev.nretnil.com/sandbox/ydnittiw/">#WittIndy</a></li>
+							<li><a target="_blank" href="http://dev.nretnil.com/sandbox/dyolf/">Floyd</a></li>
+							<li><a target="_blank" href="http://dev.nretnil.com/sandbox/ybab/">Baby Lintern</a></li>
+							<li><a target="_blank" href="http://abc.nretnil.com">Boot Straps</a></li>
+							<li><a target="_blank" href="http://dice.nretnil.com">Dice</a></li>
+							<li><a target="_blank" href="http://dev.nretnil.com/sandbox/llorcs-on/">Zoom In / AutoHide</a></li>
+							<li><a target="_blank" href="http://sites.nretnil.com">Mini Site Display</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</nav>
+	</div>
+	
+	<div class="row">
+		<div class="col-xs-10 col-xs-offset-1">
+			<ul class="nav nav-tabs">
+			  <li><a href="#SetOne" data-toggle="tab">Text</a></li>
+			  <li class="active"><a href="#SetTwo" data-toggle="tab">DNS</a></li>
+			  <li><a href="#SetThree" data-toggle="tab">Tools</a></li>
+			  <li><a href="#SetFive" data-toggle="tab">Code Transform</a></li>
+			  <li><a href="#SetFour" data-toggle="tab">Tests / Ask</a></li>
+			  <li><a href="#SetSix" data-toggle="tab">Social</a></li>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+		<div class="col-xs-12">
+			<div class="tab-content">
+				<div class="tab-pane" id="SetOne">
+					<ul class="nav nav-pills nav-justified top-border">
+						<li><a href="#pig-latin" data-toggle="tab">Pig Latin Generator <i class="fa fa-list-alt fa-lg pull-right"></i></a></li>
+						<li><a href="#lorem" data-toggle="tab">Lorem Ipsum Text <i class="fa fa-list-alt fa-lg pull-right"></i></a></li>
+						<li><a href="#reverse" data-toggle="tab">Reverse Text <i class="fa fa-arrows-h fa-lg pull-right"></i></a></li>	
+					</ul>
+				</div>
+				<div class="tab-pane active" id="SetTwo">
+					<ul class="nav nav-pills nav-justified top-border">
+						<li class="active"><a href="#exip" data-toggle="tab">External IP<i class="fa fa-chain fa-lg pull-right"></i></a></li>
+						<li><a href="#dnstools" data-toggle="tab">DNS Tools<i class="fa fa-check-square-o fa-lg pull-right"></i></a></li>
+					</ul>	
+				</div>
+				<div class="tab-pane" id="SetThree">
+					<ul class="nav nav-pills nav-justified top-border">
+						<li><a href="#pswd1" data-toggle="tab">Password Generator <i class="fa fa-ban fa-lg pull-right"></i></a></li>
+						<li><a href="#pswd2" data-toggle="tab">Passphrase Generator <i class="fa fa-ban fa-lg pull-right"></i></a></li>
+						<li><a href="#human2unix" data-toggle="tab">Human To Unix Time<i class="fa fa-clock-o fa-lg pull-right"></i></a></li>
+						<li><a href="#crontab" data-toggle="tab">Cron Generator <i class="fa fa-clock-o fa-lg pull-right"></i></a></li>
+					</ul>
+				</div>
+				<div class="tab-pane" id="SetFour">
+					<ul class="nav nav-pills nav-justified top-border">
+						<li><a href="#ettest" data-toggle="tab">ET Signup Test<i class="fa fa-envelope fa-lg pull-right"></i></a></li>
+						<li><a href="#ask" data-toggle="tab">Ask Mark <i class="fa fa-bullhorn fa-lg pull-right"></i></a></li>
+					</ul>
+				</div>
+				<div class="tab-pane" id="SetSix">
+					<ul class="nav nav-pills nav-justified top-border">
+						<li><a href="#fb-token" data-toggle="tab">Facebook Token Lookup <i class="fa fa-facebook fa-lg pull-right"></i></a></li>
+						<li><a href="#insta-token" data-toggle="tab">Instagram Token Lookup <i class="fa fa-instagram fa-lg pull-right"></i></a></li>
+						<li><a href="#insta-auth" data-toggle="tab">Instagram Auth Token <i class="fa fa-instagram fa-lg pull-right"></i></a></li>
+					</ul>	
+				</div>
+				<div class="tab-pane" id="SetFive">
+					<ul class="nav nav-pills nav-justified top-border">
+						<li><a href="#codify" data-toggle="tab">Codify Text <i class="fa fa-code fa-lg pull-right"></i></a></li>
+						<li><a href="#dencode" data-toggle="tab">URL Dencoder <i class="fa fa-code fa-lg pull-right"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="tab-content">
+			<div style="height:40px;clear:both;"></div>
+			<div class="tab-pane" id="pswd1">
+			  	<form class="col-sm-6 col-sm-offset-3">
+					<fieldset>
+						<legend>Password Generator</legend>
+						<div style="height: 20px;"></div>
+						<div class="row">
+							<label class="col-sm-4">Length:</label>
+							<div class="col-sm-3"><input class="form-control" id="Length" type="text" value="15"/></div>
+						</div>
+						<label class="checkbox">
+						<input id="Symbols" type="checkbox" /> Punctuation (!, @, #, $, %, and so on)
+						</label>
+						<label class="help-block">Your new password:</label>
+						<div id="outputPassword" tabindex="-1" aria-live="assertive" class="align-center" spellcheck="false">Your new password here.</div>
+						<input id="btnGenerate" style="margin: 15px 0" class="btn btn-large btn-primary col-sm-12" type="button" value="Generate" />							
+						<label class="help-block">Your mnemonic password:</label>
+						<div id="outputMnemonic" spellcheck="false">Your mnemonic will appear here.</div>
+						<br />
+					</fieldset>
+				</form>
+			</div>
+			<div class="tab-pane" id="pswd2">
+				<div class="col-sm-6 col-sm-offset-3">
+					<code class="col-sm-12 align-center" id="passphrase_result" style="text-transform:lowercase;padding:10px;margin-bottom: 15px;display: block;"></code>
+					<button class="btn btn-large btn-success btn-block" onclick="passphrase_gen();return false;">Generate Another!</button>
+					<code class="align-center" id="passphrase_result_nospace" style="text-transform:lowercase;padding:10px;margin-top: 15px;display: block;"></code>
+				</div>
+			</div>
+			<div class="tab-pane" id="reverse">
+				<div class="col-sm-6 col-sm-offset-3">
+			        <input type="text" class="col-sm-12 form-control" value=""  placeholder="Text To Reverse…" id="reverse_text">
+					<button class="btn btn-large btn-success btn-block" onclick="reverse_text();return false;">Reverse Text!</button>
+					<code class="align-center" id="reverse_result" style="padding:10px;margin-top:15px;display:block;white-space:normal;"></code>
+				</div>
+			</div>
+			<div class="tab-pane active" id="exip">
+				<h1 class="align-center col-sm-6 col-sm-offset-3" id="External-IP"></h1>
+			</div>
+			<div class="tab-pane" id="dnstools">
+				<div  class="col-sm-10 col-sm-offset-1">
+					<div class="row">
+					<form class="col-sm-12">
+						<fieldset>
+			                <label>Reverse IP Lookup</label>
+			                <input type="text" class="col-sm-12 form-control" value=""  placeholder="IP Address..." id="ip-info">
+	                		<button class="btn btn-large btn-primary btn-block" onclick="iplookup();return false;">Lookup</button>
+	                		<div style="margin-top:10px;" id="ip-info-div"></div>
+	                	</fieldset>
+	                </form>
+	                </div>
+	                <div class="row">
+					<form class="col-sm-12">
+						<fieldset>
+			                <label>Who Is</label>
+			                <input type="text" class="col-sm-12 form-control" value=""  placeholder="Target..." id="whois-info">
+	                		<button class="btn btn-large btn-primary btn-block" onclick="whoislookup();return false;">Lookup</button>
+	                		<div style="margin-top:10px;" id="whois-info-div"></div>
+	                	</fieldset>
+	                </form>
+	                </div>
+	                <div class="row">
+	                <form class="col-sm-12">
+						<fieldset>
+			                <label>DIG</label>
+			                <input type="text" class="col-sm-12 form-control" value="" placeholder="Hostname..." id="hostname-info">
+	                		<button class="btn btn-large btn-primary btn-block" onclick="hostnamelookup();return false;">Lookup</button>
+	                		<div style="margin-top:10px;" id="hostname-info-div"></div>
+	                	</fieldset>
+	                </form>
+	                </div>
+	                <div class="row">
+	                <form class="col-sm-12">
+						<fieldset>
+			                <label>Trace Route</label>
+			                <input type="text" class="col-sm-12 form-control" value="" placeholder="Target..." id="traceroute-info">
+	                		<button id="tr-btn" class="btn btn-large btn-primary btn-block" onclick="traceroute();return false;" data-loading-text="Loading...">Lookup</button>
+	                		<div style="margin-top:10px;" id="traceroute-info-div"></div>
+	                	</fieldset>
+	                </form>
+	                </div>
+	            </div>
+			</div>
+			<div class="tab-pane" id="fb-token">
+				<form class="col-sm-6 col-sm-offset-3">
+					<fieldset>
+		                <label>Look up Facebook ID</label>
+		                <input type="text" class="col-sm-12 form-control" value="mark.lintern" id="fb-user">
+	            		<button id="fb-button" class="btn btn-large btn-primary btn-block" onclick="updatefacebook();return false;">Go</button>
+	            		<div style="margin-top:10px;" id="facebook-info"></div>
+	            	</fieldset>
+	            </form>
+			</div>
+			<div class="tab-pane" id="insta-token">
+				<form class="col-sm-6 col-sm-offset-3">
+					<fieldset>
+		                <label>Look up Instagram User ID</label>
+		                <input type="text" class="input-block-level form-control" value="mlintern" id="username">
+		                <button class="btn btn-large btn-primary btn-block" onclick="lookupID();return false;">Go</button>
+		                <div><a href="http://jelled.com/instagram/lookup-user-id">Lookup Tool From Jelled</a></div>
+		        	</fieldset>
+			        <div class="result hidden">
+						<div class="id"></div>
+						<table class="table">
+							<tr>
+								<td class="avatar"></td>
+								<td class="text"></td>
+							</tr>
+						</table>
+					</div>
+	            </form> 
+			</div>
+			<div class="tab-pane" id="insta-auth">
+				<form class="col-sm-6 col-sm-offset-3">
+					<fieldset>
+		                <label>Look up Instagram Auth Token</label>
+		                <input type="text" class="input-block-level form-control" value="b4dbc0111231442697e1ab382961f06e" id="authId">
+		                <button class="btn btn-large btn-primary btn-block" onclick="getToken();return false;">Go</button>
+		                <div><a href="http://jelled.com/instagram/access-token">Auth Tool From Jelled</a></div>
+		        	</fieldset>
+	            </form> 
+			</div>
+			<div class="tab-pane" id="pig-latin">
+			  <form name="frmTranslator" class="col-md-6 col-md-offset-3">
+			  	<fieldset>
+					<label>Enter English Text to Translate:</label>
+					
+					<textarea id="taEng" class="col-sm-12 form-control" rows="7" name="taEng">Enter the English text here that you want translated into Pig Latin.</textarea>
+					
+					<div class="row" style="margin: 20px 0;">
+					<input class="btn btn-success col-sm-6" value="Translate" onclick="fTranslate()" type="button">
+					<input  class="btn btn-danger col-sm-6" value="Clear Text" onclick="fClearText()" type="button">
+					</div>
+					
+					<label>Igpay Atinlay Anslationtray:</label>
+					<textarea id="taPL" class="col-sm-12 form-control" rows="7" name="taPL"></textarea>
+					
+					<input class="btn btn-warning col-sm-12" value="Select All Text" onclick="fSelectText('taPL')" type="button" style="margin: 20px 0;">
+					
+					<label>Maximum Line Length:</label>
+					<input class="col-sm-2 form-control" name="txtMaxLength" value="65" maxlength="2" onchange="fVerifyEntry(this.value)" type="text">
+					
+					<div class="clearfix"></div>
+					<label class="checkbox">
+						<input name="learnmode" checked="checked" type="checkbox">Check for 'Learning Mode'.
+					</label>
+				  </fieldset>	
+				</form>
+			</div>
+			<div class="tab-pane" id="lorem">
+				<form class="col-md-6 col-md-offset-3 form-horizontal">
+					<fieldset>
+					<div class="form-group">
+						<label class="radio col-sm-3">
+							<input name="typeoftext" type="radio" value="words">Words
+						</label>
+						<div class="col-sm-9">
+							<input class="form-control" type="text" id="numwords" value="500"/>
+						</div>
+					</div>	
+					<div class="form-group">
+						<label class="radio col-sm-3">
+							<input name="typeoftext" type="radio" value="words">Characters
+						</label>
+						<div class="col-sm-9">
+							<input class="form-control" type="text" id="numchars" value="15000"/>
+						</div>
+					</div>	
+					<div class="form-group">
+						<label class="radio col-sm-3">
+							<input name="typeoftext" type="radio" value="paragraphs" checked>Paragraphs
+						</label>
+						<div class="col-sm-9">
+							<input class="form-control" type="text" id="numpara" value="5"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="checkbox">
+							<input id="ptags" type="checkbox">Include &lt;p&gt; tags
+						</label>
+						<input class="btn btn-large btn-success btn-block" value="Create Text" onclick="loremExecute();return false;" type="button">
+					</div>
+					</fieldset>
+				</form>
+				<div class="col-sm-10 col-sm-offset-1" style="margin-top: 10px;"><textarea class="hidden ipsum col-sm-12 form-control" style="display:block; height: 300px;"></textarea></div>
+			</div>
+			<div class="tab-pane" id="human2unix">
+				<div class="col-sm-5">
+					<form name="u2h">
+						<h3>Unix to Human</h3>
+						<label>UNIX TimeStamp:</label>
+						
+						<input type="text" class="form-control" id="timeStamp" style="margin-bottom: 25px;">
+						<input class="btn btn-large btn-success col-sm-6" type="button" value="Submit" onClick="timeToHuman();">
+						<input class="btn btn-large btn-warning col-sm-6" type="reset" value="Reset">
+						<input style="margin-top: 25px;" id="u2h-result" type="text" value="" class="col-sm-12 align-center form-control" READONLY>
+					</form>
+				</div>	
+				<div class="col-sm-7">
+					<form name="h2u">
+						<h3>Human to Unix</h3>
+							<div class="row">	
+								<div class="col-sm-6">   		    
+								    <label>Month: </label>
+								    <input type="text" class="form-control" maxlength="2" id="inMon">
+								    <label>Day: </label>
+								    <input type="text" class="form-control" maxlength="2" id="inDay">
+								    <label>Year: </label>
+								    <input type="text" class="form-control" maxlength="4" id="inYear">
+							    </div>
+							    <div class="col-sm-6" style="margin-bottom: 25px;"> 
+								    <label>Hour: </label>
+								    <input type="text" class="form-control" maxlength="2" id="inHr">
+								    <label>Minute: </label>
+								    <input type="text" class="form-control" maxlength="2" id="inMin">
+								    <label>Second: </label>
+								    <input type="text" class="form-control" maxlength="2" id="inSec">
+							    </div>	
+						    </div>				 
+						 <input class="btn btn-large btn-success col-sm-6" type="button" value="Submit" onClick="humanToTime();">
+						 <input class="btn btn-large btn-warning col-sm-6" type="reset" value="Reset">
+						 <input style="margin-top: 25px;" id="h2u-result" type="text" value="" class="col-sm-12 align-center" READONLY>
+					</form>
+				</div>
+			</div>
+			<div class="tab-pane row" id="ettest">
+			  	<form class="col-sm-10 col-sm-offset-1" action="http://cl.exct.net/subscribe.aspx" name="subscribeForm" method="post" onSubmit="return checkForm();"> 
+					<!-- <input type=hidden name="thx" value="Your thank you page here"> 
+					<input type=hidden name="err" value="Your error page here"> 
+					<input type=hidden name="usub" value="Your success unsub page here">
+					<input type="hidden" name="MID" value="Member ID Here">
+					<input type="hidden" name="lid" value="List ID Here">
+					<input type="hidden" name="SubAction" value="sub_add_update">
+					<input type="hidden" name="Email Type" value="HTML"> //-->
+					<div class="row">
+						<div class="col-sm-6"> 
+							<label>Exact Target Member ID:</label> 
+							<input class="form-control" type="text" name="MID">
+							<label>Exact Target List ID:</label> 
+							<input class="form-control" type="text" name="lid">
+							<label>Thank You Page:</label> 
+							<input class="form-control" type="text" name="thx">
+							<label>Error Page:</label> 
+							<input class="form-control" type="text" name="err" value="http://dev.nretnil.com/php/et-error.php">
+							<label>Unsubscribe Success Page:</label> 
+							<input class="form-control" type="text" name="usub">
+						</div>
+						<div class="col-sm-6">
+							<label>Name:</label> 
+							<input class="form-control" type="text" name="Full Name"> 
+							<label>Company Name:</label> 
+							<input class="form-control" type="text" name="User Defined"> 
+							<label>Email:</label> 
+							<input class="form-control" type="text" name="Email Address"> 
+							<label class="radio"><input type="radio" name="Email Type" value="HTML" checked> HTML</label>	 
+							<label class="radio"><input type="radio" name="Email Type" value="TEXT">Text</label> 	 	 
+							<label class="radio"><input type="radio" name="SubAction" value="sub_add_update" checked>Subscribe</label> 	 	
+							<label class="radio"><input type="radio" name="SubAction" value="unsub"> Unsubscribe</label> 
+						</div>
+					</div>
+					<div class="row" style="margin-top: 40px;">
+						<div class="col-sm-12">
+							<input class="btn btn-primary btn-large btn-block btn-warning" type="submit" value="Submit"> 
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="tab-pane" id="crontab">
+				<!-- <form enctype="multipart/form-data"  action="index.html" method="post"> -->
+				<div class="col-sm-10 col-sm-offset-1">
+					<form id="cron-creator">
+					<div class="row">	
+						<div class="col-sm-6 cron-item">
+							<div class="row">
+								<div class="cron-section-title" align="center">MINUTES</div>
+								<div class="col-sm-6">
+									<label class="radio"><input type="radio" name="minutes" value="*" checked>Every Minute</label>
+									<label class="radio"><input type="radio" name="minutes" value="0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58">Even Minutes</label>
+									<label class="radio"><input type="radio" name="minutes" value="1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59">Odd Minutes</label>
+									<label class="radio"><input type="radio" name="minutes" value="*/5">Every 5 Min</label>
+									<label class="radio"><input type="radio" name="minutes" value="*/15">Every 15 Min</label>
+									<label class="radio"><input type="radio" name="minutes" value="*/30">Every 30 min</label>
+									<label class="radio"><input type="radio" name="minutes" value="0">Once Per Hour</label>
+								</div>
+								<div class="col-sm-6">
+									<label class="radio"><input type="radio" name="minutes" value="custom">Custom</label>
+									  <select class="cron chosen-select form-control" name="custminutes[]" size="5" multiple>
+										<option></option><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option>
+									  </select>
+								</div>
+							</div>
+						</div>	
+						<div class="col-sm-6 cron-item">
+							<div class="row">
+								<div class="cron-section-title" align="center">HOURS</div>
+								<div class="col-sm-6">
+									<label class="radio"><input type="radio" name="hours" value="*" checked>Every Hour</label>
+									<label class="radio"><input type="radio" name="hours" value="0,2,4,6,8,10,12,14,16,18,20,22">Even Hours</label>
+									<label class="radio"><input type="radio" name="hours" value="1,3,5,7,9,11,13,15,17,19,21,23">Odd Hours</label>
+									<label class="radio"><input type="radio" name="hours" value="0,6,12,18">Every 6 Hours</label>
+									<label class="radio"><input type="radio" name="hours" value="0,12">Every 12 Hours</label>
+									<label class="radio"><input type="radio" name="hours" value="0">Once Per Day</label>
+								</div>
+								<div class="col-sm-6">	
+									<label class="radio"><input type="radio" name="hours" value="custom">Custom</label>
+									  <select class="cron chosen-select form-control" name="custhours[]" size="5" multiple>
+									    <option></option><option value="0">Midnight</option><option value="1">1am</option><option value="2">2am</option><option value="3">3am</option><option value="4">4am</option><option value="5">5am</option><option value="6">6am</option><option value="7">7am</option><option value="8">8am</option><option value="9">9am</option><option value="10">10am</option><option value="11">11am</option><option value="12">Noon</option><option value="13">1pm</option><option value="14">2pm</option><option value="15">3pm</option><option value="16">4pm</option><option value="17">5pm</option><option value="18">6pm</option><option value="19">7pm</option><option value="20">8pm</option><option value="21">9pm</option><option value="22">10pm</option><option value="23">11pm</option>
+								  	</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 cron-item">
+							<div class="row">
+								<div class="cron-section-title" align="center">DAYS OF MONTH</div>
+								<div class="col-sm-6">
+									<label class="radio"><input type="radio" name="days" value="*" checked>Every Day</label>
+									<label class="radio"><input type="radio" name="days" value="2,4,6,8,10,12,14,16,18,20,22,24,26,28,30">Even Days</label>
+									<label class="radio"><input type="radio" name="days" value="1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31">Odd Days</label>
+									<label class="radio"><input type="radio" name="days" value="1,15">Twice Per Month</label>
+									<label class="radio"><input type="radio" name="days" value="1">Once Per Month</label>
+								</div>
+								<div class="col-sm-6">	
+									<label class="radio"><input type="radio" name="days" value="custom">Custom</label>
+								      <select class="cron chosen-select form-control" name="custdays[]" multiple>
+								        <option></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
+								    </select>
+								 </div>
+							 </div>
+						</div>	
+						<div class="col-sm-6 cron-item">
+							<div class="row">
+								<div class="cron-section-title" align="center">MONTH</div>
+								<div class="col-sm-6">
+									<label class="radio"><input type="radio" name="months" value="*" checked>Every Month</label>
+									<label class="radio"><input type="radio" name="months" value="2,4,6,8,10,12">Even Months</label>
+									<label class="radio"><input type="radio" name="months" value="1,3,5,7,9,11">Odd Months</label>
+									<label class="radio"><input type="radio" name="months" value="1,4,7,10">Every 3 Months</label>
+									<label class="radio"><input type="radio" name="months" value="1,7">Every 6 Months</label>
+									<label class="radio"><input type="radio" name="months" value="1">Once Per Year</label>
+								</div>
+								<div class="col-sm-6">
+									<label class="radio"><input type="radio" name="months" value="custom">Custom</label>
+								      <select class="cron chosen-select form-control" name="custmonths[]" size="5" multiple>
+								        <option></option><option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option><option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option><option value="7">Jul</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+								      </select>
+							    </div>
+						    </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 cron-item">
+							<div class="row">
+								<div class="cron-section-title" align="center">WEEKDAYS</div>
+								<div class="col-sm-6">
+									<label class="radio"><input type="radio" name="weekdays" value="*" checked>Every Day of the Week</label>
+								    <label class="radio"><input type="radio" name="weekdays" value="1-5">Weekdays (Mon-Fri)</label>
+								    <label class="radio"><input type="radio" name="weekdays" value="0,6">Weekend</label>
+								    <label class="radio"><input type="radio" name="weekdays" value="0">Once Per Week (Sunday)</label>
+								</div>
+								<div class="col-sm-6">
+									<label class="radio"><input type="radio" name="weekdays" value="custom">Custom</label>
+								      <select class="cron chosen-select form-control" name="custweekdays[]" size="7" multiple>
+										<option></option><option value="0">Sun</option><option value="1">Mon</option><option value="2">Tue</option><option value="3">Wed</option><option value="4">Thu</option><option value="5">Fri</option><option value="6">Sat</option>
+								      </select>
+								</div>
+							</div>
+						</div>										
+						<div class="col-sm-6 cron-item">
+							<label class="cron-section-title" align="center">PATH TO SCRIPT</label>
+							<input type="text" name="command" size="50" value="/this/that/notscript.php">
+							<button class="btn btn-large btn-primary btn-block" onClick="generatecron();return false;">Generate</button>
+							<code id="cron-code" style="margin-top: 20px;display:block;"></code>
+						</div>
+					</div>
+					</form>
+				</div>
+			</div>
+			<div class="tab-pane" id="codify">
+				<div class="col-sm-10 col-sm-offset-1">
+			        <textarea type="text" value="" rows="10" class="form-control" placeholder="Text To Codify…" id="code_text" style="margin-bottom: 10px;width: 100%"></textarea>
+					<button class="btn btn-large btn-success btn-block" onclick="codify_text();return false;">Codify Text!</button>
+					<!-- <code class="well" id="codified_result" style="padding:10px;margin-top: 15px;display: block;white-space: pre-wrap;"></code> -->
+					<textarea id="codified_result" class="hidden" style="width: 100%; margin-top:10px;"></textarea>
+				</div>
+			</div>
+			<div class="tab-pane" id="dencode">
+				<div class="col-sm-10 col-sm-offset-1">
+					<textarea cols="100" rows="5" class="form-control" placeholder="Url to Dencode..." id="dencoder" style="width: 100%;"></textarea>
+					<div class="row" style="margin: 10px 0;">
+						<button class="btn btn-large btn-warning col-xs-6" onclick="decode();">Decode</button>
+						<button class="btn btn-large btn-info col-xs-6" onclick="encode();">Encode</button>
+					</div>
+					<textarea cols="100" class="hidden form-control" rows="5" id="dencoder-result" style="width: 100%;"></textarea>
+				</div>
+			</div>
+			<div class="tab-pane" id="ask">
+			  <form action="php/FormToEmail.php" method="post" class="col-sm-6 col-sm-offset-3">
+			  	<fieldset>
+					<label>Name:</label>
+					<input class="form-control" type="text" name="name">
+					<label>Email address:</label>
+					<input class="form-control" type="text" name="email">
+					<label>Question</label>
+					<textarea class="form-control" name="comments" rows="6"></textarea>
+					<div style="height: 15px;"></div>
+					<input type="submit" class="btn btn-large btn-success col-sm-12" value="Send">
+				</fieldset>
+			</form>
+			</div>
+		</div>
+	</div>
+		
+		<div class="row">
+			<div class="footer">
+				<div class="footer-email" style="text-align:center;">mark@lintern.us</div>
+				<div class="version" style="text-align:center;">v 1.7.19</div>
+			</div>
+		</div>
+
+</div> <!-- End Container -->
+
+<a href="javascript:void(0);" onclick="$('#secret-modal').modal('show')" class="secret-button"></a>
+
+<div id="secret-modal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Secret Area</h4>
+			</div>
+			<div class="modal-body">
+				<a target="_blank" href="http://dev.nretnil.com/staging" class="btn btn-default btn-lg btn-block">Staging</a>
+				<div style="height: 5px;"></div>	
+				<div class="row">
+					<div class="col-sm-6">
+						<a target="_blank" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth" class="btn btn-success btn-block">Fonts</a>
+						<a target="_blank" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/font-awesome-3" class="btn btn-info btn-sm btn-block">Font Awesome 3.2.1</a>
+						<a target="_blank" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/font-awesome-4" class="btn btn-info btn-sm btn-block">Font Awesome 4.0.3</a>
+						<a target="_blank" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/Fonts.html" class="btn btn-info btn-sm btn-block">Fonts Example</a>
+						<a target="_blank" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/" class="btn btn-info btn-sm btn-block">Font Directories</a>
+					</div>
+					<div class="col-sm-6">
+						<a target="_blank" href="http://dev.nretnil.com/staging/tools" class="btn btn-danger btn-block">Tools</a>
+						<a target="_blank" href="http://dev.nretnil.com/staging/tools/bootstrap2" class="btn btn-warning btn-sm btn-block">Bootstrap 2.3.2</a>
+						<a target="_blank" href="http://dev.nretnil.com/staging/tools/bootstrap3" class="btn btn-warning btn-sm btn-block">Bootstrap 3.1.1</a>
+						<a target="_blank" href="http://dev.nretnil.com/staging/tools/css" class="btn btn-warning btn-sm btn-block">CSS</a>
+						<a target="_blank" href="http://dev.nretnil.com/staging/tools/js" class="btn btn-warning btn-sm btn-block">Javascript</a>
+						<a target="_blank" href="http://dev.nretnil.com/staging/tools/img" class="btn btn-warning btn-sm btn-block">Images</a>
+					</div>
+				</div>
+				<div style="height: 5px;"></div>
+				<div class="row">
+					<div class="col-sm-6">
+						<a target="_blank" href="http://dev.nretnil.com/sandbox" class="btn btn-danger btn-block">Sandbox</a>
+						<a target="_blank" href="http://dice.nretnil.com" class="btn btn-warning btn-sm btn-block">Dice</a>
+						<a target="_blank" href="http://dev.nretnil.com/sandbox/dyolf/index.html" class="btn btn-warning btn-sm btn-block">Floyd</a>
+						<a target="_blank" href="http://dev.nretnil.com/sandbox/trats-hserf/index.html" class="btn btn-warning btn-sm btn-block">Fresh Start</a>
+						<a target="_blank" href="http://sandybox.nretnil.com" class="btn btn-warning btn-sm btn-block">SandyBox</a>
+						<a target="_blank" href="http://dev.nretnil.com/sandbox/ydnittiw/index.html" class="btn btn-warning btn-sm btn-block">WittIndy</a>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+</div>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://dev.nretnil.com/staging/tools/js/chosen_v1/chosen.jquery.min.js"></script>
+<script type="text/javascript" src="js/secret.js"></script>
+<script type="text/javascript" src="js/passwordgenerator.js"></script>
+<script type="text/javascript" src="js/passphrase.js"></script>
+<script type="text/javascript" src="js/piglatin.js"></script>
+<script type="text/javascript" src="js/instagram.js"></script>
+<script type="text/javascript" src="js/instagram-token.js"></script>
+<script type="text/javascript" src="js/facebook.js"></script>
+<script type="text/javascript" src="js/lorem.js"></script>
+<script type="text/javascript" src="js/cron.js"></script>
+<script type="text/javascript" src="js/windows-console.js"></script>
+<script type="text/javascript" src="js/human2unix.js"></script>
+<script type="text/javascript" src="js/dns.js"></script>
+<script type="text/javascript" src="http://dev.nretnil.com/staging/tools/bootstrap3/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/emailvalidator.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+<script type="text/javascript" src="js/codify.js"></script>
+<script type="text/javascript" src="js/dencoder.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39642733-1', 'nretnil.com');
+  ga('send', 'pageview');
+
+</script>
+
+<script>$(".chosen-select").chosen({width: "95%"})</script>
+
+</body>
+</html>
