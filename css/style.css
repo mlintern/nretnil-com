@@ -19,6 +19,11 @@ font-family: 'Almost Noteworthy', sans-serif;
 font-weight: bold;
 font-size: 50px;
 }
+.content {
+border: solid 1px #999;
+border-radius: 8px;
+padding: 50px 0;
+}
 /*Nav Bar Updates*/
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
 background-color: #b90102;
@@ -84,6 +89,9 @@ list-style: none outside none;
 .navbar-collapse {
 max-height: 400px;
 }
+.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+max-height: 500px;
+}
 @media (max-width: 767px) {
 	.navbar-default .navbar-nav .open .dropdown-menu {
 	background-color: #fff;
@@ -126,6 +134,12 @@ display: inline-block;
 }
 .chosen-container-multi .chosen-choices{
 	border-radius: 3px;
+}
+.list-group-item {
+background-color: #999;
+}
+a.list-group-item {
+color: #fff;
 }
 /*
  * Off Canvas
