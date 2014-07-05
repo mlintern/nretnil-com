@@ -155,14 +155,14 @@
 					<div class="col-sm-6">
 						<a target="_blank" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth" class="btn btn-success btn-block">Fonts</a>
 						<a target="_blank" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/font-awesome-3" class="btn btn-info btn-sm btn-block">Font Awesome 3.2.1</a>
-						<a target="_blank" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/font-awesome-4" class="btn btn-info btn-sm btn-block">Font Awesome 4.0.3</a>
+						<a target="_blank" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/font-awesome-4" class="btn btn-info btn-sm btn-block">Font Awesome 4.1.0</a>
 						<a target="_blank" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/Fonts.html" class="btn btn-info btn-sm btn-block">Fonts Example</a>
 						<a target="_blank" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/" class="btn btn-info btn-sm btn-block">Font Directories</a>
 					</div>
 					<div class="col-sm-6">
 						<a target="_blank" href="http://dev.nretnil.com/staging/tools" class="btn btn-danger btn-block">Tools</a>
 						<a target="_blank" href="http://dev.nretnil.com/staging/tools/bootstrap2" class="btn btn-warning btn-sm btn-block">Bootstrap 2.3.2</a>
-						<a target="_blank" href="http://dev.nretnil.com/staging/tools/bootstrap3" class="btn btn-warning btn-sm btn-block">Bootstrap 3.1.0</a>
+						<a target="_blank" href="http://dev.nretnil.com/staging/tools/bootstrap3" class="btn btn-warning btn-sm btn-block">Bootstrap 3.2.0</a>
 						<a target="_blank" href="http://dev.nretnil.com/staging/tools/css" class="btn btn-warning btn-sm btn-block">CSS</a>
 						<a target="_blank" href="http://dev.nretnil.com/staging/tools/js" class="btn btn-warning btn-sm btn-block">Javascript</a>
 						<a target="_blank" href="http://dev.nretnil.com/staging/tools/img" class="btn btn-warning btn-sm btn-block">Images</a>
@@ -172,7 +172,7 @@
 				<div class="row">
 					<div class="col-sm-6">
 						<a target="_blank" href="http://dev.nretnil.com/sandbox" class="btn btn-danger btn-block">Sandbox</a>
-						<a target="_blank" href="http://dev.nretnil.com/sandbox/ecid/index.html" class="btn btn-warning btn-sm btn-block">Dice</a>
+						<a target="_blank" href="http://dice.nretnil.com" class="btn btn-warning btn-sm btn-block">Dice</a>
 						<a target="_blank" href="http://dev.nretnil.com/sandbox/dyolf/index.html" class="btn btn-warning btn-sm btn-block">Floyd</a>
 						<a target="_blank" href="http://dev.nretnil.com/sandbox/trats-hserf/index.html" class="btn btn-warning btn-sm btn-block">Fresh Start</a>
 						<a target="_blank" href="http://sandybox.nretnil.com" class="btn btn-warning btn-sm btn-block">SandyBox</a>
