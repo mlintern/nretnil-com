@@ -1,6 +1,6 @@
-// The following example creates complex markers to indicate beaches near
-// Sydney, NSW, Australia. Note that the anchor is set to
-// (0,32) to correspond to the base of the flagpole.
+function getEvents() {
+
+}
 
 function initialize() {
 	var mapOptions = {
@@ -13,10 +13,12 @@ function initialize() {
 	}
 
 	/**
-	* Data for the markers consisting of a name, a LatLng and a zIndex for
-	* the order in which these markers should display on top of each
-	* other.
+	* Data for the markers
+	* [name,lat,lng,zindex,description]
 	*/
+
+	//var markers = getEvents();
+
 	var markers = [
 		['Bondi Beach', -33.890542, 151.274856, 4,'Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.'],
 		['Coogee Beach', -33.923036, 151.259052, 5,'Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.'],
@@ -27,30 +29,15 @@ function initialize() {
 
 	function setMarkers(map, locations) {
 	// Add markers to the map
-
-	// Marker sizes are expressed as a Size of X,Y
-	// where the origin of the image (0,0) is located
-	// in the top left of the image.
-
-	// Origins, anchor positions and coordinates of the marker
-	// increase in the X direction to the right and in
-	// the Y direction down.
 	var image = {
 	url: 'img/beachflag.png',
-	// This marker is 20 pixels wide by 32 pixels tall.
-	size: new google.maps.Size(20, 32),
-	// The origin for this image is 0,0.
+	size: new google.maps.Size(31, 31),
 	origin: new google.maps.Point(0,0),
-	// The anchor for this image is the base of the flagpole at 0,32.
-	anchor: new google.maps.Point(0, 32)
+	anchor: new google.maps.Point(0, 31)
 	};
 	// Shapes define the clickable region of the icon.
-	// The type defines an HTML &lt;area&gt; element 'poly' which
-	// traces out a polygon as a series of X,Y points. The final
-	// coordinate closes the poly by connecting to the first
-	// coordinate.
 	var shape = {
-	coords: [1, 1, 1, 20, 18, 20, 18 , 1],
+	coords: [1, 1, 1, 19, 20, 19, 20 , 1],
 	type: 'poly'
 	};
 
