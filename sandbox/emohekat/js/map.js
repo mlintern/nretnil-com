@@ -1,27 +1,38 @@
-function getEvents(map) {
+function getEvents(map,center) {
 
-	var url = 'http://api.nytimes.com/svc/events/v2/listings'
-	var key = 'ca4c9f9366bec636a98ef71d8b8e6df7:19:69565207'
-	var radius = '1000'
-	var latlng = '40.7127,-74.0059'
-	var limit = '20';
-	var ne = ''
-	var sw = ''
-	//var request = url + 'll=' + latlng + '&radius=' + radius +'&api-key=' + key
-	//console.log(request)
+	var url = 'http://api.nytimes.com/svc/events/v2/listings.jsonp';
+	var key = 'ca4c9f9366bec636a98ef71d8b8e6df7:19:69565207';
+	var radius = '1000';
+	var latlng = (typeof center === "undefined") ? '40.7127,-74.0059' : center;
+	var limit = '100';
+	var ne = '';
+	var sw = '';
+	var filters = $("input:radio[name=filter]").val();
+
+	var events = []
+
+	if ((0+$('#radius').val()) > 0 ){
+		radius = $('#radius').val();
+	}
+
+	if ((0+$('#numresults').val()) > 0 ){
+		limit = $('#numresults').val();
+	}
 
 	$.ajax({
 		type: 'GET',
 		url: url,
-		data: { 'll':latlng, 'radius':radius, 'limit':limit, 'api-key':key },
+		data: { 'll':latlng, 'radius':radius, 'limit':limit, 'api-key':key, 'filters' : filters },
 		dataType: 'jsonp',
 		success: function (data){
-			console.log('here');
-			console.log(data['results']);
+			results = data['results'];
+			$.each( results, function (k,v) {
+				current = v;
+				events.push([v['event_name'],v['geocode_latitude'],v['geocode_longitude'],k,v['web_description']]);
+			})
+			resetMarkers(map, events);
 		}
 	});
-
-	resetMarkers(map, siteMarkers);
 }
 
 function initializeMap() {
@@ -32,7 +43,12 @@ function initializeMap() {
 	}
 	var map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
 	google.maps.event.addListener(map, 'dragend', function() {
-			//alert('map dragged'); 
+			var center = map.getCenter();
+			var new_center = center['k']+','+center['B'];
+			getEvents(map,new_center);
+		}
+	);
+	google.maps.event.addListener(map, 'zoom_changed', function() {
 			getEvents(map);
 		}
 	);
@@ -44,15 +60,13 @@ function initializeMap() {
 * [name,lat,lng,zindex,description]
 */
 
-//var markers = getEvents();
-
-var siteMarkers = [
-	['Bondi Beach', -33.890542, 151.274856, 4,'Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.'],
-	['Coogee Beach', -33.923036, 151.259052, 5,'Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.'],
-	['Cronulla Beach', -34.028249, 151.157507, 3,'Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.'],
-	['Manly Beach', -33.80010128657071, 151.28747820854187, 2,'Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.'],
-	['Maroubra Beach', -33.950198, 151.259302, 1,'Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.']
-];
+// var siteMarkers = [
+// 	['Bondi Beach', -33.890542, 151.274856, 4,'Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.'],
+// 	['Coogee Beach', -33.923036, 151.259052, 5,'Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.'],
+// 	['Cronulla Beach', -34.028249, 151.157507, 3,'Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.'],
+// 	['Manly Beach', -33.80010128657071, 151.28747820854187, 2,'Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.'],
+// 	['Maroubra Beach', -33.950198, 151.259302, 1,'Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.']
+// ];
 
 function resetMarkers(map, locations) {
 	// Add markers to the map
@@ -69,7 +83,7 @@ function resetMarkers(map, locations) {
 	};
 
 	var infoWindow = new google.maps.InfoWindow({content: '',maxWidth: '400'});
-
+	console.log(locations.length);
 	for (var i = 0; i < locations.length; i++) {
 		var location = locations[i];
 		var myLatLng = new google.maps.LatLng(location[1], location[2]);
