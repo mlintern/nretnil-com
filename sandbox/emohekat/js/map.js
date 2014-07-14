@@ -1,9 +1,10 @@
 function getEvents(map) {
 
-	var url = 'http://api.nytimes.com/svc/events/v2/listings.json'
+	var url = 'http://api.nytimes.com/svc/events/v2/listings'
 	var key = 'ca4c9f9366bec636a98ef71d8b8e6df7:19:69565207'
 	var radius = '1000'
 	var latlng = '40.7127,-74.0059'
+	var limit = '20';
 	var ne = ''
 	var sw = ''
 	//var request = url + 'll=' + latlng + '&radius=' + radius +'&api-key=' + key
@@ -12,8 +13,8 @@ function getEvents(map) {
 	$.ajax({
 		type: 'GET',
 		url: url,
-		data: { 'll':latlng, 'radius':radius,'api-key':key },
-		dataType: 'json',
+		data: { 'll':latlng, 'radius':radius, 'limit':limit, 'api-key':key },
+		dataType: 'jsonp',
 		success: function (data){
 			console.log('here');
 			console.log(data['results']);
@@ -25,7 +26,7 @@ function getEvents(map) {
 
 function initializeMap() {
 	var mapOptions = {
-		zoom: 11,
+		zoom: 15,
 		//center: new google.maps.LatLng(-33.9, 151.2)
 		center: new google.maps.LatLng(40.71, -74.00)
 	}
