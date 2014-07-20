@@ -1,28 +1,56 @@
-function getEvents(map,center) {
+var mapOptions = {
+	zoom: 15,
+	//center: new google.maps.LatLng(-33.9, 151.2)
+	center: new google.maps.LatLng(40.71, -74.00)
+}
+var map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
+google.maps.event.addListener(map, 'dragend', function() {
+		if ($('#useCenter').is(':checked')) {
+			var center = map.getCenter();
+			var new_center = center['k']+','+center['B'];
+			deleteMarkers();
+			getEvents(new_center);
+		}
+	}
+);
+// google.maps.event.addListener(map, 'zoom_changed', function() {
+// 		getEvents();
+// 	}
+// );
+var events = [];
+var markers = [];
+
+function getEvents(center) {
 
 	var url = 'http://api.nytimes.com/svc/events/v2/listings.jsonp';
 	var key = 'ca4c9f9366bec636a98ef71d8b8e6df7:19:69565207';
-	var radius = '1000';
+	var radius = '10000';
 	var latlng = (typeof center === "undefined") ? '40.7127,-74.0059' : center;
-	var limit = '100';
+	var limit = '1000';
+	var query = '';
 	var ne = '';
 	var sw = '';
-	var filters = $("input:radio[name=filter]").val();
-
-	var events = []
+	var filter = $("#filter").val();
 
 	if ((0+$('#radius').val()) > 0 ){
 		radius = $('#radius').val();
 	}
 
+	if ($('#query').val() != '' ){
+		query = $('#query').val();
+	}
+
 	if ((0+$('#numresults').val()) > 0 ){
 		limit = $('#numresults').val();
 	}
+	console.log('filter: '+filter);
+	console.log('query: '+query);
+	events = [];
 
 	$.ajax({
 		type: 'GET',
 		url: url,
-		data: { 'll':latlng, 'radius':radius, 'limit':limit, 'api-key':key, 'filters' : filters },
+		data: { 'll':latlng, 'radius':radius, 'limit':limit, 'api-key':key, 'filters':filter, 'query':query },
 		dataType: 'jsonp',
 		success: function (data){
 			results = data['results'];
@@ -30,45 +58,12 @@ function getEvents(map,center) {
 				current = v;
 				events.push([v['event_name'],v['geocode_latitude'],v['geocode_longitude'],k,v['web_description']]);
 			})
-			resetMarkers(map, events);
+			loadMarkers(events);
 		}
 	});
 }
 
-function initializeMap() {
-	var mapOptions = {
-		zoom: 15,
-		//center: new google.maps.LatLng(-33.9, 151.2)
-		center: new google.maps.LatLng(40.71, -74.00)
-	}
-	var map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
-	google.maps.event.addListener(map, 'dragend', function() {
-			var center = map.getCenter();
-			var new_center = center['k']+','+center['B'];
-			getEvents(map,new_center);
-		}
-	);
-	google.maps.event.addListener(map, 'zoom_changed', function() {
-			getEvents(map);
-		}
-	);
-	getEvents(map);
-}
-
-/**
-* Data for the markers
-* [name,lat,lng,zindex,description]
-*/
-
-// var siteMarkers = [
-// 	['Bondi Beach', -33.890542, 151.274856, 4,'Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.'],
-// 	['Coogee Beach', -33.923036, 151.259052, 5,'Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.'],
-// 	['Cronulla Beach', -34.028249, 151.157507, 3,'Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.'],
-// 	['Manly Beach', -33.80010128657071, 151.28747820854187, 2,'Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.'],
-// 	['Maroubra Beach', -33.950198, 151.259302, 1,'Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.']
-// ];
-
-function resetMarkers(map, locations) {
+function loadMarkers(locations) {
 	// Add markers to the map
 	var image = {
 	url: 'img/beachflag.png',
@@ -82,8 +77,13 @@ function resetMarkers(map, locations) {
 	type: 'poly'
 	};
 
+	/*
+	* locations structure
+	* [name,lat,lng,zindex,description]
+	*/
+
 	var infoWindow = new google.maps.InfoWindow({content: '',maxWidth: '400'});
-	console.log(locations.length);
+	console.log('locations: '+locations.length);
 	for (var i = 0; i < locations.length; i++) {
 		var location = locations[i];
 		var myLatLng = new google.maps.LatLng(location[1], location[2]);
@@ -101,9 +101,48 @@ function resetMarkers(map, locations) {
 			infoWindow.content = this.text;
 			infoWindow.open(this.getMap(),this)
 		});
+		markers.push(marker);
 	}
 }
 
-google.maps.event.addDomListener(window, 'load', initializeMap);
+// Sets the map on all markers in the array.
+function setAllMap(map) {
+  for (var i = 0; i < markers.length; i++) {
+    markers[i].setMap(map);
+  }
+}
+
+// Removes the markers from the map, but keeps them in the array.
+function clearMarkers() {
+  setAllMap(null);
+}
+
+// Shows any markers currently in the array.
+function showMarkers() {
+  setAllMap(map);
+}
+
+// Deletes all markers in the array by removing references to them.
+function deleteMarkers() {
+  clearMarkers();
+  markers = [];
+}
+
+// Deletes all markers in the array by removing references to them then gets new ones.
+function refreshMarkers() {
+  clearMarkers();
+  markers = [];
+  getEvents();
+}
+
+getEvents();
+
+$(document).ready(function(){
+	$('#sidebar input, #filter').change(function(){
+		deleteMarkers();
+		getEvents();
+	});
+});
+
 
 
