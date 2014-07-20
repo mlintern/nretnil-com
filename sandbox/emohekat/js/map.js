@@ -54,9 +54,10 @@ function getEvents(center) {
 		dataType: 'jsonp',
 		success: function (data){
 			results = data['results'];
+			console.log(results);
 			$.each( results, function (k,v) {
 				current = v;
-				events.push([v['event_name'],v['geocode_latitude'],v['geocode_longitude'],k,v['web_description']]);
+				events.push([v['event_name'],v['geocode_latitude'],v['geocode_longitude'],k,v['web_description'],v['venue_name'],v['venue_detail_url'],v['price'],v['event_detail_url'],v['date_time_description']]);
 			})
 			loadMarkers(events);
 		}
@@ -79,7 +80,7 @@ function loadMarkers(locations) {
 
 	/*
 	* locations structure
-	* [name,lat,lng,zindex,description]
+	* [name,lat,lng,zindex,description,venue,venue_url,place,event_url,timing]
 	*/
 
 	var infoWindow = new google.maps.InfoWindow({content: '',maxWidth: '400'});
@@ -96,7 +97,17 @@ function loadMarkers(locations) {
 			title: location[0],
 			zIndex: location[3]
 		});
-		marker.text = '<div><h1>'+location[0]+'</h1><div>'+location[4]+'</div></div>'
+		marker.text = '<div><h1><a target="_blank" href="'+location[8]+'">'+location[0]+'</a></h1><div>'+location[4]+'</div>';
+		if(location[5] !== undefined){
+			marker.text += '<div>Venue: <a target="_blank" href="'+location[6]+'">'+location[5]+'</a></div>';
+		}
+		if(location[7] !== undefined){
+			marker.text += '<div>Price: '+location[7]+'</div>';
+		}
+		if(location[9] !== undefined){
+			marker.text += '<div>Timing: '+location[9]+'</div></div>';
+		}
+
 		google.maps.event.addListener(marker, 'click', function() {
 			infoWindow.content = this.text;
 			infoWindow.open(this.getMap(),this)
