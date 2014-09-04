@@ -32,10 +32,10 @@ $(document).ready(function(){
 	}
 	
 	var h = function walk(){
-		var	divClass = 'animal';
-		if ( k == 3 ){
+		var	divClass = 'animal_2';
+		if ( k == 4 ){
 			$('.'+divClass).removeClass(divClass+'_img_'+k);
-			k = 2;
+			k = 1;
 			$('.'+divClass).addClass(divClass+'_img_'+k);
 		}else{
 			$('.'+divClass).removeClass(divClass+'_img_'+k);
@@ -46,7 +46,7 @@ $(document).ready(function(){
 	
 	var spin = setInterval(f,100);
 	var shoot = setInterval(g,150);
-	var go = setInterval(h,750);
+	var go = setInterval(h,300);
 	
 	
 });

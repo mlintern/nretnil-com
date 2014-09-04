@@ -1,21 +1,21 @@
-.animal{
+.animal, .animal_2{
 background: url('animal-sprite.png') 0 0 no-repeat transparent;
 height: 200px;
 width: 200px;
 }
 /*Standing Right*/
-.animal_img_1{
+.animal_img_1, .animal_2_img_2, .animal_2_img_4{
 background-position: 0px -35px;
 height: 170px;
 width: 80px;
 }
 /*Walk / Run*/
-.animal_img_2{
+.animal_img_2, .animal_2_img_1{
 background-position: -125px -35px;
 height: 170px;
 width: 120px;
 }
-.animal_img_3{
+.animal_img_3, .animal_2_img_3{
 background-position: -260px -35px;
 height: 185px;
 width: 125px;
