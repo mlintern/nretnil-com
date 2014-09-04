@@ -11,7 +11,7 @@ $(document).ready(function(){
 		if ( i == imageCount ){
 			$('.globe').removeClass('globe_img_'+i);
 			i = 1;
-			$('.globe').addClass('globe_img_'+i);		
+			$('.globe').addClass('globe_img_'+i);
 		}else{
 			$('.globe').removeClass('globe_img_'+i);
 			i++;
@@ -23,7 +23,7 @@ $(document).ready(function(){
 		if ( j == 4 ){
 			$('.pistol').removeClass('pistol_img_'+j);
 			j = 1;
-			$('.pistol').addClass('pistol_img_'+j);		
+			$('.pistol').addClass('pistol_img_'+j);
 		}else{
 			$('.pistol').removeClass('pistol_img_'+j);
 			j++;
