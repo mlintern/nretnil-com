@@ -13,28 +13,28 @@ jQuery.fn.autoHide = function(settings){
 
     var options = jQuery.extend({
         delay: 1000, // in milliseconds
-        min_width: 768, // in px
-        slide_speed: 300, // in milliseconds
-        show_height: 2 // in px
+        minWidth: 768, // in px
+        slideSpeed: 300, // in milliseconds
+        showHeight: 2 // in px
     }, settings);
 
-    var cur_height = $(this).height();
+    var currHeight = $(this).height();
 
-    if ($(window).width() >= options.min_width) {
+    if ($(window).width() >= options.minWidth) {
 
         $(this).hover(function(){
 
             $(this).stop(true);
-            $(this).animate({top: 0},options.slide_speed);
+            $(this).animate({top: 0},options.slideSpeed);
 
         },function(){
 
             $(this).stop(true);
-            $(this).animate({ top: -(cur_height - options.show_height) },2*options.slide_speed);
+            $(this).animate({ top: -(currHeight - options.showHeight) },2*options.slideSpeed);
 
         });
 
-        $(this).animate({top: -(cur_height - options.show_height)},options.slide_speed);
+        $(this).animate({top: -(currHeight - options.showHeight)},options.slideSpeed);
     }
 
 };

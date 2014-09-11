@@ -12,7 +12,7 @@
 jQuery.fn.clickSpin = function(settings){
 
   var options = jQuery.extend({
-    delta_degrees: 5,
+    deltaDegrees: 5,
     rotations: 1,
     direction: 'clockwise' // clockwise, counter
   }, settings);
@@ -27,7 +27,7 @@ jQuery.fn.clickSpin = function(settings){
     interval = setInterval(function(){
       console.log(counter);
       if (counter < goal) {
-        counter += options.delta_degrees;
+        counter += options.deltaDegrees;
         if (counter > goal) {
           counter = goal;
         }

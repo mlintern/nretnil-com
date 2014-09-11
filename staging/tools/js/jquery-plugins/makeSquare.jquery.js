@@ -12,11 +12,11 @@
 jQuery.fn.makeSquare = function(settings) {
 
 	var options = jQuery.extend({
-		based_on: 'width'
+		basedOn: 'width'
 	}, settings);
 
 	$(this).each(function() {
-		if (options.based_on == 'height') {
+		if (options.basedOn == 'height') {
 			var height = $(this).height();
 			$(this).width(height);
 		} else {

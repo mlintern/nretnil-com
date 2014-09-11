@@ -13,11 +13,11 @@ jQuery.fn.zoomIn = function(settings){
 
     var options = jQuery.extend({
         magnification: 2,
-        min_width: 768,
+        minWidth: 768,
         direction: 'middle' // up, down, left, right, middle
     }, settings);
 
-    if ($(window).width() >= options.min_width) {
+    if ($(window).width() >= options.minWidth) {
 
         $(this).hover(function(){
 
@@ -31,34 +31,34 @@ jQuery.fn.zoomIn = function(settings){
                 direction = $(this).data('magnification-direction');
             }
 
-            var cur_width = parseInt($(this).width());
-            var cur_height = parseInt($(this).height());
-            var top_margin = ((cur_height*magnification)/2)-(cur_height/2);
-            var left_margin = ((cur_width*magnification)/2)-(cur_width/2);
+            var currWidth = parseInt($(this).width());
+            var currHeight = parseInt($(this).height());
+            var topMargin = ((currHeight*magnification)/2)-(currHeight/2);
+            var leftMargin = ((currWidth*magnification)/2)-(currWidth/2);
             var styles = {
-                "width": (cur_width*magnification)+"px"
+                "width": (currWidth*magnification)+"px"
             }
 
             switch (direction) {
                 case 'up':
-                    styles['margin-left'] = '-'+left_margin+'px';
-                    styles['margin-top'] = '-'+(2*top_margin)+'px';
+                    styles['margin-left'] = '-'+leftMargin+'px';
+                    styles['margin-top'] = '-'+(2*topMargin)+'px';
                     break;
                 case 'down':
-                    styles['margin-left'] = '-'+left_margin+'px';
-                    styles['margin-bottom'] = '-'+(2*top_margin)+'px';
+                    styles['margin-left'] = '-'+leftMargin+'px';
+                    styles['margin-bottom'] = '-'+(2*topMargin)+'px';
                     break;
                 case 'left':
-                    styles['margin-left'] = '-'+(2*left_margin)+'px';
-                    styles['margin-top'] = '-'+top_margin+'px';
+                    styles['margin-left'] = '-'+(2*leftMargin)+'px';
+                    styles['margin-top'] = '-'+topMargin+'px';
                     break;
                 case 'right':
-                    styles['margin-right'] = '-'+(2*left_margin)+'px';
-                    styles['margin-top'] = '-'+top_margin+'px';
+                    styles['margin-right'] = '-'+(2*leftMargin)+'px';
+                    styles['margin-top'] = '-'+topMargin+'px';
                     break;
                 default:
-                    styles['margin-left'] = '-'+left_margin+'px';
-                    styles['margin-top'] = '-'+top_margin+'px';
+                    styles['margin-left'] = '-'+leftMargin+'px';
+                    styles['margin-top'] = '-'+topMargin+'px';
                     break;
             }
             
