@@ -10,7 +10,6 @@ a:hover {
  */
 html,
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
   color: #555;
 }
 
@@ -21,8 +20,6 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
   margin-top: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
   color: #333;
 }
 
@@ -31,7 +28,6 @@ h6, .h6 {
  * Override Bootstrap's default container.
  */
 .container {
-  background-color: #fff;
   padding: 0 20px;
 }
 

@@ -8,6 +8,10 @@ body {
   background-size: cover;
 }
 
+.white-90{
+  background-color: rgba(255,255,255,.9);
+  padding: 20px;
+}
 /*
  * Header
  */
@@ -15,6 +19,7 @@ body {
   color: #fff;
   text-align: center;
   text-shadow: 3px 3px 3px rgba(0,0,0,.5);
+  margin: 30px 0;
 }
 .masthead-brand {
   margin-top: 10px;

@@ -1,0 +1,21 @@
+.white-90 h2{
+	margin-top: 0;
+}
+
+.panel-ais>.panel-heading {
+  background-image: -webkit-linear-gradient(top,#fff 0,#30B2B8 100%);
+  background-image: -o-linear-gradient(top,#fff 0,#30B2B8 100%);
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#30B2B8));
+  background-image: linear-gradient(to bottom,#fff 0,#30B2B8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#30B2B8', GradientType=0);
+  background-repeat: repeat-x;
+  padding: 0;
+}
+.panel-ais>.panel-heading a {
+  padding: 10px 15px;
+  display: block;
+}
+
+img {
+	max-width: 100%;
+}
