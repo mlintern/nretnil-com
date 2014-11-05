@@ -1,0 +1,23 @@
+.rust{
+	height: 100%;
+	width: 100%;
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+}
+.rust.right{
+	background-image: url('rust-r.png');
+	background-position: top right;
+}
+.rust.bottom{
+	background-image: url('rust-b.png');
+	background-position: bottom left;
+}
+.rust.left{
+	background-image: url('rust-l.png');
+	background-position: top left;
+}
+.rust.top{
+	background-image: url('rust-t.png');
+	background-position: top left;
+}
