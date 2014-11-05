@@ -21,3 +21,32 @@
 	background-image: url('rust-t.png');
 	background-position: top left;
 }
+.rust.zoom.top, .rust.zoom.bottom{
+	background-size: 100% 50%;
+}
+.rust.zoom.right, .rust.zoom.left{
+	background-size: 50% 100%;
+}
+.metal{
+	background-image: url('metal-2000-high.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.metal.lg.high{
+	background-image: url('metal-2000-high.jpg');
+}
+.metal.high{
+	background-image: url('metal-1000-high.jpg');
+}
+.metal.lg.med{
+	background-image: url('metal-2000-med.jpg');
+}
+.metal.med{
+	background-image: url('metal-1000-med.jpg');
+}
+.metal.lg.low{
+	background-image: url('metal-2000-low.jpg');
+}
+.metal.low{
+	background-image: url('metal-1000-low.jpg');
+}
