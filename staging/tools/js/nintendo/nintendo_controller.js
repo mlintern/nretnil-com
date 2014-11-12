@@ -33,7 +33,7 @@ function ninReset (sequence) {
   $('.nin-completed').html( '' );
 }
 
-function ninSecret (sequence,executeFunction,timeout) {
+function ninSecret (sequence,executeFunction,resetTimeout) {
 
   ninReset(sequence);
 
@@ -47,7 +47,7 @@ function ninSecret (sequence,executeFunction,timeout) {
         executeFunction(); 
         setTimeout(function() {
           ninReset(sequence);
-        },timeout);
+        },resetTimeout);
       } else {
         $('.nin-current').html( sequence[current].show );
         $('.nin-number').html( current + 1 );
