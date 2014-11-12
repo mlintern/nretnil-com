@@ -35,11 +35,10 @@ function ninReset () {
 
 function ninSecret (sequence,executeFunction,timeout) {
 
-  $('.nin-current').html( sequence[0].show );
-  $('.nin-number').html( 1 );
-  $('.nin-completed').html( '' );
+  ninReset();
 
   $(document).keydown(function(e) {
+    e.preventDefault();
     if ( e.keyCode == sequence[current].code ) {
       current++;
       if ( current == sequence.length ) {
