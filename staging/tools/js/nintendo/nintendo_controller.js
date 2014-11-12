@@ -1,0 +1,49 @@
+/*
+ * Nintendo Buttons 1.0.0
+ *
+ * Mark Lintern
+ *
+ * Dual licensed under the MIT and GPL licenses:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *   http://www.gnu.org/licenses/gpl.html
+ *
+ * Date: November 6 2014
+ *
+ * Example: 
+ *   var sequence = [up,up,down,down,left,right,left,right,b,a];
+ *   var go = function () { $('#secret-modal').modal('show'); }
+ *
+ *   secret(sequence, go, '.current-btn', '.num')
+ */
+
+var up = {code:38,show:'<span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x"></i></span>'};
+var down = {code:40,show:'<span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-arrow-down fa-stack-1x"></i></span>'};
+var right = {code:39,show:'<span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-arrow-right fa-stack-1x"></i></span>'};
+var left = {code:37,show:'<span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-arrow-left fa-stack-1x"></i></span>'};
+var a = {code:65,show:'<span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-stack-1x"><strong>a</strong></i></span>'};
+var b = {code:66,show:'<span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-stack-1x"><strong>b</strong></i></span>'};
+
+var current = 0;
+
+function secret (sequence,executeFunction,currentBtnDiv,currentNumDiv) {
+
+  $(document).keydown(function(e) {
+    if ( e.keyCode == sequence[current].code ) {
+      current++;
+      if ( current == sequence.length ) {
+        executeFunction();
+        current = 0;
+        $(currentBtnDiv).html(sequence[0].show );
+        $(currentNumDiv).html( 1 );
+      } else {
+        $(currentBtnDiv).html( sequence[current].show );
+        $(currentNumDiv).html( current + 1 );
+      }
+    } else {
+      current = 0;
+      $(currentBtnDiv).html( sequence[0].show );
+      $(currentNumDiv).html( 1 );
+    }
+  });
+
+}
