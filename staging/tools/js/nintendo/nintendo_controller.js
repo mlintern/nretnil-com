@@ -25,24 +25,36 @@ var b = {code:66,show:'<span class="fa-stack fa-lg"><i class="fa fa-circle-thin 
 
 var current = 0;
 
-function secret (sequence,executeFunction,currentBtnDiv,currentNumDiv) {
+function ninReset () {
+  current = 0;
+  $('.nin-current').html( sequence[0].show );
+  $('.nin-number').html( 1 );
+  $('.nin-completed').html( '' );
+}
+
+function ninSecret (sequence,executeFunction,timeout) {
+
+  $('.nin-current').html( sequence[0].show );
+  $('.nin-number').html( 1 );
+  $('.nin-completed').html( '' );
 
   $(document).keydown(function(e) {
     if ( e.keyCode == sequence[current].code ) {
       current++;
       if ( current == sequence.length ) {
-        executeFunction();
-        current = 0;
-        $(currentBtnDiv).html(sequence[0].show );
-        $(currentNumDiv).html( 1 );
+        $('.nin-current').html( sequence[0].show );
+        $('.nin-completed').append( '<div>' + sequence[current - 1].show + '</div>' );
+        executeFunction(); 
+        setTimeout(function() {
+          ninReset();
+        },timeout);
       } else {
-        $(currentBtnDiv).html( sequence[current].show );
-        $(currentNumDiv).html( current + 1 );
+        $('.nin-current').html( sequence[current].show );
+        $('.nin-number').html( current + 1 );
+        $('.nin-completed').append( '<div>' + sequence[current - 1].show + '</div>' );
       }
     } else {
-      current = 0;
-      $(currentBtnDiv).html( sequence[0].show );
-      $(currentNumDiv).html( 1 );
+      ninReset();
     }
   });
 

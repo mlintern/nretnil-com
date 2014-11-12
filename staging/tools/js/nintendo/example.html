@@ -12,24 +12,47 @@
 	<!-- Font Awesome-->
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
 	<style>
-		body{font-size: 1000%;}
+		.nin-current{font-size: 1000%;}
 	</style>
 </head>
 <body>
 	<div class="container">
-		<h3>Press: </h3>
-		<p class="current-btn">
-			<span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x"></i></span>
-		</p>
-		<p class="num">1</p>
+		<div class="row">
+			<div class="col-xs-2">
+				<h3>Press: </h3>
+				<div class="nin-completed"></div>
+			</div>
+			<div class="col-xs-8">
+				<p>
+					<div class="nin-current"></div>
+				</p>
+			</div>
+			<div class="col-xs-2">
+				<h3 class="nin-number pull-right"></h3> 
+			</div>
+		</div>
+		
+		<!-- Modal -->
+		<div class="modal fade" id="secret-modal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title" id="myModalLabel">Secret Portal</h4>
+					</div>
+					<div class="modal-body">
+
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<script src="nintendo_controller.js"></script>
 	<script>
 		var sequence = [up,up,down,down,left,right,left,right,b,a];
-		var go = function () { alert('Secret'); };
-		secret(sequence, go, '.current-btn', '.num');
-		go
+		var go = function () { $("#secret-modal").modal('show'); };
+		ninSecret(sequence, go, 1000);
 	</script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
