@@ -16,6 +16,7 @@
 	</style>
 </head>
 <body>
+	<a class="secret-link" style="position:absolute;bottom:0;height:100%;width:50px;" href="http://www.google.com"></a>
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-2">
@@ -50,11 +51,9 @@
 
 	<script src="nintendo_controller.js"></script>
 	<script>
-	$(document).ready(function() {
-    	var sequence = [up,up,down,down,left,right,left,right,b,a];
-    	var go = function () { alert('Secret'); };
-    	ninSecret(sequence, go, 1000);
-    });
+		var sequence = [up,up,down,down,left,right,left,right,b,a];
+		var go = function () { window.location = 'http://www.google.com'; };
+		ninSecret(sequence, go, 1000);
 	</script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
