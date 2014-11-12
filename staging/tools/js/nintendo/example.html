@@ -50,9 +50,11 @@
 
 	<script src="nintendo_controller.js"></script>
 	<script>
-		var sequence = [up,up,down,down,left,right,left,right,b,a];
-		var go = function () { $("#secret-modal").modal('show'); };
-		ninSecret(sequence, go, 1000);
+	$(document).ready(function() {
+    	var sequence = [up,up,down,down,left,right,left,right,b,a];
+    	var go = function () { alert('Secret'); };
+    	ninSecret(sequence, go, 1000);
+    });
 	</script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>

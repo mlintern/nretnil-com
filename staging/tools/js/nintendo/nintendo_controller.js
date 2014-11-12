@@ -1,5 +1,5 @@
 /*
- * Nintendo Buttons 1.0.0
+ * Nintendo Buttons 1.1.1
  *
  * Mark Lintern
  *
@@ -26,7 +26,7 @@ var success = '<span class="fa-stack fa-lg"><i class="fa fa-stack-2x"></i><i cla
 
 var current = 0;
 
-function ninReset () {
+function ninReset (sequence) {
   current = 0;
   $('.nin-current').html( sequence[0].show );
   $('.nin-number').html( 1 );
@@ -35,7 +35,7 @@ function ninReset () {
 
 function ninSecret (sequence,executeFunction,timeout) {
 
-  ninReset();
+  ninReset(sequence);
 
   $(document).keydown(function(e) {
     e.preventDefault();
@@ -46,7 +46,7 @@ function ninSecret (sequence,executeFunction,timeout) {
         $('.nin-completed').append( '<div>' + sequence[current - 1].show + '</div>' );
         executeFunction(); 
         setTimeout(function() {
-          ninReset();
+          ninReset(sequence);
         },timeout);
       } else {
         $('.nin-current').html( sequence[current].show );
@@ -54,7 +54,7 @@ function ninSecret (sequence,executeFunction,timeout) {
         $('.nin-completed').append( '<div>' + sequence[current - 1].show + '</div>' );
       }
     } else {
-      ninReset();
+      ninReset(sequence);
     }
   });
 
