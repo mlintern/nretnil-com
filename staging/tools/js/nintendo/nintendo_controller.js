@@ -22,6 +22,7 @@ var right = {code:39,show:'<span class="fa-stack fa-lg"><i class="fa fa-square-o
 var left = {code:37,show:'<span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-arrow-left fa-stack-1x"></i></span>'};
 var a = {code:65,show:'<span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-stack-1x"><strong>a</strong></i></span>'};
 var b = {code:66,show:'<span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-stack-1x"><strong>b</strong></i></span>'};
+var success = '<span class="fa-stack fa-lg"><i class="fa fa-stack-2x"></i><i class="fa fa-stack-1x fa-thumbs-o-up"></i></span>';
 
 var current = 0;
 
@@ -42,7 +43,7 @@ function ninSecret (sequence,executeFunction,timeout) {
     if ( e.keyCode == sequence[current].code ) {
       current++;
       if ( current == sequence.length ) {
-        $('.nin-current').html( sequence[0].show );
+        $('.nin-current').html( success );
         $('.nin-completed').append( '<div>' + sequence[current - 1].show + '</div>' );
         executeFunction(); 
         setTimeout(function() {
