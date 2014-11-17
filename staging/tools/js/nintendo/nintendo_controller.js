@@ -9,11 +9,22 @@
  *
  * Date: November 6 2014
  *
- * Example: 
- *   var sequence = [up,up,down,down,left,right,left,right,b,a];
- *   var go = function () { $('#secret-modal').modal('show'); }
+ * In order to take full advantage of the script you should include Fontawesome (4+) on your site.
+ * The class names are not customaziable and are as follows:
+ *   .nin-current - will display the current button to press in as Fontawesome icon.
+ *   .nin-number -  will diplay the current number of the secquece as a Number.
+ *   .nin-completed - will construct a list of completed buttons as they are pressed.
  *
- *   secret(sequence, go, '.current-btn', '.num')
+ * Example:
+ *   <div class="nin-completed"></div>
+ *   <div class="nin-number"></div>
+ *   <div class="nin-current"></div>
+ *   <script>
+ *     var sequence = [up,up,down,down,left,right,left,right,b,a];
+ *     var go = function () { $('#secret-modal').modal('show'); }
+ *
+ *     secret(sequence, go, '.current-btn', '.num')
+ *   </script
  */
 
 var up = {code:38,show:'<span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x"></i></span>'};
