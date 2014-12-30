@@ -13,7 +13,7 @@
 
 
 
-<script src="js/jquery.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/jquery.cookie.js"></script>
 
 <script src="js/beautify.js"></script>
@@ -31,14 +31,14 @@
 <body>
 <div class="container">
 
-<div class="row-fluid">
-	<div class="span12 page-header">
+<div class="row">
+	<div class="col-sm-12 page-header">
 		<h1 class="text-center">Nretnil Tools</h1>
 	</div>
 </div>
 
-<div class="row-fluid">
-	<div class="span3 offset3">
+<div class="row">
+	<div class="col-sm-3 col-sm-offset-3">
 	          <select name="tabsize" id="tabsize">
 	            <option value="1">indent with a tab character</option>
 	            <option value="2">indent with 2 spaces</option>
@@ -72,7 +72,7 @@
 	          </select>
 	
 	</div>
-	<div class="span6">
+	<div class="col-sm-6">
 	
 	          <label class="checkbox"><input class="checkbox" type="checkbox" id="preserve-newlines"> Preserve empty lines?</label>
 	          <label class="checkbox"><input class="checkbox" type="checkbox" id="detect-packers"> Detect packers and obfuscators?</label>
@@ -83,7 +83,8 @@
 	          <a href="index.html?without-codemirror" class="turn-off-codemirror">Use a simple textarea for code input?</a>
 	</div>
 </div>
-<div class="row-fluid">
+<div style="height: 20px;"></div>
+<div class="row">
     <button  class="btn-block btn btn-primary btn-large" id="submit"><strong>Beautify JavaScript or HTML</strong> <em>(ctrl-enter)</em></button>
     <textarea id="source" rows="30" cols="160"></textarea>
 
