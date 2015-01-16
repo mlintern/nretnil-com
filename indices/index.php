@@ -162,7 +162,7 @@
 					<div class="col-sm-6">
 						<a target="_blank" href="http://dev.nretnil.com/staging/tools" class="btn btn-danger btn-block">Tools</a>
 						<a target="_blank" href="http://dev.nretnil.com/staging/tools/bootstrap3" class="btn btn-warning btn-sm btn-block">Bootstrap 3.3.1</a>
-						<a target="_blank" href="http://dev.nretnil.com/staging/tools/foundation" class="btn btn-warning btn-sm btn-block">Foundation 5.4.7</a>
+						<a target="_blank" href="http://dev.nretnil.com/staging/tools/foundation5" class="btn btn-warning btn-sm btn-block">Foundation 5.4.7</a>
 						<a target="_blank" href="http://dev.nretnil.com/staging/tools/css" class="btn btn-warning btn-sm btn-block">CSS</a>
 						<a target="_blank" href="http://dev.nretnil.com/staging/tools/js" class="btn btn-warning btn-sm btn-block">Javascript</a>
 						<a target="_blank" href="http://dev.nretnil.com/staging/tools/img" class="btn btn-warning btn-sm btn-block">Images</a>
@@ -177,6 +177,9 @@
 						<a target="_blank" href="http://dev.nretnil.com/sandbox/trats-hserf/index.html" class="btn btn-warning btn-sm btn-block">Fresh Start</a>
 						<a target="_blank" href="http://sandybox.nretnil.com" class="btn btn-warning btn-sm btn-block">SandyBox</a>
 						<a target="_blank" href="http://dev.nretnil.com/sandbox/ydnittiw/index.html" class="btn btn-warning btn-sm btn-block">WittIndy</a>
+					</div>
+					<div class="col-sm-6">
+						<a target="_blank" href="http://dev.nretnil.com/avatar" class="btn btn-danger btn-block">Avatars</a>
 					</div>
 				</div>
 			</div>
