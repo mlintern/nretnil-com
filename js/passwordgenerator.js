@@ -1,4 +1,7 @@
 var theSymbols = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "+"];
+var theWords = ["alpha", "bravo", "charlie", "delta", "echo", "foxtrot", "golf", "hotel", "india", "juliet", "kilo", "lima", "mike", "november", "oscar", "papa", "quebec", "romeo", "sierra", "tango", "uniform", "victor", "whiskey", "x-ray", "yankee", "zulu"];
+var lettersArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var symWords = ["<Tilda>", "<Explamation Point>", "<At>", "<Hash>", "<Dollar Sign>", "<Percent Sign>", "<Carrot>", "<Ampersand>", "<Star>", "<Left Parenthesis>", "<Right Parenthesis>", "<Dash>", "<Plus>"]
 
 function GeneratePassword(lengthOfPassword, wantSymbols) {
 	var theLetters = "abcdefghijklmnopqrstuvwxyz";
@@ -94,10 +97,6 @@ function Validate(StrongPasswordArray, lengthOfPassword, wantSymbols) {
 }
 
 function MakeMnemonic(StrongPasswordArray) {
-	var theWords = [];
-	theWords = ["alpha", "bravo", "charlie", "delta", "echo", "foxtrot", "golf", "hotel", "india", "juliet", "kilo", "lima", "mike", "november", "oscar", "papa", "quebec", "romeo", "sierra", "tango", "uniform", "victor", "whiskey", "x-ray", "yankee", "zulu"];
-	var lettersArray = [];
-	lettersArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 	var easyToRememberArray = [];
 	for (var i = 0; i < StrongPasswordArray.length; i++) {
 		for (var iLetters = 0; iLetters < lettersArray.length; iLetters++) {
@@ -113,7 +112,8 @@ function MakeMnemonic(StrongPasswordArray) {
 		}
 		for (var iSymbols = 0; iSymbols < theSymbols.length; iSymbols++) {
 			if (StrongPasswordArray[i] == theSymbols[iSymbols]) {
-				easyToRememberArray[i] = StrongPasswordArray[i];
+				//easyToRememberArray[i] = StrongPasswordArray[i];
+				easyToRememberArray[i] = symWords[iSymbols];
 				/* use "[space]" to represent a space character */
 				if (StrongPasswordArray[i] === " ") {
 					easyToRememberArray[i] = "[space]";
