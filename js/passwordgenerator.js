@@ -13,6 +13,8 @@ function displayPassword() {
 	});
 }
 
+displayPassword();
+
 $(document).ready(function(){
 	$('#btnGenerate').click(function(){displayPassword()});
 });
