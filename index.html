@@ -7,7 +7,7 @@
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+		
 <link type="text/css" href="http://dev.nretnil.com/staging/tools/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/tools/bootstrap3/css/bootstrap-theme.min.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/tools/js/chosen_v1/chosen.min.css" rel="stylesheet">
@@ -75,8 +75,8 @@
 
 		<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
 			<div class="list-group">
-				<a href="#pswd1" class="list-group-item" data-toggle="tab">Password Generator <i class="fa fa-ban fa-lg pull-right"></i></a>
-				<a href="#pswd2" class="list-group-item" data-toggle="tab">Passphrase Generator <i class="fa fa-ban fa-lg pull-right"></i></a>
+				<a href="#pswd1" class="list-group-item" data-toggle="tab">Password Generator <i class="fa fa-lock fa-lg pull-right"></i></a>
+				<a href="#pswd2" class="list-group-item" data-toggle="tab">Passphrase Generator <i class="fa fa-lock fa-lg pull-right"></i></a>
 				<a href="#reverse" class="list-group-item" data-toggle="tab">Reverse Text <i class="fa fa-arrows-h fa-lg pull-right"></i></a>
 				<a href="#codify" class="list-group-item" data-toggle="tab">Codify Text <i class="fa fa-code fa-lg pull-right"></i></a>
 				<a href="#dencode" class="list-group-item" data-toggle="tab">URL Dencoder <i class="fa fa-code fa-lg pull-right"></i></a>
@@ -84,9 +84,10 @@
 				<a href="#dnstools" class="list-group-item" data-toggle="tab">DNS Tools<i class="fa fa-check-square-o fa-lg pull-right"></i></a>
 				<a href="#pig-latin" class="list-group-item" data-toggle="tab">Pig Latin Generator <i class="fa fa-list-alt fa-lg pull-right"></i></a>
 				<a href="#lorem" class="list-group-item" data-toggle="tab">Lorem Ipsum Text <i class="fa fa-list-alt fa-lg pull-right"></i></a>
+				<a href="#uuid" class="list-group-item" data-toggle="tab">UUID Generator <i class="fa fa-random fa-lg pull-right"></i></a>
 				<a href="#human2unix" class="list-group-item" data-toggle="tab">Human To Unix Time<i class="fa fa-clock-o fa-lg pull-right"></i></a>
 				<a href="#crontab" class="list-group-item" data-toggle="tab">Cron Generator <i class="fa fa-clock-o fa-lg pull-right"></i></a>
-				<a href="#fb-token" class="list-group-item" data-toggle="tab">Facebook Token Lookup <i class="fa fa-facebook fa-lg pull-right"></i></a>
+				<!-- <a href="#fb-token" class="list-group-item" data-toggle="tab">Facebook Token Lookup <i class="fa fa-facebook fa-lg pull-right"></i></a> -->
 				<a href="#insta-token" class="list-group-item" data-toggle="tab">Instagram Token Lookup <i class="fa fa-instagram fa-lg pull-right"></i></a>
 				<a href="#insta-auth" class="list-group-item" data-toggle="tab">Instagram Auth Token <i class="fa fa-instagram fa-lg pull-right"></i></a>
 				<a href="#ettest" class="list-group-item" data-toggle="tab">ET Signup Test<i class="fa fa-envelope fa-lg pull-right"></i></a>
@@ -100,8 +101,9 @@
 			</div>
 			<div class="content row">
 			<div class="tab-content">
+
 				<div class="tab-pane" id="pswd1">
-				  	<form class="col-sm-6 col-sm-offset-3">
+						<form class="col-sm-6 col-sm-offset-3">
 						<fieldset>
 							<legend>Password Generator</legend>
 							<div style="height: 20px;"></div>
@@ -121,6 +123,7 @@
 						</fieldset>
 					</form>
 				</div>
+
 				<div class="tab-pane" id="pswd2">
 					<div class="col-sm-6 col-sm-offset-3">
 						<code class="col-sm-12 align-center" id="passphrase_result" style="text-transform:lowercase;padding:10px;margin-bottom: 15px;display: block;"></code>
@@ -128,79 +131,84 @@
 						<code class="align-center" id="passphrase_result_nospace" style="text-transform:lowercase;padding:10px;margin-top: 15px;display: block;"></code>
 					</div>
 				</div>
+
 				<div class="tab-pane" id="reverse">
 					<div class="col-sm-6 col-sm-offset-3">
-				        <input type="text" class="col-sm-12 form-control" value=""  placeholder="Text To Reverse…" id="reverse_text">
+								<input type="text" class="col-sm-12 form-control" value=""	placeholder="Text To Reverse…" id="reverse_text">
 						<button class="btn btn-large btn-success btn-block" onclick="reverse_text();return false;">Reverse Text!</button>
 						<code class="align-center" id="reverse_result" style="padding:10px;margin-top:15px;display:block;white-space:normal;"></code>
 					</div>
 				</div>
+
 				<div class="tab-pane active" id="exip">
 					<h1 class="align-center col-sm-6 col-sm-offset-3" id="External-IP"></h1>
 				</div>
+
 				<div class="tab-pane" id="dnstools">
-					<div  class="col-sm-10 col-sm-offset-1">
+					<div	class="col-sm-10 col-sm-offset-1">
 						<div class="row">
 						<form class="col-sm-12">
 							<fieldset>
-				                <label>Reverse IP Lookup</label>
-				                <input type="text" class="col-sm-12 form-control" value=""  placeholder="IP Address..." id="ip-info">
-		                		<button class="btn btn-large btn-primary btn-block" onclick="iplookup();return false;">Lookup</button>
-		                		<div style="margin-top:10px;" id="ip-info-div"></div>
-		                	</fieldset>
-		                </form>
-		                </div>
-		                <div class="row">
+												<label>Reverse IP Lookup</label>
+												<input type="text" class="col-sm-12 form-control" value=""	placeholder="IP Address..." id="ip-info">
+												<button class="btn btn-large btn-primary btn-block" onclick="iplookup();return false;">Lookup</button>
+												<div style="margin-top:10px;" id="ip-info-div"></div>
+											</fieldset>
+										</form>
+										</div>
+										<div class="row">
 						<form class="col-sm-12">
 							<fieldset>
-				                <label>Who Is</label>
-				                <input type="text" class="col-sm-12 form-control" value=""  placeholder="Target..." id="whois-info">
-		                		<button class="btn btn-large btn-primary btn-block" onclick="whoislookup();return false;">Lookup</button>
-		                		<div style="margin-top:10px;" id="whois-info-div"></div>
-		                	</fieldset>
-		                </form>
-		                </div>
-		                <div class="row">
-		                <form class="col-sm-12">
+												<label>Who Is</label>
+												<input type="text" class="col-sm-12 form-control" value=""	placeholder="Target..." id="whois-info">
+												<button class="btn btn-large btn-primary btn-block" onclick="whoislookup();return false;">Lookup</button>
+												<div style="margin-top:10px;" id="whois-info-div"></div>
+											</fieldset>
+										</form>
+										</div>
+										<div class="row">
+										<form class="col-sm-12">
 							<fieldset>
-				                <label>DIG</label>
-				                <input type="text" class="col-sm-12 form-control" value="" placeholder="Hostname..." id="hostname-info">
-		                		<button class="btn btn-large btn-primary btn-block" onclick="hostnamelookup();return false;">Lookup</button>
-		                		<div style="margin-top:10px;" id="hostname-info-div"></div>
-		                	</fieldset>
-		                </form>
-		                </div>
-		                <div class="row">
-		                <form class="col-sm-12">
+												<label>DIG</label>
+												<input type="text" class="col-sm-12 form-control" value="" placeholder="Hostname..." id="hostname-info">
+												<button class="btn btn-large btn-primary btn-block" onclick="hostnamelookup();return false;">Lookup</button>
+												<div style="margin-top:10px;" id="hostname-info-div"></div>
+											</fieldset>
+										</form>
+										</div>
+										<div class="row">
+										<form class="col-sm-12">
 							<fieldset>
-				                <label>Trace Route</label>
-				                <input type="text" class="col-sm-12 form-control" value="" placeholder="Target..." id="traceroute-info">
-		                		<button id="tr-btn" class="btn btn-large btn-primary btn-block" onclick="traceroute();return false;" data-loading-text="Loading...">Lookup</button>
-		                		<div style="margin-top:10px;" id="traceroute-info-div"></div>
-		                	</fieldset>
-		                </form>
-		                </div>
-		            </div>
+												<label>Trace Route</label>
+												<input type="text" class="col-sm-12 form-control" value="" placeholder="Target..." id="traceroute-info">
+												<button id="tr-btn" class="btn btn-large btn-primary btn-block" onclick="traceroute();return false;" data-loading-text="Loading...">Lookup</button>
+												<div style="margin-top:10px;" id="traceroute-info-div"></div>
+											</fieldset>
+										</form>
+										</div>
+								</div>
 				</div>
-				<div class="tab-pane" id="fb-token">
+
+				<!-- <div class="tab-pane" id="fb-token">
 					<form class="col-sm-6 col-sm-offset-3">
 						<fieldset>
-			                <label>Look up Facebook ID</label>
-			                <input type="text" class="col-sm-12 form-control" value="mark.lintern" id="fb-user">
-		            		<button id="fb-button" class="btn btn-large btn-primary btn-block" onclick="updatefacebook();return false;">Go</button>
-		            		<div style="margin-top:10px;" id="facebook-info"></div>
-		            	</fieldset>
-		            </form>
-				</div>
+											<label>Look up Facebook ID</label>
+											<input type="text" class="col-sm-12 form-control" value="mark.lintern" id="fb-user">
+										<button id="fb-button" class="btn btn-large btn-primary btn-block" onclick="updatefacebook();return false;">Go</button>
+										<div style="margin-top:10px;" id="facebook-info"></div>
+									</fieldset>
+								</form>
+				</div> -->
+
 				<div class="tab-pane" id="insta-token">
 					<form class="col-sm-6 col-sm-offset-3">
 						<fieldset>
-			                <label>Look up Instagram User ID</label>
-			                <input type="text" class="input-block-level form-control" value="mlintern" id="username">
-			                <button class="btn btn-large btn-primary btn-block" onclick="lookupID();return false;">Go</button>
-			                <div><a href="http://jelled.com/instagram/lookup-user-id">Lookup Tool From Jelled</a></div>
-			        	</fieldset>
-				        <div class="result hidden">
+											<label>Look up Instagram User ID</label>
+											<input type="text" class="input-block-level form-control" value="mlintern" id="username">
+											<button class="btn btn-large btn-primary btn-block" onclick="lookupID();return false;">Go</button>
+											<div><a href="http://jelled.com/instagram/lookup-user-id">Lookup Tool From Jelled</a></div>
+								</fieldset>
+								<div class="result hidden">
 							<div class="id"></div>
 							<table class="table">
 								<tr>
@@ -209,28 +217,29 @@
 								</tr>
 							</table>
 						</div>
-		            </form> 
+								</form> 
 				</div>
 				<div class="tab-pane" id="insta-auth">
 					<form class="col-sm-6 col-sm-offset-3">
 						<fieldset>
-			                <label>Look up Instagram Auth Token</label>
-			                <input type="text" class="input-block-level form-control" value="b4dbc0111231442697e1ab382961f06e" id="authId">
-			                <button class="btn btn-large btn-primary btn-block" onclick="getToken();return false;">Go</button>
-			                <div><a href="http://jelled.com/instagram/access-token">Auth Tool From Jelled</a></div>
-			        	</fieldset>
-		            </form> 
+											<label>Look up Instagram Auth Token</label>
+											<input type="text" class="input-block-level form-control" value="b4dbc0111231442697e1ab382961f06e" id="authId">
+											<button class="btn btn-large btn-primary btn-block" onclick="getToken();return false;">Go</button>
+											<div><a href="http://jelled.com/instagram/access-token">Auth Tool From Jelled</a></div>
+								</fieldset>
+								</form> 
 				</div>
+
 				<div class="tab-pane" id="pig-latin">
-				  <form name="frmTranslator" class="col-md-6 col-md-offset-3">
-				  	<fieldset>
+					<form name="frmTranslator" class="col-md-6 col-md-offset-3">
+						<fieldset>
 						<label>Enter English Text to Translate:</label>
 						
 						<textarea id="taEng" class="col-sm-12 form-control" rows="7" name="taEng">Enter the English text here that you want translated into Pig Latin.</textarea>
 						
 						<div class="row" style="margin: 20px 0;">
 						<input class="btn btn-success col-sm-6" value="Translate" onclick="fTranslate()" type="button">
-						<input  class="btn btn-danger col-sm-6" value="Clear Text" onclick="fClearText()" type="button">
+						<input	class="btn btn-danger col-sm-6" value="Clear Text" onclick="fClearText()" type="button">
 						</div>
 						
 						<label>Igpay Atinlay Anslationtray:</label>
@@ -245,9 +254,10 @@
 						<label class="checkbox">
 							<input name="learnmode" checked="checked" type="checkbox">Check for 'Learning Mode'.
 						</label>
-					  </fieldset>	
+						</fieldset>	
 					</form>
 				</div>
+
 				<div class="tab-pane" id="lorem">
 					<form class="col-md-6 col-md-offset-3 form-horizontal">
 						<fieldset>
@@ -285,6 +295,7 @@
 					</form>
 					<div class="col-sm-10 col-sm-offset-1" style="margin-top: 10px;"><textarea class="hidden ipsum col-sm-12 form-control" style="display:block; height: 300px;"></textarea></div>
 				</div>
+
 				<div class="tab-pane" id="human2unix">
 					<div class="col-sm-5">
 						<form name="u2h">
@@ -301,31 +312,32 @@
 						<form name="h2u">
 							<h3>Human to Unix</h3>
 								<div class="row">	
-									<div class="col-sm-6">   		    
-									    <label>Month: </label>
-									    <input type="text" class="form-control" maxlength="2" id="inMon">
-									    <label>Day: </label>
-									    <input type="text" class="form-control" maxlength="2" id="inDay">
-									    <label>Year: </label>
-									    <input type="text" class="form-control" maxlength="4" id="inYear">
-								    </div>
-								    <div class="col-sm-6" style="margin-bottom: 25px;"> 
-									    <label>Hour: </label>
-									    <input type="text" class="form-control" maxlength="2" id="inHr">
-									    <label>Minute: </label>
-									    <input type="text" class="form-control" maxlength="2" id="inMin">
-									    <label>Second: </label>
-									    <input type="text" class="form-control" maxlength="2" id="inSec">
-								    </div>	
-							    </div>				 
+									<div class="col-sm-6">	 				
+											<label>Month: </label>
+											<input type="text" class="form-control" maxlength="2" id="inMon">
+											<label>Day: </label>
+											<input type="text" class="form-control" maxlength="2" id="inDay">
+											<label>Year: </label>
+											<input type="text" class="form-control" maxlength="4" id="inYear">
+										</div>
+										<div class="col-sm-6" style="margin-bottom: 25px;"> 
+											<label>Hour: </label>
+											<input type="text" class="form-control" maxlength="2" id="inHr">
+											<label>Minute: </label>
+											<input type="text" class="form-control" maxlength="2" id="inMin">
+											<label>Second: </label>
+											<input type="text" class="form-control" maxlength="2" id="inSec">
+										</div>	
+									</div>				 
 							 <input class="btn btn-large btn-success col-sm-6" type="button" value="Submit" onClick="humanToTime();">
 							 <input class="btn btn-large btn-warning col-sm-6" type="reset" value="Reset">
 							 <input style="margin-top: 25px;" id="h2u-result" type="text" value="" class="col-sm-12 align-center" READONLY>
 						</form>
 					</div>
 				</div>
+
 				<div class="tab-pane" id="ettest">
-				  	<form class="col-sm-10 col-sm-offset-1" action="http://cl.exct.net/subscribe.aspx" name="subscribeForm" method="post" onSubmit="return checkForm();"> 
+						<form class="col-sm-10 col-sm-offset-1" action="http://cl.exct.net/subscribe.aspx" name="subscribeForm" method="post" onSubmit="return checkForm();"> 
 						<!-- <input type=hidden name="thx" value="Your thank you page here"> 
 						<input type=hidden name="err" value="Your error page here"> 
 						<input type=hidden name="usub" value="Your success unsub page here">
@@ -372,8 +384,9 @@
 						</div>
 					</form>
 				</div>
+
 				<div class="tab-pane" id="crontab">
-					<!-- <form enctype="multipart/form-data"  action="index.html" method="post"> -->
+					<!-- <form enctype="multipart/form-data"	action="index.html" method="post"> -->
 					<div class="col-sm-10 col-sm-offset-1">
 						<form id="cron-creator">
 						<div class="row">	
@@ -391,9 +404,9 @@
 									</div>
 									<div class="col-sm-6">
 										<label class="radio"><input type="radio" name="minutes" value="custom">Custom</label>
-										  <select class="cron chosen-select form-control" name="custminutes[]" size="5" multiple>
+											<select class="cron chosen-select form-control" name="custminutes[]" size="5" multiple>
 											<option></option><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option>
-										  </select>
+											</select>
 									</div>
 								</div>
 							</div>	
@@ -410,9 +423,9 @@
 									</div>
 									<div class="col-sm-6">	
 										<label class="radio"><input type="radio" name="hours" value="custom">Custom</label>
-										  <select class="cron chosen-select form-control" name="custhours[]" size="5" multiple>
-										    <option></option><option value="0">Midnight</option><option value="1">1am</option><option value="2">2am</option><option value="3">3am</option><option value="4">4am</option><option value="5">5am</option><option value="6">6am</option><option value="7">7am</option><option value="8">8am</option><option value="9">9am</option><option value="10">10am</option><option value="11">11am</option><option value="12">Noon</option><option value="13">1pm</option><option value="14">2pm</option><option value="15">3pm</option><option value="16">4pm</option><option value="17">5pm</option><option value="18">6pm</option><option value="19">7pm</option><option value="20">8pm</option><option value="21">9pm</option><option value="22">10pm</option><option value="23">11pm</option>
-									  	</select>
+											<select class="cron chosen-select form-control" name="custhours[]" size="5" multiple>
+												<option></option><option value="0">Midnight</option><option value="1">1am</option><option value="2">2am</option><option value="3">3am</option><option value="4">4am</option><option value="5">5am</option><option value="6">6am</option><option value="7">7am</option><option value="8">8am</option><option value="9">9am</option><option value="10">10am</option><option value="11">11am</option><option value="12">Noon</option><option value="13">1pm</option><option value="14">2pm</option><option value="15">3pm</option><option value="16">4pm</option><option value="17">5pm</option><option value="18">6pm</option><option value="19">7pm</option><option value="20">8pm</option><option value="21">9pm</option><option value="22">10pm</option><option value="23">11pm</option>
+											</select>
 									</div>
 								</div>
 							</div>
@@ -430,9 +443,9 @@
 									</div>
 									<div class="col-sm-6">	
 										<label class="radio"><input type="radio" name="days" value="custom">Custom</label>
-									      <select class="cron chosen-select form-control" name="custdays[]" multiple>
-									        <option></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
-									    </select>
+												<select class="cron chosen-select form-control" name="custdays[]" multiple>
+													<option></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
+											</select>
 									 </div>
 								 </div>
 							</div>	
@@ -449,11 +462,11 @@
 									</div>
 									<div class="col-sm-6">
 										<label class="radio"><input type="radio" name="months" value="custom">Custom</label>
-									      <select class="cron chosen-select form-control" name="custmonths[]" size="5" multiple>
-									        <option></option><option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option><option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option><option value="7">Jul</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
-									      </select>
-								    </div>
-							    </div>
+												<select class="cron chosen-select form-control" name="custmonths[]" size="5" multiple>
+													<option></option><option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option><option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option><option value="7">Jul</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+												</select>
+										</div>
+									</div>
 							</div>
 						</div>
 						<div class="row">
@@ -462,15 +475,15 @@
 									<div class="cron-section-title" align="center">WEEKDAYS</div>
 									<div class="col-sm-6">
 										<label class="radio"><input type="radio" name="weekdays" value="*" checked>Every Day of the Week</label>
-									    <label class="radio"><input type="radio" name="weekdays" value="1-5">Weekdays (Mon-Fri)</label>
-									    <label class="radio"><input type="radio" name="weekdays" value="0,6">Weekend</label>
-									    <label class="radio"><input type="radio" name="weekdays" value="0">Once Per Week (Sunday)</label>
+											<label class="radio"><input type="radio" name="weekdays" value="1-5">Weekdays (Mon-Fri)</label>
+											<label class="radio"><input type="radio" name="weekdays" value="0,6">Weekend</label>
+											<label class="radio"><input type="radio" name="weekdays" value="0">Once Per Week (Sunday)</label>
 									</div>
 									<div class="col-sm-6">
 										<label class="radio"><input type="radio" name="weekdays" value="custom">Custom</label>
-									      <select class="cron chosen-select form-control" name="custweekdays[]" size="7" multiple>
+												<select class="cron chosen-select form-control" name="custweekdays[]" size="7" multiple>
 											<option></option><option value="0">Sun</option><option value="1">Mon</option><option value="2">Tue</option><option value="3">Wed</option><option value="4">Thu</option><option value="5">Fri</option><option value="6">Sat</option>
-									      </select>
+												</select>
 									</div>
 								</div>
 							</div>										
@@ -484,14 +497,16 @@
 						</form>
 					</div>
 				</div>
+
 				<div class="tab-pane" id="codify">
 					<div class="col-sm-10 col-sm-offset-1">
-				        <textarea type="text" value="" rows="10" class="form-control" placeholder="Text To Codify…" id="code_text" style="margin-bottom: 10px;width: 100%"></textarea>
+								<textarea type="text" value="" rows="10" class="form-control" placeholder="Text To Codify…" id="code_text" style="margin-bottom: 10px;width: 100%"></textarea>
 						<button class="btn btn-large btn-success btn-block" onclick="codify_text();return false;">Codify Text!</button>
 						<!-- <code class="well" id="codified_result" style="padding:10px;margin-top: 15px;display: block;white-space: pre-wrap;"></code> -->
 						<textarea id="codified_result" class="hidden" style="width: 100%; margin-top:10px;"></textarea>
 					</div>
 				</div>
+
 				<div class="tab-pane" id="dencode">
 					<div class="col-sm-10 col-sm-offset-1">
 						<textarea cols="100" rows="5" class="form-control" placeholder="Url to Dencode..." id="dencoder" style="width: 100%;"></textarea>
@@ -502,9 +517,10 @@
 						<textarea cols="100" class="hidden form-control" rows="5" id="dencoder-result" style="width: 100%;"></textarea>
 					</div>
 				</div>
+
 				<div class="tab-pane" id="ask">
-				  <form action="php/FormToEmail.php" method="post" class="col-sm-6 col-sm-offset-3">
-				  	<fieldset>
+					<form action="php/FormToEmail.php" method="post" class="col-sm-6 col-sm-offset-3">
+						<fieldset>
 						<label>Name:</label>
 						<input class="form-control" type="text" name="name">
 						<label>Email address:</label>
@@ -516,6 +532,14 @@
 					</fieldset>
 				</form>
 				</div>
+
+				<div class="tab-pane" id="uuid">
+					<div class="col-sm-8 col-sm-offset-2">
+						<div class="well text-center uuid-view"></div>
+						<div class="text-center"><button class="btn btn-success" onclick="generateUUID();">Generate</button></div>
+					</div>
+				</div>
+
 			</div> <!-- tab-content -->
 			</div>
 		</div> <!-- col-xs-12 col-sm-9 -->
@@ -524,7 +548,7 @@
 		<div class="row">
 			<div class="footer">
 				<div class="footer-email" style="text-align:center;">mark@lintern.us</div>
-				<div class="version" style="text-align:center;">v 1.8.1</div>
+				<div class="version" style="text-align:center;">v 1.9.0</div>
 			</div>
 		</div>
 
@@ -602,6 +626,7 @@
 <script type="text/javascript" src="js/functions.js"></script>
 <script type="text/javascript" src="js/codify.js"></script>
 <script type="text/javascript" src="js/dencoder.js"></script>
+<script type="text/javascript" src="js/uuid.js"></script>
 
 <script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -617,13 +642,13 @@
 <script>
 	$(".chosen-select").chosen({width: "95%"})
 	$(document).ready(function () {
-	  $('[data-toggle="offcanvas"]').click(function () {
-	    $('.row-offcanvas').toggleClass('active');
-	  });
-	  $('[data-toggle="tab"]').click(function () {
-	    $('[data-toggle="tab"]').removeClass('active');
-	    $(this).addClass('active');
-	  });
+		$('[data-toggle="offcanvas"]').click(function () {
+			$('.row-offcanvas').toggleClass('active');
+		});
+		$('[data-toggle="tab"]').click(function () {
+			$('[data-toggle="tab"]').removeClass('active');
+			$(this).addClass('active');
+		});
 	});
 </script>
 
