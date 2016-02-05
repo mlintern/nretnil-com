@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+	<h1>Images</h1>
+	<div class="images"></div>
+
+	<script>
+		var loc = window.location.pathname;
+		var dir = loc.substring(0, loc.lastIndexOf('/'));
+		console.log(dir);
+		var fileextension = [".png",".jpg"];
+		$.ajax({
+			url: dir,
+			success: function (data) {
+				console.log(data);
+				$(data).find("a:contains(" + (fileextension[0]) + "), a:contains(" + (fileextension[1]) + ")").each(function () {
+					console.log(this);
+					var filename = this.href;
+					$('.images').append($("<img  width='25%' src=" + filename + ">"));
+				});
+			}
+		});
+	</script>
+</body>
+</html>
