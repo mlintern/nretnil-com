@@ -10,14 +10,11 @@
 	<script>
 		var loc = window.location.pathname;
 		var dir = loc.substring(0, loc.lastIndexOf('/'));
-		console.log(dir);
 		var fileextension = [".png",".jpg"];
 		$.ajax({
 			url: dir,
 			success: function (data) {
-				console.log(data);
 				$(data).find("a:contains(" + (fileextension[0]) + "), a:contains(" + (fileextension[1]) + ")").each(function () {
-					console.log(this);
 					var filename = this.href;
 					$('.images').append($("<img  width='25%' src=" + filename + ">"));
 				});
