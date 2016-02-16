@@ -7,28 +7,30 @@
 	<style>
 		img { width: 100%; }
 		.img-box { position: relative; width: 23%; float: left; margin: 1%; }
-		.img-hover { position: absolute; width: 100%; height: 0%; background-color: gray; top: 0; display: none; text-align: center; }
+		.img-hover { position: absolute; width: 100%; height: 0%; background-color: rgba(0, 0, 0, 0.7); top: 0; display: none; text-align: center; }
 		.img-box:hover > .img-hover { display: block; height: 100%; }
-		.img-hover .copy-btn { margin-top: 40%; }
+		.img-hover .copy-btn { margin-top: 15%; }
+		.img-hover h4 { color: #fff; margin-top: 20%; }
 	</style>
 </head>
 <body>
-	<h1>Images</h1>
-	<div class="images"></div>
+	<div class="container">
+		<h1>Images</h1>
+		<div class="images"></div>
+	</div>
 
 	<script>
 		var loc = window.location.pathname;
 		var dir = loc.substring(0, loc.lastIndexOf('/'));
 		console.log(dir);
+		console.log(loc);
 		var fileextension = [".png",".jpg"];
 		$.ajax({
 			url: dir,
 			success: function (data) {
-				console.log(data);
 				$(data).find("a:contains(" + (fileextension[0]) + "), a:contains(" + (fileextension[1]) + ")").each(function () {
-					console.log(this);
 					var filename = this.href;
-					$('.images').append($("<div class='img-box'><img src='" + filename + "'><div class='img-hover'><button class='btn copy-btn' data-clipboard-text='" + filename + "''>copy url</button></div></div>"));
+					$('.images').append($("<div class='img-box'><img src='" + filename + "'><div class='img-hover'><h4>" + filename.split('/').pop() + "</h4><button class='btn copy-btn btn-lg btn-success' data-clipboard-text='" + filename + "''>copy url</button></div></div>"));
 				});
 			}
 		});
