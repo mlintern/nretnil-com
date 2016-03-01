@@ -38,7 +38,8 @@
       <?php
       foreach( $images as $image ):
         $image_size = getimagesize($image);
-        echo "<div class='img-box'><img src='" . str_replace($path."/", "", $image) . "'><div class='img-hover'><h4 class='filename'>" . str_replace($path."/", "", $image) . "</h4><h4>" . $image_size[0] . " x " . $image_size[1] . "</h4><button class='btn copy-btn btn-lg btn-success' data-clipboard-text='". $location . str_replace($path."/", "", $image) . "''>copy url</button></div></div>";
+        $src = str_replace($path."/", "", $image);
+        echo "<div class='img-box'><img src='" . $src . "'><div class='img-hover'><h4 class='filename'>" . str_replace($path."/", "", $image) . "</h4><h4>" . $image_size[0] . " x " . $image_size[1] . "</h4><button class='btn copy-btn btn-success' data-clipboard-text='". $location . str_replace($path."/", "", $image) . "''>copy url</button><div><a href='" . $src . "' class='btn copy-btn btn-success' download>download</a></div></div></div>";
       endforeach;
       ?>
     </div>
