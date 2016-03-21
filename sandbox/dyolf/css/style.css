@@ -1,128 +1,108 @@
-body{
-position:relative;
-background-image: url('../img/frog-bg.jpeg');
-background-color: #666;
-background-repeat: no-repeat;
-background-position: center center;
-background-attachment: fixed;
-background-size: cover;
-color: #FFF;
+body {
+	position:relative;
+	background-image: url('../img/frog-bg.jpeg');
+	background-color: #666;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	color: #FFF;
 }
 @media (max-width: 768px) {
-	body{
+	body {
 	background-repeat: repeat-y;
 	background-position: center top;
 	}
 }
 @media handheld {
-	body{
+	body {
 	background-repeat: repeat-y;
 	background-position: center top;
 	}
 }
 a {
-color: #FFF;
+	color: #FFF;
 }
-a:hover{
-color: #DDD;
-cursor: url("../img/frog_footprint_30.png"), pointer;
+a:hover {
+	color: #DDD;
+	cursor: url("../img/frog_footprint_30.png"), pointer;
 }
-button:hover{
-cursor: url("../img/frog_footprint_30.png"), pointer;
+button:hover {
+	cursor: url("../img/frog_footprint_30.png"), pointer;
 }
-button a:hover{
-color: #FFF;
+button a:hover {
+	color: #FFF;
 }
-h2 a:hover{
-color: #FFF;
+h2 a:hover {
+	color: #FFF;
 }
-.right-side{
+img{
+	max-width: 100%;
+}
+.page-header {
+	border-bottom: solid 1px;
+	padding: 15px 0;
+}
+.no-padding {
+	padding: 0;
+}
+.right-side {
 	float: right;
 }
-.left-side{
+.left-side {
 	float: left;
 }
-@media (min-width: 768px) {
-	.right-side .btn, .left-side .btn {
-		display: block;
-		margin-bottom: 10px;
-		width: 80px;
-	}
-	.right-side{
-		position: fixed;
-		right: 20px;
-		top: 50px;
-	}
-	.left-side{
-		position: fixed;
-		left: 20px;
-		top: 50px;
-	}
+.nav-btn {
+	text-align: center;
+	padding-left: 0;
+	padding-right: 0;
+}
+.thumbnail {
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 /*Buttons*/
-.btn-twitter{
+.btn-twitter {
 	color: #fff;
 	background-color: #5bc0de;
 	border-color: #46b8da;
 }
-.btn-twitter:hover{
+.btn-twitter:hover {
 	color: #fff;
 	background-color: #2aabd2;
 	border-color: #269abc;
 }
-.btn-facebook{
+.btn-facebook {
 	color: #fff;
 	background-color: #4661A2;
 	border-color: #2F467E;
 }
-.btn-facebook:hover{
+.btn-facebook:hover {
 	color: #fff;
 	background-color: #2F467E;
 	border-color: #2F467E;
 }
-.btn-pinterest{
+.btn-pinterest {
 	color: #fff;
 	background-color: #d9534f;
 	border-color: #d43f3a;
 }
-.btn-pinterest:hover{
+.btn-pinterest:hover {
 	color: #fff;
 	background-color: #c12e2a;
 	border-color: #ac2925;
 }
 /*Font Updates*/
-.alight-center{
+.alight-center {
 	text-align: center;
 }
-h1, h2, h3, h4, h5, h6{
-
-}
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
-	color: #bbb;
-}
-.thumbnail, .modal-content{
-	color: #b90102;
-}
-/*Carousel*/
-.carousel-inner > .item > img, .carousel-inner > .item > a > img {
-	margin: 0 auto;
-}
 /*Footer*/
-.footer{
+.footer {
 	border-top: solid 1px #FFF;
 	margin-top: 20px;
-}
-.footer-email{
-color: #FFF;
-	padding: 30px 0;
+	padding: 25px 0;
 }
 /*Fixes*/
-img{
-	max-width: 100%;
-}
-body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom {
-	margin-right: 0;
-}
 #floyd {
 	display:none;
 	position: fixed;
@@ -147,7 +127,6 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
 	font-size: 55px;
 	border: solid 8px #CCC; 
 	padding: 50px 80px;
-	margin: 0 15px;
 }
 @media (max-width: 768px) {
 	.chalkboard{

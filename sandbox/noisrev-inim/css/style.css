@@ -63,3 +63,7 @@ img{
 .navbar-auto-hide{
 	margin: 0;
 }
+.navbar-right {
+	margin-right: 15px;
+	margin-top: 8px;
+}
