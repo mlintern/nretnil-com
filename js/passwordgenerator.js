@@ -1,10 +1,10 @@
 function displayPassword() {
 	$.ajax({
-		url: 'http://app.nretnil.com/api/password?length='+$("#Length").val()+'&symbols='+$("#Symbols").is(':checked'),
+		url: 'https://app.nretnil.com/api/password?length='+$("#Length").val()+'&symbols='+$("#Symbols").is(':checked'),
 		success: function(response) {
-			$("#outputPassword").text(response['password']);
+			$("#outputPassword").text(response.password);
 			$("#outputPassword").focus();
-			$("#outputMnemonic").text(response['phonetic']);
+			$("#outputMnemonic").text(response.phonetic);
 		},
 		error: function(response) {
 			console.log(response);
@@ -15,5 +15,5 @@ function displayPassword() {
 displayPassword();
 
 $(document).ready(function(){
-	$('#btnGenerate').click(function(){displayPassword()});
+	$('#btnGenerate').click(function(){displayPassword();});
 });
