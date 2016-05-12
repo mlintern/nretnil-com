@@ -1,4 +1,4 @@
-$.get('http://ip.nretnil.com', function(data,status,xhr){
+$.get('https://ip.nretnil.com', function(data,status,xhr){
 	$('#External-IP').html(data);
 },"html");
 
