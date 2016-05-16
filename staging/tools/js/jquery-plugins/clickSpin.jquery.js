@@ -1,5 +1,5 @@
 /*
- * jQuery Click Spin plugin 1.1.0
+ * jQuery Click Spin plugin 1.1.1
  *
  * Mark Lintern
  *
@@ -7,7 +7,7 @@
  *   http://www.opensource.org/licenses/mit-license.php
  *   http://www.gnu.org/licenses/gpl.html
  *
- * Date: May 22 2014
+ * Date: May 16 2016
  */
 jQuery.fn.clickSpin = function(settings){
 
@@ -52,6 +52,6 @@ jQuery.fn.clickSpin = function(settings){
       }
     }, 1);
   
-  })
+  });
  
 };

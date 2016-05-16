@@ -1,5 +1,5 @@
 /*
- * jQuery Make Square plugin 1.0.0
+ * jQuery Make Square plugin 1.0.1
  *
  * Mark Lintern
  *
@@ -7,7 +7,7 @@
  *   http://www.opensource.org/licenses/mit-license.php
  *   http://www.gnu.org/licenses/gpl.html
  *
- * Date: July 21 2014
+ * Date: May 16, 2016
  */
 jQuery.fn.makeSquare = function(settings) {
 
@@ -23,6 +23,6 @@ jQuery.fn.makeSquare = function(settings) {
 			var width = $(this).width();
 			$(this).height(width);
 		}
-	})
+	});
 
 };

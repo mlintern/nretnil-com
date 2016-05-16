@@ -35,13 +35,13 @@ jQuery.fn.countdown = function(settings){
   var secondLabel = 'Seconds';
 
   if (options.compactLabel){
-    var yearLabel = 'Yrs';
-    var monthLabel = 'Mos';
-    var weekLabel = 'Wks';
-    var dayLabel = 'Days';
-    var hourLabel = 'Hrs';
-    var minuteLabel = 'Mins';
-    var secondLabel = 'Secs';
+    yearLabel = 'Yrs';
+    monthLabel = 'Mos';
+    weekLabel = 'Wks';
+    dayLabel = 'Days';
+    hourLabel = 'Hrs';
+    minuteLabel = 'Mins';
+    secondLabel = 'Secs';
   }
 
   var $self = $(this);
@@ -102,12 +102,12 @@ jQuery.fn.countdown = function(settings){
     //console.log(y+' '+m+' '+d+' '+h+' '+mn+' '+diff);
     $self.find('.countdownInternal').remove();
     $self.append(div);
-  }
+  };
 
   if (options.pause) {
     updateCountdown(options.until);
   }else{
-    setInterval(function(){updateCountdown(options.until)},1000);
+    setInterval(function(){ updateCountdown(options.until); },1000);
   }
 
 };

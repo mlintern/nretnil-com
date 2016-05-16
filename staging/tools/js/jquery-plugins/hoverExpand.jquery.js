@@ -28,33 +28,33 @@ jQuery.fn.hoverExpand = function(settings){
 
     if ( divHeight > options.startHeight ) {
       
-        $(this).wrap( "<div class='arrow-container'></div>" );
-        var width = $(this).width();
-        var arrowMargin = width * ( ( 50 - ( options.arrowWidth / 2 ) ) / 100 );
-        var arrowSideBorder = width * ( ( options.arrowWidth / 2 ) / 100 );
-        $(this).parent('.arrow-container').append("<div class='arrow' style='border-top: solid "+options.arrowHeight+"px;border-left: solid "+arrowSideBorder+"px transparent;border-right: solid "+arrowSideBorder+"px transparent;margin: 5px "+arrowMargin+"px;'></div>");
+      $(this).wrap( "<div class='arrow-container'></div>" );
+      var width = $(this).width();
+      var arrowMargin = width * ( ( 50 - ( options.arrowWidth / 2 ) ) / 100 );
+      var arrowSideBorder = width * ( ( options.arrowWidth / 2 ) / 100 );
+      $(this).parent('.arrow-container').append("<div class='arrow' style='border-top: solid "+options.arrowHeight+"px;border-left: solid "+arrowSideBorder+"px transparent;border-right: solid "+arrowSideBorder+"px transparent;margin: 5px "+arrowMargin+"px;'></div>");
 
-        $(this).hover(function(){
-          $(this).stop(true);
-          var newHeight = '100%';
-          if ( options.maxHeight > 0 ) {
-            newHeight = options.maxHeight + "px";
-            $(this).css({ 'overflow': "scroll" });
-          }
-          $(this).css({ height: 'auto' });
-          var autoHeight = $(this).height();
-          $(this).css({ height: options.startHeight });
-          $(this).parent().find('.arrow').css('visibility', 'hidden');
-          $(this).delay(options.delay).animate({ 'height': autoHeight }, options.slideSpeed);
-        },function(){
-          $(this).stop(true);
-          $(this).delay(options.delay).animate({ 'height': options.startHeight }, options.slideSpeed);
-          $(this).parent().find('.arrow').css('visibility', 'visible');
-          if ( options.maxHeight < 100 ) {
-            $(this).css({ 'overflow': "hidden" });
-            $(this).scrollTop(0);
-          }
-        });
+      $(this).hover(function(){
+        $(this).stop(true);
+        var newHeight = '100%';
+        if ( options.maxHeight > 0 ) {
+          newHeight = options.maxHeight + "px";
+          $(this).css({ 'overflow': "scroll" });
+        }
+        $(this).css({ height: 'auto' });
+        var autoHeight = $(this).height();
+        $(this).css({ height: options.startHeight });
+        $(this).parent().find('.arrow').css('visibility', 'hidden');
+        $(this).delay(options.delay).animate({ 'height': autoHeight }, options.slideSpeed);
+      },function(){
+        $(this).stop(true);
+        $(this).delay(options.delay).animate({ 'height': options.startHeight }, options.slideSpeed);
+        $(this).parent().find('.arrow').css('visibility', 'visible');
+        if ( options.maxHeight < 100 ) {
+          $(this).css({ 'overflow': "hidden" });
+          $(this).scrollTop(0);
+        }
+      });
 
       $(this).css({ height: options.startHeight });
     }
