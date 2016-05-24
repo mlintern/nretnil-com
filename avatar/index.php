@@ -18,9 +18,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-  <script type="text/javascript" src="http://dev.nretnil.com/staging/tools/js/clipboard.min.js"></script>
-  <link type="text/css" href="http://dev.nretnil.com/staging/tools/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="https://dev.nretnil.com/staging/tools/js/clipboard.min.js"></script>
+  <link type="text/css" href="https://dev.nretnil.com/staging/tools/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
   <style>
     img { width: 100%; }
     .img-box { position: relative; width: 23%; float: left; margin: 1%; }
