@@ -48,6 +48,9 @@ border-bottom-color: #777;
 .navbar-default .navbar-brand {
 color: #FFF;
 }
+.navbar-brand > img {
+display: inline-block;
+}
 /*Font Updates*/
 .alight-center{
 text-align: center;
