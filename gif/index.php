@@ -18,13 +18,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Gifs</title>
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
   <script type="text/javascript" src="https://dev.nretnil.com/staging/tools/js/clipboard.min.js"></script>
   <link type="text/css" href="https://dev.nretnil.com/staging/tools/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
   <style>
     img { width: 100%; }
-    .img-box { position: relative; width: 23%; float: left; margin: 1%; }
-    .img-hover { position: absolute; width: 100%; height: 0%; background-color: rgba(0, 0, 0, 0.7); top: 0; display: none; text-align: center; }
+    .img-box { margin-bottom: 30px; }
+    .img-hover { position: absolute; height: 0%; left: 15px; right: 15px; background-color: rgba(0, 0, 0, 0.7); top: 0; display: none; text-align: center; }
     .img-box:hover > .img-hover { display: block; height: 100%; }
     .img-hover .copy-btn { margin-top: 10%; }
     .img-hover h4 { color: #fff; }
@@ -33,13 +34,13 @@
 </head>
 <body>
   <div class="container">
-    <h1>Images</h1>
+    <h1>Gifs</h1>
     <div class="images">
       <?php
       foreach( $images as $image ):
         $image_size = getimagesize($image);
         $src = str_replace($path."/", "", $image);
-        echo "<div class='img-box'><img src='" . $src . "'><div class='img-hover'><h4 class='filename'>" . str_replace($path."/", "", $image) . "</h4><h4>" . $image_size[0] . " x " . $image_size[1] . "</h4><button class='btn copy-btn btn-success' data-clipboard-text='". $location . str_replace($path."/", "", $image) . "''>copy url</button><div><a href='" . $src . "' class='btn copy-btn btn-success' download>download</a></div></div></div>";
+        echo "<div class='img-box col-sm-6 col-md-3'><img src='" . $src . "'><div class='img-hover'><h4 class='filename'>" . str_replace($path."/", "", $image) . "</h4><h4>" . $image_size[0] . " x " . $image_size[1] . "</h4><button class='btn copy-btn btn-success' data-clipboard-text='". $location . str_replace($path."/", "", $image) . "''>copy url</button><div><a href='" . $src . "' class='btn copy-btn btn-success' download>download</a></div></div></div>";
       endforeach;
       ?>
     </div>
