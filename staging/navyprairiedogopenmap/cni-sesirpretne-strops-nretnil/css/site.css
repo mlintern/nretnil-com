@@ -1,0 +1,122 @@
+img { 
+  max-width: 100%
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Catamaran', sans-serif;
+}
+
+.bgimg {
+  position: relative;
+  opacity: 0.75;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.social-icons {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.social-icons a {
+	text-shadow: 2px 2px #ffffff;
+}
+
+.bgimg-1 {
+  background-image: url("../img/five.jpg");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("../img/three.jpg");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("../img/four.jpg");
+  min-height: 400px;
+}
+
+.bgimg-4 {
+  background-image: url("../img/one.jpg");
+  min-height: 400px;
+}
+
+.bgimg-5 {
+  background-image: url("../img/six.jpg");
+  min-height: 100%;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: rgba(17, 17, 17, 0.85);
+  color: #fff;
+  padding: 15px;
+  letter-spacing: 10px;
+  display: inline-block;
+}
+
+.caption span.border.transparent {
+	background-color: transparent;
+	color: #f7f7f7;
+}
+
+.contact{
+	background-color: rgba(255,255,255,0.6);
+}
+
+.info {
+	color: #777;
+	background-color: #FFF;
+	padding: 30px 60px;
+	text-align: justify;
+	border-top: solid 3px;
+	border-bottom: solid 3px;
+}
+
+.info.invert {
+	color: #FFF;
+	background-color: #777;
+	padding: 30px 60px;
+	text-align: justify;
+	border-top: solid 3px;
+	border-bottom: solid 3px;
+}
+
+/* COLOR HELPERS */
+
+.facebook-blue, 
+.facebook-blue:hover, 
+.facebook-blue:active, 
+.facebook-blue:visited, 
+.facebook-blue:focus {
+	color: #3b5998;
+}
+
+.twitter-blue, 
+.twitter-blue:hover, 
+.twitter-blue:active, 
+.twitter-blue:visited, 
+.twitter-blue:focus {
+	color: #55acee;
+}
+
+.youtube-red, 
+.youtube-red:hover, 
+.youtube-red:active, 
+.youtube-red:visited, 
+.youtube-red:focus {
+	color: #cd201f;
+}
