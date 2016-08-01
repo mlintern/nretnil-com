@@ -1,29 +1,29 @@
 img, iframe { 
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 body, html {
-  height: 100%;
-  font-family: 'Catamaran', sans-serif;
+	height: 100%;
+	font-family: 'Catamaran', sans-serif;
 }
 
 .bgimg {
-  position: relative;
-  opacity: 0.75;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+	position: relative;
+	opacity: 0.75;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 }
 
 @media (max-width: 544px) {
-  .bgimg {
-    background-attachment: scroll;
-  }
+	.bgimg {
+		background-attachment: scroll;
+	}
 }
 
 .social-icons {
@@ -37,51 +37,51 @@ body, html {
 }
 
 .bgimg-1 {
-  background-image: url("../img/five.jpg");
-  min-height: 100%;
+	background-image: url("../img/five.jpg");
+	min-height: 100%;
 }
 
 .bgimg-2 {
-  background-image: url("../img/three.jpg");
-  min-height: 400px;
+	background-image: url("../img/three.jpg");
+	min-height: 400px;
 }
 
 .bgimg-3 {
-  background-image: url("../img/four.jpg");
-  min-height: 400px;
+	background-image: url("../img/four.jpg");
+	min-height: 400px;
 }
 
 .bgimg-4 {
-  background-image: url("../img/one.jpg");
-  min-height: 400px;
+	background-image: url("../img/one.jpg");
+	min-height: 400px;
 }
 
 .bgimg-5 {
-  background-image: url("../img/six.jpg");
-  min-height: 100%;
+	background-image: url("../img/six.jpg");
+	min-height: 100%;
 }
 
 .caption {
-  position: absolute;
-  left: 0;
-  top: 30%;
-  width: 100%;
-  text-align: center;
-  color: #000;
+	position: absolute;
+	left: 0;
+	top: 30%;
+	width: 100%;
+	text-align: center;
+	color: #000;
 }
 
 @media (min-width: 544px) {
-  .caption {
-    top: 45%;
-  }
+	.caption {
+		top: 45%;
+	}
 }
 
 .caption span.border {
-  background-color: rgba(17, 17, 17, 0.85);
-  color: #fff;
-  padding: 20px;
-  letter-spacing: 10px;
-  display: inline-block;
+	background-color: rgba(17, 17, 17, 0.85);
+	color: #fff;
+	padding: 20px;
+	letter-spacing: 10px;
+	display: inline-block;
 }
 
 .caption span.border.transparent {
@@ -91,12 +91,6 @@ body, html {
 
 .contact{
 	background-color: rgba(255,255,255,0.6);
-}
-
-.contact {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .info {
@@ -109,9 +103,9 @@ body, html {
 }
 
 @media (min-width: 544px) {
-  .info {
-    padding: 30px 60px;
-  }
+	.info {
+		padding: 30px 60px;
+	}
 }
 
 .info.invert {
@@ -150,7 +144,7 @@ body, html {
 .black:active, 
 .black:visited, 
 .black:focus {
-  color: #000;
+	color: #000;
 }
 
 
