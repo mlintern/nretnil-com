@@ -1,5 +1,6 @@
-img { 
-  max-width: 100%
+img, iframe { 
+  max-width: 100%;
+  height: auto;
 }
 
 body, html {
@@ -89,10 +90,16 @@ body, html {
 .info {
 	color: #777;
 	background-color: #FFF;
-	padding: 30px 60px;
+	padding: 15px;
 	text-align: justify;
 	border-top: solid 3px;
 	border-bottom: solid 3px;
+}
+
+@media (min-width: 544px) {
+  .info {
+    padding: 30px 60px;
+  }
 }
 
 .info.invert {
