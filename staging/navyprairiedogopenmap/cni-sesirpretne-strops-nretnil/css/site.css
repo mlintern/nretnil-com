@@ -64,10 +64,16 @@ body, html {
 .caption {
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 30%;
   width: 100%;
   text-align: center;
   color: #000;
+}
+
+@media (min-width: 544px) {
+  .caption {
+    top: 45%;
+  }
 }
 
 .caption span.border {
@@ -85,6 +91,12 @@ body, html {
 
 .contact{
 	background-color: rgba(255,255,255,0.6);
+}
+
+.contact {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .info {
@@ -139,4 +151,27 @@ body, html {
 .black:visited, 
 .black:focus {
   color: #000;
+}
+
+
+/* MEDIA */
+
+/* SM */
+@media (min-width: 544px) {
+
+}
+
+/* MD */
+@media (min-width: 768px) {
+
+}
+
+/* LG */
+@media (min-width: 992px) {
+
+}
+
+/* XL */
+@media (min-width: 1200px) {
+
 }
