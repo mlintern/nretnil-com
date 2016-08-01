@@ -1,5 +1,5 @@
 $('.js-trigger').click(function(event){
-	event.preventDefault();
+  event.preventDefault();
 });
 
 // YOUTUBE
@@ -18,6 +18,10 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
     height: '390',
     width: '640',
-    videoId: 'M7lc1UVf-VE',
+    playerVars: {
+      listType: 'playlist',
+      list: 'PLZ1f3amS4y1ffYEhGZDtawaEyRQQu69Bw'
+    },
+    // videoId: 'M7lc1UVf-VE'
   });
 }
