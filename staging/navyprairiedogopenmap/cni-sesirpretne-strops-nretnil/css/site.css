@@ -14,7 +14,16 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
+
+/*@media (max-width: 760px) {
+  .bgimg {
+    background-attachment: scroll;
+  }
+}*/
 
 .social-icons {
 	position: absolute;
