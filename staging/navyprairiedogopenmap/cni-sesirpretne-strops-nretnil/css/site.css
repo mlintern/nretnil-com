@@ -19,11 +19,11 @@ body, html {
   -o-background-size: cover;
 }
 
-/*@media (max-width: 760px) {
+@media (max-width: 544px) {
   .bgimg {
     background-attachment: scroll;
   }
-}*/
+}
 
 .social-icons {
 	position: absolute;
