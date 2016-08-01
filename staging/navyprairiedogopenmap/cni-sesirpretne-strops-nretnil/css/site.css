@@ -129,3 +129,11 @@ body, html {
 .youtube-red:focus {
 	color: #cd201f;
 }
+
+.black, 
+.black:hover, 
+.black:active, 
+.black:visited, 
+.black:focus {
+  color: #000;
+}
