@@ -80,7 +80,7 @@ a:hover {
 
 .bgimg-5 {
 	background-image: url("../img/six.jpg");
-	min-height: 100%;
+	min-height: 500px;
 }
 
 .caption {
@@ -118,6 +118,7 @@ a:hover {
 
 .contact{
 	background-color: rgba(255,255,255,0.6);
+	margin: 40px 0;
 }
 
 .info {
@@ -138,6 +139,10 @@ a:hover {
 	color: #FFF;
 	/*background-color: #777;*/
 	background-color: #551A8B;
+}
+
+.footer {
+	background-color: white
 }
 
 /* COLOR HELPERS */
@@ -200,6 +205,13 @@ a:hover {
 	bottom: 0;
 	background-image: -webkit-gradient(linear, 0 0, 10% 100%, color-stop(0.5, transparent), color-stop(0.5, #551A8B));
 	background-image: linear-gradient(15deg, #551A8B 50%, transparent 50%);
+}
+
+.zigzag.clear-white-bottom {
+	top: auto;
+	bottom: 0;
+	background-image: -webkit-gradient(linear, 0 0, 10% 100%, color-stop(0.5, transparent), color-stop(0.5, #FFFFFF));
+	background-image: linear-gradient(15deg, #FFFFFF 50%, transparent 50%);
 }
 
 .no-border {
