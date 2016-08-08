@@ -1,16 +1,38 @@
-body, html {
-	height: 100%;
-	font-family: 'Catamaran', sans-serif;
-}
+/*
+	Purple: #551A8B (85,26,139)
+	Lime Green: #32CD32 (50,205,50)
+*/
 
 img { 
 	max-width: 100%;
 	height: auto;
 }
 
+body, html {
+	height: 100%;
+	font-family: 'Catamaran', sans-serif;
+	color: #551A8B;
+}
+
+a {
+	color: #551A8B;
+}
+
+a:hover {
+	color: #32CD32;
+}
+
+.purple {
+	color: #551A8B;
+}
+
+.green {
+	color: #32CD32;
+}
+
 .bgimg {
 	position: relative;
-	opacity: 0.75;
+	/*opacity: 0.75;*/
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -77,11 +99,16 @@ img {
 }
 
 .caption span.border {
-	background-color: rgba(17, 17, 17, 0.85);
+	/*background-color: rgba(17, 17, 17, 0.85);*/
+	background-color: rgba(50, 205, 50, 0.85);
 	color: #fff;
 	padding: 20px;
 	letter-spacing: 10px;
 	display: inline-block;
+}
+
+.caption.inverse span.border {
+	background-color: rgba(85, 26, 139, 0.85);
 }
 
 .caption span.border.transparent {
@@ -94,7 +121,6 @@ img {
 }
 
 .info {
-	color: #777;
 	background-color: #FFF;
 	padding: 15px;
 	text-align: justify;
@@ -110,7 +136,8 @@ img {
 
 .info.invert {
 	color: #FFF;
-	background-color: #777;
+	/*background-color: #777;*/
+	background-color: #551A8B;
 }
 
 /* COLOR HELPERS */
@@ -145,6 +172,46 @@ img {
 .black:visited, 
 .black:focus {
 	color: #000;
+}
+
+/* CURVED HR 
+	http://tympanus.net/Development/SectionSeparators/
+*/
+
+.zigzag{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	background-size: 100px 100%;
+	background-image: -webkit-gradient(linear, 0 0, 10% 100%, color-stop(0.5, #2980b9), color-stop(0.5, #3498db));
+	background-image: linear-gradient(15deg, #3498db 50%, #2980b9 50%);
+}
+
+.zigzag.purple-clear-top {
+	top: 0;
+	background-image: -webkit-gradient(linear, 0 0, 10% 100%, color-stop(0.5, #551A8B), color-stop(0.5, transparent));
+	background-image: linear-gradient(15deg, transparent 50%, #551A8B 50%);
+}
+
+.zigzag.clear-purple-bottom {
+	top: auto;
+	bottom: 0;
+	background-image: -webkit-gradient(linear, 0 0, 10% 100%, color-stop(0.5, transparent), color-stop(0.5, #551A8B));
+	background-image: linear-gradient(15deg, #551A8B 50%, transparent 50%);
+}
+
+.no-border {
+	border: none;
+}
+
+.no-border-t {
+	border-top: none;
+}
+
+.no-border-b {
+	border-bottom: none;
 }
 
 
