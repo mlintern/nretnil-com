@@ -92,19 +92,22 @@ a:hover {
 	color: #000;
 }
 
-@media (min-width: 544px) {
-	.caption {
-		top: 45%;
-	}
-}
-
 .caption span.border {
 	/*background-color: rgba(17, 17, 17, 0.85);*/
 	background-color: rgba(50, 205, 50, 0.85);
 	color: #fff;
 	padding: 20px;
-	letter-spacing: 10px;
+	letter-spacing: 5px;
 	display: inline-block;
+}
+
+@media (min-width: 544px) {
+	.caption {
+		top: 45%;
+	}
+	.caption span.border {
+		letter-spacing: 10px;
+	}
 }
 
 .caption.inverse span.border {
