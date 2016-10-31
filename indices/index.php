@@ -92,15 +92,17 @@
 <body style="padding-bottom: 50px;" onload="$('table').addClass('table');">
 
 <nav class="navbar navbar-dark bg-danger navbar-fixed-top">
-	<a class="navbar-brand" href="#">Nretnil Tools</a>
+	<a class="navbar-brand drop-down-toggle text-white pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nretnil Tools</a>
+	<div class="dropdown-menu">
+		<a class="dropdown-item" target="_blank" href="http://beer.nretnil.com">Beer O'Clock</a>
+		<a class="dropdown-item" target="_blank" href="http://sandybox.nretnil.com">HTML SandyBox</a>
+		<a class="dropdown-item" target="_blank" href="http://dev.nretnil.com/jsb/index.html">JS Beautify</a>
+		<a class="dropdown-item" target="_blank" href="http://dev.nretnil.com/map/index.html">Maps</a>
+		<a class="dropdown-item" target="_blank" href="http://dev.nretnil.com/img/sprites/index.html">Sprites</a>
+	</div>
 	<ul class="nav navbar-nav">
-		<li class="nav-item"><a class="nav-link" target="_blank" href="http://beer.nretnil.com">Beer O'Clock</a></li>
-		<li class="nav-item"><a class="nav-link" target="_blank" href="http://sandybox.nretnil.com">HTML SandyBox</a></li>
-		<li class="nav-item"><a class="nav-link" target="_blank" href="http://dev.nretnil.com/jsb/index.html">JS Beautify</a></li>
-		<li class="nav-item"><a class="nav-link" target="_blank" href="http://dev.nretnil.com/map/index.html">Maps</a></li>
-		<li class="nav-item"><a class="nav-link" target="_blank" href="http://dev.nretnil.com/img/sprites/index.html">Sprites</a></li>
 		<li class="nav-item dropdown float-xs-right">
-			<a class="nav-link dropdown-toggle pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sandbox</a>
+			<a class="nav-link dropdown-toggle pointer text-white" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
 			<div class="dropdown-menu dropdown-menu-right">
 				<a class="dropdown-item" target="_blank" href="http://app.nretnil.com">App</a>
 				<a class="dropdown-item" target="_blank" href="http://abc.nretnil.com">Boot Straps</a>
