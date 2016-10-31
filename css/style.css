@@ -44,6 +44,11 @@ body{
   font-size: 2rem;
   border-radius: .4rem;
 }
+.btn-xxxl {
+  padding: 2rem 4rem;
+  font-size: 2.5rem;
+  border-radius: .45rem;
+}
 
 /* Cron Radio Fix */
 #crontab .form-check-input:only-child,
