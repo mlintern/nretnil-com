@@ -11,8 +11,8 @@ function codify_text(){
 	var linecount = lines.length;
 	
 	$('#codified_result').attr('rows', linecount);
-	$('#codified_result').text(text);	
-	$('#codified_result').removeClass('hidden');
+	$('#codified_result').text(text);
+	$('#codified_result').removeClass('hidden-xs-up');
 	$('#codified_result').focus();
   	$('#codified_result').select();
 }

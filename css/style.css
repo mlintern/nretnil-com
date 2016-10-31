@@ -27,7 +27,7 @@ body{
   cursor: pointer;
 }
 .modal-backdrop.in {
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 /* Buttons */
@@ -43,6 +43,13 @@ body{
   padding: 1.5rem 3rem;
   font-size: 2rem;
   border-radius: .4rem;
+}
+
+/* Cron Radio Fix */
+#crontab .form-check-input:only-child,
+#lorem .form-check-input:only-child,
+#pig-latin .form-check-input:only-child {
+  position: absolute;
 }
 
 /*FOOTER*/

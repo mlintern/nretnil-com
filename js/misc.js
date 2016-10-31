@@ -35,9 +35,10 @@ $(document).keydown(function(e){
 });
 
 $(document).ready(function () {
-	SIZES = ['','btn-lg','btn-xl','btn-xxl','btn-sm','','btn-lg','btn-xl','','btn-lg','btn-xl'];
+	SIZES = ['','btn-lg','btn-xl','btn-xxl','btn-sm','','btn-lg','btn-xl','','btn-lg','btn-xl','btn-xxl','btn-lg'];
+	COLORS = ['btn-danger','btn-success','btn-primary','btn-info','btn-warning','btn-success','btn-secondary','btn-primary','btn-info','btn-warning'];
 	$('.tools .btn').each(function( index, value ) {
-		console.log(Math.floor(Math.random() * SIZES.length));
 		$(this).addClass(SIZES[Math.floor(Math.random() * SIZES.length)]);
+		$(this).addClass(COLORS[Math.floor(Math.random() * COLORS.length)]);
 	});
 });

@@ -1,6 +1,6 @@
 (function($) {
-  $.fn.lorem = function(options) {
-  	$.fn.lorem.defaults = {
+	$.fn.lorem = function(options) {
+		$.fn.lorem.defaults = {
 		type: 'paragraphs',
 		amount: '3',
 		ptags: true,
@@ -76,28 +76,28 @@
 		}
 		switch(opts.type) {
 			case "words":{
-		      	var numOfWords = opts.amount;
+						var numOfWords = opts.amount;
 				numOfWords = parseInt( numOfWords );
-				var list = new Array();
-				var wordList = new Array();
+				var list = new [];
+				var wordList = [];
 				wordList = ipsum_text.split( ' ' );
 				var iParagraphCount = 0;
 				var iWordCount = 0;
 				while( list.length < numOfWords ) {
 					if( iWordCount > wordList.length ) {
 						iWordCount = 0;
-		        		iParagraphCount++;
-		      		  	if( iParagraphCount + 1 > text.length ) {
+								iParagraphCount++;
+									if( iParagraphCount + 1 > text.length ) {
 							iParagraphCount = 0;
 						}
-		        		wordList = text[ iParagraphCount ].split( ' ' );
-		        		wordList[0] = "\n\n" + wordList[ 0 ];
+								wordList = text[ iParagraphCount ].split( ' ' );
+								wordList[0] = "\n\n" + wordList[ 0 ];
 					}
-		       		list.push( wordList[ iWordCount ] );
-		       		iWordCount++;
+							list.push( wordList[ iWordCount ] );
+							iWordCount++;
 				}
 				ipsum_text = list.join(' '); // changed
-				if(opts.ptags==true){
+				if(opts.ptags === true){
 					ipsum_text+="</p>";
 				}
 			break;
@@ -105,13 +105,13 @@
 			case 'characters':
 			{
 				var outputString = '';
-			    var numOfChars = opts.amount;
-			    numOfChars = parseInt( numOfChars );
-			    var tempString = text.join( "\n\n" );
+					var numOfChars = opts.amount;
+					numOfChars = parseInt( numOfChars );
+					var tempString = text.join( "\n\n" );
 				while(outputString.length < numOfChars ){
 						outputString += tempString;
 				}
-			    ipsum_text = outputString.substring(0, numOfChars );
+					ipsum_text = outputString.substring(0, numOfChars );
 			break;
 			}
 			case 'paragraphs':{
@@ -124,18 +124,18 @@
 
 
 	return this.each(function() {
-	  $this = $(this);
-	  var markup = makeipsum();
-	  $this.html(markup);
-	  
+		$this = $(this);
+		var markup = makeipsum();
+		$this.html(markup);
+		
 	});
-  };
+	};
 
 })(jQuery);
 
 function loremExecute(){
 
-	$('.ipsum').addClass('hidden');
+	$('.ipsum').addClass('hidden-xs-up');
 	var lang = $('.lorem-lang').val();
 	
 	if ($("input:radio[name='typeoftext']:checked").val() == "paragraphs"){
@@ -144,7 +144,7 @@ function loremExecute(){
 		}else{
 			$('.ipsum').lorem({ type: 'paragraphs',amount: $('#numpara').val(),ptags: false, language: lang });
 		}
-		$('.ipsum').toggleClass('hidden');
+		$('.ipsum').toggleClass('hidden-xs-up');
 		$('.ipsum').focus();
 		$('.ipsum').select();
 	}else if ($("input:radio[name='typeoftext']:checked").val() == "words"){
@@ -153,18 +153,18 @@ function loremExecute(){
 		}else{
 			$('.ipsum').lorem({ type: 'words',amount: $('#numwords').val(),ptags: false, language: lang });
 		}
-		$('.ipsum').removeClass('hidden');
+		$('.ipsum').removeClass('hidden-xs-up');
 		$('.ipsum').focus();
-  		$('.ipsum').select();
+			$('.ipsum').select();
 	}else{
 		if ($('#ptags').is(":checked")){
 			$('.ipsum').lorem({ type: 'characters',amount: $('#numchars').val(),ptags: true, language: lang });
 		}else{
 			$('.ipsum').lorem({ type: 'characters',amount: $('#numchars').val(),ptags: false, language: lang });
 		}
-		$('.ipsum').toggleClass('hidden');
+		$('.ipsum').toggleClass('hidden-xs-up');
 		$('.ipsum').focus();
-  		$('.ipsum').select();
+			$('.ipsum').select();
 	}
 
 }
