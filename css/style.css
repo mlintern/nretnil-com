@@ -1,5 +1,5 @@
 body{
-  padding-top: 70px;
+  padding-top: 80px;
   font-family: 'Almost Noteworthy', sans-serif;
 }
 .align-center{
@@ -20,61 +20,31 @@ body{
   font-weight: bold;
   font-size: 50px;
 }
-.content {
-  border: solid 1px #999;
-  border-radius: 8px;
-  padding: 50px 0;
-  margin: 0;
-}
 #outputPassword {
   word-wrap: break-word;
 }
-/*Nav Bar Updates*/
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
-  background-color: #b90102;
+.pointer {
+  cursor: pointer;
 }
-.nav-tabs.nav-justified > .active > a {
-  border-bottom-color: #b90102;
+.modal-backdrop.in {
+    opacity: 0.9;
 }
-.navbar-default .navbar-nav > li > a {
-  color: #FFF;
+
+/* Buttons */
+.tools .btn {
+  margin-bottom: 15px;
 }
-.navbar-default .navbar-nav > li > a:hover {
-  color: #FFF;
-  background-color: transparent;
-  text-decoration: underline;
+.btn-xl {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: .35rem;
 }
-.navbar-default .navbar-nav > .dropdown > a .caret, .navbar-default .navbar-nav > .dropdown > a:hover .caret {
-  border-top-color: #FFF;
-  border-bottom-color: #FFF;
+.btn-xxl {
+  padding: 1.5rem 3rem;
+  font-size: 2rem;
+  border-radius: .4rem;
 }
-.navbar-default .navbar-nav > .dropdown.open > a .caret, .navbar-default .navbar-nav > .dropdown.open > a:hover .caret {
-  border-top-color: #777;
-  border-bottom-color: #777;
-}
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-  color: #FFF;
-}
-.nav-tabs > li > a {
-  border: 1px solid #b90102;
-  border-color: #b90102 #b90102 transparent #b90102;
-}
-.nav-tabs > li > a:hover {
-  border-color: #b90102 #b90102 transparent #b90102;
-}
-.nav-tabs>li.active>a{
-  border-color: #b90102;
-}
-.navbar-default .navbar-brand {
-  color: #FFF;
-}
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #FFF;
-  text-decoration: underline;
-}
-.dropdown-backdrop{
-  display: none;
-}
+
 /*FOOTER*/
 .footer{
   padding-bottom: 50px;
@@ -83,40 +53,6 @@ body{
   color:blue;
   padding-top: 30px;
   margin-bottom: 10px;
-}
-/**/
-.span1{
-  list-style: none outside none;
-}
-ul.thumbnails li{
-  list-style: none outside none;
-}
-.navbar-collapse {
-  max-height: 400px;
-}
-.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
-  max-height: 500px;
-}
-@media (max-width: 767px) {
-  .navbar-default .navbar-nav .open .dropdown-menu {
-    background-color: #fff;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #333;
-    background-color: transparent;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
-    color: #FFF;
-    background-color: #428bca;
-  }
-}
-@media (min-width: 768px) {
-  .nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus {
-    border-bottom-color: transparent;
-  }
-  .navbar-nav.navbar-right:last-child {
-    margin-right: 0;
-  }
 }
 .tab-content .fa.fa-lg{
   padding-top: 4px;
@@ -127,12 +63,6 @@ ul.thumbnails li{
   left: 0;
   height: 60px;
   width: 60px;
-}
-.btn {
-  margin: 5px 0px;
-}
-.btn-block {
-  display: inline-block;
 }
 .chosen-container-multi .chosen-choices li.search-field{
   padding: 3px;
@@ -145,48 +75,4 @@ ul.thumbnails li{
 }
 a.list-group-item {
   color: #fff;
-}
-/*
- * Off Canvas
- * --------------------------------------------------
- */
-@media screen and (max-width: 767px) {
-  .row-offcanvas {
-    position: relative;
-    -webkit-transition: all .25s ease-out;
-         -o-transition: all .25s ease-out;
-            transition: all .25s ease-out;
-  }
-
-  .row-offcanvas-right {
-    right: 0;
-  }
-
-  .row-offcanvas-left {
-    left: 0;
-  }
-
-  .row-offcanvas-right
-  .sidebar-offcanvas {
-    right: -50%; /* 6 columns */
-  }
-
-  .row-offcanvas-left
-  .sidebar-offcanvas {
-    left: -50%; /* 6 columns */
-  }
-
-  .row-offcanvas-right.active {
-    right: 50%; /* 6 columns */
-  }
-
-  .row-offcanvas-left.active {
-    left: 50%; /* 6 columns */
-  }
-
-  .sidebar-offcanvas {
-    position: absolute;
-    top: 0;
-    width: 50%; /* 6 columns */
-  }
 }
