@@ -90,41 +90,37 @@
 </head>
 
 <body style="padding-bottom: 50px;" onload="$('table').addClass('table');">
+
+<nav class="navbar navbar-dark bg-danger navbar-fixed-top">
+	<a class="navbar-brand" href="#">Nretnil Tools</a>
+	<ul class="nav navbar-nav">
+		<li class="nav-item"><a class="nav-link" target="_blank" href="http://beer.nretnil.com">Beer O'Clock</a></li>
+		<li class="nav-item"><a class="nav-link" target="_blank" href="http://sandybox.nretnil.com">HTML SandyBox</a></li>
+		<li class="nav-item"><a class="nav-link" target="_blank" href="http://dev.nretnil.com/jsb/index.html">JS Beautify</a></li>
+		<li class="nav-item"><a class="nav-link" target="_blank" href="http://dev.nretnil.com/map/index.html">Maps</a></li>
+		<li class="nav-item"><a class="nav-link" target="_blank" href="http://dev.nretnil.com/img/sprites/index.html">Sprites</a></li>
+		<li class="nav-item dropdown float-xs-right">
+			<a class="nav-link dropdown-toggle pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sandbox</a>
+			<div class="dropdown-menu dropdown-menu-right">
+				<a class="dropdown-item" target="_blank" href="http://app.nretnil.com">App</a>
+				<a class="dropdown-item" target="_blank" href="http://abc.nretnil.com">Boot Straps</a>
+				<a class="dropdown-item" target="_blank" href="http://dice.nretnil.com">Dice</a>
+				<a class="dropdown-item" target="_blank" href="http://sites.nretnil.com">Mini Site Display</a>
+				<a class="dropdown-item" target="_blank" href="http://dev.nretnil.com/sandbox/dyolf/">Floyd</a>
+				<a class="dropdown-item" target="_blank" href="http://dev.nretnil.com/sandbox/ydnittiw/">#WittIndy</a>
+				<a class="dropdown-item" target="_blank" href="http://dev.nretnil.com/sandbox/llorcs-on/">Zoom In / AutoHide</a>
+			</div>
+		</li>
+	</ul>
+</nav>
+
 <div class="container">
 	<div class="row">
 		<div class="page-header">
 			<h1 class="text-center">Nretnil Tools</h1>
 		</div>
 	</div>
-	<div class="row">
-		<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top r-fog80" role="navigation">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			<a class="navbar-brand" href="/">Tools</a>
-			</div>
-			
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-right">
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Sandbox <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a target="_blank" href="//dev.nretnil.com/sandbox/ydnittiw/index.html">#WittIndy</a></li>
-							<li><a target="_blank" href="//dev.nretnil.com/sandbox/dyolf/index.html">Floyd</a></li>
-							<li><a target="_blank" href="//dev.nretnil.com/sandbox/trats-hserf/index.html">Boot Straps</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div><!-- /.navbar-collapse -->
-		</nav>
-	</div>
-	
+
 	<div class="row">
 		<div id="pagecontainer" class="col-md-10 col-md-offset-1">
 			<div class='header'>
