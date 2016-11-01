@@ -1,5 +1,5 @@
 /*
- * jQuery Auto Hide plugin 1.0.2
+ * jQuery Auto Hide plugin 1.1.0
  *
  * Mark Lintern
  *
@@ -18,6 +18,10 @@ jQuery.fn.autoHide = function(settings){
     showHeight: 2 // in px
   }, settings);
 
+  if (options.showHeight < 0) {
+    options.showHeight = 0;
+  }
+
   var currHeight = $(this).outerHeight();
 
   if ($(window).width() >= options.minWidth) {
@@ -30,11 +34,12 @@ jQuery.fn.autoHide = function(settings){
     },function(){
 
       $(this).stop(true);
-      $(this).animate({ top: -(currHeight - options.showHeight) },2*options.slideSpeed);
+      $(this).animate({ top: -(currHeight - options.showHeight) }, 2 * options.slideSpeed);
+      $(this).css({ 'border-bottom': 'solid 5px transparent' });
 
     });
 
-    $(this).animate({top: -(currHeight - options.showHeight)},options.slideSpeed);
+    $(this).animate({ top: - (currHeight - options.showHeight) }, options.slideSpeed);
   }
 
 };
