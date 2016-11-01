@@ -1,5 +1,5 @@
 /*
- * jQuery Auto Hide plugin 1.1.0
+ * jQuery Auto Hide plugin 1.1.1
  *
  * Mark Lintern
  *
@@ -35,7 +35,6 @@ jQuery.fn.autoHide = function(settings){
 
       $(this).stop(true);
       $(this).animate({ top: -(currHeight - options.showHeight) }, 2 * options.slideSpeed);
-      $(this).css({ 'border-bottom': 'solid 5px transparent' });
 
     });
 
