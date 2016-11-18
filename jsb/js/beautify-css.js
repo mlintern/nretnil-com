@@ -62,7 +62,6 @@ function css_beautify(source_text, options) {
         indentSize = parseInt(indentSize, 10);
     }
 
-
     // tokenizer
     var whiteRe = /^\s+$/;
     var wordRe = /[\w$\-_]/;
@@ -180,7 +179,6 @@ function css_beautify(source_text, options) {
             break;
         }
 
-
         if (ch === '{') {
             indent();
             print["{"](ch);
@@ -232,11 +230,9 @@ function css_beautify(source_text, options) {
         }
     }
 
-
     var sweetCode = output.join('').replace(/[\n ]+$/, '');
     return sweetCode;
 }
-
 
 if (typeof exports !== 'undefined') {
     exports.css_beautify = css_beautify;

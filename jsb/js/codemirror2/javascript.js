@@ -122,7 +122,7 @@ CodeMirror.defineMode("javascript", function(config, parserConfig) {
     this.type = type;
     this.prev = prev;
     this.info = info;
-    if (align != null) this.align = align;
+    if (align !== null) this.align = align;
   }
 
   function inScope(state, varname) {
@@ -134,7 +134,7 @@ CodeMirror.defineMode("javascript", function(config, parserConfig) {
     var cc = state.cc;
     // Communicate our context to the combinators.
     // (Less wasteful than consing up a hundred closures on every call.)
-    cx.state = state; cx.stream = stream; cx.marked = null, cx.cc = cc;
+    cx.state = state; cx.stream = stream; cx.marked = null; cx.cc = cc;
   
     if (!state.lexical.hasOwnProperty("align"))
       state.lexical.align = true;
@@ -185,7 +185,7 @@ CodeMirror.defineMode("javascript", function(config, parserConfig) {
   function pushlex(type, info) {
     var result = function() {
       var state = cx.state;
-      state.lexical = new JSLexical(state.indented, cx.stream.column(), type, null, state.lexical, info)
+      state.lexical = new JSLexical(state.indented, cx.stream.column(), type, null, state.lexical, info);
     };
     result.lex = true;
     return result;
@@ -240,7 +240,7 @@ CodeMirror.defineMode("javascript", function(config, parserConfig) {
     if (type.match(/[;\}\)\],]/)) return pass();
     return pass(expression);
   }
-    
+
   function maybeoperator(type, value) {
     if (type == "operator" && /\+\+|--/.test(value)) return cont(maybeoperator);
     if (type == "operator" || type == ":") return cont(expression);
