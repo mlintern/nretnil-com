@@ -4,19 +4,6 @@ var the = {
     editor: null // codemirror editor
 };
 
-function run_tests() {
-    var st = new SanityTest();
-    run_beautifier_tests(st, Urlencoded, js_beautify);
-    JavascriptObfuscator.run_tests(st);
-    P_A_C_K_E_R.run_tests(st);
-    Urlencoded.run_tests(st);
-    MyObfuscate.run_tests(st);
-    // $('#testresults').html(results.replace(/r/g, '').replace(/\n/g, '<br>'));
-    var results = st.results_raw().replace(/ /g, '&nbsp;').replace(/\r/g, '·').replace(/\n/g, '<br>');
-    $('#testresults').html(results).show();
-}
-
-
 function any(a, b) {
     return a || b;
 }
@@ -142,7 +129,7 @@ $(function() {
     var default_text = "// This is just a sample script. Paste your real code (javascript or HTML) here.\n\nif ('this_is'==/an_example/){of_beautifer();}else{var a=b?(c%d):e[f];}";
 
     if (the.use_codemirror && typeof CodeMirror !== 'undefined') {
-        the.editor = CodeMirror.fromTextArea($('#source').get(0))
+        the.editor = CodeMirror.fromTextArea($('#source').get(0));
         the.editor.setValue(default_text);
         $('.CodeMirror').click(function () {
             if (the.editor.getValue() == default_text) {
@@ -161,14 +148,15 @@ $(function() {
         });
     }
 
-
     $(window).bind('keydown', function (e) {
         if (e.ctrlKey && e.keyCode == 13) {
             beautify();
         }
-    })
+    });
+
     $('#submit').click(beautify);
     $('select').change(beautify);
 
+    $('.CodeMirror').css('height', $(window).height() - 200);
 
 });
