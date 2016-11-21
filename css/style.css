@@ -29,6 +29,9 @@ body{
 .modal-backdrop.in {
     opacity: 0.8;
 }
+.dropdown-menu.left-fifteen {
+  left: 15px;
+}
 
 /* Buttons */
 .tools .btn {
@@ -99,4 +102,33 @@ body{
 }
 a.list-group-item {
   color: #fff;
+}
+
+/* Hidden Link */
+@media ( min-width: 768px ) {
+  .secret, .secret:active, .secret:visited, .secret:focus {
+    color: transparent;
+  }
+  .secret:hover {
+    color: blue;
+  }
+  .secret.white:hover {
+    color: white;
+  }
+}
+.secret-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 50px;
+  width: 60px;
+  height: 60px;
+  line-height: 1;
+  text-align: center;
+  z-index: 11;
+  opacity: 0.5;
+}
+.secret-button:hover {
+  text-decoration: none;
+  color: #aaa;
 }

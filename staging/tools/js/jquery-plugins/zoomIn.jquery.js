@@ -1,5 +1,5 @@
 /*
- * jQuery Zoom In plugin 1.1.1
+ * jQuery Zoom In plugin 1.1.2
  *
  * Mark Lintern
  *
@@ -21,10 +21,10 @@ jQuery.fn.zoomIn = function(settings){
       var magnification = options.magnification;
       var direction = options.direction;
 
-      if ($(this).data('magnification-times') !== null){
+      if ($(this).data('magnification-times') !== undefined){
         magnification = $(this).data('magnification-times');
       }
-      if ($(this).data('magnification-direction') !== null){
+      if ($(this).data('magnification-direction') !== undefined){
         direction = $(this).data('magnification-direction');
       }
 

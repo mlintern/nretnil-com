@@ -34,7 +34,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Avatars</h1>
+    <h1>Celebrate</h1>
     <div class="images">
       <?php
       foreach( $images as $image ):

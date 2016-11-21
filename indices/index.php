@@ -133,57 +133,5 @@
 	</div>
 </div>
 
-<a href="javascript:void(0);" onclick="$('#secret-modal').modal('show')" class="secret-button"></a>
-
-<div id="secret-modal" class="modal fade">
-	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title">Secret Area</h4>
-			</div>
-			<div class="modal-body">
-				<a target="_blank" href="//dev.nretnil.com/staging" class="btn btn-secondary btn-lg btn-block">Staging</a>
-				<div style="height: 5px;"></div>  
-				<div class="row">
-					<div class="col-sm-6">
-						<a target="_blank" href="//dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth" class="btn btn-success btn-block">Fonts</a>
-						<a target="_blank" href="//dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/font-awesome-4" class="btn btn-info btn-sm btn-block">Font Awesome 4.7.0</a>
-						<a target="_blank" href="//dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/Fonts.html" class="btn btn-info btn-sm btn-block">Fonts Example</a>
-						<a target="_blank" href="//dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/" class="btn btn-info btn-sm btn-block">Font Directories</a>
-					</div>
-					<div class="col-sm-6">
-						<a target="_blank" href="//dev.nretnil.com/staging/tools" class="btn btn-danger btn-block">Tools</a>
-						<a target="_blank" href="//dev.nretnil.com/staging/tools/bootstrap3" class="btn btn-warning btn-sm btn-block">Bootstrap 3.3.7</a>
-						<a target="_blank" href="//dev.nretnil.com/staging/tools/foundation6" class="btn btn-warning btn-sm btn-block">Foundation 6.2.1</a>
-						<a target="_blank" href="//dev.nretnil.com/staging/tools/css" class="btn btn-warning btn-sm btn-block">CSS</a>
-						<a target="_blank" href="//dev.nretnil.com/staging/tools/js" class="btn btn-warning btn-sm btn-block">Javascript</a>
-						<a target="_blank" href="//dev.nretnil.com/staging/tools/img" class="btn btn-warning btn-sm btn-block">Images</a>
-					</div>
-				</div>
-				<div style="height: 5px;"></div>
-				<div class="row">
-					<div class="col-sm-6">
-						<a target="_blank" href="//dev.nretnil.com/sandbox" class="btn btn-danger btn-block">Sandbox</a>
-						<a target="_blank" href="http://dice.nretnil.com" class="btn btn-warning btn-sm btn-block">Dice</a>
-						<a target="_blank" href="//dev.nretnil.com/sandbox/dyolf/index.html" class="btn btn-warning btn-sm btn-block">Floyd</a>
-						<a target="_blank" href="http://sandybox.nretnil.com" class="btn btn-warning btn-sm btn-block">SandyBox</a>
-						<a target="_blank" href="//dev.nretnil.com/sandbox/ydnittiw/index.html" class="btn btn-warning btn-sm btn-block">WittIndy</a>
-					</div>
-					<div class="col-sm-6">
-						<a target="_blank" href="//dev.nretnil.com/avatar/" class="btn btn-secondary btn-block">Avatars</a>
-						<a target="_blank" href="//dev.nretnil.com/celebrate/" class="btn btn-secondary btn-block">Celebrate</a>
-						<a target="_blank" href="//dev.nretnil.com/gif/" class="btn btn-secondary btn-block">GIF</a>
-						<a target="_blank" href="//dev.nretnil.com/logo/" class="btn btn-secondary btn-block">Logos</a>
-					</div>
-				</div>
-			</div>
-		</div><!-- /.modal-content -->
-	</div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-<script type="text/javascript" src="//dev.nretnil.com/js/jquery-2.2.3.min.js"></script>
-<script type="text/javascript" src="//dev.nretnil.com/js/secret.js"></script>
-<script type="text/javascript" src="//dev.nretnil.com/staging/tools/bootstrap4/js/bootstrap.min.js"></script>
 </body>
 </html>
