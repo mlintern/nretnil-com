@@ -8,18 +8,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link type="text/css" href="https://dev.nretnil.com/staging/tools/bootstrap4/css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="https://dev.nretnil.com/staging/tools/fontstrap/css/fontstrap.min.css" rel="stylesheet">
 <link type="text/css" href="https://dev.nretnil.com/staging/tools/js/chosen_v1/chosen.min.css" rel="stylesheet">
 <link type="text/css" href="https://dev.nretnil.com/staging/tools/css/fog/fog.css" rel="stylesheet">
 <link type="text/css" href="https://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Almost%20Noteworthy/almost_noteworthy/stylesheet.css" rel="stylesheet">
-<link type="text/css" href="https://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/font-awesome-4/css/font-awesome.css" rel="stylesheet">
 <script type="text/javascript" src="js/ie-fix.js"></script>
 <link type="text/css" href="css/style.css?v=1.0.1" rel="stylesheet">
 </head>
 
 <body class="bg-faded">
 
-<nav class="navbar navbar-dark bg-danger navbar-fixed-top">
+<nav class="navbar navbar-dark bg-danger fixed-top">
 	<a class="navbar-brand drop-down-toggle text-white pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nretnil Tools</a>
 	<div class="dropdown-menu left-fifteen">
 		<a class="dropdown-item" target="_blank" href="http://beer.nretnil.com">Beer O'Clock</a>
@@ -44,7 +43,7 @@
 	</ul>
 </nav>
 
-<div class="tools text-xs-center">
+<div class="tools text-center">
 	<a data-toggle="modal" data-target="#pswd1" class="btn">Password Generator <i class="fa fa-lock fa-lg pull-right"></i></a>
 	<a data-toggle="modal" data-target="#pswd2" class="btn">Passphrase Generator <i class="fa fa-lock fa-lg pull-right"></i></a>
 	<a data-toggle="modal" data-target="#reverse" class="btn">Reverse Text <i class="fa fa-arrows-h fa-lg pull-right"></i></a>
@@ -73,8 +72,8 @@
 			<div class="modal-body">
 
 				<div class="row form-group">
-					<label class="col-xs-6">Length:</label>
-					<div class="col-xs-6"><input class="form-control text-xs-center" id="Length" type="text" value="15"/></div>
+					<label class="col-6">Length:</label>
+					<div class="col-6"><input class="form-control text-center" id="Length" type="text" value="15"/></div>
 				</div>
 				<div class="form-check">
 					<label class="form-check-label">
@@ -144,7 +143,7 @@
 			</div>
 			<div class="modal-body">
 
-				<h1 class="text-xs-center" id="External-IP"></h1>
+				<h1 class="text-center" id="External-IP"></h1>
 
 			</div>
 		</div><!-- /.modal-content -->
@@ -201,14 +200,14 @@
 				<form name="frmTranslator">
 					<fieldset>
 						<label>Enter English Text to Translate:</label>
-						
+
 						<textarea id="taEng" class="col-sm-12 form-control" rows="7" name="taEng">Enter the English text here that you want translated into Pig Latin.</textarea>
-						
+
 						<div class="row" style="margin: 20px 0;">
 							<input class="btn btn-success col-sm-6" value="Translate" onclick="fTranslate()" type="button">
 							<input	class="btn btn-danger col-sm-6" value="Clear Text" onclick="fClearText()" type="button">
 						</div>
-						
+
 						<label>Igpay Atinlay Anslationtray:</label>
 						<textarea id="taPL" class="col-sm-12 form-control" rows="7" name="taPL"></textarea>
 
@@ -318,39 +317,43 @@
 						<form name="u2h">
 							<h3>Unix to Human</h3>
 							<label>UNIX TimeStamp:</label>
-							
-							<input type="text" class="form-control" id="timeStamp" style="margin-bottom: 25px;">
-							<input class="btn btn-large btn-success col-sm-6" type="button" value="Submit" onClick="timeToHuman();">
-							<input class="btn btn-large btn-warning col-sm-6" type="reset" value="Reset">
-							<input style="margin-top: 25px;" id="u2h-result" type="text" value="" class="col-sm-12 align-center form-control" READONLY>
+
+							<input type="text" class="form-control mb-4" id="timeStamp">
+							<div class="col-12">
+								<div class="row">
+									<input class="btn btn-large btn-success col-sm-6 float-left" type="button" value="Submit" onClick="timeToHuman();">
+									<input class="btn btn-large btn-warning col-sm-6 float-left" type="reset" value="Reset">
+								</div>
+							</div>
+							<input id="u2h-result" type="text" value="" class="col-sm-12 align-center form-control mt-4" READONLY>
 						</form>
-					</div>	
+					</div>
 					<div class="col-sm-7">
 						<form name="h2u">
 							<h3>Human to Unix</h3>
-								<div class="row">
-									<div class="col-sm-6">
-											<label>Month: </label>
-											<select class="form-control" maxlength="2" id="inMon">
-											<option></option><option value="01">January</option><option value="02">February</option><option value="03">March</option><option value="04">April</option><option value="05">May</option><option value="06">June</option><option value="07">July</option><option value="08">August</option><option value="09">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option>
-											</select>
-											<label>Day: </label>
-											<input type="text" class="form-control" maxlength="2" id="inDay">
-											<label>Year: </label>
-											<input type="text" class="form-control" maxlength="4" id="inYear">
-										</div>
-										<div class="col-sm-6" style="margin-bottom: 25px;">
-											<label>Hour: </label>
-											<input type="text" class="form-control" maxlength="2" id="inHr">
-											<label>Minute: </label>
-											<input type="text" class="form-control" maxlength="2" id="inMin">
-											<label>Second: </label>
-											<input type="text" class="form-control" maxlength="2" id="inSec">
-										</div>
-									</div>
-							 <input class="btn btn-large btn-success col-sm-6" type="button" value="Submit" onClick="humanToTime();">
-							 <input class="btn btn-large btn-warning col-sm-6" type="reset" value="Reset">
-							 <input style="margin-top: 25px;" id="h2u-result" type="text" value="" class="col-sm-12 align-center" READONLY>
+							<div class="row">
+								<div class="col-sm-6">
+									<label>Month: </label>
+									<select class="form-control" maxlength="2" id="inMon">
+									<option></option><option value="01">January</option><option value="02">February</option><option value="03">March</option><option value="04">April</option><option value="05">May</option><option value="06">June</option><option value="07">July</option><option value="08">August</option><option value="09">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option>
+									</select>
+									<label>Day: </label>
+									<input type="text" class="form-control" maxlength="2" id="inDay">
+									<label>Year: </label>
+									<input type="text" class="form-control" maxlength="4" id="inYear">
+								</div>
+								<div class="col-sm-6" style="margin-bottom: 25px;">
+									<label>Hour: </label>
+									<input type="text" class="form-control" maxlength="2" id="inHr">
+									<label>Minute: </label>
+									<input type="text" class="form-control" maxlength="2" id="inMin">
+									<label>Second: </label>
+									<input type="text" class="form-control" maxlength="2" id="inSec">
+								</div>
+							</div>
+							<input class="btn btn-large btn-success col-sm-6 float-left" type="button" value="Submit" onClick="humanToTime();">
+							<input class="btn btn-large btn-warning col-sm-6 float-left" type="reset" value="Reset">
+							<input id="h2u-result" type="text" value="" class="col-sm-12 align-center mt-4" READONLY>
 						</form>
 					</div>
 				</div>
@@ -372,10 +375,10 @@
 			<div class="modal-body">
 
 				<form id="cron-creator">
-				<div class="row">	
-					<div class="col-sm-6 cron-item">
+				<div class="row">
+					<div class="col-sm-6 cron-item mt-3">
 						<div class="row">
-							<div class="cron-section-title" align="center">MINUTES</div>
+							<div class="cron-section-title col-sm-6" align="center">MINUTES</div>
 							<div class="col-sm-6">
 								<label class="form-check-label"><input class="form-check-input" type="radio" name="minutes" value="*" checked>Every Minute</label>
 								<label class="form-check-label"><input class="form-check-input" type="radio" name="minutes" value="0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58">Even Minutes</label>
@@ -385,6 +388,7 @@
 								<label class="form-check-label"><input class="form-check-input" type="radio" name="minutes" value="*/30">Every 30 min</label>
 								<label class="form-check-label"><input class="form-check-input" type="radio" name="minutes" value="0">Once Per Hour</label>
 							</div>
+							<div class="col-sm-6">&nbsp;</div>
 							<div class="col-sm-6">
 								<label class="form-check-label"><input class="form-check-input" type="radio" name="minutes" value="custom">Custom</label>
 									<select class="cron chosen-select form-control" name="custminutes[]" size="5" multiple>
@@ -392,10 +396,10 @@
 									</select>
 							</div>
 						</div>
-					</div>	
-					<div class="col-sm-6 cron-item">
+					</div>
+					<div class="col-sm-6 cron-item mt-3">
 						<div class="row">
-							<div class="cron-section-title" align="center">HOURS</div>
+							<div class="cron-section-title col-sm-6" align="center">HOURS</div>
 							<div class="col-sm-6">
 								<label class="form-check-label"><input class="form-check-input" type="radio" name="hours" value="*" checked>Every Hour</label>
 								<label class="form-check-label"><input class="form-check-input" type="radio" name="hours" value="0,2,4,6,8,10,12,14,16,18,20,22">Even Hours</label>
@@ -404,7 +408,8 @@
 								<label class="form-check-label"><input class="form-check-input" type="radio" name="hours" value="0,12">Every 12 Hours</label>
 								<label class="form-check-label"><input class="form-check-input" type="radio" name="hours" value="0">Once Per Day</label>
 							</div>
-							<div class="col-sm-6">	
+							<div class="col-sm-6">&nbsp;</div>
+							<div class="col-sm-6">
 								<label class="form-check-label"><input class="form-check-input" type="radio" name="hours" value="custom">Custom</label>
 									<select class="cron chosen-select form-control" name="custhours[]" size="5" multiple>
 										<option></option><option value="0">Midnight</option><option value="1">1am</option><option value="2">2am</option><option value="3">3am</option><option value="4">4am</option><option value="5">5am</option><option value="6">6am</option><option value="7">7am</option><option value="8">8am</option><option value="9">9am</option><option value="10">10am</option><option value="11">11am</option><option value="12">Noon</option><option value="13">1pm</option><option value="14">2pm</option><option value="15">3pm</option><option value="16">4pm</option><option value="17">5pm</option><option value="18">6pm</option><option value="19">7pm</option><option value="20">8pm</option><option value="21">9pm</option><option value="22">10pm</option><option value="23">11pm</option>
@@ -414,9 +419,9 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-6 cron-item">
+					<div class="col-sm-6 cron-item mt-3">
 						<div class="row">
-							<div class="cron-section-title" align="center">DAYS OF MONTH</div>
+							<div class="cron-section-title col-sm-6" align="center">DAYS OF MONTH</div>
 							<div class="col-sm-6">
 								<label class="form-check-label"><input class="form-check-input" type="radio" name="days" value="*" checked>Every Day</label>
 								<label class="form-check-label"><input class="form-check-input" type="radio" name="days" value="2,4,6,8,10,12,14,16,18,20,22,24,26,28,30">Even Days</label>
@@ -424,17 +429,18 @@
 								<label class="form-check-label"><input class="form-check-input" type="radio" name="days" value="1,15">Twice Per Month</label>
 								<label class="form-check-label"><input class="form-check-input" type="radio" name="days" value="1">Once Per Month</label>
 							</div>
-							<div class="col-sm-6">	
+							<div class="col-sm-6">&nbsp;</div>
+							<div class="col-sm-6">
 								<label class="form-check-label"><input class="form-check-input" type="radio" name="days" value="custom">Custom</label>
 								<select class="cron chosen-select form-control" name="custdays[]" multiple>
 									<option></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
 								</select>
 							 </div>
 						 </div>
-					</div>	
-					<div class="col-sm-6 cron-item">
+					</div>
+					<div class="col-sm-6 cron-item mt-3">
 						<div class="row">
-							<div class="cron-section-title" align="center">MONTH</div>
+							<div class="cron-section-title col-sm-6" align="center">MONTH</div>
 							<div class="col-sm-6">
 								<label class="form-check-label"><input class="form-check-input" type="radio" name="months" value="*" checked>Every Month</label>
 								<label class="form-check-label"><input class="form-check-input" type="radio" name="months" value="2,4,6,8,10,12">Even Months</label>
@@ -443,6 +449,7 @@
 								<label class="form-check-label"><input class="form-check-input" type="radio" name="months" value="1,7">Every 6 Months</label>
 								<label class="form-check-label"><input class="form-check-input" type="radio" name="months" value="1">Once Per Year</label>
 							</div>
+							<div class="col-sm-6">&nbsp;</div>
 							<div class="col-sm-6">
 								<label class="form-check-label"><input class="form-check-input" type="radio" name="months" value="custom">Custom</label>
 								<select class="cron chosen-select form-control" name="custmonths[]" size="5" multiple>
@@ -453,15 +460,16 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-6 cron-item">
+					<div class="col-sm-6 cron-item mt-3">
 						<div class="row">
-							<div class="cron-section-title" align="center">WEEKDAYS</div>
+							<div class="cron-section-title col-sm-6" align="center">WEEKDAYS</div>
 							<div class="col-sm-6">
 								<label class="form-check-label"><input class="form-check-input" type="radio" name="weekdays" value="*" checked>Every Day of the Week</label>
 									<label class="form-check-label"><input class="form-check-input" type="radio" name="weekdays" value="1-5">Weekdays (Mon-Fri)</label>
 									<label class="form-check-label"><input class="form-check-input" type="radio" name="weekdays" value="0,6">Weekend</label>
 									<label class="form-check-label"><input class="form-check-input" type="radio" name="weekdays" value="0">Once Per Week (Sunday)</label>
 							</div>
+							<div class="col-sm-6">&nbsp;</div>
 							<div class="col-sm-6">
 								<label class="form-check-label"><input class="form-check-input" type="radio" name="weekdays" value="custom">Custom</label>
 								<select class="cron chosen-select form-control" name="custweekdays[]" size="7" multiple>
@@ -470,8 +478,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-6 cron-item">
-						<label class="cron-section-title" align="center">PATH TO SCRIPT</label>
+					<div class="col-sm-6 cron-item mt-3">
+						<label class="cron-section-title">PATH TO SCRIPT</label>
 						<input class="form-control" type="text" name="command" size="50" value="/this/that/notscript.php">
 						<button class="btn btn-large btn-primary btn-block" onClick="generatecron();return false;">Generate</button>
 						<code id="cron-code" style="margin-top: 20px;display:block;"></code>
@@ -517,10 +525,10 @@
 
 				<textarea cols="100" rows="5" class="form-control" placeholder="Url to Dencode..." id="dencoder" style="width: 100%;"></textarea>
 				<div class="row" style="margin: 10px 0;">
-					<button class="btn btn-large btn-warning col-xs-6" onclick="decode();">Decode</button>
-					<button class="btn btn-large btn-info col-xs-6" onclick="encode();">Encode</button>
+					<button class="btn btn-large btn-warning col-6" onclick="decode();">Decode</button>
+					<button class="btn btn-large btn-info col-6" onclick="encode();">Encode</button>
 				</div>
-				<textarea cols="100" class="hidden form-control" rows="5" id="dencoder-result" style="width: 100%;"></textarea>
+				<textarea cols="100" class="form-control" rows="5" id="dencoder-result" style="width: 100%;"></textarea>
 
 			</div>
 		</div><!-- /.modal-content -->
@@ -567,8 +575,8 @@
 			</div>
 			<div class="modal-body">
 
-				<div class="text-xs-center uuid-view mt-1"></div>
-				<div class="text-xs-center mt-2"><button class="btn btn-success" onclick="generateUUID();">Generate</button></div>
+				<div class="text-center uuid-view mt-1"></div>
+				<div class="text-center mt-2"><button class="btn btn-success" onclick="generateUUID();">Generate</button></div>
 
 			</div>
 		</div><!-- /.modal-content -->
@@ -586,7 +594,7 @@
 			</div>
 			<div class="modal-body">
 				<a target="_blank" href="staging" class="btn btn-secondary btn-lg btn-block">Staging</a>
-				<div style="height: 5px;"></div>  
+				<div style="height: 5px;"></div>
 				<div class="row">
 					<div class="col-sm-6">
 						<a target="_blank" href="staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth" class="btn btn-success btn-block">Fonts</a>
@@ -626,10 +634,10 @@
 
 <div class="footer">
 	<div class="footer-email" style="text-align:center;">mark@lintern.us</div>
-	<div class="version" style="text-align:center;">v 2.0.0</div>
+	<div class="version" style="text-align:center;">v 2017.7.26</div>
 </div>
 
-<script src="js/jquery-2.2.3.min.js"></script>
+<script src="https://dev.nretnil.com/staging/tools/fontstrap/js/jquery.min.js"></script>
 <script src="js/tether.min.js"></script>
 <script src="https://dev.nretnil.com/staging/tools/js/chosen_v1/chosen.jquery.min.js"></script>
 <script type="text/javascript" src="js/misc.js"></script>
@@ -641,7 +649,7 @@
 <script type="text/javascript" src="js/windows-console.js"></script>
 <script type="text/javascript" src="js/human2unix.js"></script>
 <script type="text/javascript" src="js/dns.js"></script>
-<script type="text/javascript" src="https://dev.nretnil.com/staging/tools/bootstrap4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://dev.nretnil.com/staging/tools/fontstrap/js/fontstrap.js"></script>
 <script type="text/javascript" src="js/emailvalidator.js"></script>
 <script type="text/javascript" src="js/functions.js"></script>
 <script type="text/javascript" src="js/codify.js"></script>
