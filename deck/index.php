@@ -19,9 +19,9 @@
 <html>
 <head>
   <title>Playing Cards</title>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-  <script type="text/javascript" src="https://dev.nretnil.com/staging/tools/js/clipboard.min.js"></script>
-  <link type="text/css" href="https://dev.nretnil.com/staging/tools/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <link type="text/css" href="https://dev.nretnil.com/staging/tools/fontstrap/css/fontstrap.min.css" rel="stylesheet">
   <style>
     img { width: 100%; }
     .img-box { margin-bottom: 30px; }
@@ -34,7 +34,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Playing Cards</h1>
+    <h1 class="py-3">Playing Cards</h1>
     <div class="images row">
       <?php
       foreach( $images as $image ):
@@ -46,6 +46,8 @@
     </div>
   </div>
 
+  <script type="text/javascript" src="https://dev.nretnil.com/staging/tools/fontstrap/js/jquery.min.js"></script>
+  <script type="text/javascript" src="https://dev.nretnil.com/staging/tools/js/clipboard.min.js"></script>
   <script>
     new Clipboard('.copy-btn');
   </script>
