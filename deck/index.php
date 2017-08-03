@@ -19,8 +19,6 @@
 <html>
 <head>
   <title>Playing Cards</title>
-
-
   <link type="text/css" href="https://dev.nretnil.com/staging/tools/fontstrap/css/fontstrap.min.css" rel="stylesheet">
   <style>
     img { width: 100%; }
