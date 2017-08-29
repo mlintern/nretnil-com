@@ -12,3 +12,6 @@ function decode() {
 	$('#dencoder-result').focus();
 	$('#dencoder-result').select();
 }
+
+$('.decode-btn').click(decode);
+$('.encode-btn').click(encode);

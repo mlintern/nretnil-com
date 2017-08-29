@@ -302,7 +302,7 @@
 </div><!-- /.modal -->
 
 <div id="human2unix" class="modal fade">
-	<div class="modal-dialog modal-lg" role="document">
+	<div class="modal-dialog modal-80" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -364,7 +364,7 @@
 </div><!-- /.modal -->
 
 <div id="crontab" class="modal fade">
-	<div class="modal-dialog modal-lg" role="document">
+	<div class="modal-dialog modal-80" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -493,7 +493,7 @@
 </div><!-- /.modal -->
 
 <div id="codify" class="modal fade">
-	<div class="modal-dialog" role="document">
+	<div class="modal-dialog modal-80" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -505,7 +505,7 @@
 
 				<textarea type="text" value="" rows="10" class="form-control" placeholder="Text To Codify…" id="code_text" style="margin-bottom: 10px;width: 100%"></textarea>
 				<button class="btn btn-large btn-success btn-block" onclick="codify_text();return false;">Codify Text!</button>
-				<textarea id="codified_result" class="hidden-xs-up form-control" style="width: 100%; margin-top:10px;"></textarea>
+				<textarea id="codified_result" class="hidden-xs-up form-control" style="width: 100%; margin-top:10px;" readonly></textarea>
 
 			</div>
 		</div><!-- /.modal-content -->
@@ -513,7 +513,7 @@
 </div><!-- /.modal -->
 
 <div id="dencode" class="modal fade">
-	<div class="modal-dialog" role="document">
+	<div class="modal-dialog modal-lg" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -525,10 +525,10 @@
 
 				<textarea cols="100" rows="5" class="form-control" placeholder="Url to Dencode..." id="dencoder" style="width: 100%;"></textarea>
 				<div class="row" style="margin: 10px 0;">
-					<button class="btn btn-large btn-warning col-6" onclick="decode();">Decode</button>
-					<button class="btn btn-large btn-info col-6" onclick="encode();">Encode</button>
+					<button class="btn btn-large btn-warning col-6 decode-btn">Decode</button>
+					<button class="btn btn-large btn-info col-6 encode-btn">Encode</button>
 				</div>
-				<textarea cols="100" class="form-control" rows="5" id="dencoder-result" style="width: 100%;"></textarea>
+				<textarea cols="100" class="form-control" rows="5" id="dencoder-result" style="width: 100%;" readonly></textarea>
 
 			</div>
 		</div><!-- /.modal-content -->
@@ -634,7 +634,7 @@
 
 <div class="footer">
 	<div class="footer-email" style="text-align:center;">mark@lintern.us</div>
-	<div class="version" style="text-align:center;">v 17.8.3</div>
+	<div class="version" style="text-align:center;">v 17.8.29</div>
 </div>
 
 <script src="https://dev.nretnil.com/staging/tools/fontstrap/js/jquery.min.js"></script>

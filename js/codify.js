@@ -1,15 +1,15 @@
 function codify_text(){
 	var text = $("#code_text").val();
-	
+
 	text = text.replaceAll("<", "&lt;");
 	text = text.replaceAll(">", "&gt;");
 	if ($('#usebreaks').is(':checked')){
 		text = text.replaceAll("\n", "<br> \n");
 	}
-	
+
 	var lines = text.split("\n");
-	var linecount = lines.length;
-	
+	var linecount = lines.length < 20 ? lines.length : 20;
+
 	$('#codified_result').attr('rows', linecount);
 	$('#codified_result').text(text);
 	$('#codified_result').removeClass('hidden-xs-up');

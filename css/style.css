@@ -29,6 +29,9 @@ body{
 .modal-backdrop.in {
     opacity: 0.8;
 }
+.modal-80 {
+  max-width: 80%;
+}
 .dropdown-menu.left-fifteen {
   left: 15px;
 }
@@ -78,10 +81,10 @@ body{
 }
 .footer-email{
   color:blue;
-  padding-top: 30px;
   margin-bottom: 10px;
+  padding-top: 30px;
 }
-.tab-content .fa.fa-lg{
+.tab-content .fa-lg{
   padding-top: 4px;
 }
 .secret-button{
@@ -91,7 +94,7 @@ body{
   height: 60px;
   width: 60px;
 }
-.chosen-container-multi .chosen-choices li.search-field{
+.chosen-container-multi .chosen-choices .search-field{
   padding: 3px;
 }
 .chosen-container-multi .chosen-choices{
@@ -112,7 +115,7 @@ a.list-group-item {
   .secret:hover {
     color: blue;
   }
-  .secret.white:hover {
+  .white:hover {
     color: white;
   }
 }
