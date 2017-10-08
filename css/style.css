@@ -135,3 +135,7 @@ a.list-group-item {
   text-decoration: none;
   color: #aaa;
 }
+.dropdown-menu-right {
+  left: auto;
+  right: 0;
+}
