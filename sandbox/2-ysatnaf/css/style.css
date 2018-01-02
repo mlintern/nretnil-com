@@ -1,0 +1,36 @@
+a, a:hover {
+	color: #800080;
+	text-shadow: 1px 1px #ffff00;
+}
+th {
+	text-align: center;
+}
+body { 
+	position:relative;
+	background-image: url('../img/trophy.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.panel {
+	background-color: transparent;
+	box-shadow: none;
+}
+.panel-body .container{
+	background-color: #fff;
+}
+.panel-group .panel-heading+.panel-collapse .panel-body {
+	border: none;
+}
+.page-header {
+	color: #ffff00;
+	text-shadow: 2px 2px #800080;
+	border: none;
+}
+h1 {
+	font-size: 50px;
+}
+.page-header h1{
+	font-size: 60px;
+}
