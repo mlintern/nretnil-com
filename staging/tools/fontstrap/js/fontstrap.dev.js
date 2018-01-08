@@ -1,5 +1,5 @@
 /*
- * Fontstrap v2.1.0 (https://github.com/nretnilkram/fontstrap)
+ * Fontstrap v2.1.2 (https://github.com/nretnilkram/fontstrap)
  * Copyright 2017 Mark Lintern
  * Licensed under MIT (https://github.com/nretnilkram/fontstrap/blob/master/LICENSE)
  */
@@ -47,6 +47,7 @@ var loadRequirements = function () {
     loadScript(fontstrapAssetJsPath + "keepOnScreen.jquery.js", function(){ });
     loadScript(fontstrapAssetJsPath + "offcanvasMenu.jquery.js", function(){ });
     loadScript(fontstrapAssetJsPath + "imagePopOut.jquery.js", function(){ });
+    loadScript(fontstrapAssetJsPath + "zoomIn.jquery.js", function(){ });
   });
 };
 
