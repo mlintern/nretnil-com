@@ -62,10 +62,8 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
 				<h4 class="modal-title" id="myModalLabel">Password Generator</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			</div>
 			<div class="modal-body">
 
@@ -93,10 +91,8 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
 				<h4 class="modal-title" id="myModalLabel">Passphrase Generator</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			</div>
 			<div class="modal-body">
 
@@ -114,10 +110,8 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
 				<h4 class="modal-title" id="myModalLabel">Reverse Text</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			</div>
 			<div class="modal-body">
 
@@ -134,10 +128,8 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
 				<h4 class="modal-title" id="myModalLabel">External IP Address</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			</div>
 			<div class="modal-body">
 
@@ -152,10 +144,8 @@
 	<div class="modal-dialog modal-lg" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
 				<h4 class="modal-title" id="myModalLabel">DNS Tools</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			</div>
 			<div class="modal-body">
 
@@ -188,10 +178,8 @@
 	<div class="modal-dialog modal-lg" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
 				<h4 class="modal-title" id="myModalLabel">Pig Latin Translator</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			</div>
 			<div class="modal-body">
 
@@ -234,20 +222,16 @@
 	<div class="modal-dialog modal-lg" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
 				<h4 class="modal-title" id="myModalLabel">Lorem Ipsum Generator</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			</div>
 			<div class="modal-body">
 
 				<form class="form-horizontal">
 					<fieldset>
 					<div class="form-group row">
-						<label class="radio col-sm-3">
-							Language
-						</label>
-						<div class="col-sm-9">
+						<label class="radio col-sm-4">Language</label>
+						<div class="col-sm-8">
 							<select class="form-control lorem-lang">
 								<option value="LA" selected>Latin</option>
 								<option value="FR">French</option>
@@ -255,33 +239,29 @@
 						</div>
 					</div>
 					<div class="form-group row">
-						<div class="form-check col-sm-3">
-							<label class="form-check-label">
-								<input class="form-check-input" name="typeoftext" type="radio" value="words">Words
-							</label>
-						</div>
-						<div class="col-sm-9">
-							<input class="form-control" type="text" id="numwords" value="500"/>
+						<label class="radio col-sm-4">Number</label>
+						<div class="col-sm-8">
+							<input class="form-control" type="text" id="num" value="5"/>
 						</div>
 					</div>
-					<div class="form-group row">
-						<div class="form-check col-sm-3">
-							<label class="form-check-label">
-								<input class="form-check-input" name="typeoftext" type="radio" value="words">Characters
-							</label>
+					<div class="form-group row text-center">
+						<div class="col-sm-4">
+							<div class="form-check">
+								<input class="form-check-input" name="typeoftext" type="radio" value="words">
+								<label class="form-check-label">Words</label>
+							</div>
 						</div>
-						<div class="col-sm-9">
-							<input class="form-control" type="text" id="numchars" value="15000"/>
+						<div class="col-sm-4">
+							<div class="form-check">
+								<input class="form-check-input" name="typeoftext" type="radio" value="characters">
+								<label class="form-check-label">Characters</label>
+							</div>
 						</div>
-					</div>
-					<div class="form-group row">
-						<div class="form-check col-sm-3">
-							<label class="form-check-label">
-								<input class="form-check-input" name="typeoftext" type="radio" value="paragraphs" checked>Paragraphs
-							</label>
-						</div>
-						<div class="col-sm-9">
-							<input class="form-control" type="text" id="numpara" value="5"/>
+						<div class="col-sm-4">
+							<div class="form-check">
+								<input class="form-check-input" name="typeoftext" type="radio" value="paragraphs" checked>
+								<label class="form-check-label">Paragraphs</label>
+							</div>
 						</div>
 					</div>
 					<div class="form-check form-group mb-1">
@@ -303,10 +283,8 @@
 	<div class="modal-dialog modal-80" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
 				<h4 class="modal-title" id="myModalLabel">Unix to Human Time</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			</div>
 			<div class="modal-body">
 
@@ -365,10 +343,8 @@
 	<div class="modal-dialog modal-80" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
 				<h4 class="modal-title" id="myModalLabel">Crontab Generator</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			</div>
 			<div class="modal-body">
 
@@ -494,10 +470,8 @@
 	<div class="modal-dialog modal-80" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
 				<h4 class="modal-title" id="myModalLabel">Codeify Text</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			</div>
 			<div class="modal-body">
 
@@ -514,10 +488,8 @@
 	<div class="modal-dialog modal-lg" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
 				<h4 class="modal-title" id="myModalLabel">URL Dencoder</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			</div>
 			<div class="modal-body">
 
@@ -537,10 +509,8 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
 				<h4 class="modal-title" id="myModalLabel">Ask Mark</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			</div>
 			<div class="modal-body">
 
@@ -566,10 +536,8 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
 				<h4 class="modal-title" id="myModalLabel">UUID Generator</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			</div>
 			<div class="modal-body">
 
@@ -587,8 +555,8 @@
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				<h4 class="modal-title">Secret Area</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			</div>
 			<div class="modal-body">
 				<a target="_blank" href="staging" class="btn btn-secondary btn-lg btn-block">Staging</a>
@@ -602,7 +570,7 @@
 					</div>
 					<div class="col-sm-6">
 						<a target="_blank" href="staging/tools" class="btn btn-danger btn-block">Tools</a>
-						<a target="_blank" href="staging/tools/fontstrap" class="btn btn-warning btn-sm btn-block">Fontstrap</a>
+						<a target="_blank" href="staging/tools/fontstrap5" class="btn btn-warning btn-sm btn-block">Fontstrap 5</a>
 						<a target="_blank" href="staging/tools/foundation6" class="btn btn-warning btn-sm btn-block">Foundation 6.2.4</a>
 						<a target="_blank" href="staging/tools/css" class="btn btn-warning btn-sm btn-block">CSS</a>
 						<a target="_blank" href="staging/tools/js" class="btn btn-warning btn-sm btn-block">Javascript</a>
@@ -632,7 +600,7 @@
 
 <div class="footer">
 	<div class="footer-email" style="text-align:center;">mark@lintern.us</div>
-	<div class="version" style="text-align:center;">v 18.1.4</div>
+	<div class="version" style="text-align:center;">v 18.1.19</div>
 </div>
 
 <script src="https://dev.nretnil.com/staging/tools/fontstrap/js/jquery.min.js"></script>

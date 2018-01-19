@@ -58,113 +58,89 @@
 		FR: loremFR
 	}
 	var text =  langOptions[opts.language];
-	var min_num = 0;  
-	var max_num = text.length-1; 
-	var diff = max_num-min_num+1; 
-	function makeipsum(){
+	var min_num = 0;
+	var max_num = text.length - 1;
+	var diff = max_num - min_num + 1;
+	function makeipsum () {
 		var ipsum_text = "";
 		for (var i = 0; i < howmany; i++){
-			rnd_number=Math.floor(Math.random()*diff + min_num); 
-		if(options.ptags==true){
-			ipsum_text+="<p>";
-		}
-		ipsum_text+=text[rnd_number];
-		if(opts.ptags==true){
-			ipsum_text+="</p>";
-		}
-		ipsum_text+="\n\n";
-		}
-		switch(opts.type) {
-			case "words":{
-						var numOfWords = opts.amount;
-				numOfWords = parseInt( numOfWords );
-				var list = new [];
-				var wordList = [];
-				wordList = ipsum_text.split( ' ' );
-				var iParagraphCount = 0;
-				var iWordCount = 0;
-				while( list.length < numOfWords ) {
-					if( iWordCount > wordList.length ) {
-						iWordCount = 0;
-								iParagraphCount++;
-									if( iParagraphCount + 1 > text.length ) {
-							iParagraphCount = 0;
-						}
-								wordList = text[ iParagraphCount ].split( ' ' );
-								wordList[0] = "\n\n" + wordList[ 0 ];
-					}
-							list.push( wordList[ iWordCount ] );
-							iWordCount++;
-				}
-				ipsum_text = list.join(' '); // changed
-				if(opts.ptags === true){
-					ipsum_text+="</p>";
-				}
-			break;
+			rnd_number = Math.floor(Math.random() * diff + min_num);
+			if(options.ptags === true){
+				ipsum_text += "<p>";
 			}
-			case 'characters':
-			{
-				var outputString = '';
+			ipsum_text += text[rnd_number];
+			if(opts.ptags === true){
+				ipsum_text += "</p>";
+			}
+			ipsum_text += "\n\n";
+			}
+			switch(opts.type) {
+				case "words": {
+					var numOfWords = opts.amount;
+					numOfWords = parseInt( numOfWords );
+					var list = [];
+					var wordList = [];
+					wordList = ipsum_text.split( ' ' );
+					var iParagraphCount = 0;
+					var iWordCount = 0;
+					while( list.length < numOfWords ) {
+						if( iWordCount > wordList.length ) {
+							iWordCount = 0;
+							iParagraphCount++;
+							if( iParagraphCount + 1 > text.length ) {
+								iParagraphCount = 0;
+							}
+							wordList = text[ iParagraphCount ].split( ' ' );
+							wordList[0] = "\n\n" + wordList[ 0 ];
+						}
+						list.push( wordList[ iWordCount ] );
+						iWordCount++;
+					}
+					ipsum_text = list.join(' '); // changed
+					if(opts.ptags === true){
+						ipsum_text += "</p>";
+					}
+				break;
+				}
+				case 'characters': {
+					var outputString = '';
 					var numOfChars = opts.amount;
 					numOfChars = parseInt( numOfChars );
 					var tempString = text.join( "\n\n" );
-				while(outputString.length < numOfChars ){
+					while(outputString.length < numOfChars ){
 						outputString += tempString;
-				}
+					}
 					ipsum_text = outputString.substring(0, numOfChars );
-			break;
+				break;
+				}
+				case 'paragraphs': {
+				///no action needed
+				break;
+				}
 			}
-			case 'paragraphs':{
-			///no action needed
-			break;
-			}
+			return ipsum_text;
 		}
-		return ipsum_text;
-	}
 
-
-	return this.each(function() {
-		$this = $(this);
-		var markup = makeipsum();
-		$this.html(markup);
-		
-	});
+		return this.each(function() {
+			$this = $(this);
+			var markup = makeipsum();
+			$this.html(markup);
+		});
 	};
 
 })(jQuery);
 
 function loremExecute(){
-
 	$('.ipsum').addClass('hidden-xs-up');
 	var lang = $('.lorem-lang').val();
-	
-	if ($("input:radio[name='typeoftext']:checked").val() == "paragraphs"){
-		if ($('#ptags').is(':checked')){
-			$('.ipsum').lorem({ type: 'paragraphs',amount: $('#numpara').val(),ptags: true, language: lang });
-		}else{
-			$('.ipsum').lorem({ type: 'paragraphs',amount: $('#numpara').val(),ptags: false, language: lang });
-		}
-		$('.ipsum').toggleClass('hidden-xs-up');
-		$('.ipsum').focus();
-		$('.ipsum').select();
-	}else if ($("input:radio[name='typeoftext']:checked").val() == "words"){
-		if ($('#ptags').is(":checked")){
-			$('.ipsum').lorem({ type: 'words',amount: $('#numwords').val(),ptags: true, language: lang });
-		}else{
-			$('.ipsum').lorem({ type: 'words',amount: $('#numwords').val(),ptags: false, language: lang });
-		}
-		$('.ipsum').removeClass('hidden-xs-up');
-		$('.ipsum').focus();
-			$('.ipsum').select();
-	}else{
-		if ($('#ptags').is(":checked")){
-			$('.ipsum').lorem({ type: 'characters',amount: $('#numchars').val(),ptags: true, language: lang });
-		}else{
-			$('.ipsum').lorem({ type: 'characters',amount: $('#numchars').val(),ptags: false, language: lang });
-		}
-		$('.ipsum').toggleClass('hidden-xs-up');
-		$('.ipsum').focus();
-			$('.ipsum').select();
-	}
+	var options = { type: $("input:radio[name='typeoftext']:checked").val(),
+									amount: $('#num').val(),
+									ptags: $('#ptags').is(':checked'),
+									language: $('.lorem-lang').val()
+								};
 
+	$('.ipsum').lorem(options);
+	$('.ipsum').toggleClass('hidden-xs-up');
+	$('.ipsum').focus();
+	$('.ipsum').select();
 }
