@@ -1,5 +1,5 @@
 /*
- * Fontstrap v2.2.0 (https://github.com/nretnilkram/fontstrap)
+ * Fontstrap v1.2.10 (https://github.com/nretnilkram/fontstrap)
  * Copyright 2017 Mark Lintern
  * Licensed under MIT (https://github.com/nretnilkram/fontstrap/blob/master/LICENSE)
  */
@@ -29,18 +29,16 @@ function loadScript(url, callback){
 var currSrc = document.currentScript.src,
     jsPath = currSrc.substr(0, currSrc.lastIndexOf("/")) + '/', // "dist/js/";
     fontstrapAssetJsPath = jsPath + '../../assets/javascripts/fontstrap/',
-    bootstrapJsPath = jsPath + '../../assets/javascripts/bootstrap/',
-    fontawesomeJsPath = jsPath + '../../assets/javascripts/fontawesome/',
+    tmpJsPath = jsPath + '../../tmp/',
     thirdPartyAssetJsPath = jsPath + '../../assets/javascripts/third_party/';
 
 var loadRequirements = function () {
   $(window).on('beforeunload', function() {
     $(window).scrollTop(0);
   });
-  loadScript(bootstrapJsPath + "bootstrap.bundle.min.js", function(){
+  loadScript(tmpJsPath + "popper-bootstrap.min.js", function(){
     $('[data-toggle="tooltip"]').tooltip();
   });
-  loadScript(fontawesomeJsPath + "fontawesome-all.min.js", function(){ });
   loadScript(thirdPartyAssetJsPath + "lodash.min.js", function(){
     loadScript(fontstrapAssetJsPath + "storage.js", function(){ });
     loadScript(fontstrapAssetJsPath + "alignBlocks.jquery.js", function(){ });
@@ -49,7 +47,6 @@ var loadRequirements = function () {
     loadScript(fontstrapAssetJsPath + "keepOnScreen.jquery.js", function(){ });
     loadScript(fontstrapAssetJsPath + "offcanvasMenu.jquery.js", function(){ });
     loadScript(fontstrapAssetJsPath + "imagePopOut.jquery.js", function(){ });
-    loadScript(fontstrapAssetJsPath + "zoomIn.jquery.js", function(){ });
   });
 };
 
