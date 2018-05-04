@@ -30,9 +30,9 @@
     .img-hover .filename { margin-top: 15%; }
   </style>
 </head>
-<body>
+<body class="bg-dark">
   <div class="container">
-    <h1 class="py-3">Logos</h1>
+    <h1 class="py-3 text-white">Logos</h1>
     <div class="images row">
       <?php
       foreach( $images as $image ):
