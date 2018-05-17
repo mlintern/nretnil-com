@@ -12,9 +12,9 @@
 	/* The animation code */
 		@keyframes loading {
 			0%   { transform: skewY(0deg); }
-			25%  { transform: skewY(75deg); }
-			50%  { transform: skewY(0deg); }
-			75% { transform: skewY(-75deg); }
+    	25%  { transform: skewY(60deg); }
+    	50%  { transform: skewY(0deg); }
+    	75% { transform: skewY(-60deg); }
 			100% { transform: skewY( 0deg); }
 		}
 		.loading-container {
@@ -25,7 +25,7 @@
 		}
 		.loading-logo {
 			animation-name: loading;
-			animation-duration: 4s;
+    	animation-duration: 4s;
 			animation-iteration-count: infinite;
 		}
 	</style>
