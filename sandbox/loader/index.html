@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="icon" href="oracle-o.jpg">
+
+	<title>Oracle Loader</title>
+
+	<style>
+	/* The animation code */
+		@keyframes loading {
+			0%   { transform: skewY(0deg); }
+    	25%  { transform: skewY(90deg); }
+    	50%  { transform: skewY(0deg); }
+    	75% { transform: skewY(-90deg); }
+			100% { transform: skewY( 0deg); }
+		}
+		.loading-container {
+			position: fixed;
+			transform: translate(-50%, -50%);
+			left: 50%;
+			top: 50%;
+		}
+		.loading-logo {
+			animation-name: loading;
+    	animation-duration: 4s;
+			animation-iteration-count: infinite;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="loading-container"><img class="loading-logo" src="oracle-o.png"></div>
+	</div>
+</body>
+</html>
