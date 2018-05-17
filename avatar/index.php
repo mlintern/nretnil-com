@@ -21,24 +21,28 @@
   <title>Avatars</title>
   <link type="text/css" href="https://dev.nretnil.com/staging/tools/fontstrap/css/fontstrap.min.css" rel="stylesheet">
   <style>
-    img { width: 100%; }
-    .img-box { margin-bottom: 30px; }
-    .img-hover { position: absolute; height: 0%; left: 15px; right: 15px; background-color: rgba(0, 0, 0, 0.7); top: 0; display: none; text-align: center; }
+    img { max-width: 100%; }
+    .img-hover { position: absolute; height: 0%; left: 15px; right: 15px; background-color: rgba(0, 0, 0, 0.7); top: 0; display: none; }
     .img-box:hover > .img-hover { display: block; height: 100%; }
-    .img-hover .copy-btn { margin-top: 10%; }
-    .img-hover h4 { color: #fff; }
-    .img-hover .filename { margin-top: 15%; }
   </style>
 </head>
-<body>
+<body class="bg-dark">
   <div class="container">
-    <h1 class="py-3">Avatars</h1>
+    <h1 class="py-3 text-white">Avatars</h1>
     <div class="images row">
       <?php
       foreach( $images as $image ):
         $image_size = getimagesize($image);
         $src = str_replace($path."/", "", $image);
-        echo "<div class='img-box col-md-6 col-lg-4 col-xl-3'><img src='" . $src . "'><div class='img-hover'><h4 class='filename'>" . str_replace($path."/", "", $image) . "</h4><h4>" . $image_size[0] . " x " . $image_size[1] . "</h4><button class='btn copy-btn btn-success' data-clipboard-text='". $location . str_replace($path."/", "", $image) . "''>copy url</button><div><a href='" . $src . "' class='btn copy-btn btn-success' download>download</a></div></div></div>";
+        echo "<div class='img-box col-md-6 col-lg-4 col-xl-3 text-center mb-4'>";
+        echo "<img src='" . $src . "'>";
+        echo "<div class='img-hover'>";
+        echo "<div class='filename text-white mt-3'>" . str_replace($path."/", "", $image) . "</div>";
+        echo "<div class='text-white mt-3'>" . $image_size[0] . " x " . $image_size[1] . "</div>";
+        echo "<div class='mt-3'><button class='btn copy-btn btn-success' data-clipboard-text='". $location . str_replace($path."/", "", $image) . "''>copy url</button></div>";
+        echo "<div class='mt-3'><a href='" . $src . "' class='btn copy-btn btn-success' download>download</a></div>";
+        echo "</div>";
+        echo "</div>";
       endforeach;
       ?>
     </div>
