@@ -8,31 +8,50 @@
 
 	<title>Oracle Loader</title>
 
+	<!-- Fontstrap -->
+	<link href="//dev.nretnil.com/staging/tools/fontstrap/css/fontstrap.min.css" rel="stylesheet">
+
 	<style>
-	/* The animation code */
-		@keyframes loading {
+		/* The animation code */
+		@keyframes loadingStretch {
 			0%   { transform: skewY(0deg); }
-			25%  { transform: skewY(75deg); }
+			25%  { transform: skewY(70deg); }
 			50%  { transform: skewY(0deg); }
-			75% { transform: skewY(-75deg); }
+			75% { transform: skewY(-70deg); }
 			100% { transform: skewY( 0deg); }
 		}
 		.loading-container {
-			position: fixed;
-			transform: translate(-50%, -50%);
-			left: 50%;
-			top: 50%;
+			position: relative;
+			height: 350px;
+			overflow: hidden
 		}
 		.loading-logo {
-			animation-name: loading;
+			animation-name: loadingStretch;
 			animation-duration: 4s;
 			animation-iteration-count: infinite;
+			background-image: url('oracle-o.png');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 100px 100px;
+			height: 350px;
+			left: 50%;
+			position: absolute;
+			width: 100px;
 		}
 	</style>
 </head>
 <body>
-	<div class="container">
-		<div class="loading-container"><img class="loading-logo" src="oracle-o.png"></div>
+	<div class="navbar bg-primary navbar-dark">
+		<a class="navbar-brand" href="#">Header</a>
 	</div>
+
+	<div class="container">
+		<h1 class="pt-4 pb-2">Providers</h1>
+		<div class="providers position-relative loading-container"><div class="loading-logo"></div></div>
+		<h1 class="pt-4 pb-2">Applications</h1>
+		<div class="applications position-relative loading-container"><div class="loading-logo"></div></div>
+	</div>
+
+	<div class="navbar bg-primary navbar-dark"></div>
 </body>
 </html>

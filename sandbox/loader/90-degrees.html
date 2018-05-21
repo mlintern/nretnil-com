@@ -9,30 +9,58 @@
 	<title>Oracle Loader</title>
 
 	<style>
-	/* The animation code */
-		@keyframes loading {
+		/* The animation code */
+		@keyframes stretch45 {
 			0%   { transform: skewY(0deg); }
-    	25%  { transform: skewY(90deg); }
-    	50%  { transform: skewY(0deg); }
-    	75% { transform: skewY(-90deg); }
+			25%  { transform: skewY(45deg); }
+			50%  { transform: skewY(0deg); }
+			75% { transform: skewY(-45deg); }
+			100% { transform: skewY( 0deg); }
+		}
+		@keyframes stretch60 {
+			0%   { transform: skewY(0deg); }
+			25%  { transform: skewY(60deg); }
+			50%  { transform: skewY(0deg); }
+			75% { transform: skewY(-60deg); }
+			100% { transform: skewY( 0deg); }
+		}
+		@keyframes stretch75 {
+			0%   { transform: skewY(0deg); }
+			25%  { transform: skewY(75deg); }
+			50%  { transform: skewY(0deg); }
+			75% { transform: skewY(-75deg); }
+			100% { transform: skewY( 0deg); }
+		}
+		@keyframes stretch90 {
+			0%   { transform: skewY(0deg); }
+			25%  { transform: skewY(90deg); }
+			50%  { transform: skewY(0deg); }
+			75% { transform: skewY(-90deg); }
 			100% { transform: skewY( 0deg); }
 		}
 		.loading-container {
-			position: fixed;
-			transform: translate(-50%, -50%);
-			left: 50%;
-			top: 50%;
+			position: relative;
+			height: 350px;
+			overflow: hidden
 		}
 		.loading-logo {
-			animation-name: loading;
-    	animation-duration: 4s;
+			animation-name: stretch90;
+			animation-duration: 4s;
 			animation-iteration-count: infinite;
+			background-image: url('oracle-o.png');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 100px 100px;
+			height: 350px;
+			left: 50%;
+			position: absolute;
+			width: 100px;
 		}
 	</style>
 </head>
 <body>
 	<div class="container">
-		<div class="loading-container"><img class="loading-logo" src="oracle-o.png"></div>
+		<div class="loading-container"><div class="loading-logo"></div></div>
 	</div>
 </body>
 </html>
