@@ -13,6 +13,13 @@
   $file_path = explode('/',__FILE__);
   $file = array_pop($file_path);
   $location = 'http://' . $_SERVER['HTTP_HOST'] . str_replace($file, "", $_SERVER['PHP_SELF']);
+
+  function filesize_formatted($path) {
+    $size = filesize($path);
+    $units = array( 'B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB');
+    $power = $size > 0 ? floor(log($size, 1024)) : 0;
+    return number_format($size / pow(1024, $power), 2, '.', ',') . ' ' . $units[$power];
+  }
 ?>
 
 <!DOCTYPE html>
@@ -33,12 +40,14 @@
       <?php
       foreach( $images as $image ):
         $image_size = getimagesize($image);
+        $file_size = filesize_formatted($image);
         $src = str_replace($path."/", "", $image);
         echo "<div class='img-box col-md-6 col-lg-4 col-xl-3 text-center mb-4'>";
         echo "<img src='" . $src . "'>";
         echo "<div class='img-hover'>";
         echo "<div class='filename text-white mt-3'>" . str_replace($path."/", "", $image) . "</div>";
-        echo "<div class='text-white mt-3'>" . $image_size[0] . " x " . $image_size[1] . "</div>";
+        echo "<div class='text-white mt-2'>" . $image_size[0] . " x " . $image_size[1] . "</div>";
+        echo "<div class='text-white mt-2'>" . $file_size . "</div>";
         echo "<div class='mt-3'><button class='btn copy-btn btn-success' data-clipboard-text='". $location . str_replace($path."/", "", $image) . "''>copy url</button></div>";
         echo "<div class='mt-3'><a href='" . $src . "' class='btn copy-btn btn-success' download>download</a></div>";
         echo "</div>";
