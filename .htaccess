@@ -1,0 +1,9 @@
+<Files *.png>
+  Header set Content-Type "image/png"
+</Files>
+<Files *.(jpeg|jpg|jpe|JPG)>
+  Header set Content-Type "image/jpeg"
+</Files>
+<Files *.gif>
+  Header set Content-Type "image/gif"
+</Files>
