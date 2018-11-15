@@ -1,5 +1,5 @@
 /*
- * Fontstrap v2.6.1 (https://github.com/nretnilkram/fontstrap)
+ * Fontstrap v2.7.0 (https://github.com/nretnilkram/fontstrap)
  * Copyright 2018 Mark Lintern
  * Licensed under MIT (https://github.com/nretnilkram/fontstrap/blob/master/LICENSE)
  */
@@ -48,7 +48,7 @@ jQuery.fn.offcanvasMenu = function(settings) {
 
 	var options = jQuery.extend({
 		width: 25, // percentage
-		xsWidth: 75,
+		xsWidth: 100,
 		smWidth: 50,
 		mdWidth: 33,
 		lgWidth: 25,
@@ -119,7 +119,7 @@ jQuery.fn.offcanvasMenu = function(settings) {
 		}
 	}
 
-	$(options.triggerEl).click(function () {
+	$(options.triggerEl).on('click', function () {
 		if ( self.hasClass('menu-open') ) {
 			close();
 		} else {
@@ -135,7 +135,7 @@ jQuery.fn.offcanvasMenu = function(settings) {
 		$(this).toggleClass('active');
 	});
 
-	self.find(options.lockToggle).click(function (e) {
+	self.find(options.lockToggle).on('click', function (e) {
 		e.preventDefault(e);
 		console.log($(this).hasClass('locked'));
 		if ($(this).hasClass('locked')) {
