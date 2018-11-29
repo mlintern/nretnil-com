@@ -3,24 +3,24 @@
 	Lime Green: #32CD32 (50,205,50)
 */
 
-img { 
+img {
 	max-width: 100%;
 	height: auto;
 }
 
 body, html {
+	/* color: #551A8B; */
 	height: 100%;
 	font-family: 'Catamaran', sans-serif;
-	color: #551A8B;
 }
 
-a {
+/* a {
 	color: #551A8B;
 }
 
 a:hover {
 	color: #32CD32;
-}
+} */
 
 .purple {
 	color: #551A8B;
@@ -28,6 +28,11 @@ a:hover {
 
 .green {
 	color: #32CD32;
+}
+
+.social {
+	font-size: 30px;
+	line-height: 1;
 }
 
 .bgimg {
@@ -48,91 +53,33 @@ a:hover {
 	}
 }
 
-.logo {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 300px;
+.header-bg {
+	background: #c8c8c8;
+	background: #c8c8c880;
+	background: rgba(200, 200, 200, 0.5);
 }
 
-.social-icons {
-	position: absolute;
-	top: 0;
-	right: 0;
+.logo-header {
+	width: 49px;
 }
 
-.social-icons a {
-	text-shadow: 2px 2px #ffffff;
-	min-width: 60px;
-	min-height: 60px;
-	text-align: center;
-	padding: 5px;
-	border-radius: 5px
-}
-
-.social-icons a:hover{
-	background-color: rgba(255, 255, 255, 0.5)
+.logo-small {
+	width: 30px;
 }
 
 .bgimg-1 {
 	background-image: url("../img/steve_2.jpg");
-	min-height: 100%;
+	background-position: 50% 70%;
 }
 
-.bgimg-2 {
-	background-image: url("../img/three.jpg");
-	min-height: 500px;
+.overflow-hidden {
+	overflow: hidden;
 }
 
-.bgimg-3 {
-	background-image: url("../img/steve_8.jpg");
-	min-height: 500px;
-}
-
-.bgimg-4 {
-	background-image: url("../img/steve_7.jpg");
-	min-height: 600px;
-}
-
-.bgimg-5 {
-	background-image: url("../img/six.jpg");
-	min-height: 500px;
-}
-
-.caption {
-	position: absolute;
-	left: 0;
-	top: 30%;
-	width: 100%;
-	text-align: center;
-	color: #000;
-}
-
-.caption span.border {
-	/*background-color: rgba(17, 17, 17, 0.85);*/
-	background-color: rgba(50, 205, 50, 0.85);
-	color: #fff;
-	padding: 20px;
-	letter-spacing: 5px;
-	display: inline-block;
-}
-
-@media (min-width: 544px) {
-	.caption {
-		top: 45%;
-	}
-	.caption span.border {
-		letter-spacing: 10px;
-	}
-}
-
-.caption.inverse span.border {
-	background-color: rgba(85, 26, 139, 0.85);
-}
-
-.caption span.border.transparent {
-	background-color: transparent;
-	color: #f7f7f7;
+.headline-image {
+	border-radius: 21px 21px 0 0;
+	height: 300px;
+	width: 80%;
 }
 
 .contact{
@@ -164,88 +111,6 @@ a:hover {
 	background-color: white
 }
 
-/* COLOR HELPERS */
-
-.facebook-blue, 
-.facebook-blue:hover, 
-.facebook-blue:active, 
-.facebook-blue:visited, 
-.facebook-blue:focus {
-	color: #3b5998;
-}
-
-.twitter-blue, 
-.twitter-blue:hover, 
-.twitter-blue:active, 
-.twitter-blue:visited, 
-.twitter-blue:focus {
-	color: #55acee;
-}
-
-.youtube-red, 
-.youtube-red:hover, 
-.youtube-red:active, 
-.youtube-red:visited, 
-.youtube-red:focus {
-	color: #cd201f;
-}
-
-.black, 
-.black:hover, 
-.black:active, 
-.black:visited, 
-.black:focus {
-	color: #000;
-}
-
-/* CURVED HR 
-	http://tympanus.net/Development/SectionSeparators/
-*/
-
-.zigzag{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 30px;
-	background-size: 100px 100%;
-	background-image: -webkit-gradient(linear, 0 0, 10% 100%, color-stop(0.5, #2980b9), color-stop(0.5, #3498db));
-	background-image: linear-gradient(15deg, #3498db 50%, #2980b9 50%);
-}
-
-.zigzag.purple-clear-top {
-	top: 0;
-	background-image: -webkit-gradient(linear, 0 0, 10% 100%, color-stop(0.5, #551A8B), color-stop(0.5, transparent));
-	background-image: linear-gradient(15deg, transparent 50%, #551A8B 50%);
-}
-
-.zigzag.clear-purple-bottom {
-	top: auto;
-	bottom: 0;
-	background-image: -webkit-gradient(linear, 0 0, 10% 100%, color-stop(0.5, transparent), color-stop(0.5, #551A8B));
-	background-image: linear-gradient(15deg, #551A8B 50%, transparent 50%);
-}
-
-.zigzag.clear-white-bottom {
-	top: auto;
-	bottom: 0;
-	background-image: -webkit-gradient(linear, 0 0, 10% 100%, color-stop(0.5, transparent), color-stop(0.5, #FFFFFF));
-	background-image: linear-gradient(15deg, #FFFFFF 50%, transparent 50%);
-}
-
-.no-border {
-	border: none;
-}
-
-.no-border-t {
-	border-top: none;
-}
-
-.no-border-b {
-	border-bottom: none;
-}
-
-
 /* MEDIA */
 
 /* SM */
@@ -255,12 +120,18 @@ a:hover {
 
 /* MD */
 @media (min-width: 768px) {
-
+	.flex-md-equal > * {
+		-ms-flex: 1;
+		flex: 1;
+	}
 }
 
 /* LG */
 @media (min-width: 992px) {
-
+	.flex-lg-equal > * {
+		-ms-flex: 1;
+		flex: 1;
+	}
 }
 
 /* XL */
