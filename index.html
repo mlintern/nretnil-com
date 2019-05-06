@@ -13,7 +13,7 @@
 <link type="text/css" href="staging/tools/css/fog/fog.css" rel="stylesheet">
 <link type="text/css" href="staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Almost%20Noteworthy/almost_noteworthy/stylesheet.css" rel="stylesheet">
 <script type="text/javascript" src="js/ie-fix.js"></script>
-<link type="text/css" href="css/style.css?v=17.10.8" rel="stylesheet">
+<link type="text/css" href="css/style.css?v=19.5.6" rel="stylesheet">
 </head>
 
 <body class="bg-faded">
@@ -58,7 +58,7 @@
 
 
 <div id="pswd1" class="modal fade">
-	<div class="modal-dialog" role="document">
+	<div class="modal-dialog modal-lg" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h4 class="modal-title" id="myModalLabel">Password Generator</h4>
@@ -75,8 +75,8 @@
 						<input class="form-check-input" id="Symbols" type="checkbox" /> Punctuation (!, @, #, $, %, and so on)
 					</label>
 				</div>
-				<div class="font-weight-bold">Your new password:</div>
-				<div id="outputPassword" tabindex="-1" aria-live="assertive" class="align-center" spellcheck="false">Your new password here.</div>
+				<div class="font-weight-bold mt-3">Your new password:</div>
+				<div id="outputPassword" tabindex="-1" aria-live="assertive" class="align-center py-3 border border-1 border-secondary my-3" spellcheck="false">Your new password here.</div>
 				<input id="btnGenerate" style="margin: 15px 0" class="btn btn-large btn-primary col-sm-12" type="button" value="Generate" />
 				<div class="font-weight-bold">Your mnemonic password:</div>
 				<div id="outputMnemonic" spellcheck="false">Your mnemonic will appear here.</div>
@@ -188,17 +188,7 @@
 
 						<textarea id="taEng" class="col-sm-12 form-control" rows="7" name="taEng">Enter the English text here that you want translated into Pig Latin.</textarea>
 
-						<div class="row" style="margin: 20px 0;">
-							<input class="btn btn-success col-sm-6" value="Translate" onclick="fTranslate()" type="button">
-							<input	class="btn btn-danger col-sm-6" value="Clear Text" onclick="fClearText()" type="button">
-						</div>
-
-						<label>Igpay Atinlay Anslationtray:</label>
-						<textarea id="taPL" class="col-sm-12 form-control" rows="7" name="taPL"></textarea>
-
-						<input class="btn btn-warning col-sm-12 mb-1" value="Select All Text" onclick="fSelectText('taPL')" type="button">
-
-						<div class="row form-group">
+						<div class="row form-group mt-3">
 							<label class="col-sm-6">Maximum Line Length:</label>
 							<div class="col-sm-6"><input class="form-control" name="txtMaxLength" value="65" maxlength="2" onchange="fVerifyEntry(this.value)" type="text"></div>
 						</div>
@@ -209,6 +199,16 @@
 								<input class="form-check-input" name="learnmode" checked="checked" type="checkbox">Check for 'Learning Mode'.
 							</label>
 						</div>
+
+						<div class="row" style="margin: 20px 0;">
+							<input class="btn btn-success col-sm-6" value="Translate" onclick="fTranslate()" type="button">
+							<input	class="btn btn-danger col-sm-6" value="Clear Text" onclick="fClearText()" type="button">
+						</div>
+
+						<label>Igpay Atinlay Anslationtray:</label>
+						<textarea id="taPL" class="col-sm-12 form-control" rows="7" name="taPL"></textarea>
+
+						<input class="btn btn-warning col-sm-12 mt-3" value="Select All Text" onclick="fSelectText('taPL')" type="button">
 					</fieldset>
 				</form>
 
@@ -263,12 +263,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="form-check form-group mb-1">
+					<div class="form-check form-group">
 						<label class="form-check-label">
 							<input class="form-check-input" id="ptags" type="checkbox">Include &lt;p&gt; tags
 						</label>
 					</div>
-					<input class="btn btn-large btn-success btn-block" value="Create Text" onclick="loremExecute();return false;" type="button">
+					<input class="btn btn-large btn-success btn-block my-3" value="Create Text" onclick="loremExecute();return false;" type="button">
 					</fieldset>
 				</form>
 				<div class="mt-1"><textarea class="hidden-xs-up ipsum form-control" style="display:block; height: 300px;"></textarea></div>
@@ -353,13 +353,13 @@
 						<div class="row">
 							<div class="cron-section-title col-sm-6" align="center">MINUTES</div>
 							<div class="col-sm-6">
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="minutes" value="*" checked>Every Minute</label>
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="minutes" value="0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58">Even Minutes</label>
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="minutes" value="1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59">Odd Minutes</label>
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="minutes" value="*/5">Every 5 Min</label>
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="minutes" value="*/15">Every 15 Min</label>
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="minutes" value="*/30">Every 30 min</label>
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="minutes" value="0">Once Per Hour</label>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="minutes" value="*" checked>Every Minute</label></div>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="minutes" value="0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58">Even Minutes</label></div>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="minutes" value="1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59">Odd Minutes</label></div>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="minutes" value="*/5">Every 5 Min</label></div>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="minutes" value="*/15">Every 15 Min</label></div>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="minutes" value="*/30">Every 30 min</label></div>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="minutes" value="0">Once Per Hour</label></div>
 							</div>
 							<div class="col-sm-6">&nbsp;</div>
 							<div class="col-sm-6">
@@ -374,12 +374,12 @@
 						<div class="row">
 							<div class="cron-section-title col-sm-6" align="center">HOURS</div>
 							<div class="col-sm-6">
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="hours" value="*" checked>Every Hour</label>
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="hours" value="0,2,4,6,8,10,12,14,16,18,20,22">Even Hours</label>
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="hours" value="1,3,5,7,9,11,13,15,17,19,21,23">Odd Hours</label>
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="hours" value="0,6,12,18">Every 6 Hours</label>
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="hours" value="0,12">Every 12 Hours</label>
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="hours" value="0">Once Per Day</label>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="hours" value="*" checked>Every Hour</label></div>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="hours" value="0,2,4,6,8,10,12,14,16,18,20,22">Even Hours</label></div>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="hours" value="1,3,5,7,9,11,13,15,17,19,21,23">Odd Hours</label></div>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="hours" value="0,6,12,18">Every 6 Hours</label></div>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="hours" value="0,12">Every 12 Hours</label></div>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="hours" value="0">Once Per Day</label></div>
 							</div>
 							<div class="col-sm-6">&nbsp;</div>
 							<div class="col-sm-6">
@@ -396,11 +396,11 @@
 						<div class="row">
 							<div class="cron-section-title col-sm-6" align="center">DAYS OF MONTH</div>
 							<div class="col-sm-6">
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="days" value="*" checked>Every Day</label>
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="days" value="2,4,6,8,10,12,14,16,18,20,22,24,26,28,30">Even Days</label>
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="days" value="1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31">Odd Days</label>
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="days" value="1,15">Twice Per Month</label>
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="days" value="1">Once Per Month</label>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="days" value="*" checked>Every Day</label></div>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="days" value="2,4,6,8,10,12,14,16,18,20,22,24,26,28,30">Even Days</label></div>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="days" value="1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31">Odd Days</label></div>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="days" value="1,15">Twice Per Month</label></div>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="days" value="1">Once Per Month</label></div>
 							</div>
 							<div class="col-sm-6">&nbsp;</div>
 							<div class="col-sm-6">
@@ -415,12 +415,12 @@
 						<div class="row">
 							<div class="cron-section-title col-sm-6" align="center">MONTH</div>
 							<div class="col-sm-6">
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="months" value="*" checked>Every Month</label>
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="months" value="2,4,6,8,10,12">Even Months</label>
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="months" value="1,3,5,7,9,11">Odd Months</label>
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="months" value="1,4,7,10">Every 3 Months</label>
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="months" value="1,7">Every 6 Months</label>
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="months" value="1">Once Per Year</label>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="months" value="*" checked>Every Month</label></div>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="months" value="2,4,6,8,10,12">Even Months</label></div>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="months" value="1,3,5,7,9,11">Odd Months</label></div>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="months" value="1,4,7,10">Every 3 Months</label></div>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="months" value="1,7">Every 6 Months</label></div>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="months" value="1">Once Per Year</label></div>
 							</div>
 							<div class="col-sm-6">&nbsp;</div>
 							<div class="col-sm-6">
@@ -437,10 +437,10 @@
 						<div class="row">
 							<div class="cron-section-title col-sm-6" align="center">WEEKDAYS</div>
 							<div class="col-sm-6">
-								<label class="form-check-label"><input class="form-check-input" type="radio" name="weekdays" value="*" checked>Every Day of the Week</label>
-									<label class="form-check-label"><input class="form-check-input" type="radio" name="weekdays" value="1-5">Weekdays (Mon-Fri)</label>
-									<label class="form-check-label"><input class="form-check-input" type="radio" name="weekdays" value="0,6">Weekend</label>
-									<label class="form-check-label"><input class="form-check-input" type="radio" name="weekdays" value="0">Once Per Week (Sunday)</label>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="weekdays" value="*" checked>Every Day of the Week</label></div>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="weekdays" value="1-5">Weekdays (Mon-Fri)</label></div>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="weekdays" value="0,6">Weekend</label></div>
+								<div><label class="form-check-label"><input class="form-check-input" type="radio" name="weekdays" value="0">Once Per Week (Sunday)</label></div>
 							</div>
 							<div class="col-sm-6">&nbsp;</div>
 							<div class="col-sm-6">
@@ -454,7 +454,7 @@
 					<div class="col-sm-6 cron-item mt-3">
 						<label class="cron-section-title">PATH TO SCRIPT</label>
 						<input class="form-control" type="text" name="command" size="50" value="/this/that/notscript.php">
-						<button class="btn btn-large btn-primary btn-block" onClick="generatecron();return false;">Generate</button>
+						<button class="btn btn-large btn-primary btn-block mt-3" onClick="generatecron();return false;">Generate</button>
 						<code id="cron-code" style="margin-top: 20px;display:block;"></code>
 					</div>
 				</div>
@@ -514,16 +514,21 @@
 			<div class="modal-body">
 
 				<form action="php/FormToEmail.php" method="post">
-					<fieldset>
+					<div>
 						<label>Name:</label>
 						<input class="form-control" type="text" name="name">
+					</div>
+					<div class="mt-3">
 						<label>Email address:</label>
 						<input class="form-control" type="text" name="email">
+					</div>
+					<div class="mt-3">
 						<label>Question</label>
 						<textarea class="form-control" name="comments" rows="6"></textarea>
-						<div style="height: 15px;"></div>
+					</div>
+					<div class="mt-3">
 						<input type="submit" class="btn btn-large btn-success col-sm-12" value="Send">
-					</fieldset>
+					</div>
 				</form>
 
 			</div>
@@ -599,7 +604,7 @@
 
 <div class="footer">
 	<div class="footer-email" style="text-align:center;">mark@lintern.us</div>
-	<div class="version" style="text-align:center;">v 18.3.2</div>
+	<div class="version" style="text-align:center;">v 19.5.6</div>
 </div>
 
 <script src="https://dev.nretnil.com/staging/tools/fontstrap/js/third_party/jquery.min.js"></script>
