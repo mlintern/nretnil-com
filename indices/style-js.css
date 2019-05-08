@@ -58,10 +58,6 @@ table {
   margin: 0 auto;
 }
 
-.table{
-  width: 80%;
-}
-
 tr:hover{
   background: #dddddd;
 }
@@ -90,7 +86,7 @@ th {
   padding: 8px;
 }
 
-.table>tbody>tr>td.col_name {
+.table > tbody > tr > td.col_name {
   padding:0;
 }
 

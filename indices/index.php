@@ -67,7 +67,7 @@
 	}
 	$pathtext = "<div class='path'>$uri</div>";
 
-	$headerhtml = $logohtml . " " . $pathtext;
+	$headerhtml = $logohtml . "&nbsp;" . $uri;
 ?>
 
 <!DOCTYPE html>
