@@ -64,10 +64,11 @@
 		if ($logolink != "") {
 			$logohtml = "<a href='" . $logolink . "' onclick='history.go(-1);return false;'>" . $logohtml . "</a>";
 		}
+		$logohtml = "<div class='logohtml d-inline-block mr-3'>$logohtml</div>";
 	}
-	$pathtext = "<div class='path'>$uri</div>";
+	$pathtext = "<div class='path d-inline-block'>$uri</div>";
 
-	$headerhtml = $logohtml . "&nbsp;" . $uri;
+	$headerhtml = $logohtml . $pathtext;
 ?>
 
 <!DOCTYPE html>
@@ -92,7 +93,7 @@
 			<h1 class="text-center">Nretnil Tools</h1>
 		</div>
 
-		<div id="pagecontainer">
+		<div id="pagecontainer" class="mb-3">
 			<div class='header'>
 				<?php print $headerhtml; ?>
 			</div>
