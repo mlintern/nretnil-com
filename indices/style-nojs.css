@@ -29,7 +29,6 @@ img {
 /* HEADER STYLING ===========================================================*/
 
 .header {
-  width: 80%;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -75,7 +74,7 @@ img {
 
 table {
   background-color: white;
-  border: solid 1px #888888;
+  border: solid 1px #dee2e6;
 
   padding: 0px;
 

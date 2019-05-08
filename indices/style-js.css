@@ -17,11 +17,6 @@ img {
   margin-top: 20px;
 }
 
-/* gets rid of visual glitch from hover color */
-.header img {
-  vertical-align: bottom;
-}
-
 .header a {
   font-weight: bold;
 }
@@ -32,7 +27,7 @@ img {
 }
 
 .path {
-  font-size: 18px;
+  font-size: 20px;
   margin: 10px 0;
 }
 
@@ -51,11 +46,8 @@ img {
 }
 
 /* TABLE STYLING ============================================================*/
-
-table {
-  border: solid 1px #888888;
-  width: 60%;
-  margin: 0 auto;
+.table tr {
+  border: solid 1px #dee2e6;
 }
 
 tr:hover{
@@ -83,11 +75,11 @@ th {
 
 .dirlink, .filelink{
   display: block;
-  padding: 8px;
+  padding: 12px;
 }
 
 .table > tbody > tr > td.col_name {
-  padding:0;
+  padding: 0;
 }
 
 .col_date {
