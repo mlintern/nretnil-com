@@ -61,15 +61,13 @@
 	$logohtml = "";
 	if ($logoimageurl != "") {
 		$logohtml = "<img src='" . $logoimageurl . "' alt=''/>";
-
 		if ($logolink != "") {
 			$logohtml = "<a href='" . $logolink . "' onclick='history.go(-1);return false;'>" . $logohtml . "</a>";
 		}
-
-		$logohtml = "<div class='logohtml'>$logohtml</div>";
 	}
-
 	$pathtext = "<div class='path'>$uri</div>";
+
+	$headerhtml = $logohtml . " " . $pathtext;
 ?>
 
 <!DOCTYPE html>
@@ -87,7 +85,7 @@
 	<script type="text/javascript" src="/indices/script.js"></script>
 </head>
 
-<body style="padding-bottom: 50px;" onload="$('table').addClass('table');">
+<body style="padding-bottom: 50px;" onload="$('table').addClass('table').addClass('container');">
 
 	<div class="container">
 		<div class="page-header">
@@ -96,8 +94,7 @@
 
 		<div id="pagecontainer">
 			<div class='header'>
-				<?php print $logohtml; ?>
-				<?php print $pathtext; ?>
+				<?php print $headerhtml; ?>
 			</div>
 		</div>
 	</div>
