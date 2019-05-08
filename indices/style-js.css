@@ -1,123 +1,122 @@
 /*
   Indices styles: javascript version
-    This does its magic based on a bunch of Javascript that cruises
-    the DOM of Apache's HTML output and injects useful class names
-    throughout.
+  This does its magic based on a bunch of Javascript that cruises
+  the DOM of Apache's HTML output and injects useful class names
+  throughout.
 */
 
 /*==========================================================================*/
 
 img {
-    border: 0;
+  border: 0;
 }
 
 /* HEADER STYLING ==========================================================*/
 
 .header {
-    width: 600px;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+  width: 80%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* gets rid of visual glitch from hover color */
 .header img {
-    vertical-align: bottom;
+  vertical-align: bottom;
 }
 
 .header a {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .readme {
-    margin-top: 10px;
-    margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .path {
-
-    font-size: 16px;
-    margin: 10px 0;
+  font-size: 18px;
+  margin: 10px 0;
 }
 
 .credits {
-    text-align: right;
-    font-size: 9px;
-    font-style: italic;
-    width: 600px;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
+  text-align: right;
+  font-size: 9px;
+  font-style: italic;
+  width: 600px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .credits a {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* TABLE STYLING ============================================================*/
 
 table {
-    border: solid 1px #888888;
-    width: 60%;
-    margin: 0 auto;
+  border: solid 1px #888888;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .table{
-width: 70%;
+  width: 80%;
 }
 
 tr:hover{
-    background: #dddddd;
+  background: #dddddd;
 }
 
 th {
-    border-top: 1px solid #e0e0e0;
-    border-bottom: 1px solid #e0e0e0;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .row_parentdir {
-    display: none;
+  display: none;
 }
 
 .row_header .col_icon {
-    border-left: 1px solid #e0e0e0;
-    padding: 0px 0px 0px 1px;
+  border-left: 1px solid #e0e0e0;
+  padding: 0px 0px 0px 1px;
 }
 
 .row_normal .col_icon {
-    text-align: center;
-    width: 24px;
+  text-align: center;
+  width: 24px;
 }
 
 .dirlink, .filelink{
-    display: block;
-    padding: 8px;
+  display: block;
+  padding: 8px;
 }
 
 .table>tbody>tr>td.col_name {
-    padding:0;
+  padding:0;
 }
 
 .col_date {
-    text-align: left;
-    padding-left: 5px;
+  text-align: left;
+  padding-left: 5px;
 }
 
 .row_header .col_size {
-    border-right: 1px solid #e0e0e0;
-    padding-right: 5px;
+  border-right: 1px solid #e0e0e0;
+  padding-right: 5px;
 }
 
 .col_size {
-    text-align: right;
-    padding-right: 5px;
+  text-align: right;
+  padding-right: 5px;
 }
 
 .col_desc {
-    display: none;
+  display: none;
 }
 
 address{
-display: none;
-text-align: center;
+  display: none;
+  text-align: center;
 }

@@ -77,15 +77,14 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<meta name="host_name" content="http://www.nretnil.com">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>Nretnil Tools</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link type="text/css" href="/staging/tools/fontstrap/css/fontstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="/indices/style-js.css" rel="stylesheet">
-	<link type="text/css" href="/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Almost%20Noteworthy/almost_noteworthy/stylesheet.css" rel="stylesheet">
 	<script type="text/javascript" src="/staging/tools/fontstrap/js/third_party/jquery.min.js"></script>
 	<script type="text/javascript" src="/indices/script.js"></script>
-
 </head>
 
 <body style="padding-bottom: 50px;" onload="$('table').addClass('table');">
