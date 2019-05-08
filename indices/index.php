@@ -68,49 +68,44 @@
 
 		$logohtml = "<div class='logohtml'>$logohtml</div>";
 	}
-	
+
 	$pathtext = "<div class='path'>$uri</div>";
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<meta name="host_name" content="http://www.nretnil.com">
-<title>Nretnil Tools</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="host_name" content="http://www.nretnil.com">
+	<title>Nretnil Tools</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link type="text/css" href="//dev.nretnil.com/staging/tools/bootstrap4/css/bootstrap.min.css" rel="stylesheet">
-<link type="text/css" href="//dev.nretnil.com/css/style.css" rel="stylesheet">
-<link type="text/css" href="//dev.nretnil.com/staging/tools/css/fog/fog.css" rel="stylesheet">
-<link type="text/css" href="//dev.nretnil.com/indices/style-js.css" rel="stylesheet">
-<link type="text/css" href="//dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Almost%20Noteworthy/almost_noteworthy/stylesheet.css" rel="stylesheet">
-<script type="text/javascript" src="//dev.nretnil.com/indices/script.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link type="text/css" href="/staging/tools/fontstrap/css/fontstrap.min.css" rel="stylesheet">
+	<link type="text/css" href="/css/style.css" rel="stylesheet">
+	<link type="text/css" href="/staging/tools/css/fog/fog.css" rel="stylesheet">
+	<link type="text/css" href="/indices/style-js.css" rel="stylesheet">
+	<link type="text/css" href="/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Almost%20Noteworthy/almost_noteworthy/stylesheet.css" rel="stylesheet">
+	<script type="text/javascript" src="/staging/tools/fontstrap/js/third_part/fontstrap.min.css" rel="stylesheet"></script>
+	<script type="text/javascript" src="/indices/script.js"></script>
 
 </head>
 
 <body style="padding-bottom: 50px;" onload="$('table').addClass('table');">
 
-<nav class="navbar navbar-dark bg-danger navbar-fixed-top">
-	<a class="navbar-brand text-white pointer" href="/">Nretnil Tools</a>
-</nav>
-
-<div class="container">
-	<div class="row">
+	<div class="container">
 		<div class="page-header">
 			<h1 class="text-center">Nretnil Tools</h1>
 		</div>
-	</div>
 
-	<div class="row">
-		<div id="pagecontainer" class="col-md-10 col-md-offset-1">
-			<div class='header'>
-				<?php print $logohtml; ?>
-				<?php print $pathtext; ?>
+		<div class="row">
+			<div id="pagecontainer" class="col-md-10 col-md-offset-1">
+				<div class='header'>
+					<?php print $logohtml; ?>
+					<?php print $pathtext; ?>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
 </body>
 </html>
