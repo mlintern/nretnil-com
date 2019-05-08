@@ -81,11 +81,9 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link type="text/css" href="/staging/tools/fontstrap/css/fontstrap.min.css" rel="stylesheet">
-	<link type="text/css" href="/css/style.css" rel="stylesheet">
-	<link type="text/css" href="/staging/tools/css/fog/fog.css" rel="stylesheet">
 	<link type="text/css" href="/indices/style-js.css" rel="stylesheet">
 	<link type="text/css" href="/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Almost%20Noteworthy/almost_noteworthy/stylesheet.css" rel="stylesheet">
-	<script type="text/javascript" src="/staging/tools/fontstrap/js/third_part/fontstrap.min.css" rel="stylesheet"></script>
+	<script type="text/javascript" src="/staging/tools/fontstrap/js/third_party/jquery.min.js"></script>
 	<script type="text/javascript" src="/indices/script.js"></script>
 
 </head>
@@ -97,12 +95,10 @@
 			<h1 class="text-center">Nretnil Tools</h1>
 		</div>
 
-		<div class="row">
-			<div id="pagecontainer" class="col-md-10 col-md-offset-1">
-				<div class='header'>
-					<?php print $logohtml; ?>
-					<?php print $pathtext; ?>
-				</div>
+		<div id="pagecontainer">
+			<div class='header'>
+				<?php print $logohtml; ?>
+				<?php print $pathtext; ?>
 			</div>
 		</div>
 	</div>
