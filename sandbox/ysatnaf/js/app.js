@@ -1,4 +1,4 @@
-data = [data2009, data2010, data2011, data2012, data2013, data2014, data2015, data2016, data2017];
+data = [data2009, data2010, data2011, data2012, data2013, data2014, data2015, data2016, data2017,data2018];
 
 _.each(data, function (year) {
   var card = $('<div>').addClass('card');
