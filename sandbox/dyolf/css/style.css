@@ -1,140 +1,147 @@
 body {
-	position:relative;
-	background-image: url('../img/frog-bg.jpeg');
-	background-color: #666;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-attachment: fixed;
-	background-size: cover;
-	color: #FFF;
+  position: relative;
+  background-image: url("../img/frog-bg.jpeg");
+  background-color: #666;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff;
 }
 @media (max-width: 768px) {
-	body {
-	background-repeat: repeat-y;
-	background-position: center top;
-	}
+  body {
+    background-repeat: repeat-y;
+    background-position: center top;
+  }
 }
 @media handheld {
-	body {
-	background-repeat: repeat-y;
-	background-position: center top;
-	}
+  body {
+    background-repeat: repeat-y;
+    background-position: center top;
+  }
 }
 a {
-	color: #FFF;
+  color: #fff;
 }
 a:hover {
-	color: #DDD;
-	cursor: url("../img/frog_footprint_30.png"), pointer;
+  color: #ddd;
+  cursor: url("../img/frog_footprint_30.png"), pointer;
 }
 button:hover {
-	cursor: url("../img/frog_footprint_30.png"), pointer;
+  cursor: url("../img/frog_footprint_30.png"), pointer;
 }
 button a:hover {
-	color: #FFF;
+  color: #fff;
 }
 h2 a:hover {
-	color: #FFF;
+  color: #fff;
 }
-img{
-	max-width: 100%;
+img {
+  max-width: 100%;
 }
 .page-header {
-	border-bottom: solid 1px;
-	padding: 15px 0;
+  border-bottom: solid 1px;
+  padding: 15px 0;
 }
 .no-padding {
-	padding: 0;
+  padding: 0;
 }
 .right-side {
-	float: right;
+  float: right;
 }
 .left-side {
-	float: left;
+  float: left;
 }
 .nav-btn {
-	text-align: center;
-	padding-left: 0;
-	padding-right: 0;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
 }
 .thumbnail {
-	margin-top: 15px;
-	margin-bottom: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 /*Buttons*/
 .btn-twitter {
-	color: #fff;
-	background-color: #5bc0de;
-	border-color: #46b8da;
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
 }
 .btn-twitter:hover {
-	color: #fff;
-	background-color: #2aabd2;
-	border-color: #269abc;
+  color: #fff;
+  background-color: #2aabd2;
+  border-color: #269abc;
 }
 .btn-facebook {
-	color: #fff;
-	background-color: #4661A2;
-	border-color: #2F467E;
+  color: #fff;
+  background-color: #4661a2;
+  border-color: #2f467e;
 }
 .btn-facebook:hover {
-	color: #fff;
-	background-color: #2F467E;
-	border-color: #2F467E;
+  color: #fff;
+  background-color: #2f467e;
+  border-color: #2f467e;
 }
 .btn-pinterest {
-	color: #fff;
-	background-color: #d9534f;
-	border-color: #d43f3a;
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
 }
 .btn-pinterest:hover {
-	color: #fff;
-	background-color: #c12e2a;
-	border-color: #ac2925;
+  color: #fff;
+  background-color: #c12e2a;
+  border-color: #ac2925;
 }
 /*Font Updates*/
 .alight-center {
-	text-align: center;
+  text-align: center;
 }
 /*Footer*/
 .footer {
-	border-top: solid 1px #FFF;
-	margin-top: 20px;
-	padding: 25px 0;
+  border-top: solid 1px #fff;
+  margin-top: 20px;
+  padding: 25px 0;
 }
 /*Fixes*/
 #floyd {
-	display:none;
-	position: fixed;
-	left: 0;
-	right: 0;
-	top: 0;
-	height: 100%;
-	background: url('../img/Floyd-Through-Glass.png') center center fixed transparent;
-	background-size: cover;
-	z-index: 1032;
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background: url("../img/Floyd-Through-Glass.png") center center fixed
+    transparent;
+  background-size: cover;
+  z-index: 1032;
 }
 #mask {
-	display:none;
-	background: black;
-	position: fixed; left: 0; top: 0; bottom: 0; right: 0;
-	z-index: 1031;
-	width: 100%; height: 100%;
+  display: none;
+  background: black;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1031;
+  width: 100%;
+  height: 100%;
 }
-.chalkboard{
-	background: url('http://dev.nretnil.com/staging/tools/img/chalkboard.jpeg') 0 0 repeat-y #000;
-	background-size: cover;
-	font-size: 55px;
-	border: solid 8px #CCC; 
-	padding: 50px 80px;
+.chalkboard {
+  background: url("http://dev.nretnil.com/staging/tools/img/chalkboard.jpeg") 0
+    0 repeat-y #000;
+  background-size: cover;
+  font-size: 55px;
+  border: solid 8px #ccc;
+  padding: 50px 80px;
 }
 @media (max-width: 768px) {
-	.chalkboard{
-		padding: 20px;
-		font-size: 40px;
-	}
+  .chalkboard {
+    padding: 20px;
+    font-size: 40px;
+  }
 }
-.chalk1{
-	font-family: 'Chalk';
-	line-height: 1;
+.chalk1 {
+  font-family: "Chalk";
+  line-height: 1;
 }
